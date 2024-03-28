@@ -35,18 +35,6 @@ const SocialAuthButtons: React.FC<ISocialAuthButtons> = ({
           <Typography variant="body2">Register With Google</Typography>
         )}
       </Button>
-      <Button
-        variant="outlined"
-        colorVariant={ColorVariant.Light}
-        className={classes.btn}
-        startIcon={<img src={googleIcon} />}
-      >
-        {isActiveTabLogin ? (
-          <Typography variant="body2">Sign In With Google</Typography>
-        ) : (
-          <Typography variant="body2">Register With Google</Typography>
-        )}
-      </Button>
     </div>
   )
 }
