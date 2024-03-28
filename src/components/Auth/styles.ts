@@ -9,7 +9,7 @@ const useStyles = tss.create(({ theme }) => ({
   box: {
     background: theme.palette.light.main,
     width: '580px',
-    minHeight: '530px',
+    minHeight: '480px',
     padding: '32px',
     position: 'fixed',
     top: '150px',

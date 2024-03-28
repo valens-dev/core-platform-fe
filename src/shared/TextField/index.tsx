@@ -33,7 +33,7 @@ const TextField: React.FC<ITextField> = ({
 }) => {
   const { errors } = useFormState({ control })
   const error = errors[register?.name ?? '']?.message as string
-  const classes = useStyles()
+  const { classes } = useStyles()
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     const newValue = e.target.value
@@ -45,18 +45,18 @@ const TextField: React.FC<ITextField> = ({
     <div>
       {!!label && <Typography variant="body1">{label}</Typography>}
       <MuiTextField
-        className={classnames(classes.classes.textField, className)}
+        className={classnames(classes.textField, className)}
         onChange={handleChange}
         error={!!error}
         variant={variant}
         placeholder={placeholder}
         classes={{
-          root: classes.classes.root,
+          root: classes.root,
         }}
         {...register}
       />
       {!!error && (
-        <Typography variant="subtitle2" className={classes.classes.errorText}>
+        <Typography variant="subtitle2" className={classes.errorText}>
           {error}
         </Typography>
       )}
