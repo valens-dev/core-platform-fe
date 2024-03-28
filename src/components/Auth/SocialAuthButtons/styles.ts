@@ -23,10 +23,7 @@ const useStyles = tss.create(({ theme }) => ({
     color: theme.palette.light.dark,
   },
   btn: {
-    background: theme.palette.white.main,
     height: '48px',
-    color: theme.palette.dark.main,
-    border: `0.4px solid ${theme.palette.light.grey}`,
   },
 }))
 

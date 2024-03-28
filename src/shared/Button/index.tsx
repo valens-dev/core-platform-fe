@@ -25,7 +25,11 @@ const Button: React.FC<ButtonProps> = ({
   const { classes } = useStyles({ colorVariant })
 
   return (
-    <MuiButton className={classNames(classes.general, className)} {...props}>
+    <MuiButton
+      className={classNames(classes.general, className)}
+      variant={variant}
+      {...props}
+    >
       {children}
     </MuiButton>
   )

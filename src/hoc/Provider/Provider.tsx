@@ -1,21 +1,6 @@
 import { ReactNode } from 'react'
-import {
-  createTheme,
-  StyledEngineProvider,
-  ThemeProvider,
-} from '@mui/material/styles'
-
-const theme = createTheme({
-  components: {
-    MuiInput: {
-      styleOverrides: {
-        root: {
-          color: 'red',
-        },
-      },
-    },
-  },
-})
+import { StyledEngineProvider, ThemeProvider } from '@mui/material/styles'
+import { componentOverrides } from '../../styles/componentOverrides'
 
 interface IProvider {
   children?: ReactNode
@@ -24,7 +9,7 @@ interface IProvider {
 const Provider: React.FC<IProvider> = ({ children }) => {
   return (
     <StyledEngineProvider injectFirst>
-      <ThemeProvider theme={theme}>{children}</ThemeProvider>
+      <ThemeProvider theme={componentOverrides}>{children}</ThemeProvider>
     </StyledEngineProvider>
   )
 }
