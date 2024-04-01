@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Typography } from '@mui/material'
 import classnames from 'classnames'
 
@@ -7,8 +7,9 @@ import Registration from './Registration'
 import SocialAuthButtons from './SocialAuthButtons'
 
 import useStyles from './styles'
+import { useLocation } from 'react-router-dom'
 
-enum AuthTab {
+export enum AuthTab {
   Login = 'login',
   Registration = 'registration',
 }
@@ -19,7 +20,14 @@ interface IAuth {
 
 const Auth: React.FC<IAuth> = ({ tab = AuthTab.Login }) => {
   const [activeTab, setActiveTab] = useState(tab)
+  const location = useLocation()
   const { classes } = useStyles()
+
+  useEffect(() => {
+    if (location.state?.tab) {
+      setActiveTab(location.state.tab)
+    }
+  }, [])
 
   const isActiveTabLogin = activeTab === AuthTab.Login
   return (
