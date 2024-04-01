@@ -2,13 +2,12 @@ import { Box, Typography } from '@mui/material'
 import { ColorVariant } from '../../../models/styles'
 import { GoogleIcon } from '../../../asserts/logo/Google'
 
-// import Button from '../../../shared/Button'
+import Button from '../../../shared/Button'
 import Line from '../../../shared/Line'
 import { ISocialAuthButtons } from '../../../utils/interfaces'
 import { appText } from '../../../utils/strings'
 
 import useStyles from './styles'
-import Button from 'src/shared/Button'
 
 function SocialAuthButtons({ isActiveTabLogin }: ISocialAuthButtons) {
   const text = appText.auth.socialAuthButtons
