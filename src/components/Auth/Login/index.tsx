@@ -1,41 +1,43 @@
-import { Checkbox, FormControlLabel, Link, Typography } from '@mui/material'
+import {
+  Box,
+  Checkbox,
+  FormControlLabel,
+  Link,
+  Typography,
+} from '@mui/material'
 import { useForm } from 'react-hook-form'
 
 import Button from '../../../shared/Button'
 import TextField from '../../../shared/TextField'
-import useStyles from './styles'
+import { ILoginFormData } from '../../../utils/interfaces'
+import { appText } from '../../../utils/strings'
 
-interface ILoginFormData {
-  email: string
-  password: string
-  rememberMe: boolean
-}
+import useStyles from './styles'
 
 function Login() {
   const { control, register, handleSubmit } = useForm<ILoginFormData>()
+  const text = appText.auth.login
   const { classes } = useStyles()
 
-  const onSubmit = async (values: ILoginFormData) => {
-    console.log(values)
-  }
+  const onSubmit = async (values: ILoginFormData) => {}
 
   return (
     <form className={classes.loginForm} onSubmit={handleSubmit(onSubmit)}>
       <TextField
-        label="Email:"
+        label={text.emailLabel}
         control={control}
         register={register('email')}
         className={classes.textField}
-        placeholder="Email"
+        placeholder={text.emailPlaceHolder}
       ></TextField>
       <TextField
         label="Password:"
         control={control}
         register={register('password')}
         className={classes.textField}
-        placeholder="********"
+        placeholder={text.passwordPlaceHolder}
       ></TextField>
-      <div className={classes.section}>
+      <Box className={classes.section}>
         <FormControlLabel
           className={classes.formControlLabel}
           control={
@@ -46,16 +48,16 @@ function Login() {
               {...register('rememberMe')}
             />
           }
-          label="Remember me"
+          label={text.rememberMe}
         />
-        <div className={classes.forgotPasswordSection}>
+        <Box className={classes.forgotPasswordSection}>
           <Link underline="always" className={classes.link}>
-            Forgot Password?
+            {text.forgotPassword}
           </Link>
-        </div>
-      </div>
+        </Box>
+      </Box>
       <Button className={classes.loginBtn} type="submit">
-        <Typography variant="body1">Sign In</Typography>
+        <Typography variant="body1">{text.signIn}</Typography>
       </Button>
     </form>
   )

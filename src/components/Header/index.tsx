@@ -1,36 +1,39 @@
-import { Typography } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import { useNavigate } from 'react-router-dom'
 
-import { ColorVariant } from '../../../models/styles'
-import Button from '../../../shared/Button'
-import { AuthTab } from '../../Auth'
+import { AuthTab } from '../../utils/types'
+import { ColorVariant } from '../../models/styles'
+import Button from '../../shared/Button'
 import { getNavLinks } from './navLinks'
+import { appText } from '../../utils/strings'
+
 import useStyles from './styles'
 
 function Header() {
   const pages = getNavLinks()
   const navigate = useNavigate()
+  const text = appText.header
   const { classes } = useStyles()
 
   return (
-    <div className={classes.wrapper}>
-      <div className={classes.logo}>
+    <Box className={classes.wrapper}>
+      <Box className={classes.logo}>
         <Typography variant="h4">Core</Typography>
-      </div>
-      <div className={classes.links}>
+      </Box>
+      <Box className={classes.links}>
         {pages.map(({ label }, i) => (
           <Typography key={`${label}_${i}`} variant="body1">
             {label}
           </Typography>
         ))}
-      </div>
-      <div className={classes.buttonsAndLinks}>
-        <div className={classes.auth}>
+      </Box>
+      <Box className={classes.buttonsAndLinks}>
+        <Box className={classes.auth}>
           <Typography
             variant="body2"
             onClick={() => navigate('/auth', { state: { tab: AuthTab.Login } })}
           >
-            Login
+            {text.login}
           </Typography>
           <Typography
             variant="body2"
@@ -38,19 +41,19 @@ function Header() {
               navigate('/auth', { state: { tab: AuthTab.Registration } })
             }
           >
-            Sign Up
+            {text.signUp}
           </Typography>
-        </div>
-        <div className={classes.buttons}>
+        </Box>
+        <Box className={classes.buttons}>
           <Button variant="outlined" colorVariant={ColorVariant.Light}>
-            <Typography variant="body2">Book a demo</Typography>
+            <Typography variant="body2">{text.bookADemo}</Typography>
           </Button>
           <Button colorVariant={ColorVariant.Primary}>
-            Start your free trial
+            {text.startYourFreeTrial}
           </Button>
-        </div>
-      </div>
-    </div>
+        </Box>
+      </Box>
+    </Box>
   )
 }
 export default Header

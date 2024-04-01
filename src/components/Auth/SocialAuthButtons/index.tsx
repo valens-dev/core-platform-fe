@@ -1,41 +1,41 @@
-import { Typography } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import { ColorVariant } from '../../../models/styles'
+import { GoogleIcon } from '../../../asserts/logo/Google'
 
-import Button from '../../../shared/Button'
+// import Button from '../../../shared/Button'
+import Line from '../../../shared/Line'
+import { ISocialAuthButtons } from '../../../utils/interfaces'
+import { appText } from '../../../utils/strings'
+
 import useStyles from './styles'
+import Button from 'src/shared/Button'
 
-interface ISocialAuthButtons {
-  isActiveTabLogin: boolean
-}
-
-const SocialAuthButtons: React.FC<ISocialAuthButtons> = ({
-  isActiveTabLogin,
-}) => {
-  const googleIcon = '/svg/Google.svg'
+function SocialAuthButtons({ isActiveTabLogin }: ISocialAuthButtons) {
+  const text = appText.auth.socialAuthButtons
   const { classes } = useStyles()
 
   return (
-    <div className={classes.wrapper}>
-      <div className={classes.lines}>
-        <div className={classes.line}></div>
+    <Box className={classes.wrapper}>
+      <Box className={classes.lines}>
+        <Line />
         <Typography variant="body2" className={classes.lightText}>
-          Or
+          {text.or}
         </Typography>
-        <div className={classes.line}></div>
-      </div>
+        <Line />
+      </Box>
       <Button
         variant="outlined"
         className={classes.btn}
         colorVariant={ColorVariant.Light}
-        startIcon={<img src={googleIcon} />}
+        startIcon={<GoogleIcon />}
       >
         {isActiveTabLogin ? (
-          <Typography variant="body2">Sign In With Google</Typography>
+          <Typography variant="body2">{text.signInWithGoogle}</Typography>
         ) : (
-          <Typography variant="body2">Register With Google</Typography>
+          <Typography variant="body2">{text.registerWithGoogle}</Typography>
         )}
       </Button>
-    </div>
+    </Box>
   )
 }
 

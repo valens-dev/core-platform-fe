@@ -12,11 +12,10 @@ const useStyles = tss.create(({ theme }) => ({
     justifyContent: 'center',
     alignItems: 'center',
     gap: '10px',
-  },
-  line: {
-    width: '46.5%',
-    height: '0.5px',
-    background: theme.palette.light.dark,
+    '& > div': {
+      width: '46.5%',
+      height: '0.5px',
+    },
   },
   lightText: {
     fontSize: '12px',

@@ -16,6 +16,8 @@ const getButtonGeneralStyle = (theme: Theme, colorVariant: ColorVariant) => {
           border: `0.4px solid ${theme.palette.light.grey}`,
         },
       }
+    default:
+      return {}
   }
 }
 

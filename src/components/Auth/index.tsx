@@ -1,26 +1,23 @@
+import { Box, Typography } from '@mui/material'
+import { useLocation } from 'react-router-dom'
 import { useEffect, useState } from 'react'
-import { Typography } from '@mui/material'
 import classnames from 'classnames'
 
 import Login from './Login'
 import Registration from './Registration'
 import SocialAuthButtons from './SocialAuthButtons'
+import Line from '../../shared/Line'
+
+import { IAuth } from '../../utils/interfaces'
+import { AuthTab } from '../../utils/types'
 
 import useStyles from './styles'
-import { useLocation } from 'react-router-dom'
+import { appText } from '../../utils/strings'
 
-export enum AuthTab {
-  Login = 'login',
-  Registration = 'registration',
-}
-
-interface IAuth {
-  tab?: AuthTab
-}
-
-const Auth: React.FC<IAuth> = ({ tab = AuthTab.Login }) => {
+function Auth({ tab = AuthTab.Login }: IAuth) {
   const [activeTab, setActiveTab] = useState(tab)
   const location = useLocation()
+  const text = appText.auth
   const { classes } = useStyles()
 
   useEffect(() => {
@@ -31,28 +28,28 @@ const Auth: React.FC<IAuth> = ({ tab = AuthTab.Login }) => {
 
   const isActiveTabLogin = activeTab === AuthTab.Login
   return (
-    <div className={classes.wrapper}>
-      <div className={classes.box}>
-        <div className={classes.infoDetails}>
-          <div className={classes.openingMessage}>
+    <Box className={classes.wrapper}>
+      <Box className={classes.box}>
+        <Box className={classes.infoDetails}>
+          <Box className={classes.openingMessage}>
             <Typography
               variant="body1"
               className={classnames(classes.text, classes.welcomeToText)}
             >
-              Welcome to
+              {text.welcomeTo}
             </Typography>
             <span
               className={classnames(classes.text, classes.corePlatformText)}
             >
-              Core Platform
+              {text.corePlatform}
             </span>
-          </div>
+          </Box>
           <Typography variant="body2" className={classes.lightText}>
-            Kindly fill in your details below to create an account
+            {text.note}
           </Typography>
-        </div>
-        <div className={classes.tabs}>
-          <div onClick={() => setActiveTab(AuthTab.Login)}>
+        </Box>
+        <Box className={classes.tabs}>
+          <Box onClick={() => setActiveTab(AuthTab.Login)}>
             <Typography
               variant="body1"
               className={
@@ -61,10 +58,10 @@ const Auth: React.FC<IAuth> = ({ tab = AuthTab.Login }) => {
                   : classes.tab
               }
             >
-              Login
+              {text.loginText}
             </Typography>
-          </div>
-          <div
+          </Box>
+          <Box
             onClick={() => setActiveTab(AuthTab.Registration)}
             className={
               !isActiveTabLogin
@@ -72,14 +69,14 @@ const Auth: React.FC<IAuth> = ({ tab = AuthTab.Login }) => {
                 : classes.tab
             }
           >
-            <Typography variant="body1">Sign Up</Typography>
-          </div>
-        </div>
-        <div className={classes.line}></div>
+            <Typography variant="body1">{text.signUp}</Typography>
+          </Box>
+        </Box>
+        <Line className={classes.line} />
         {isActiveTabLogin ? <Login /> : <Registration />}
         <SocialAuthButtons isActiveTabLogin={isActiveTabLogin} />
-      </div>
-    </div>
+      </Box>
+    </Box>
   )
 }
 

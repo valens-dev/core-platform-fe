@@ -1,10 +1,10 @@
 import { createTss } from 'tss-react'
-import { Palette } from './config/palette'
-import { Typography } from './config/typography'
+import { Breakpoints, Palette, Typography } from '../utils/interfaces'
 
 export interface Theme {
   palette: Palette
   typography: Typography
+  breakpoints: Breakpoints
 }
 
 function useContext() {
@@ -45,6 +45,19 @@ function useContext() {
         fontWeight: 300,
         fontSize: '16px',
         lineHeight: '22px',
+      },
+    },
+    breakpoints: {
+      values: {
+        xxs: 0,
+        xs: 450,
+        sm: 600,
+        md: 900,
+        semiLg: 1100,
+        lg: 1200,
+        semiXl: 1450,
+        xl: 1536,
+        xxl: 1900,
       },
     },
   }

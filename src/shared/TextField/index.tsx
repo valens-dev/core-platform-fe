@@ -1,26 +1,11 @@
 import React from 'react'
 import classnames from 'classnames'
-import { Control, useFormState } from 'react-hook-form'
-import { UseFormRegisterReturn } from 'react-hook-form/dist/types/form'
-import {
-  BaseTextFieldProps,
-  TextField as MuiTextField,
-  Typography,
-} from '@mui/material'
+import { useFormState } from 'react-hook-form'
+import { TextField as MuiTextField, Typography } from '@mui/material'
+
+import { ITextField } from '../../utils/interfaces'
 
 import useStyles from './styles'
-
-type TexFieldVariant = 'outlined' | 'filled' | 'standard'
-
-interface ITextField extends BaseTextFieldProps {
-  label?: string
-  className?: string
-  placeholder?: string
-  register?: UseFormRegisterReturn
-  control?: Control<any, any>
-  variant?: TexFieldVariant
-  customOnChange?: (value: string) => void
-}
 
 const TextField: React.FC<ITextField> = ({
   label,
