@@ -1,11 +1,14 @@
 import { Box, Typography } from '@mui/material'
-import { ColorVariant } from '../../../models/styles'
-import { GoogleIcon } from '../../../asserts/logo/Google'
 
-import Button from '../../../shared/Button'
-import Line from '../../../shared/Line'
-import { ISocialAuthButtons } from '../../../utils/interfaces'
-import { appText } from '../../../utils/strings'
+import { ColorVariant } from '@models/styles'
+
+import Button from '@shared/Button'
+import Line from '@shared/Line'
+
+import { ISocialAuthButtons } from '@utils/interfaces'
+import { appText } from '@utils/strings'
+
+import GoogleLogo from '@assets/logo/google-logo.svg?react'
 
 import useStyles from './styles'
 
@@ -26,7 +29,7 @@ function SocialAuthButtons({ isActiveTabLogin }: ISocialAuthButtons) {
         variant="outlined"
         className={classes.btn}
         colorVariant={ColorVariant.Light}
-        startIcon={<GoogleIcon />}
+        startIcon={<GoogleLogo />}
       >
         {isActiveTabLogin ? (
           <Typography variant="body2">{text.signInWithGoogle}</Typography>

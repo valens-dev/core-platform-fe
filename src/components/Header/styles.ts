@@ -1,4 +1,4 @@
-import { tss } from '../../styles/theme'
+import { tss } from '@styles/theme'
 
 const useStyles = tss.create(({ theme }) => ({
   wrapper: {
@@ -46,9 +46,9 @@ const useStyles = tss.create(({ theme }) => ({
     '& > button': {
       height: '44px',
     },
-    '& > :nth-child(1)': {
-      color: theme.palette.primary.dark,
-    },
+  },
+  bookADemoBtn: {
+    color: theme.palette.primary.dark,
   },
 }))
 

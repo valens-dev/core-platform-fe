@@ -1,19 +1,20 @@
-import React from 'react'
 import { Button as MuiButton } from '@mui/material'
 import classNames from 'classnames'
 
-import { ColorVariant } from '../../models/styles'
-import useStyles from './styles'
-import { ButtonProps } from '../../utils/types'
+import { ColorVariant } from '@models/styles'
 
-const Button: React.FC<ButtonProps> = ({
+import { ButtonProps } from '@utils/types'
+
+import useStyles from './styles'
+
+function Button({
   children,
   variant = 'contained',
   colorVariant = ColorVariant.Primary,
   className,
   isSubmitting,
   ...props
-}) => {
+}: ButtonProps) {
   const { classes } = useStyles({ colorVariant })
 
   return (

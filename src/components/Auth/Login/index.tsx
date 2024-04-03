@@ -7,16 +7,17 @@ import {
 } from '@mui/material'
 import { useForm } from 'react-hook-form'
 
-import Button from '../../../shared/Button'
-import TextField from '../../../shared/TextField'
-import { ILoginFormData } from '../../../utils/interfaces'
-import { appText } from '../../../utils/strings'
+import Button from '@shared/Button'
+import TextField from '@shared/TextField'
+
+import { ILoginFormData } from '@utils/interfaces'
+import { appText } from '@utils/strings'
 
 import useStyles from './styles'
 
 function Login() {
-  const { control, register, handleSubmit } = useForm<ILoginFormData>()
   const text = appText.auth.login
+  const { control, register, handleSubmit } = useForm<ILoginFormData>()
   const { classes } = useStyles()
 
   const onSubmit = async (values: ILoginFormData) => {}

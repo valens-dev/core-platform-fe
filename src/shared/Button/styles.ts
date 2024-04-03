@@ -1,6 +1,5 @@
-import { tss } from '../../styles/theme'
-import { ColorVariant } from '../../models/styles'
-import { Theme } from '../../styles/theme'
+import { ColorVariant } from '@models/styles'
+import { Theme, tss } from '@styles/theme'
 
 const getButtonGeneralStyle = (theme: Theme, colorVariant: ColorVariant) => {
   switch (colorVariant) {

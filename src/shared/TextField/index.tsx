@@ -1,13 +1,13 @@
 import React from 'react'
-import classnames from 'classnames'
 import { useFormState } from 'react-hook-form'
 import { TextField as MuiTextField, Typography } from '@mui/material'
+import classnames from 'classnames'
 
-import { ITextField } from '../../utils/interfaces'
+import { ITextField } from '@utils/interfaces'
 
 import useStyles from './styles'
 
-const TextField: React.FC<ITextField> = ({
+function TextField({
   label,
   className,
   placeholder,
@@ -15,7 +15,7 @@ const TextField: React.FC<ITextField> = ({
   control,
   variant,
   customOnChange,
-}) => {
+}: ITextField) {
   const { errors } = useFormState({ control })
   const error = errors[register?.name ?? '']?.message as string
   const { classes } = useStyles()

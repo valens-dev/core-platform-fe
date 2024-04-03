@@ -1,5 +1,5 @@
 import { createTss } from 'tss-react'
-import { Breakpoints, Palette, Typography } from '../utils/interfaces'
+import { Breakpoints, Palette, Typography } from '@utils/interfaces'
 
 export interface Theme {
   palette: Palette

@@ -1,18 +1,21 @@
 import { Box, Typography } from '@mui/material'
 import { useNavigate } from 'react-router-dom'
 
-import { AuthTab } from '../../utils/types'
-import { ColorVariant } from '../../models/styles'
-import Button from '../../shared/Button'
 import { getNavLinks } from './navLinks'
-import { appText } from '../../utils/strings'
+
+import { ColorVariant } from '@models/styles'
+
+import Button from '@shared/Button'
+
+import { appText } from '@utils/strings'
+import { AuthTab } from '@utils/types'
 
 import useStyles from './styles'
 
 function Header() {
+  const text = appText.header
   const pages = getNavLinks()
   const navigate = useNavigate()
-  const text = appText.header
   const { classes } = useStyles()
 
   return (
@@ -45,7 +48,11 @@ function Header() {
           </Typography>
         </Box>
         <Box className={classes.buttons}>
-          <Button variant="outlined" colorVariant={ColorVariant.Light}>
+          <Button
+            variant="outlined"
+            colorVariant={ColorVariant.Light}
+            className={classes.bookADemoBtn}
+          >
             <Typography variant="body2">{text.bookADemo}</Typography>
           </Button>
           <Button colorVariant={ColorVariant.Primary}>

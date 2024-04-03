@@ -1,7 +1,8 @@
 import { StyledEngineProvider, ThemeProvider } from '@mui/material/styles'
 
-import { componentOverrides } from '../../styles/componentOverrides'
-import { IProvider } from '../../utils/interfaces'
+import { IProvider } from '@utils/interfaces'
+
+import { componentOverrides } from '@styles/componentOverrides'
 
 const Provider: React.FC<IProvider> = ({ children }) => {
   return (

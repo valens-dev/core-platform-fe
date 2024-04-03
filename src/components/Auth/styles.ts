@@ -1,18 +1,17 @@
-import { tss } from '../../styles/theme'
+import { tss } from '@styles/theme'
 
 const useStyles = tss.create(({ theme }) => ({
   wrapper: {
     width: '100%',
     display: 'grid',
     placeItems: 'center',
+    height: '100vh',
   },
   box: {
     background: theme.palette.light.main,
     width: '580px',
     minHeight: '480px',
     padding: '32px',
-    position: 'fixed',
-    top: '150px',
   },
   infoDetails: {
     display: 'flex',

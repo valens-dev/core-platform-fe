@@ -1,8 +1,11 @@
 import { Routes, Route, BrowserRouter } from 'react-router-dom'
+
+import Provider from '@hoc/Provider/Provider'
+
+import Auth from '@components/Auth'
+import Homepage from '@components/Homepage'
+
 import './App.css'
-import Auth from './components/Auth'
-import Homepage from './components/Homepage'
-import Provider from './hoc/Provider/Provider'
 
 function App() {
   return (

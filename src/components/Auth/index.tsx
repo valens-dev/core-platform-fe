@@ -1,23 +1,24 @@
+import { useEffect, useState } from 'react'
 import { Box, Typography } from '@mui/material'
 import { useLocation } from 'react-router-dom'
-import { useEffect, useState } from 'react'
 import classnames from 'classnames'
 
 import Login from './Login'
 import Registration from './Registration'
 import SocialAuthButtons from './SocialAuthButtons'
-import Line from '../../shared/Line'
+import { AuthTab } from '@utils/types'
 
-import { IAuth } from '../../utils/interfaces'
-import { AuthTab } from '../../utils/types'
+import { IAuth } from '@utils/interfaces'
+import { appText } from '@utils/strings'
+
+import Line from '@shared/Line'
 
 import useStyles from './styles'
-import { appText } from '../../utils/strings'
 
 function Auth({ tab = AuthTab.Login }: IAuth) {
+  const text = appText.auth
   const [activeTab, setActiveTab] = useState(tab)
   const location = useLocation()
-  const text = appText.auth
   const { classes } = useStyles()
 
   useEffect(() => {
