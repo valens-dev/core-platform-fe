@@ -16,8 +16,8 @@ const useStyles = tss.create(({ theme }) => ({
   },
   formControlLabel: {
     width: '50%',
-    color: theme.palette.light.dark,
     '& .MuiTypography-body1': {
+      color: theme.palette.light.dark,
       fontSize: '14px',
     },
   },

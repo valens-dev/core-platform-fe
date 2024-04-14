@@ -6,7 +6,7 @@ const useStyles = tss.create(({ theme }) => ({
     height: '122px',
     display: 'flex',
     borderBottom: `2px solid ${theme.palette.light.main}`,
-    '* > h4, p': {
+    '* > p, svg': {
       cursor: 'pointer',
     },
   },
@@ -15,8 +15,6 @@ const useStyles = tss.create(({ theme }) => ({
     paddingTop: '40px',
     display: 'grid',
     placeItems: 'center',
-    fontSize: '30px',
-    color: theme.palette.primary.dark,
   },
   links: {
     width: '60%',

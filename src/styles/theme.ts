@@ -1,17 +1,11 @@
 import { createTss } from 'tss-react'
-import { Breakpoints, Palette, Typography } from '@utils/interfaces'
-
-export interface Theme {
-  palette: Palette
-  typography: Typography
-  breakpoints: Breakpoints
-}
 
 function useContext() {
   const theme = {
     palette: {
       primary: {
         main: '#3366FF',
+        light: '#3D68F5',
         dark: '#001A54',
       },
       white: {
@@ -24,6 +18,7 @@ function useContext() {
         main: '#F4F4F4',
         dark: '#A8A8A8',
         grey: '#525252',
+        light: '#6F6F6F',
       },
       dark: {
         main: '#161616',
@@ -40,11 +35,6 @@ function useContext() {
         bold: 700,
         extraBold: 800,
         black: 900,
-      },
-      body1: {
-        fontWeight: 300,
-        fontSize: '16px',
-        lineHeight: '22px',
       },
     },
     breakpoints: {

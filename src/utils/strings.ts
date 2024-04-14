@@ -5,6 +5,44 @@ export const appText = {
     bookADemo: 'Book a demo',
     startYourFreeTrial: 'Start your free trial',
   },
+  footer: {
+    footNote: '©2024 CORE PLATFORM · All rights reserved.',
+    termsOfUse: 'Terms of use',
+    privacyPolicy: 'Privacy policy',
+    security: 'Security',
+  },
+  homepage: {
+    infoPanel: {
+      chipLabel: 'Lorem ipsum is simply dummy tex',
+      greatSupport: 'Great support on long term partnerships',
+      makeTheRightMove: 'Make the right move',
+      note: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      startFreeTrial: 'Start your free trial',
+      ourOffers: 'Our offers',
+    },
+    aboutUs: {
+      chipText: 'Who are we',
+      aboutUs: 'About us',
+      note: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknownLorem Ipsum is simply industry.",
+      aboutUsText:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      learnMore: 'Learn more',
+    },
+    contactUs: {
+      contactUs: 'Contact us',
+      note: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      namePlaceHolder: 'Name',
+      emailPlaceHolder: 'Email',
+      typeYourMessageHere: 'Type your message here',
+      letsConnect: "Let's connect",
+    },
+    howWeWork: {
+      workFlow: 'Work flow',
+      howWeWork: 'How we work?',
+      note: 'Specify helps you gain control of your design system across teams and products.',
+      bookADemo: 'Book a demo',
+    },
+  },
   auth: {
     loginText: 'Login',
     signUp: 'Sign Up',

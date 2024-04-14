@@ -5,6 +5,8 @@ import { BaseTextFieldProps } from '@mui/material'
 
 import { AuthTab, TexFieldVariant } from './types'
 
+import { ColorVariant } from '@models/styles'
+
 export interface IProvider {
   children?: ReactNode
 }
@@ -26,6 +28,14 @@ export interface IRegistrationFormData {
   termsAndConditions: boolean
 }
 
+export interface IContactFormData {
+  name: string
+  email: string
+  message: string
+}
+
+type TexFieldSize = 'small' | 'medium'
+
 export interface ITextField extends BaseTextFieldProps {
   label?: string
   className?: string
@@ -33,6 +43,7 @@ export interface ITextField extends BaseTextFieldProps {
   register?: UseFormRegisterReturn
   control?: Control<any, any>
   variant?: TexFieldVariant
+  size?: TexFieldSize
   customOnChange?: (value: string) => void
 }
 
@@ -42,6 +53,26 @@ export interface ISocialAuthButtons {
 
 export interface ILine {
   className?: string
+}
+
+export interface IChip {
+  className?: string
+  label?: string
+}
+
+export interface Theme {
+  palette: Palette
+  typography: Typography
+  breakpoints: Breakpoints
+}
+
+export interface ILink {
+  label: string
+  href?: string
+  colorVariant?: ColorVariant
+  className?: string
+  underline?: boolean
+  endIcon?: ReactNode
 }
 
 interface FontWeights {
@@ -55,16 +86,9 @@ interface FontWeights {
   black: number
 }
 
-interface TypographyType {
-  fontWeight: number
-  fontSize: string
-  lineHeight: string
-}
-
 export interface Typography {
   fontFamily: string
   fontWeight: FontWeights
-  body1: TypographyType
 }
 
 interface Color {

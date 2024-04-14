@@ -14,7 +14,9 @@ function TextField({
   register,
   control,
   variant,
+  size = 'small',
   customOnChange,
+  ...props
 }: ITextField) {
   const { errors } = useFormState({ control })
   const error = errors[register?.name ?? '']?.message as string
@@ -35,10 +37,12 @@ function TextField({
         error={!!error}
         variant={variant}
         placeholder={placeholder}
+        size={size}
         classes={{
           root: classes.root,
         }}
         {...register}
+        {...props}
       />
       {!!error && (
         <Typography variant="subtitle2" className={classes.errorText}>
