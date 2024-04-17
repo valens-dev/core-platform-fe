@@ -17,10 +17,13 @@ const getButtonGeneralStyle = (theme: Theme, colorVariant: ColorVariant) => {
     case ColorVariant.Light:
       return {
         background: theme.palette.white.main,
-        border: `1px solid ${theme.palette.light.dark}`,
+        border: `1px solid ${theme.palette.primary.dark}`,
+        '& > p, span': {
+          color: theme.palette.primary.dark,
+        },
         '&:hover': {
           background: theme.palette.white.main,
-          border: `0.4px solid ${theme.palette.light.grey}`,
+          border: `1px solid ${theme.palette.primary.dark}`,
         },
       }
     default:

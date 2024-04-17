@@ -10,7 +10,7 @@ import useStyles from './styles'
 
 function Link({
   label,
-  href,
+  href = '',
   colorVariant = ColorVariant.Light,
   className,
   underline = true,
@@ -19,14 +19,10 @@ function Link({
   const navigate = useNavigate()
   const { classes } = useStyles({ colorVariant, underline })
 
-  const handleNavigate = () => {
-    if (!!href) navigate(href)
-  }
-
   return (
-    <Box className={classes.wrapper} onClick={handleNavigate}>
+    <Box className={classes.wrapper} onClick={() => navigate(href)}>
       <MuiLink className={classNames(classes.link, className)}>{label}</MuiLink>
-      {!!endIcon && endIcon}
+      {endIcon}
     </Box>
   )
 }

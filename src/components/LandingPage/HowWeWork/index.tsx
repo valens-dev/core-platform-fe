@@ -7,11 +7,12 @@ import Button from '@shared/Button'
 
 import { getCardsData } from './cards'
 
+import ConnectAndCreate from '@assets/images/connect-and-create.png'
+
 import useStyles from './styles'
 
 function HowWeWork() {
   const text = appText.homepage.howWeWork
-  const imgPath = '/src/assets/images/connect-and-create.png'
   const cards = getCardsData()
   const { classes } = useStyles()
 
@@ -41,7 +42,7 @@ function HowWeWork() {
         <Button className={classes.bookADemoBtn}>
           <Typography variant="body2">{text.bookADemo}</Typography>
         </Button>
-        <img src={imgPath} className={classes.image} />
+        <img src={ConnectAndCreate} className={classes.image} />
       </Box>
     </Box>
   )

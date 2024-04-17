@@ -49,6 +49,9 @@ const useStyles = tss.create(({ theme }) => ({
       width: '200px',
       height: '54px',
     },
+    '& > button > p': {
+      fontWeight: theme.typography.fontWeight.bold,
+    },
   },
   image: {
     width: '700px',

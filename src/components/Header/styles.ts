@@ -44,6 +44,9 @@ const useStyles = tss.create(({ theme }) => ({
     '& > button': {
       height: '44px',
     },
+    '& > button > p': {
+      fontWeight: theme.typography.fontWeight.bold,
+    },
   },
   bookADemoBtn: {
     color: theme.palette.primary.dark,

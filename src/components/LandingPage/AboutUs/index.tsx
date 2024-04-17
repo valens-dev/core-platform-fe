@@ -19,13 +19,17 @@ function AboutUs() {
     <Box className={classes.wrapper}>
       <Chip label={text.chipText} />
       <Typography variant="h2">{text.aboutUs}</Typography>
-      <Typography variant="body1" className={classes.note}>
-        {text.note}
+      <Box className={classes.noteWrapper}>
+        <Typography align="center" variant="body1" className={classes.note}>
+          {text.note}
+        </Typography>
+      </Box>
+      <Typography className={classes.aboutUsText} align="center" variant="h5">
+        {text.aboutUsText}
       </Typography>
-      <Typography variant="h5">{text.aboutUsText}</Typography>
       <Link
         label={text.learnMore}
-        colorVariant={ColorVariant.Primary}
+        colorVariant={ColorVariant.PrimaryLight}
         endIcon={<ArrowRight />}
       />
     </Box>

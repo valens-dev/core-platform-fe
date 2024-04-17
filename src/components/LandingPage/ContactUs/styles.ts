@@ -16,21 +16,14 @@ const useStyles = tss.create(({ theme }) => ({
     color: theme.palette.primary.dark,
   },
   note: {
-    color: theme.palette.light.dark,
-  },
-  logos: {
-    display: 'flex',
-    alignItems: 'center',
-    gap: '30px',
-    '& > svg': {
-      cursor: 'pointer',
-    },
+    color: theme.palette.light.light,
   },
   contactUsForm: {
     display: 'flex',
     flexDirection: 'column',
     gap: '20px',
     width: '839px',
+    marginTop: '40px',
   },
   textfield: {
     background: theme.palette.white.main,
@@ -44,7 +37,6 @@ const useStyles = tss.create(({ theme }) => ({
     height: '64px',
     width: '284px',
     '& > span': {
-      fontFamily: 'Poppins',
       fontWeight: theme.typography.fontWeight.bold,
     },
   },

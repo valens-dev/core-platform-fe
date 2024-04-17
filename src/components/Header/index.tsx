@@ -50,15 +50,15 @@ function Header() {
           </Typography>
         </Box>
         <Box className={classes.buttons}>
+          <Button colorVariant={ColorVariant.Primary}>
+            <Typography variant="body2">{text.startYourFreeTrial}</Typography>
+          </Button>
           <Button
             variant="outlined"
             colorVariant={ColorVariant.Light}
             className={classes.bookADemoBtn}
           >
-            <Typography variant="body2">{text.bookADemo}</Typography>
-          </Button>
-          <Button colorVariant={ColorVariant.Primary}>
-            {text.startYourFreeTrial}
+            <Typography variant="body2">{text.ourOffers}</Typography>
           </Button>
         </Box>
       </Box>

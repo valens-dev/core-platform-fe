@@ -7,12 +7,6 @@ import { IContactFormData } from '@utils/interfaces'
 import TextField from '@shared/TextField'
 import Button from '@shared/Button'
 
-import DiscordIcon from '@assets/icon/discord.svg?react'
-import FacebookIcon from '@assets/icon/facebook.svg?react'
-import BasketballIcon from '@assets/icon/basketball.svg?react'
-import InstagramIcon from '@assets/icon/instagram.svg?react'
-import BeIcon from '@assets/icon/be.svg?react'
-
 import useStyles from './styles'
 
 function ContactUs() {
@@ -27,16 +21,9 @@ function ContactUs() {
       <Typography variant="h2" className={classes.contactUs}>
         {text.contactUs}
       </Typography>
-      <Typography variant="body1" className={classes.note}>
+      <Typography align="center" variant="body1" className={classes.note}>
         {text.note}
       </Typography>
-      <Box className={classes.logos}>
-        <DiscordIcon />
-        <FacebookIcon />
-        <BasketballIcon />
-        <InstagramIcon />
-        <BeIcon />
-      </Box>
       <form className={classes.contactUsForm} onSubmit={handleSubmit(onSubmit)}>
         <TextField
           control={control}

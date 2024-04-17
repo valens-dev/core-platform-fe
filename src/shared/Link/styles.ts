@@ -14,13 +14,16 @@ const getLinkGeneralStyle = (
     case ColorVariant.Primary:
       color = theme.palette.primary.dark
       break
+    case ColorVariant.PrimaryLight:
+      color = theme.palette.primary.main
+      break
     default:
       color = theme.palette.light.dark
   }
 
-  if (!underline) return { color, textDecoration: 'none' }
-
-  return { color, textDecorationColor: color }
+  return !underline
+    ? { color, textDecoration: 'none' }
+    : { color, textDecorationColor: color }
 }
 
 const useStyles = tss

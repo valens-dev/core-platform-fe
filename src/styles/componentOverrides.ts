@@ -8,11 +8,6 @@ export const componentOverrides = createTheme({
           boxShadow: 'none',
           textTransform: 'none',
         },
-        outlined: {
-          border: '0.4px solid #A8A8A8',
-          color: '#161616',
-          background: '#FFFFFF',
-        },
       },
     },
     MuiChip: {
@@ -25,6 +20,8 @@ export const componentOverrides = createTheme({
           padding: '6px 12px 6px 12px',
           boxShadow: '0px 10px 20px 0px #3040780F',
           width: 'min-content',
+          fontSize: '16px',
+          fontWeight: 500,
         },
       },
     },

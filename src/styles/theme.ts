@@ -5,7 +5,7 @@ function useContext() {
     palette: {
       primary: {
         main: '#3366FF',
-        light: '#3D68F5',
+        light: '#0F62FE',
         dark: '#001A54',
       },
       white: {

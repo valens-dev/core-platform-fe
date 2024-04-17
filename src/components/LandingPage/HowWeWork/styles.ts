@@ -34,6 +34,9 @@ const useStyles = tss.create(({ theme }) => ({
   bookADemoBtn: {
     width: '140px',
     height: '55px',
+    '& > p': {
+      fontWeight: theme.typography.fontWeight.bold,
+    },
   },
   image: {
     marginTop: '50px',

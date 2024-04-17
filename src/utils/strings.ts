@@ -2,7 +2,7 @@ export const appText = {
   header: {
     login: 'Login',
     signUp: 'Sign Up',
-    bookADemo: 'Book a demo',
+    ourOffers: 'Our offers',
     startYourFreeTrial: 'Start your free trial',
   },
   footer: {

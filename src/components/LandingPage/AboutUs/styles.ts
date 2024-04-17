@@ -9,8 +9,14 @@ const useStyles = tss.create(({ theme }) => ({
     flexDirection: 'column',
     gap: '24px',
   },
+  noteWrapper: {
+    width: '70%',
+  },
   note: {
-    color: theme.palette.light.dark,
+    color: theme.palette.light.grey,
+  },
+  aboutUsText: {
+    marginTop: '30px',
   },
 }))
 

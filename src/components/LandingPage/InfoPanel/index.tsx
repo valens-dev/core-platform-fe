@@ -8,11 +8,12 @@ import Button from '@shared/Button'
 
 import { ColorVariant } from '@models/styles'
 
+import ExampleImage from '@assets/images/example.png'
+
 import useStyles from './styles'
 
 function InfoPanel() {
   const text = appText.homepage.infoPanel
-  const imgPath = '/src/assets/images/example.png'
   const { classes } = useStyles()
 
   return (
@@ -38,7 +39,7 @@ function InfoPanel() {
           </Button>
         </Box>
       </Box>
-      <img src={imgPath} className={classes.image} />
+      <img src={ExampleImage} className={classes.image} />
     </Box>
   )
 }
