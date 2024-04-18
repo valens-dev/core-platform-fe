@@ -20,7 +20,7 @@ function Login() {
   const { control, register, handleSubmit } = useForm<ILoginFormData>()
   const { classes } = useStyles()
 
-  const onSubmit = async (values: ILoginFormData) => {}
+  const onSubmit = async () => {}
 
   return (
     <form className={classes.loginForm} onSubmit={handleSubmit(onSubmit)}>

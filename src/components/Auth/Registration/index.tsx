@@ -14,7 +14,7 @@ function Registration() {
   const { control, register, handleSubmit } = useForm<IRegistrationFormData>()
   const { classes } = useStyles()
 
-  const onSubmit = async (values: IRegistrationFormData) => {}
+  const onSubmit = async () => {}
 
   return (
     <form
