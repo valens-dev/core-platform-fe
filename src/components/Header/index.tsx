@@ -7,6 +7,8 @@ import { ColorVariant } from '@models/styles'
 
 import Button from '@shared/Button'
 
+import CoreIcon from '@assets/logo/core.svg?react'
+
 import { appText } from '@utils/strings'
 import { AuthTab } from '@utils/types'
 
@@ -21,7 +23,7 @@ function Header() {
   return (
     <Box className={classes.wrapper}>
       <Box className={classes.logo}>
-        <Typography variant="h4">Core</Typography>
+        <CoreIcon />
       </Box>
       <Box className={classes.links}>
         {pages.map(({ label }, i) => (
@@ -48,15 +50,15 @@ function Header() {
           </Typography>
         </Box>
         <Box className={classes.buttons}>
+          <Button colorVariant={ColorVariant.Primary}>
+            <Typography variant="body2">{text.startYourFreeTrial}</Typography>
+          </Button>
           <Button
             variant="outlined"
             colorVariant={ColorVariant.Light}
             className={classes.bookADemoBtn}
           >
-            <Typography variant="body2">{text.bookADemo}</Typography>
-          </Button>
-          <Button colorVariant={ColorVariant.Primary}>
-            {text.startYourFreeTrial}
+            <Typography variant="body2">{text.ourOffers}</Typography>
           </Button>
         </Box>
       </Box>

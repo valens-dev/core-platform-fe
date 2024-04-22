@@ -55,8 +55,6 @@ const useStyles = tss.create(({ theme }) => ({
   line: {
     marginTop: '5px',
     marginBottom: '25px',
-    height: '0.5px',
-    background: theme.palette.light.dark,
   },
 }))
 

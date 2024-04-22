@@ -14,7 +14,6 @@ const useStyles = tss.create(({ theme }) => ({
     gap: '10px',
     '& > div': {
       width: '46.5%',
-      height: '0.5px',
     },
   },
   lightText: {
@@ -23,6 +22,11 @@ const useStyles = tss.create(({ theme }) => ({
   },
   btn: {
     height: '48px',
+    border: `1px solid ${theme.palette.light.main}`,
+    background: theme.palette.white.main,
+    '& > p': {
+      color: theme.palette.dark.main,
+    },
   },
 }))
 

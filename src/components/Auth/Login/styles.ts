@@ -15,9 +15,9 @@ const useStyles = tss.create(({ theme }) => ({
   },
   formControlLabel: {
     width: '50%',
-    color: theme.palette.light.dark,
     '& .MuiTypography-body1': {
       fontSize: '14px',
+      color: theme.palette.light.dark,
     },
   },
   checkbox: {
@@ -37,8 +37,6 @@ const useStyles = tss.create(({ theme }) => ({
   },
   loginBtn: {
     width: '100%',
-    background: theme.palette.primary.dark,
-    color: theme.palette.white.main,
     height: '50px',
   },
 }))

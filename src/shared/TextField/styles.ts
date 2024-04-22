@@ -2,9 +2,6 @@ import { tss } from '@styles/theme'
 
 const useStyles = tss.create(({ theme }) => ({
   root: {
-    '& .MuiInputBase-root': {
-      height: '40px',
-    },
     '& .MuiInput-input': {
       padding: '10px',
     },

@@ -6,17 +6,13 @@ const useStyles = tss.create(({ theme }) => ({
     height: '122px',
     display: 'flex',
     borderBottom: `2px solid ${theme.palette.light.main}`,
-    '* > h4, p': {
+    '* > p, svg': {
       cursor: 'pointer',
     },
   },
   logo: {
     width: '15%',
-    paddingTop: '40px',
-    display: 'grid',
-    placeItems: 'center',
-    fontSize: '30px',
-    color: theme.palette.primary.dark,
+    padding: '60px 60px',
   },
   links: {
     width: '60%',
@@ -45,6 +41,9 @@ const useStyles = tss.create(({ theme }) => ({
     paddingTop: '30px',
     '& > button': {
       height: '44px',
+    },
+    '& > button > p': {
+      fontWeight: theme.typography.fontWeight.bold,
     },
   },
   bookADemoBtn: {

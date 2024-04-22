@@ -28,7 +28,6 @@ function SocialAuthButtons({ isActiveTabLogin }: ISocialAuthButtons) {
       <Button
         variant="outlined"
         className={classes.btn}
-        colorVariant={ColorVariant.Light}
         startIcon={<GoogleLogo />}
       >
         {isActiveTabLogin ? (
