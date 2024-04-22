@@ -12,9 +12,7 @@ const useStyles = tss.create(({ theme }) => ({
   },
   logo: {
     width: '15%',
-    paddingTop: '40px',
-    display: 'grid',
-    placeItems: 'center',
+    padding: '60px 60px',
   },
   links: {
     width: '60%',

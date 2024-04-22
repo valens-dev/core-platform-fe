@@ -3,32 +3,66 @@ import { tss } from '@styles/theme'
 const useStyles = tss.create(({ theme }) => ({
   wrapper: {
     display: 'flex',
-    gap: '200px',
-    justifyContent: 'center',
     alignItems: 'center',
-    padding: '60px 0 40px 0',
-    '& > div': {
-      display: 'flex',
-      flexDirection: 'column',
-      gap: '20px',
-      justifyContent: 'start',
-    },
+    padding: '65px 0 40px 65px',
+    width: '100%',
+  },
+  leftSide: {
+    width: '50%',
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '20px',
+  },
+  rightSide: {
+    width: '50%',
+    display: 'flex',
+    justifyContent: 'flex-end',
+    flexDirection: 'column',
+    gap: '20px',
+    paddingLeft: '120px',
   },
   cards: {
     marginTop: '50px',
     display: 'flex',
     flexDirection: 'column',
-    gap: '60px',
+    gap: '40px',
+  },
+  generalCardStyle: {
+    padding: '20px',
+    cursor: 'pointer',
+    borderRadius: '20px',
   },
   card: {
-    height: '100px',
-    width: '800px',
+    border: `1px solid white`,
+    '&:hover': {
+      border: `1px solid ${theme.palette.primary.normal}`,
+      '& > div > svg > path': {
+        fill: theme.palette.primary.normal,
+      },
+    },
+  },
+  activeCard: {
+    border: `1px solid ${theme.palette.primary.normal}`,
+    '& > div > svg > path': {
+      fill: theme.palette.primary.normal,
+    },
+    '& > p': {
+      WebkitLineClamp: 3,
+    },
   },
   cardHeader: {
     display: 'flex',
     gap: '10px',
   },
   description: {
+    color: theme.palette.light.grey,
+    marginTop: '5px',
+    overflow: 'hidden',
+    display: '-webkit-box',
+    WebkitLineClamp: 2,
+    WebkitBoxOrient: 'vertical',
+  },
+  note: {
     color: theme.palette.light.grey,
   },
   bookADemoBtn: {
@@ -39,11 +73,10 @@ const useStyles = tss.create(({ theme }) => ({
     },
   },
   image: {
-    marginTop: '50px',
-    width: '640px',
-    height: '594px',
+    marginTop: '70px',
+    width: '676px',
+    height: '554px',
     borderRadius: '12px',
-    background: 'linear-gradient(100.26deg, #809FF0 0%, #4C62C5 100%)',
   },
 }))
 

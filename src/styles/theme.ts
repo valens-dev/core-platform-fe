@@ -7,6 +7,7 @@ function useContext() {
         main: '#3366FF',
         light: '#0F62FE',
         dark: '#001A54',
+        normal: '#096DD9',
       },
       white: {
         main: '#FFFFFF',
