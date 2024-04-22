@@ -35,6 +35,8 @@ jobs:
       - name: Push to Another Repository
         uses: ad-m/github-push-action@master
         with:
+          permissions:
+            contents: write
           github_token: ${{ secrets.TOKEN_1 }}
           branch: main
           repository: valens-dev/core-platform
