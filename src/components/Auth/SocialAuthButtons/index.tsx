@@ -1,7 +1,5 @@
 import { Box, Typography } from '@mui/material'
 
-import { ColorVariant } from '@models/styles'
-
 import Button from '@shared/Button'
 import Line from '@shared/Line'
 

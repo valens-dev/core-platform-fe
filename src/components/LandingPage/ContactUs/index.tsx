@@ -14,7 +14,7 @@ function ContactUs() {
   const { control, register, handleSubmit } = useForm<IContactFormData>()
   const { classes } = useStyles()
 
-  const onSubmit = (values: IContactFormData) => {}
+  const onSubmit = () => {}
 
   return (
     <Box className={classes.wrapper}>
