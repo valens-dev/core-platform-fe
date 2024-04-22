@@ -41,3 +41,4 @@ jobs:
           branch: main
           repository: valens-dev/core-platform
           path: ./dist
+          force: true
