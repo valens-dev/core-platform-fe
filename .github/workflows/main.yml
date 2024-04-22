@@ -17,9 +17,6 @@ concurrency:
 
 jobs:
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -35,17 +32,10 @@ jobs:
         run: yarn
       - name: Build
         run: yarn build
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+      - name: Push to Another Repository
+        uses: ad-m/github-push-action@master
         with:
-          path: './dist'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
-      - name: Discord Commits
-        uses: Sniddl/discord-commits@v1.3
-        with:
-          webhook: https://discord.com/api/webhooks/1193607200384499832/VdiV6pveW2GH5mUeoR7ke6oEeJe1JHwQQdWrPCsl1yelm9niosQt0ElpVwwSv2wA7lV_
-          message: 'Deployment done, check it out: https://core.valens.dev/'
+          github_token: ${{ secrets.PUSH_REPO_TOKEN }}
+          branch: main
+          repository: valens-dev/core-platform
+          path: ./dist
