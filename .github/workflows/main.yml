@@ -34,6 +34,8 @@ jobs:
         run: yarn
       - name: Build
         run: yarn build
+      - name: Check Git object integrity
+        run: git fsck
       - name: Push to Another Repository
         uses: ad-m/github-push-action@master
         with:
