@@ -7,9 +7,13 @@ import { AuthTab, TexFieldVariant } from './types'
 
 import { ColorVariant } from '@models/styles'
 
-export interface IProvider {
+export interface BaseLayout {
   children?: ReactNode
 }
+
+export interface IProvider extends BaseLayout {}
+
+export interface ILandingPageLayout extends BaseLayout {}
 
 export interface IAuth {
   tab?: AuthTab
