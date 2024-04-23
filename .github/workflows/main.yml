@@ -40,6 +40,7 @@ jobs:
           git config user.name "TarikCata"
           git config user.email "tarik.catovic@edu.fit.ba"
           git remote set-url origin https://valens-dev:${GIT_TOKEN}@github.com/valens-dev/core-platform.git
+          git fetch --unshallow
           git add -f dist
           git commit -m "Deploy the bundle"
           git push origin main --force
