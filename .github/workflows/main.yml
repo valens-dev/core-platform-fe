@@ -42,5 +42,5 @@ jobs:
           github_token: ${{ secrets.TOKEN_1 }}
           branch: main
           repository: valens-dev/core-platform
-          path: ./dist
+          path: .
           force: true
