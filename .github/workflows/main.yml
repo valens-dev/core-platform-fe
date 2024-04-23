@@ -36,13 +36,15 @@ jobs:
         run: yarn
       - name: Build
         run: yarn build
-      - name: Check Git object integrity
-        run: git fsck
-      - name: Push to Another Repository
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.TOKEN_1 }}
-          branch: main
-          repository: valens-dev/core-platform
-          path: ./
-          force: true
+      - name: Remove Git history and re-initialize
+        run: |
+          rm -rf .git
+          git init
+          git config user.name "TarikCata"
+          git config user.email "tarik.catovic@gmail.com"
+          git remote set-url origin https://valens-dev:${GIT_TOKEN}@github.com/valens-dev/core-platform.git
+          git add dist
+          git commit -m "Deploy the bundle"
+          git push origin HEAD:main --force
+        env:
+          GIT_TOKEN: ${{ secrets.TOKEN_1 }}
