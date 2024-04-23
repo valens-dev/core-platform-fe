@@ -23,8 +23,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.TOKEN_1 }}
-      - name: Fetch latest changes
-        run: git fetch
       - name: Set up Node
         uses: actions/setup-node@v3
         with:
@@ -41,10 +39,10 @@ jobs:
           rm -rf .git
           git init
           git config user.name "TarikCata"
-          git config user.email "tarik.catovic@gmail.com"
+          git config user.email "tarik.catovic@edu.fit.ba"
           git remote set-url origin https://valens-dev:${GIT_TOKEN}@github.com/valens-dev/core-platform.git
           git add dist
           git commit -m "Deploy the bundle"
-          git push origin HEAD:main --force
+          git push origin main --force
         env:
           GIT_TOKEN: ${{ secrets.TOKEN_1 }}
