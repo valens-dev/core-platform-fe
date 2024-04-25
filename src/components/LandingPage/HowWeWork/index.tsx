@@ -1,19 +1,21 @@
 import { useState } from 'react'
 import { Box, Typography } from '@mui/material'
+import classnames from 'classnames'
 
 import { appText } from '@utils/strings'
 
 import Chip from '@shared/Chip'
 import Button from '@shared/Button'
 
+import { IHowWeWork } from '@utils/interfaces'
+
 import { getCardsData } from './cards'
 
 import ConnectAndCreate from '@assets/images/connect-and-create.png'
 
 import useStyles from './styles'
-import classnames from 'classnames'
 
-function HowWeWork() {
+function HowWeWork({ scrollToContactUs }: IHowWeWork) {
   const text = appText.homepage.howWeWork
   const cards = getCardsData()
   const [activeCard, setActiveCard] = useState<number | null>(null)
@@ -49,7 +51,10 @@ function HowWeWork() {
         <Typography variant="body1" className={classes.note}>
           {text.note}
         </Typography>
-        <Button className={classes.bookADemoBtn}>
+        <Button
+          className={classes.bookADemoBtn}
+          onClick={() => scrollToContactUs()}
+        >
           <Typography variant="body2">{text.bookADemo}</Typography>
         </Button>
         <img src={ConnectAndCreate} className={classes.image} />

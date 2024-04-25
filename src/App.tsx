@@ -1,8 +1,8 @@
 import { Routes, Route, BrowserRouter } from 'react-router-dom'
 
 import Provider from '@hoc/Provider/Provider'
-import LandingPageLayout from '@hoc/Provider/LandingPage'
 
+import LandingPageLayout from '@components/Layout/LandingPageLayout'
 import LandingPage from '@components/LandingPage'
 import Auth from '@components/Auth'
 

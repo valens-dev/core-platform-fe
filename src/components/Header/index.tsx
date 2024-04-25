@@ -9,16 +9,22 @@ import Button from '@shared/Button'
 
 import CoreIcon from '@assets/logo/core.svg?react'
 
+import { IHeader } from '@utils/interfaces'
+
 import { appText } from '@utils/strings'
 import { AuthTab } from '@utils/types'
 
 import useStyles from './styles'
 
-function Header() {
+function Header({ scrollToContactUs }: IHeader) {
   const text = appText.header
   const pages = getNavLinks()
   const navigate = useNavigate()
   const { classes } = useStyles()
+
+  const handleScrollTo = (href: string) => {
+    if (href === 'contact') scrollToContactUs()
+  }
 
   return (
     <Box className={classes.wrapper}>
@@ -26,10 +32,10 @@ function Header() {
         <CoreIcon />
       </Box>
       <Box className={classes.links}>
-        {pages.map(({ label }, i) => (
-          <Typography key={`${label}_${i}`} variant="body1">
-            {label}
-          </Typography>
+        {pages.map(({ label, href }, i) => (
+          <Box onClick={() => handleScrollTo(href)} key={`${label}_${i}`}>
+            <Typography variant="body1">{label}</Typography>
+          </Box>
         ))}
       </Box>
       <Box className={classes.buttonsAndLinks}>

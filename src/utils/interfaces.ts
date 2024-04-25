@@ -32,6 +32,18 @@ export interface IRegistrationFormData {
   termsAndConditions: boolean
 }
 
+export interface IHeader {
+  scrollToContactUs: () => void
+}
+
+export interface IContactUs {
+  contactUsRef: any
+}
+
+export interface IHowWeWork {
+  scrollToContactUs: () => void
+}
+
 export interface IContactFormData {
   name: string
   email: string

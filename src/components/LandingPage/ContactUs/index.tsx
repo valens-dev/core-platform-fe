@@ -2,14 +2,15 @@ import { Box, Typography } from '@mui/material'
 import { useForm } from 'react-hook-form'
 
 import { appText } from '@utils/strings'
-import { IContactFormData } from '@utils/interfaces'
+
+import { IContactFormData, IContactUs } from '@utils/interfaces'
 
 import TextField from '@shared/TextField'
 import Button from '@shared/Button'
 
 import useStyles from './styles'
 
-function ContactUs() {
+function ContactUs({ contactUsRef }: IContactUs) {
   const text = appText.homepage.contactUs
   const { control, register, handleSubmit } = useForm<IContactFormData>()
   const { classes } = useStyles()
@@ -17,7 +18,7 @@ function ContactUs() {
   const onSubmit = () => {}
 
   return (
-    <Box className={classes.wrapper}>
+    <Box className={classes.wrapper} ref={contactUsRef}>
       <Typography variant="h2" className={classes.contactUs}>
         {text.contactUs}
       </Typography>
