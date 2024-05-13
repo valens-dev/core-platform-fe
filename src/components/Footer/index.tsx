@@ -6,11 +6,9 @@ import { appText } from '@utils/strings'
 
 import { getNavLinks } from '@components/Header/navLinks'
 
-import DiscordIcon from '@assets/icon/discord.svg?react'
-import FacebookIcon from '@assets/icon/facebook.svg?react'
-import BasketballIcon from '@assets/icon/basketball.svg?react'
-import InstagramIcon from '@assets/icon/instagram.svg?react'
-import BeIcon from '@assets/icon/be.svg?react'
+import MicrosoftIcon from '@assets/icon/microsoft.svg?react'
+import GithubIcon from '@assets/icon/github.svg?react'
+import LinkedInIcon from '@assets/icon/linkedIn.svg?react'
 
 import useStyles from './styles'
 
@@ -29,11 +27,9 @@ function Footer() {
         ))}
       </Box>
       <Box className={classes.logos}>
-        <DiscordIcon />
-        <FacebookIcon />
-        <BasketballIcon />
-        <InstagramIcon />
-        <BeIcon />
+        <MicrosoftIcon />
+        <GithubIcon />
+        <LinkedInIcon />
       </Box>
       <Line className={classes.line} />
       <Box className={classes.notes}>

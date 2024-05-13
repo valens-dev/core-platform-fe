@@ -15,3 +15,8 @@ export type ButtonProps = {
   colorVariant?: ColorVariant
   isSubmitting?: boolean
 } & Omit<MuiButtonProps, 'color' | 'size'>
+
+export type LandingPageOutletContextType = [
+  React.RefObject<HTMLDivElement | null>,
+  () => void
+]

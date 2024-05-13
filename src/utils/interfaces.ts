@@ -7,9 +7,13 @@ import { AuthTab, TexFieldVariant } from './types'
 
 import { ColorVariant } from '@models/styles'
 
-export interface IProvider {
+export interface BaseLayout {
   children?: ReactNode
 }
+
+export interface IProvider extends BaseLayout {}
+
+export interface ILandingPageLayout extends BaseLayout {}
 
 export interface IAuth {
   tab?: AuthTab
@@ -26,6 +30,18 @@ export interface IRegistrationFormData {
   email: string
   password: string
   termsAndConditions: boolean
+}
+
+export interface IHeader {
+  scrollToContactUs: () => void
+}
+
+export interface IContactUs {
+  contactUsRef: any
+}
+
+export interface IHowWeWork {
+  scrollToContactUs: () => void
 }
 
 export interface IContactFormData {

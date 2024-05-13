@@ -1,22 +1,24 @@
-import Footer from '@components/Footer'
-import Header from '@components/Header'
+import { useOutletContext } from 'react-router-dom'
 
 import AboutUs from './AboutUs'
 import ContactUs from './ContactUs'
 import HowWeWork from './HowWeWork'
 import InfoPanel from './InfoPanel'
 
-function Homepage() {
+import { LandingPageOutletContextType } from '@utils/types'
+
+function LandingPage() {
+  const [contactUsRef, scrollToContactUs]: LandingPageOutletContextType =
+    useOutletContext()
+
   return (
     <>
-      <Header />
       <InfoPanel />
-      <HowWeWork />
+      <HowWeWork scrollToContactUs={scrollToContactUs} />
       <AboutUs />
-      <ContactUs />
-      <Footer />
+      <ContactUs contactUsRef={contactUsRef} />
     </>
   )
 }
 
-export default Homepage
+export default LandingPage
