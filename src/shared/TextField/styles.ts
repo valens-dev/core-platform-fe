@@ -1,9 +1,9 @@
 import { tss } from '@styles/theme'
 
 const useStyles = tss.create(({ theme }) => ({
-  root: {
-    '& .MuiInput-input': {
-      padding: '10px',
+  adornedStart: {
+    '& > svg': {
+      width: '30px',
     },
   },
   errorText: {

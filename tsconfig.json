@@ -8,7 +8,9 @@
       "@assets/*": ["assets/*"],
       "@hoc/*": ["hoc/*"],
       "@styles/*": ["styles/*"],
-      "@models/*": ["models/*"]
+      "@models/*": ["models/*"],
+      "@constants/*": ["constants/*"],
+      "@context/*": ["context/*"]
     },
     "target": "ES2020",
     "useDefineForClassFields": true,

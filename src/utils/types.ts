@@ -14,6 +14,7 @@ export type ButtonProps = {
   variant?: ButtonVariant
   colorVariant?: ColorVariant
   isSubmitting?: boolean
+  startIcon?: JSX.Element
 } & Omit<MuiButtonProps, 'color' | 'size'>
 
 export type LandingPageOutletContextType = [

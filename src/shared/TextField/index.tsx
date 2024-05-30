@@ -14,6 +14,8 @@ function TextField({
   register,
   control,
   variant,
+  startIcon,
+  endIcon,
   size = 'small',
   customOnChange,
   ...props
@@ -38,8 +40,12 @@ function TextField({
         variant={variant}
         placeholder={placeholder}
         size={size}
-        classes={{
-          root: classes.root,
+        InputProps={{
+          startAdornment: startIcon,
+          endAdornment: endIcon,
+          classes: {
+            adornedStart: classes.adornedStart,
+          },
         }}
         {...register}
         {...props}

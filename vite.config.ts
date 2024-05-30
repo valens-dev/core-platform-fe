@@ -14,6 +14,8 @@ export default defineConfig({
       '@hoc': '/src/hoc',
       '@styles': '/src/styles',
       '@models': '/src/models',
+      '@constants': '/src/constants',
+      '@context': '/src/context',
     },
   },
 })

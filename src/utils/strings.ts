@@ -11,7 +11,7 @@ export const appText = {
     privacyPolicy: 'Privacy policy',
     security: 'Security',
   },
-  homepage: {
+  landingPage: {
     infoPanel: {
       chipLabel: 'Lorem ipsum is simply dummy tex',
       greatSupport: 'Great support on long term partnerships',
@@ -41,6 +41,31 @@ export const appText = {
       howWeWork: 'How we work?',
       note: 'Specify helps you gain control of your design system across teams and products.',
       bookADemo: 'Book a demo',
+    },
+  },
+  homepage: {
+    createWorkspace: 'Create Workspace',
+    profileHeader: {
+      name: 'example example',
+      email: 'example@gmail.com',
+    },
+    createWorkspaceModal: {
+      createWorkspace: 'Create Workspace',
+      note: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      workspaceTextfieldLabel: 'Workspace name:',
+      workspaceTextfieldPlaceholder: 'Name',
+      appIdLabel: 'App ID:',
+      appIdPlaceholder: 'Apple ID',
+      appClientSecretLabel: 'App client secret:',
+      appClientSecretPlaceholder: 'Client secret',
+      objectIdLabel: 'Object ID:',
+      objectIdPlaceholder: 'Object ID',
+    },
+    search: {
+      searchTitle: 'Search for template architectures',
+      textfieldPlaceholder: 'Describe your needs (key words)',
+      generate: 'Generate',
+      tryThis: 'Try this:',
     },
   },
   auth: {

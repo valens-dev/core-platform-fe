@@ -14,6 +14,14 @@ const getButtonGeneralStyle = (theme: Theme, colorVariant: ColorVariant) => {
         },
         '&:hover': { background: theme.palette.primary.dark },
       }
+    case ColorVariant.PrimaryLight:
+      return {
+        background: theme.palette.primary.main,
+        '& > p, span': {
+          color: theme.palette.light.main,
+        },
+        '&:hover': { background: theme.palette.primary.main },
+      }
     case ColorVariant.Light:
       return {
         background: theme.palette.white.main,

@@ -20,6 +20,7 @@ function useContext() {
         dark: '#A8A8A8',
         grey: '#525252',
         light: '#6F6F6F',
+        normal: '#E0E0E0',
       },
       dark: {
         main: '#161616',
@@ -58,4 +59,6 @@ function useContext() {
 
 export const { tss } = createTss({ useContext })
 
-export const useStyles = tss.create({})
+const bla = { caja: 1 }
+
+export const useStyles = tss.create({ bla })
