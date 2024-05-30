@@ -4,6 +4,7 @@ import AboutUs from './AboutUs'
 import ContactUs from './ContactUs'
 import HowWeWork from './HowWeWork'
 import InfoPanel from './InfoPanel'
+import Track from './Track'
 
 import { LandingPageOutletContextType } from '@utils/types'
 
@@ -15,6 +16,7 @@ function LandingPage() {
     <>
       <InfoPanel />
       <HowWeWork scrollToContactUs={scrollToContactUs} />
+      <Track />
       <AboutUs />
       <ContactUs contactUsRef={contactUsRef} />
     </>
