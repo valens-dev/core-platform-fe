@@ -60,6 +60,8 @@ export interface ITextField extends BaseTextFieldProps {
   control?: Control<any, any>
   variant?: TexFieldVariant
   size?: TexFieldSize
+  startIcon?: ReactNode
+  endIcon?: ReactNode
   customOnChange?: (value: string) => void
 }
 

@@ -12,7 +12,7 @@ import ArrowRight from '@assets/icon/arrow-right.svg?react'
 import useStyles from './styles'
 
 function AboutUs() {
-  const text = appText.homepage.aboutUs
+  const text = appText.landingPage.aboutUs
   const { classes } = useStyles()
 
   return (

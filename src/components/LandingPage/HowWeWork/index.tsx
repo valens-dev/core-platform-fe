@@ -16,7 +16,7 @@ import ConnectAndCreate from '@assets/images/connect-and-create.png'
 import useStyles from './styles'
 
 function HowWeWork({ scrollToContactUs }: IHowWeWork) {
-  const text = appText.homepage.howWeWork
+  const text = appText.landingPage.howWeWork
   const cards = getCardsData()
   const [activeCard, setActiveCard] = useState<number | null>(null)
   const { classes } = useStyles()

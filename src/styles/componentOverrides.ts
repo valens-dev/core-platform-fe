@@ -39,5 +39,14 @@ export const componentOverrides = createTheme({
         },
       },
     },
+    MuiTextField: {
+      styleOverrides: {
+        root: {
+          '& .MuiInput-input': {
+            padding: '10px',
+          },
+        },
+      },
+    },
   },
 })

@@ -11,7 +11,7 @@ import Button from '@shared/Button'
 import useStyles from './styles'
 
 function ContactUs({ contactUsRef }: IContactUs) {
-  const text = appText.homepage.contactUs
+  const text = appText.landingPage.contactUs
   const { control, register, handleSubmit } = useForm<IContactFormData>()
   const { classes } = useStyles()
 

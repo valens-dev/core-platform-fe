@@ -13,7 +13,7 @@ import ExampleImage from '@assets/images/example.png'
 import useStyles from './styles'
 
 function InfoPanel() {
-  const text = appText.homepage.infoPanel
+  const text = appText.landingPage.infoPanel
   const { classes } = useStyles()
 
   return (
