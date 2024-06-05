@@ -3,14 +3,15 @@ import { Typography } from "@mui/material";
 import classnames from "classnames";
 import useStyles from "./styles";
 
-interface PlanPriceProps {
+interface IPlanPriceProps {
   price: string;
   variant: "offerCard" | "comparisonTable";
 }
 
-const PlanPrice: React.FC<PlanPriceProps> = ({ price, variant }) => {
+const PlanPrice: React.FC<IPlanPriceProps> = ({ price, variant }) => {
   const { classes } = useStyles();
   const [amount, period] = price.split(" ");
+
   return (
     <Typography className={classnames(classes.price, classes[variant])}>
       <span className="amount">{amount} </span>

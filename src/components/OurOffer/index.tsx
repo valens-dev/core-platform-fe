@@ -12,11 +12,11 @@ import ComparisonTable from "./ComparisonTable";
 import useStyles from "./styles";
 
 const OurOffer: React.FC = () => {
+  const { classes } = useStyles();
   const text = appText.pricingPage.ourOffer;
   const [isMonthly, setIsMonthly] = useState(true);
 
-  const plans = isMonthly ? monthlyPlans : annuallyPlans;
-  const { classes } = useStyles();
+  const planType = isMonthly ? monthlyPlans : annuallyPlans;
 
   return (
     <Box className={classes.wrapper}>
@@ -44,11 +44,15 @@ const OurOffer: React.FC = () => {
         </Button>
       </Box>
       <Box className={classes.plans}>
-        {plans.map((plan, index) => (
+        {planType.map((plan, index) => (
           <OfferCard key={index} plan={plan} text={text} />
         ))}
       </Box>
-      <ComparisonTable text={text} features={featureComparison} plans={plans} />
+      <ComparisonTable
+        text={text}
+        features={featureComparison}
+        plans={planType}
+      />
     </Box>
   );
 };

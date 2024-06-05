@@ -20,7 +20,8 @@ const useStyles = tss.create(({ theme }) => ({
     flex: 2,
   },
   tableHeaderPlan: {
-    flex: "1",
+    flexBasis: 0,
+    flexGrow: 1,
     textAlign: "center",
   },
   starterPrice: {
@@ -45,7 +46,6 @@ const useStyles = tss.create(({ theme }) => ({
     fontSize: "24px",
     fontWeight: theme.typography.fontWeight.medium,
   },
-  planPrice: {},
 }));
 
 export default useStyles;

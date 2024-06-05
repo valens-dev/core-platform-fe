@@ -36,7 +36,10 @@ function useContext() {
       },
     },
     typography: {
-      fontFamily: "Open Sans, sans-serif",
+      fontFamily: {
+        primary: "Open Sans, sans-serif",
+        secondary: "Inter, sans-serif",
+      },
       fontWeight: {
         extraLight: 200,
         light: 300,
@@ -68,6 +71,6 @@ function useContext() {
 
 export const { tss } = createTss({ useContext });
 
-const bla = { caja: 1 };
+const style = { styles: 1 };
 
-export const useStyles = tss.create({ bla });
+export const useStyles = tss.create({ style });

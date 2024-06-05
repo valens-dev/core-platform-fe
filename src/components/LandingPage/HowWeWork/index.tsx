@@ -15,11 +15,11 @@ import ConnectAndCreate from "@assets/images/connect-and-create.png";
 
 import useStyles from "./styles";
 
-function HowWeWork({ scrollToContactUs }: IHowWeWork) {
+const HowWeWork: React.FC<IHowWeWork> = ({ scrollToContactUs }) => {
+  const { classes } = useStyles();
   const text = appText.landingPage.howWeWork;
   const cards = getCardsData();
   const [activeCard, setActiveCard] = useState<number | null>(null);
-  const { classes } = useStyles();
 
   return (
     <Box className={classes.wrapper}>
@@ -63,6 +63,6 @@ function HowWeWork({ scrollToContactUs }: IHowWeWork) {
       </Box>
     </Box>
   );
-}
+};
 
 export default HowWeWork;

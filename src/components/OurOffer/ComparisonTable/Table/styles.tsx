@@ -10,22 +10,19 @@ const useStyles = tss.create(({ theme }) => ({
     padding: "10px 0",
   },
   tableFeature: {
-    flex: "2",
+    flexBasis: 0,
+    flexGrow: 2,
   },
   tableCell: {
-    flex: "1",
+    flexBasis: 0,
+    flexGrow: 1,
     textAlign: "center",
-  },
-  yesIcon: {},
-  noIcon: {
-    color: theme.palette.error.main,
   },
   emptyFeatureCell: {
     color: theme.palette.dark.main,
     fontWeight: theme.typography.fontWeight.semiBold,
   },
   nonEmptyFeatureCell: {
-    fontFamily: "Inter, sans-serif",
     color: theme.palette.dark.darkGrey,
     fontWeight: theme.typography.fontWeight.regular,
   },

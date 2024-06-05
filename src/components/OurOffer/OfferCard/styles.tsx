@@ -8,7 +8,6 @@ const useStyles = tss.create(({ theme }) => ({
     width: "348px",
     height: "663px",
     boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-    position: "relative",
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
@@ -67,7 +66,8 @@ const useStyles = tss.create(({ theme }) => ({
     listStyle: "none",
     padding: "0",
     margin: "20px 0",
-    flex: "1",
+    flexBasis: 0,
+    flexGrow: 1,
     "& li": {
       display: "flex",
       alignItems: "center",
@@ -80,18 +80,18 @@ const useStyles = tss.create(({ theme }) => ({
     marginBottom: "10px",
   },
   titleFeature: {
-    fontFamily: "Inter, sans-serif",
+    fontFamily: theme.typography.fontFamily.secondary,
     fontWeight: theme.typography.fontWeight.semiBold,
     lineHeight: "20px",
     fontSize: "16px",
     color: theme.palette.primary.dark,
   },
   textFeature: {
-    fontFamily: "Inter, sans-serif",
+    fontFamily: theme.typography.fontFamily.secondary,
     fontWeight: theme.typography.fontWeight.regular,
     fontSize: "16px",
   },
-  vectorIcon: {
+  checkIcon: {
     marginRight: "8px",
     width: "16px",
     height: "16px",
@@ -101,13 +101,13 @@ const useStyles = tss.create(({ theme }) => ({
     color: theme.palette.white.main,
     padding: "10px 20px",
     borderRadius: "5px",
-    "&:hover": {
-      backgroundColor: theme.palette.primary.main,
-    },
     position: "absolute",
     bottom: "-40px",
     left: "50%",
     transform: "translateX(-50%)",
+    "&:hover": {
+      backgroundColor: theme.palette.primary.dark,
+    },
   },
   btnPosition: {
     display: "flex",

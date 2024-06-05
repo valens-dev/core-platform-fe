@@ -26,9 +26,9 @@ function Header({ scrollToContactUs }: IHeader) {
     if (href === "contact" && scrollToContactUs) scrollToContactUs();
   };
 
-  const handleOpenOffers = () => {
+  function handleOpenOffers() {
     navigate("/our-offer");
-  };
+  }
 
   return (
     <Box className={classes.wrapper}>

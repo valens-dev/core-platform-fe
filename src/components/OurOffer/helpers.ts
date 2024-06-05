@@ -1,14 +1,14 @@
-export interface Plan {
+export interface IPlan {
   title: string;
   price: string;
 }
 
-export interface Feature {
+export interface IFeature {
   name: string;
   [key: string]: string | boolean;
 }
 
-export interface PlanProps {
+export interface IPlanProps {
   title: string;
   description: string;
   price: string;
@@ -17,7 +17,7 @@ export interface PlanProps {
   popular?: boolean;
 }
 
-export interface TextProps {
+export interface ITextProps {
   compareFeaturesTitle: string;
   title: string;
   mostPopular: string;

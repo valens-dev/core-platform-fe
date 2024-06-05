@@ -1,24 +1,32 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
-import { TextProps } from "../helpers";
+import { ITextProps } from "../helpers";
 import classnames from "classnames";
-import useStyles from "./styles";
-import { Feature, Plan } from "../helpers";
+import { IFeature, IPlan } from "../helpers";
 import PlanPrice from "../OfferCard/PlanPrice";
 import Table from "./Table";
+import useStyles from "./styles";
 
-interface ComparisonTableProps {
-  text: TextProps;
-  features: Feature[];
-  plans: Plan[];
+interface IComparisonTableProps {
+  text: ITextProps;
+  features: IFeature[];
+  plans: IPlan[];
 }
 
-const ComparisonTable: React.FC<ComparisonTableProps> = ({
+const ComparisonTable: React.FC<IComparisonTableProps> = ({
   text,
   plans,
   features,
 }) => {
   const { classes } = useStyles();
+
+  function getPlanPriceClass(planTitle: string) {
+    return classnames({
+      [classes.starterPrice]: planTitle === "Starter",
+      [classes.premiumPrice]: planTitle === "Premium",
+      [classes.enterprisePrice]: planTitle === "Enterprise",
+    });
+  }
 
   return (
     <Box className={classes.featureComparisonWrapper}>
@@ -29,13 +37,7 @@ const ComparisonTable: React.FC<ComparisonTableProps> = ({
         {plans.map((plan, index) => (
           <Box key={index} className={classes.tableHeaderPlan}>
             <Typography className={classes.planTitle}>{plan.title}</Typography>
-            <Typography
-              className={classnames(classes.planPrice, {
-                [classes.starterPrice]: plan.title === "Starter",
-                [classes.premiumPrice]: plan.title === "Premium",
-                [classes.enterprisePrice]: plan.title === "Enterprise",
-              })}
-            >
+            <Typography className={getPlanPriceClass(plan.title)}>
               <PlanPrice price={plan.price} variant="comparisonTable" />
             </Typography>
           </Box>
