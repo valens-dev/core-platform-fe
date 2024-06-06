@@ -26,10 +26,6 @@ function Header({ scrollToContactUs }: IHeader) {
     if (href === "contact" && scrollToContactUs) scrollToContactUs();
   };
 
-  function handleOpenOffers() {
-    navigate("/our-offer");
-  }
-
   return (
     <Box className={classes.wrapper}>
       <Box className={classes.logo}>
@@ -67,7 +63,6 @@ function Header({ scrollToContactUs }: IHeader) {
             variant="outlined"
             colorVariant={ColorVariant.Light}
             className={classes.bookADemoBtn}
-            onClick={handleOpenOffers}
           >
             <Typography variant="body2">{text.ourOffers}</Typography>
           </Button>
