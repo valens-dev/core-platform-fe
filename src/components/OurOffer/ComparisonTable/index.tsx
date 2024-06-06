@@ -1,8 +1,7 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
-import { ITextProps } from "../helpers";
 import classnames from "classnames";
-import { IFeature, IPlan } from "../helpers";
+import { IFeature, IPlan, ITextProps } from "../interfaces";
 import PlanPrice from "../OfferCard/PlanPrice";
 import Table from "./Table";
 import useStyles from "./styles";
@@ -20,13 +19,12 @@ const ComparisonTable: React.FC<IComparisonTableProps> = ({
 }) => {
   const { classes } = useStyles();
 
-  function getPlanPriceClass(planTitle: string) {
-    return classnames({
+  const getPlanPriceClass = (planTitle: string) =>
+    classnames({
       [classes.starterPrice]: planTitle === "Starter",
       [classes.premiumPrice]: planTitle === "Premium",
       [classes.enterprisePrice]: planTitle === "Enterprise",
     });
-  }
 
   return (
     <Box className={classes.featureComparisonWrapper}>

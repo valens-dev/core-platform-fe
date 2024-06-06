@@ -1,5 +1,5 @@
 import { Box, Typography } from "@mui/material";
-import { IFeature, IPlan, ITextProps } from "../../helpers";
+import { IFeature, IPlan, ITextProps } from "../../interfaces";
 import classnames from "classnames";
 import CheckIcon from "@assets/icon/check-in-icon.svg?react";
 import CrossIcon from "@assets/icon/x-icon.svg?react";
@@ -29,13 +29,15 @@ function Table({ features, plans }: IComparisonTableProps) {
 
   function handlePlanTable(feature: IFeature, planTitle: string) {
     const value = feature[planTitle.toLowerCase()];
-    return typeof value === "string" && value !== "" ? (
-      <Typography>{value}</Typography>
-    ) : value ? (
-      <CheckIcon />
-    ) : value === "" ? null : (
-      <CrossIcon />
-    );
+    if (typeof value === "string" && value !== "") {
+      return <Typography>{value}</Typography>;
+    } else if (value) {
+      return <CheckIcon />;
+    } else if (value === "") {
+      return null;
+    } else {
+      return <CrossIcon />;
+    }
   }
 
   return (

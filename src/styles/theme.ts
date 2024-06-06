@@ -11,7 +11,7 @@ function useContext() {
       },
       white: {
         main: "#FFFFFF",
-        light: "#e0e0e0",
+        light: "#E0E0E0",
       },
       error: {
         main: "#FF4D4F",
