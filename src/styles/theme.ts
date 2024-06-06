@@ -1,45 +1,33 @@
-import { createTss } from "tss-react";
+import { createTss } from 'tss-react'
 
 function useContext() {
   const theme = {
     palette: {
       primary: {
-        main: "#3366FF",
-        light: "#0F62FE",
-        dark: "#001A54",
-        normal: "#096DD9",
+        main: '#3366FF',
+        light: '#0F62FE',
+        dark: '#001A54',
+        normal: '#096DD9',
       },
       white: {
-        main: "#FFFFFF",
-        light: "#E0E0E0",
+        main: '#FFFFFF',
       },
       error: {
-        main: "#FF4D4F",
+        main: '#FF4D4F',
       },
       light: {
-        main: "#F4F4F4",
-        dark: "#A8A8A8",
-        grey: "#525252",
-        light: "#6F6F6F",
-        normal: "#E0E0E0",
-        lightGrey: "#C6C6C6",
+        main: '#F4F4F4',
+        dark: '#A8A8A8',
+        grey: '#525252',
+        light: '#6F6F6F',
+        normal: '#E0E0E0',
       },
       dark: {
-        main: "#161616",
-        darkGrey: "#343A40",
-      },
-      orange: {
-        main: "#FF832B",
-      },
-      green: {
-        main: "#24A148",
+        main: '#161616',
       },
     },
     typography: {
-      fontFamily: {
-        primary: "Open Sans, sans-serif",
-        secondary: "Inter, sans-serif",
-      },
+      fontFamily: 'Open Sans, sans-serif',
       fontWeight: {
         extraLight: 200,
         light: 300,
@@ -64,13 +52,13 @@ function useContext() {
         xxl: 1900,
       },
     },
-  };
+  }
 
-  return { theme };
+  return { theme }
 }
 
-export const { tss } = createTss({ useContext });
+export const { tss } = createTss({ useContext })
 
-const style = { styles: 1 };
+const bla = { caja: 1 }
 
-export const useStyles = tss.create({ style });
+export const useStyles = tss.create({ bla })
