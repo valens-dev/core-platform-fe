@@ -121,6 +121,7 @@ interface Color {
   info?: string;
   dark?: string;
   grey?: string;
+  
 }
 
 
