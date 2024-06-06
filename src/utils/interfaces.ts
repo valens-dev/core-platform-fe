@@ -94,6 +94,11 @@ export interface ILink {
   endIcon?: ReactNode;
 }
 
+interface FontFamily {
+  primary: string;
+  secondary: string;
+}
+
 interface FontWeights {
   extraLight: number;
   light: number;
@@ -106,7 +111,7 @@ interface FontWeights {
 }
 
 export interface Typography {
-  fontFamily: string;
+  fontFamily: FontFamily;
   fontWeight: FontWeights;
 }
 
@@ -124,6 +129,8 @@ export interface Palette {
   error: Color;
   light: Color;
   dark: Color;
+  orange: Color;
+  green: Color;
 }
 
 interface BreakpointValues {
