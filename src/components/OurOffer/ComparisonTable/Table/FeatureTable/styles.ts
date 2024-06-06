@@ -8,19 +8,19 @@ const useStyles = tss.create(({ theme }) => ({
   tableRow: {
     display: "flex",
     padding: "10px 0",
-    justifyContent: "space-between", // Ensure cells are spaced evenly
-    alignItems: "center", // Ensure vertical alignment
+    justifyContent: "space-between",
+    alignItems: "center",
   },
   tableFeature: {
     flexBasis: 0,
-    flexGrow: 2, // Ensure feature name cell is wider
-    paddingLeft: "20px", // Add padding to the left for alignment
+    flexGrow: 2,
+    paddingLeft: "20px",
   },
   tableCell: {
     flexBasis: 0,
     flexGrow: 1,
-    textAlign: "center", // Ensure text is centered in each cell
-    padding: "10px", // Add padding for better spacing
+    textAlign: "center",
+    padding: "10px",
   },
   emptyFeatureCell: {
     color: theme.palette.dark.main,
