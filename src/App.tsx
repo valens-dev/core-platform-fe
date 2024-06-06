@@ -1,4 +1,4 @@
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Provider from "@hoc/Provider/Provider";
 import HomePageLayout from "@components/Layout/HomePageLayout";
@@ -13,7 +13,7 @@ import OurOffer from "@components/OurOffer";
 function App() {
   return (
     <Provider>
-      <BrowserRouter>
+      <Router>
         <Routes>
           <Route element={<LandingPageLayout />}>
             <Route path="/" element={<LandingPage />} />
@@ -24,7 +24,7 @@ function App() {
             <Route path="/homepage" element={<HomePage />} />
           </Route>
         </Routes>
-      </BrowserRouter>
+      </Router>
     </Provider>
   );
 }
