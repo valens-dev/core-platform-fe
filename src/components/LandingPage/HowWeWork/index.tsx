@@ -1,25 +1,25 @@
-import { useState } from 'react'
-import { Box, Typography } from '@mui/material'
-import classnames from 'classnames'
+import { useState } from "react";
+import { Box, Typography } from "@mui/material";
+import classnames from "classnames";
 
-import { appText } from '@utils/strings'
+import { appText } from "@utils/strings";
 
-import Chip from '@shared/Chip'
-import Button from '@shared/Button'
+import Chip from "@shared/Chip";
+import Button from "@shared/Button";
 
-import { IHowWeWork } from '@utils/interfaces'
+import { IHowWeWork } from "@utils/interfaces";
 
-import { getCardsData } from './cards'
+import { getCardsData } from "./cards";
 
-import ConnectAndCreate from '@assets/images/connect-and-create.png'
+import ConnectAndCreate from "@assets/images/connect-and-create.png";
 
-import useStyles from './styles'
+import useStyles from "./styles";
 
-function HowWeWork({ scrollToContactUs }: IHowWeWork) {
-  const text = appText.landingPage.howWeWork
-  const cards = getCardsData()
-  const [activeCard, setActiveCard] = useState<number | null>(null)
-  const { classes } = useStyles()
+const HowWeWork: React.FC<IHowWeWork> = ({ scrollToContactUs }) => {
+  const { classes } = useStyles();
+  const text = appText.landingPage.howWeWork;
+  const cards = getCardsData();
+  const [activeCard, setActiveCard] = useState<number | null>(null);
 
   return (
     <Box className={classes.wrapper}>
@@ -57,10 +57,12 @@ function HowWeWork({ scrollToContactUs }: IHowWeWork) {
         >
           <Typography variant="body2">{text.bookADemo}</Typography>
         </Button>
-        <img src={ConnectAndCreate} className={classes.image} />
+        <Box className={classes.imagePosition}>
+          <img src={ConnectAndCreate} className={classes.image} />
+        </Box>
       </Box>
     </Box>
-  )
-}
+  );
+};
 
-export default HowWeWork
+export default HowWeWork;
