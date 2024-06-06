@@ -123,6 +123,7 @@ interface Color {
   grey?: string;
 }
 
+
 export interface Palette {
   primary: Color;
   white: Color;
