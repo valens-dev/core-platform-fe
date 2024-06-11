@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route, HashRouter } from "react-router-dom";
 
 import Provider from "@hoc/Provider/Provider";
 import HomePageLayout from "@components/Layout/HomePageLayout";
@@ -13,18 +13,18 @@ import OurOffer from "@components/OurOffer";
 function App() {
   return (
     <Provider>
-      <Router>
+      <HashRouter>
         <Routes>
           <Route element={<LandingPageLayout />}>
             <Route path="/" element={<LandingPage />} />
-            <Route path="/our-offer" element={<OurOffer />} />
           </Route>
+          <Route path="/our-offer" element={<OurOffer />} />
           <Route path="/auth" element={<Auth />} />
           <Route element={<HomePageLayout />}>
             <Route path="/homepage" element={<HomePage />} />
           </Route>
         </Routes>
-      </Router>
+      </HashRouter>
     </Provider>
   );
 }
