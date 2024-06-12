@@ -1,17 +1,23 @@
-import { tss } from '@styles/theme'
+import { tss } from "@styles/theme";
 
 const useStyles = tss.create(() => ({
   wrapper: {
-    paddingTop: '15px',
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '15px',
+    padding: "15px",
+    display: "flex",
+    flexDirection: "column",
+    gap: "15px",
+    position: "relative",
   },
   buttonWrapper: {
-    width: '100%',
-    display: 'flex',
-    justifyContent: 'right',
+    width: "100%",
+    display: "flex",
+    justifyContent: "flex-end",
   },
-}))
+  questionPopUp: {
+    position: "fixed",
+    bottom: "15px",
+    right: "80px",
+  },
+}));
 
-export default useStyles
+export default useStyles;

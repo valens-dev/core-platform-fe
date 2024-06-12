@@ -29,10 +29,13 @@ function Header({ scrollToContactUs }: IHeader) {
   function handleOpenOffers() {
     navigate("/our-offer");
   }
+  function handleLogoClick() {
+    navigate("/");
+  }
 
   return (
     <Box className={classes.wrapper}>
-      <Box className={classes.logo}>
+      <Box className={classes.logo} onClick={handleLogoClick}>
         <CoreIcon />
       </Box>
       <Box className={classes.links}>
