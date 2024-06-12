@@ -1,11 +1,11 @@
-import { Box } from '@mui/material';
-import { Outlet } from 'react-router-dom';
+import { Box } from '@mui/material'
+import { Outlet } from 'react-router-dom'
 
-import ProfileHeader from '@components/Header/ProfileHeader';
-import useStyles from './styles';
+import ProfileHeader from '@components/Header/ProfileHeader'
+import useStyles from './styles'
 
 function HomePageLayout() {
-  const { classes } = useStyles();
+  const { classes } = useStyles()
 
   return (
     <>
@@ -14,7 +14,7 @@ function HomePageLayout() {
         <Outlet />
       </Box>
     </>
-  );
+  )
 }
 
-export default HomePageLayout;
+export default HomePageLayout

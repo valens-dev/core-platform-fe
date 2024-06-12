@@ -1,4 +1,4 @@
-import { tss } from '@styles/theme';
+import { tss } from '@styles/theme'
 
 const useStyles = tss.create(({ theme }) => ({
   registrationForm: {
@@ -30,6 +30,6 @@ const useStyles = tss.create(({ theme }) => ({
     color: theme.palette.white.main,
     height: '54px',
   },
-}));
+}))
 
-export default useStyles;
+export default useStyles

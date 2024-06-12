@@ -1,20 +1,20 @@
-import { useForm } from 'react-hook-form';
-import { Box, Checkbox, FormControlLabel, Typography } from '@mui/material';
+import { useForm } from 'react-hook-form'
+import { Box, Checkbox, FormControlLabel, Typography } from '@mui/material'
 
-import Button from '@shared/Button';
-import TextField from '@shared/TextField';
+import Button from '@shared/Button'
+import TextField from '@shared/TextField'
 
-import { IRegistrationFormData } from '@utils/interfaces';
-import { appText } from '@utils/strings';
+import { IRegistrationFormData } from '@utils/interfaces'
+import { appText } from '@utils/strings'
 
-import useStyles from './styles';
+import useStyles from './styles'
 
 function Registration() {
-  const text = appText.auth.registration;
-  const { control, register, handleSubmit } = useForm<IRegistrationFormData>();
-  const { classes } = useStyles();
+  const text = appText.auth.registration
+  const { control, register, handleSubmit } = useForm<IRegistrationFormData>()
+  const { classes } = useStyles()
 
-  const onSubmit = async () => {};
+  const onSubmit = async () => {}
 
   return (
     <form
@@ -63,7 +63,7 @@ function Registration() {
         <Typography>{text.registerAccount}</Typography>
       </Button>
     </form>
-  );
+  )
 }
 
-export default Registration;
+export default Registration

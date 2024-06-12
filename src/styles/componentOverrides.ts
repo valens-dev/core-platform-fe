@@ -1,4 +1,4 @@
-import { createTheme } from '@mui/material/styles';
+import { createTheme } from '@mui/material/styles'
 
 export const componentOverrides = createTheme({
   components: {
@@ -49,4 +49,4 @@ export const componentOverrides = createTheme({
       },
     },
   },
-});
+})

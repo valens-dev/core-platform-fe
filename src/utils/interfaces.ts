@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { ReactNode } from 'react';
-import { UseFormRegisterReturn } from 'react-hook-form/dist/types/form';
-import { Control } from 'react-hook-form';
-import { BaseTextFieldProps } from '@mui/material';
+import { ReactNode } from "react";
+import { UseFormRegisterReturn } from "react-hook-form/dist/types/form";
+import { Control } from "react-hook-form";
+import { BaseTextFieldProps } from "@mui/material";
 
-import { AuthTab, TexFieldVariant } from './types';
+import { AuthTab, TexFieldVariant } from "./types";
 
-import { ColorVariant } from '@models/styles';
+import { ColorVariant } from "@models/styles";
 
 export interface BaseLayout {
   children?: ReactNode;
@@ -51,7 +51,7 @@ export interface IContactFormData {
   message: string;
 }
 
-type TexFieldSize = 'small' | 'medium';
+type TexFieldSize = "small" | "medium";
 
 export interface ITextField extends BaseTextFieldProps {
   label?: string;
@@ -121,7 +121,9 @@ interface Color {
   info?: string;
   dark?: string;
   grey?: string;
+  
 }
+
 
 export interface Palette {
   primary: Color;

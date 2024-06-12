@@ -1,25 +1,29 @@
-import { FC } from 'react';
-import { Box, Button, Typography, IconButton, Popover } from '@mui/material';
+import { FC } from "react";
+import { Box, Button, Typography, IconButton, Popover } from "@mui/material";
 
-import CloseIcon from '@assets/icon/x-icon.svg?react';
+import CloseIcon from "@assets/icon/x-icon.svg?react";
 
-import { appText } from '@utils/strings';
-import { ITourPopupProps } from './interfaces';
+import useStyles from "./styles";
+import { appText } from "@utils/strings";
 
-import useStyles from './styles';
+interface ITourPopupProps {
+  open: boolean;
+  refEl: HTMLElement | null;
+  handleClose: () => void;
+}
 
-const TourPopup: FC<ITourPopupProps> = ({ open, forwardRef, handleClose }) => {
+const TourPopup: FC<ITourPopupProps> = ({ open, refEl, handleClose }) => {
   const text = appText.homepage.tourPopup;
   const { classes } = useStyles();
 
   return (
     <Popover
       open={open}
-      anchorEl={forwardRef}
+      anchorEl={refEl}
       onClose={handleClose}
       transformOrigin={{
-        vertical: 'bottom',
-        horizontal: 'right',
+        vertical: "bottom",
+        horizontal: "right",
       }}
       className={classes.tourPopup}
     >

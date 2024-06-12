@@ -1,14 +1,14 @@
-import { Box } from '@mui/material';
+import { Box } from '@mui/material'
 
-import Marquee from 'react-fast-marquee';
+import Marquee from 'react-fast-marquee'
 
-import { getIcons } from './icons';
+import { getIcons } from './icons'
 
-import useStyles from './styles';
+import useStyles from './styles'
 
 const Track = () => {
-  const icons = getIcons();
-  const { classes } = useStyles();
+  const icons = getIcons()
+  const { classes } = useStyles()
 
   return (
     <Box className={classes.wrapper}>
@@ -20,7 +20,7 @@ const Track = () => {
         </Marquee>
       </Box>
     </Box>
-  );
-};
+  )
+}
 
-export default Track;
+export default Track

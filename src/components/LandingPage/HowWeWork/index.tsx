@@ -1,19 +1,19 @@
-import { useState } from 'react';
-import { Box, Typography } from '@mui/material';
-import classnames from 'classnames';
+import { useState } from "react";
+import { Box, Typography } from "@mui/material";
+import classnames from "classnames";
 
-import { appText } from '@utils/strings';
+import { appText } from "@utils/strings";
 
-import Chip from '@shared/Chip';
-import Button from '@shared/Button';
+import Chip from "@shared/Chip";
+import Button from "@shared/Button";
 
-import { IHowWeWork } from '@utils/interfaces';
+import { IHowWeWork } from "@utils/interfaces";
 
-import { getCardsData } from './cards';
+import { getCardsData } from "./cards";
 
-import ConnectAndCreate from '@assets/images/connect-and-create.png';
+import ConnectAndCreate from "@assets/images/connect-and-create.png";
 
-import useStyles from './styles';
+import useStyles from "./styles";
 
 const HowWeWork: React.FC<IHowWeWork> = ({ scrollToContactUs }) => {
   const { classes } = useStyles();

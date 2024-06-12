@@ -1,28 +1,28 @@
-import { Box, Typography } from '@mui/material';
-import { useForm } from 'react-hook-form';
+import { Box, Typography } from '@mui/material'
+import { useForm } from 'react-hook-form'
 
-import TextField from '@shared/TextField';
-import Button from '@shared/Button';
+import TextField from '@shared/TextField'
+import Button from '@shared/Button'
 
-import { ColorVariant } from '@models/styles';
+import { ColorVariant } from '@models/styles'
 
-import { appText } from '@utils/strings';
+import { appText } from '@utils/strings'
 
-import useStyles from './styles';
+import useStyles from './styles'
 
 interface IWorkspaceAuthData {
-  workspaceName: string;
-  appId: string;
-  appClientSecret: string;
-  objectId: string;
+  workspaceName: string
+  appId: string
+  appClientSecret: string
+  objectId: string
 }
 
 function CreateWorkspaceModal() {
-  const text = appText.homepage.createWorkspaceModal;
-  const { control, register, handleSubmit } = useForm<IWorkspaceAuthData>();
-  const { classes } = useStyles();
+  const text = appText.homepage.createWorkspaceModal
+  const { control, register, handleSubmit } = useForm<IWorkspaceAuthData>()
+  const { classes } = useStyles()
 
-  const onSubmit = async () => {};
+  const onSubmit = async () => {}
 
   return (
     <Box className={classes.wrapper}>
@@ -63,7 +63,7 @@ function CreateWorkspaceModal() {
         </Button>
       </form>
     </Box>
-  );
+  )
 }
 
-export default CreateWorkspaceModal;
+export default CreateWorkspaceModal

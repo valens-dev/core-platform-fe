@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
-import { Box, Typography, Button } from '@mui/material';
-import classnames from 'classnames';
+import React, { useState } from "react";
+import { Box, Typography, Button } from "@mui/material";
+import classnames from "classnames";
 import {
   appText,
   monthlyPlans,
   annuallyPlans,
   featureComparison,
-} from '@utils/strings';
-import OfferCard from './OfferCard';
-import ComparisonTable from './ComparisonTable';
-import useStyles from './styles';
+} from "@utils/strings";
+import OfferCard from "./OfferCard";
+import ComparisonTable from "./ComparisonTable";
+import useStyles from "./styles";
 
 const OurOffer: React.FC = () => {
   const { classes } = useStyles();

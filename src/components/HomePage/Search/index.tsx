@@ -1,19 +1,20 @@
-import { Box, Typography } from '@mui/material';
-import { useForm } from 'react-hook-form';
+import { Box, Typography } from "@mui/material";
+import { useForm } from "react-hook-form";
 
-import TextField from '@shared/TextField';
-import Button from '@shared/Button';
+import TextField from "@shared/TextField";
+import Button from "@shared/Button";
 
-import { appText } from '@utils/strings';
+import { appText } from "@utils/strings";
 
-import { ColorVariant } from '@models/styles';
+import { ColorVariant } from "@models/styles";
 
-import SearchIcon from '@assets/icon/search-icon.svg?react';
+import SearchIcon from "@assets/icon/search-icon.svg?react";
 
-import Template from './Template';
-import { templateChips, templates } from './templatesData';
+import Template from "./Template";
+import { getTemplateChips } from "./templateChips";
+import { getTemplates } from "./templates";
 
-import useStyles from './styles';
+import useStyles from "./styles";
 
 export interface ISearchForm {
   search: string;
@@ -21,11 +22,13 @@ export interface ISearchForm {
 
 function Search() {
   const text = appText.homepage.search;
+  const templates = getTemplates();
+  const templateChips = getTemplateChips();
   const { control, register } = useForm<ISearchForm>();
   const { classes } = useStyles();
 
   const getChipStyle = (background: string, color: string) => {
-    return { background, '& > span': color, border: `1px solid ${color}` };
+    return { background, "& > span": color, border: `1px solid ${color}` };
   };
 
   const textfieldEndButton = (
@@ -48,7 +51,7 @@ function Search() {
       </Box>
       <TextField
         control={control}
-        register={register('search')}
+        register={register("search")}
         placeholder={text.textfieldPlaceholder}
         fullWidth
         className={classes.textfield}

@@ -1,30 +1,30 @@
-import { tss } from '@styles/theme';
+import { tss } from '@styles/theme'
 
-import { ColorVariant } from '@models/styles';
+import { ColorVariant } from '@models/styles'
 
-import { Theme } from '@utils/interfaces';
+import { Theme } from '@utils/interfaces'
 
 const getLinkGeneralStyle = (
   theme: Theme,
   colorVariant: ColorVariant,
   underline: boolean
 ) => {
-  let color;
+  let color
   switch (colorVariant) {
     case ColorVariant.Primary:
-      color = theme.palette.primary.dark;
-      break;
+      color = theme.palette.primary.dark
+      break
     case ColorVariant.PrimaryLight:
-      color = theme.palette.primary.main;
-      break;
+      color = theme.palette.primary.main
+      break
     default:
-      color = theme.palette.light.dark;
+      color = theme.palette.light.dark
   }
 
   return !underline
     ? { color, textDecoration: 'none' }
-    : { color, textDecorationColor: color };
-};
+    : { color, textDecorationColor: color }
+}
 
 const useStyles = tss
   .withParams<{ colorVariant: ColorVariant; underline: boolean }>()
@@ -38,6 +38,6 @@ const useStyles = tss
     link: {
       ...getLinkGeneralStyle(theme, colorVariant, underline),
     },
-  }));
+  }))
 
-export default useStyles;
+export default useStyles

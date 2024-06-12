@@ -5,4 +5,4 @@ export const getNavLinks = () => [
   { label: 'Contact us', href: 'contact' },
   { label: 'Cloud services', href: 'cloud-services' },
   { label: 'DaaD services', href: 'daad-services' },
-];
+]

@@ -1,8 +1,8 @@
-import { Box, Card, CardContent, Typography } from '@mui/material';
+import { Box, Card, CardContent, Typography } from "@mui/material";
 
-import { cardData } from '@utils/strings';
+import { cardData } from "@utils/strings";
 
-import useStyles from './styles';
+import useStyles from "./styles";
 
 function Cards() {
   const { classes } = useStyles();

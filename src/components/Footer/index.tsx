@@ -1,21 +1,21 @@
-import { Box, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material'
 
-import Line from '@shared/Line';
+import Line from '@shared/Line'
 
-import { appText } from '@utils/strings';
+import { appText } from '@utils/strings'
 
-import { getNavLinks } from '@components/Header/navLinks';
+import { getNavLinks } from '@components/Header/navLinks'
 
-import MicrosoftIcon from '@assets/icon/microsoft.svg?react';
-import GithubIcon from '@assets/icon/github.svg?react';
-import LinkedInIcon from '@assets/icon/linkedIn.svg?react';
+import MicrosoftIcon from '@assets/icon/microsoft.svg?react'
+import GithubIcon from '@assets/icon/github.svg?react'
+import LinkedInIcon from '@assets/icon/linkedIn.svg?react'
 
-import useStyles from './styles';
+import useStyles from './styles'
 
 function Footer() {
-  const text = appText.footer;
-  const pages = getNavLinks();
-  const { classes } = useStyles();
+  const text = appText.footer
+  const pages = getNavLinks()
+  const { classes } = useStyles()
 
   return (
     <Box className={classes.wrapper}>
@@ -46,7 +46,7 @@ function Footer() {
         </Box>
       </Box>
     </Box>
-  );
+  )
 }
 
-export default Footer;
+export default Footer

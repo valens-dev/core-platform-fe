@@ -1,19 +1,19 @@
-import { Box, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material'
 
-import Chip from '@shared/Chip';
-import Link from '@shared/Link';
+import Chip from '@shared/Chip'
+import Link from '@shared/Link'
 
-import { ColorVariant } from '@models/styles';
+import { ColorVariant } from '@models/styles'
 
-import { appText } from '@utils/strings';
+import { appText } from '@utils/strings'
 
-import ArrowRight from '@assets/icon/arrow-right.svg?react';
+import ArrowRight from '@assets/icon/arrow-right.svg?react'
 
-import useStyles from './styles';
+import useStyles from './styles'
 
 function AboutUs() {
-  const text = appText.landingPage.aboutUs;
-  const { classes } = useStyles();
+  const text = appText.landingPage.aboutUs
+  const { classes } = useStyles()
 
   return (
     <Box className={classes.wrapper}>
@@ -33,7 +33,7 @@ function AboutUs() {
         endIcon={<ArrowRight />}
       />
     </Box>
-  );
+  )
 }
 
-export default AboutUs;
+export default AboutUs

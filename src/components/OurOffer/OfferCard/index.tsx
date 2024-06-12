@@ -1,11 +1,11 @@
-import React from 'react';
-import { Box, Typography, Button } from '@mui/material';
-import { IPlanProps, ITextProps } from '../interfaces';
-import StarIcon from '@assets/icon/star-icon.svg?react';
-import PlanPrice from './PlanPrice';
-import FeatureList from './FeatureList';
-import classnames from 'classnames';
-import useStyles from './styles';
+import React from "react";
+import { Box, Typography, Button } from "@mui/material";
+import { IPlanProps, ITextProps } from "../interfaces";
+import StarIcon from "@assets/icon/star-icon.svg?react";
+import PlanPrice from "./PlanPrice";
+import FeatureList from "./FeatureList";
+import classnames from "classnames";
+import useStyles from "./styles";
 
 interface IOfferCardProps {
   plan: IPlanProps;
@@ -16,9 +16,9 @@ const OfferCard: React.FC<IOfferCardProps> = ({ plan, text }) => {
   const { classes } = useStyles();
 
   const offerCardClass = classnames(classes.plan, {
-    [classes.starter]: plan.title === 'Starter',
-    [classes.premium]: plan.title === 'Premium',
-    [classes.enterprise]: plan.title === 'Enterprise',
+    [classes.starter]: plan.title === "Starter",
+    [classes.premium]: plan.title === "Premium",
+    [classes.enterprise]: plan.title === "Enterprise",
   });
 
   return (

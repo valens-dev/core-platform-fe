@@ -1,11 +1,11 @@
-import { Button as MuiButton } from '@mui/material';
-import classNames from 'classnames';
+import { Button as MuiButton } from '@mui/material'
+import classNames from 'classnames'
 
-import { ColorVariant } from '@models/styles';
+import { ColorVariant } from '@models/styles'
 
-import { ButtonProps } from '@utils/types';
+import { ButtonProps } from '@utils/types'
 
-import useStyles from './styles';
+import useStyles from './styles'
 
 function Button({
   children,
@@ -15,7 +15,7 @@ function Button({
   isSubmitting,
   ...props
 }: ButtonProps) {
-  const { classes } = useStyles({ colorVariant });
+  const { classes } = useStyles({ colorVariant })
 
   return (
     <MuiButton
@@ -25,7 +25,7 @@ function Button({
     >
       {children}
     </MuiButton>
-  );
+  )
 }
 
-export default Button;
+export default Button

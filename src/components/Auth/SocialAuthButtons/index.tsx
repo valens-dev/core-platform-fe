@@ -1,18 +1,18 @@
-import { Box, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material'
 
-import Button from '@shared/Button';
-import Line from '@shared/Line';
+import Button from '@shared/Button'
+import Line from '@shared/Line'
 
-import { ISocialAuthButtons } from '@utils/interfaces';
-import { appText } from '@utils/strings';
+import { ISocialAuthButtons } from '@utils/interfaces'
+import { appText } from '@utils/strings'
 
-import GoogleLogo from '@assets/logo/google-logo.svg?react';
+import GoogleLogo from '@assets/logo/google-logo.svg?react'
 
-import useStyles from './styles';
+import useStyles from './styles'
 
 function SocialAuthButtons({ isActiveTabLogin }: ISocialAuthButtons) {
-  const text = appText.auth.socialAuthButtons;
-  const { classes } = useStyles();
+  const text = appText.auth.socialAuthButtons
+  const { classes } = useStyles()
 
   return (
     <Box className={classes.wrapper}>
@@ -35,7 +35,7 @@ function SocialAuthButtons({ isActiveTabLogin }: ISocialAuthButtons) {
         )}
       </Button>
     </Box>
-  );
+  )
 }
 
-export default SocialAuthButtons;
+export default SocialAuthButtons

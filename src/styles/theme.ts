@@ -1,45 +1,45 @@
-import { createTss } from 'tss-react';
+import { createTss } from "tss-react";
 
 function useContext() {
   const theme = {
     palette: {
       primary: {
-        main: '#3366FF',
-        light: '#0F62FE',
-        dark: '#001A54',
-        normal: '#096DD9',
-        purple: '#8A3FFC',
+        main: "#3366FF",
+        light: "#0F62FE",
+        dark: "#001A54",
+        normal: "#096DD9",
+        purple: "#8A3FFC",
       },
       white: {
-        main: '#FFFFFF',
-        light: '#E0E0E0',
+        main: "#FFFFFF",
+        light: "#E0E0E0",
       },
       error: {
-        main: '#FF4D4F',
+        main: "#FF4D4F",
       },
       light: {
-        main: '#F4F4F4',
-        dark: '#A8A8A8',
-        grey: '#525252',
-        light: '#6F6F6F',
-        normal: '#E0E0E0',
-        lightGrey: '#C6C6C6',
+        main: "#F4F4F4",
+        dark: "#A8A8A8",
+        grey: "#525252",
+        light: "#6F6F6F",
+        normal: "#E0E0E0",
+        lightGrey: "#C6C6C6",
       },
       dark: {
-        main: '#161616',
-        darkGrey: '#343A40',
+        main: "#161616",
+        darkGrey: "#343A40",
       },
       orange: {
-        main: '#FF832B',
+        main: "#FF832B",
       },
       green: {
-        main: '#24A148',
+        main: "#24A148",
       },
     },
     typography: {
       fontFamily: {
-        primary: 'Open Sans, sans-serif',
-        secondary: 'Inter, sans-serif',
+        primary: "Open Sans, sans-serif",
+        secondary: "Inter, sans-serif",
       },
       fontWeight: {
         extraLight: 200,
