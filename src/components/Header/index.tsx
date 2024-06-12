@@ -1,20 +1,20 @@
-import { Box, Typography } from "@mui/material";
-import { useNavigate } from "react-router-dom";
+import { Box, Typography } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
-import { getNavLinks } from "./navLinks";
+import { getNavLinks } from './navLinks';
 
-import { ColorVariant } from "@models/styles";
+import { ColorVariant } from '@models/styles';
 
-import Button from "@shared/Button";
+import Button from '@shared/Button';
 
-import CoreIcon from "@assets/logo/core.svg?react";
+import CoreIcon from '@assets/logo/core.svg?react';
 
-import { IHeader } from "@utils/interfaces";
+import { IHeader } from '@utils/interfaces';
 
-import { appText } from "@utils/strings";
-import { AuthTab } from "@utils/types";
+import { appText } from '@utils/strings';
+import { AuthTab } from '@utils/types';
 
-import useStyles from "./styles";
+import useStyles from './styles';
 
 function Header({ scrollToContactUs }: IHeader) {
   const text = appText.header;
@@ -23,15 +23,15 @@ function Header({ scrollToContactUs }: IHeader) {
   const { classes } = useStyles();
 
   const handleScrollTo = (href: string) => {
-    if (href === "contact" && scrollToContactUs) scrollToContactUs();
+    if (href === 'contact' && scrollToContactUs) scrollToContactUs();
   };
 
-  function handleOpenOffers() {
-    navigate("/our-offer");
-  }
-  function handleLogoClick() {
-    navigate("/");
-  }
+  const handleOpenOffers = () => {
+    navigate('/our-offer');
+  };
+  const handleLogoClick = () => {
+    navigate('/');
+  };
 
   return (
     <Box className={classes.wrapper}>
@@ -49,14 +49,14 @@ function Header({ scrollToContactUs }: IHeader) {
         <Box className={classes.auth}>
           <Typography
             variant="body2"
-            onClick={() => navigate("/auth", { state: { tab: AuthTab.Login } })}
+            onClick={() => navigate('/auth', { state: { tab: AuthTab.Login } })}
           >
             {text.login}
           </Typography>
           <Typography
             variant="body2"
             onClick={() =>
-              navigate("/auth", { state: { tab: AuthTab.Registration } })
+              navigate('/auth', { state: { tab: AuthTab.Registration } })
             }
           >
             {text.signUp}

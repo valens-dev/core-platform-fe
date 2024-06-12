@@ -1,26 +1,26 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Typography } from '@mui/material';
 
-import { appText } from "@utils/strings";
+import { appText } from '@utils/strings';
 
-import Line from "@shared/Line";
-import Chip from "@shared/Chip";
-import Button from "@shared/Button";
-import { useNavigate } from "react-router-dom";
+import Line from '@shared/Line';
+import Chip from '@shared/Chip';
+import Button from '@shared/Button';
+import { useNavigate } from 'react-router-dom';
 
-import { ColorVariant } from "@models/styles";
+import { ColorVariant } from '@models/styles';
 
-import ExampleImage from "@assets/images/example.png";
+import ExampleImage from '@assets/images/example.png';
 
-import useStyles from "./styles";
+import useStyles from './styles';
 
 function InfoPanel() {
   const text = appText.landingPage.infoPanel;
   const navigate = useNavigate();
   const { classes } = useStyles();
 
-  function handleOpenOffers() {
-    navigate("/our-offer");
-  }
+  const handleOpenOffers = () => {
+    navigate('/our-offer');
+  };
 
   return (
     <Box className={classes.wrapper}>

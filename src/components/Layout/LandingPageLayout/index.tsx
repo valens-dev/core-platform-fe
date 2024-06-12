@@ -1,14 +1,14 @@
-import { useRef } from 'react'
-import { Outlet } from 'react-router-dom'
+import { useRef } from 'react';
+import { Outlet } from 'react-router-dom';
 
-import Header from '@components/Header'
-import Footer from '@components/Footer'
+import Header from '@components/Header';
+import Footer from '@components/Footer';
 
 function LandingPageLayout() {
-  const contactUsRef = useRef<HTMLDivElement | null>()
+  const contactUsRef = useRef<HTMLDivElement | null>();
 
   const scrollToContactUs = () =>
-    contactUsRef.current?.scrollIntoView({ behavior: 'smooth' })
+    contactUsRef.current?.scrollIntoView({ behavior: 'smooth' });
 
   return (
     <>
@@ -16,7 +16,7 @@ function LandingPageLayout() {
       <Outlet context={[contactUsRef, scrollToContactUs]} />
       <Footer />
     </>
-  )
+  );
 }
 
-export default LandingPageLayout
+export default LandingPageLayout;

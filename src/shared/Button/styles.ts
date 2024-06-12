@@ -1,8 +1,8 @@
-import { tss } from '@styles/theme'
+import { tss } from '@styles/theme';
 
-import { ColorVariant } from '@models/styles'
+import { ColorVariant } from '@models/styles';
 
-import { Theme } from '@utils/interfaces'
+import { Theme } from '@utils/interfaces';
 
 const getButtonGeneralStyle = (theme: Theme, colorVariant: ColorVariant) => {
   switch (colorVariant) {
@@ -13,7 +13,7 @@ const getButtonGeneralStyle = (theme: Theme, colorVariant: ColorVariant) => {
           color: theme.palette.light.main,
         },
         '&:hover': { background: theme.palette.primary.dark },
-      }
+      };
     case ColorVariant.PrimaryLight:
       return {
         background: theme.palette.primary.main,
@@ -21,7 +21,7 @@ const getButtonGeneralStyle = (theme: Theme, colorVariant: ColorVariant) => {
           color: theme.palette.light.main,
         },
         '&:hover': { background: theme.palette.primary.main },
-      }
+      };
     case ColorVariant.Light:
       return {
         background: theme.palette.white.main,
@@ -33,11 +33,11 @@ const getButtonGeneralStyle = (theme: Theme, colorVariant: ColorVariant) => {
           background: theme.palette.white.main,
           border: `1px solid ${theme.palette.primary.dark}`,
         },
-      }
+      };
     default:
-      return {}
+      return {};
   }
-}
+};
 
 const useStyles = tss
   .withParams<{ colorVariant: ColorVariant }>()
@@ -45,6 +45,6 @@ const useStyles = tss
     general: {
       ...getButtonGeneralStyle(theme, colorVariant),
     },
-  }))
+  }));
 
-export default useStyles
+export default useStyles;

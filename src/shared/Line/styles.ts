@@ -1,4 +1,4 @@
-import { tss } from '@styles/theme'
+import { tss } from '@styles/theme';
 
 const useStyles = tss.create(({ theme }) => ({
   line: {
@@ -6,6 +6,6 @@ const useStyles = tss.create(({ theme }) => ({
     height: '0.5px',
     width: '100%',
   },
-}))
+}));
 
-export default useStyles
+export default useStyles;

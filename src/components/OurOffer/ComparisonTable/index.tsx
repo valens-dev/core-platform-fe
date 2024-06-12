@@ -1,10 +1,10 @@
-import React from "react";
-import { Box, Typography } from "@mui/material";
-import classnames from "classnames";
-import { IFeature, IPlan, ITextProps } from "../interfaces";
-import PlanPrice from "../OfferCard/PlanPrice";
-import Table from "./Table";
-import useStyles from "./styles";
+import React from 'react';
+import { Box, Typography } from '@mui/material';
+import classnames from 'classnames';
+import { IFeature, IPlan, ITextProps } from '../interfaces';
+import PlanPrice from '../OfferCard/PlanPrice';
+import Table from './Table';
+import useStyles from './styles';
 
 interface IComparisonTableProps {
   text: ITextProps;
@@ -21,9 +21,9 @@ const ComparisonTable: React.FC<IComparisonTableProps> = ({
 
   const getPlanPriceClass = (planTitle: string) =>
     classnames({
-      [classes.starterPrice]: planTitle === "Starter",
-      [classes.premiumPrice]: planTitle === "Premium",
-      [classes.enterprisePrice]: planTitle === "Enterprise",
+      [classes.starterPrice]: planTitle === 'Starter',
+      [classes.premiumPrice]: planTitle === 'Premium',
+      [classes.enterprisePrice]: planTitle === 'Enterprise',
     });
 
   return (

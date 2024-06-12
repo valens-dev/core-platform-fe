@@ -1,4 +1,4 @@
-import { tss } from '@styles/theme'
+import { tss } from '@styles/theme';
 
 const useStyles = tss.create(({ theme }) => ({
   wrapper: {
@@ -49,6 +49,6 @@ const useStyles = tss.create(({ theme }) => ({
   bookADemoBtn: {
     color: theme.palette.primary.dark,
   },
-}))
+}));
 
-export default useStyles
+export default useStyles;

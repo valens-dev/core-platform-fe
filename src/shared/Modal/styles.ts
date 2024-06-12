@@ -1,4 +1,4 @@
-import { tss } from '@styles/theme'
+import { tss } from '@styles/theme';
 
 const useStyles = tss.create(() => ({
   modalWrapper: {
@@ -6,6 +6,6 @@ const useStyles = tss.create(() => ({
     justifyContent: 'center',
     alignItems: 'center',
   },
-}))
+}));
 
-export default useStyles
+export default useStyles;

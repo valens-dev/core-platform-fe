@@ -1,21 +1,21 @@
-import { Box, Typography } from '@mui/material'
-import { useForm } from 'react-hook-form'
+import { Box, Typography } from '@mui/material';
+import { useForm } from 'react-hook-form';
 
-import { appText } from '@utils/strings'
+import { appText } from '@utils/strings';
 
-import { IContactFormData, IContactUs } from '@utils/interfaces'
+import { IContactFormData, IContactUs } from '@utils/interfaces';
 
-import TextField from '@shared/TextField'
-import Button from '@shared/Button'
+import TextField from '@shared/TextField';
+import Button from '@shared/Button';
 
-import useStyles from './styles'
+import useStyles from './styles';
 
 function ContactUs({ contactUsRef }: IContactUs) {
-  const text = appText.landingPage.contactUs
-  const { control, register, handleSubmit } = useForm<IContactFormData>()
-  const { classes } = useStyles()
+  const text = appText.landingPage.contactUs;
+  const { control, register, handleSubmit } = useForm<IContactFormData>();
+  const { classes } = useStyles();
 
-  const onSubmit = () => {}
+  const onSubmit = () => {};
 
   return (
     <Box className={classes.wrapper} ref={contactUsRef}>
@@ -55,7 +55,7 @@ function ContactUs({ contactUsRef }: IContactUs) {
         </Box>
       </form>
     </Box>
-  )
+  );
 }
 
-export default ContactUs
+export default ContactUs;

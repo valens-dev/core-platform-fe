@@ -1,7 +1,7 @@
-import Header from '@components/Header'
-import Footer from '@components/Footer'
+import Header from '@components/Header';
+import Footer from '@components/Footer';
 
-import { ILandingPageLayout } from '@utils/interfaces'
+import { ILandingPageLayout } from '@utils/interfaces';
 
 function LandingPageLayout({ children }: ILandingPageLayout) {
   return (
@@ -10,7 +10,7 @@ function LandingPageLayout({ children }: ILandingPageLayout) {
       {children}
       <Footer />
     </>
-  )
+  );
 }
 
-export default LandingPageLayout
+export default LandingPageLayout;
