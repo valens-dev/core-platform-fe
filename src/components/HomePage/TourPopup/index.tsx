@@ -5,21 +5,16 @@ import CloseIcon from "@assets/icon/x-icon.svg?react";
 
 import useStyles from "./styles";
 import { appText } from "@utils/strings";
+import { ITourPopupProps } from "./interfaces";
 
-interface ITourPopupProps {
-  open: boolean;
-  refEl: HTMLElement | null;
-  handleClose: () => void;
-}
-
-const TourPopup: FC<ITourPopupProps> = ({ open, refEl, handleClose }) => {
+const TourPopup: FC<ITourPopupProps> = ({ open, forwardRef, handleClose }) => {
   const text = appText.homepage.tourPopup;
   const { classes } = useStyles();
 
   return (
     <Popover
       open={open}
-      anchorEl={refEl}
+      anchorEl={forwardRef}
       onClose={handleClose}
       transformOrigin={{
         vertical: "bottom",

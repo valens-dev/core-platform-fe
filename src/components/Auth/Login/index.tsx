@@ -23,9 +23,10 @@ function Login() {
 
   const onSubmit = async () => {};
 
-  const HandleOpenHomepage = () => {
+  const handleOpenHomepage = () => {
     navigate("/homepage");
   };
+
   return (
     <form className={classes.loginForm} onSubmit={handleSubmit(onSubmit)}>
       <TextField
@@ -63,7 +64,7 @@ function Login() {
       </Box>
       <Button
         className={classes.loginBtn}
-        onClick={HandleOpenHomepage}
+        onClick={handleOpenHomepage}
         type="submit"
       >
         <Typography variant="body1">{text.signIn}</Typography>

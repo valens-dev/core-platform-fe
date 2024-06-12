@@ -18,9 +18,9 @@ function InfoPanel() {
   const navigate = useNavigate();
   const { classes } = useStyles();
 
-  function handleOpenOffers() {
+  const handleOpenOffers = () => {
     navigate("/our-offer");
-  }
+  };
 
   return (
     <Box className={classes.wrapper}>

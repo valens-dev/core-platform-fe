@@ -1,19 +1,21 @@
 import { useEffect, useRef, useState } from "react";
+
 import { Box, Typography, IconButton } from "@mui/material";
 
 import QuestionPopUp from "@assets/icon/questionpop-icon.svg?react";
+
 import Button from "@shared/Button";
 import Modal from "@shared/Modal";
 
-import Search from "./Search";
-import CreateWorkspaceModal from "./CreateWorkspaceModal";
-
 import { appText } from "@utils/strings";
 
-import useStyles from "./styles";
+import Search from "./Search";
+import CreateWorkspaceModal from "./CreateWorkspaceModal";
 import SearchBar from "./SearchBar";
 import Cards from "./Cards";
 import TourPopup from "./TourPopup";
+
+import useStyles from "./styles";
 
 function HomePage() {
   const text = appText.homepage;
@@ -31,6 +33,7 @@ function HomePage() {
       setIsTourOpen(true);
     }
   }, []);
+
   return (
     <Box className={classes.wrapper}>
       <Box className={classes.buttonWrapper}>
@@ -55,7 +58,7 @@ function HomePage() {
       </IconButton>
       <TourPopup
         open={isTourOpen}
-        refEl={questionPopUpRef.current}
+        forwardRef={questionPopUpRef.current}
         handleClose={handleCloseTour}
       />
     </Box>

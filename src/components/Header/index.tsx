@@ -26,12 +26,12 @@ function Header({ scrollToContactUs }: IHeader) {
     if (href === "contact" && scrollToContactUs) scrollToContactUs();
   };
 
-  function handleOpenOffers() {
+  const handleOpenOffers = () => {
     navigate("/our-offer");
-  }
-  function handleLogoClick() {
+  };
+  const handleLogoClick = () => {
     navigate("/");
-  }
+  };
 
   return (
     <Box className={classes.wrapper}>

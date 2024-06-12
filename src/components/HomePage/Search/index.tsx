@@ -11,8 +11,7 @@ import { ColorVariant } from "@models/styles";
 import SearchIcon from "@assets/icon/search-icon.svg?react";
 
 import Template from "./Template";
-import { getTemplateChips } from "./templateChips";
-import { getTemplates } from "./templates";
+import { templateChips, templates } from "./templatesData";
 
 import useStyles from "./styles";
 
@@ -22,8 +21,6 @@ export interface ISearchForm {
 
 function Search() {
   const text = appText.homepage.search;
-  const templates = getTemplates();
-  const templateChips = getTemplateChips();
   const { control, register } = useForm<ISearchForm>();
   const { classes } = useStyles();
 
