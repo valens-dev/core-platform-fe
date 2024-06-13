@@ -4,16 +4,16 @@ import {
   FormControlLabel,
   Link,
   Typography,
-} from "@mui/material";
-import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
+} from '@mui/material';
+import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
 
-import Button from "@shared/Button";
-import TextField from "@shared/TextField";
+import Button from '@shared/Button';
+import TextField from '@shared/TextField';
 
-import { ILoginFormData } from "@utils/interfaces";
-import { appText } from "@utils/strings";
-import useStyles from "./styles";
+import { ILoginFormData } from '@utils/interfaces';
+import { appText } from '@utils/strings';
+import useStyles from './styles';
 
 function Login() {
   const text = appText.auth.login;
@@ -24,7 +24,7 @@ function Login() {
   const onSubmit = async () => {};
 
   const handleOpenHomepage = () => {
-    navigate("/homepage");
+    navigate('/homepage');
   };
 
   return (
@@ -32,14 +32,14 @@ function Login() {
       <TextField
         label={text.emailLabel}
         control={control}
-        register={register("email")}
+        register={register('email')}
         className={classes.textField}
         placeholder={text.emailPlaceHolder}
       ></TextField>
       <TextField
         label="Password:"
         control={control}
-        register={register("password")}
+        register={register('password')}
         className={classes.textField}
         placeholder={text.passwordPlaceHolder}
       ></TextField>
@@ -51,7 +51,7 @@ function Login() {
               defaultChecked
               color="default"
               className={classes.checkbox}
-              {...register("rememberMe")}
+              {...register('rememberMe')}
             />
           }
           label={text.rememberMe}

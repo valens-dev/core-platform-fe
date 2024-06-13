@@ -1,17 +1,17 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Typography } from '@mui/material';
 
-import { appText } from "@utils/strings";
+import { appText } from '@utils/strings';
 
-import Line from "@shared/Line";
-import Chip from "@shared/Chip";
-import Button from "@shared/Button";
-import { useNavigate } from "react-router-dom";
+import Line from '@shared/Line';
+import Chip from '@shared/Chip';
+import Button from '@shared/Button';
+import { useNavigate } from 'react-router-dom';
 
-import { ColorVariant } from "@models/styles";
+import { ColorVariant } from '@models/styles';
 
-import ExampleImage from "@assets/images/example.png";
+import ExampleImage from '@assets/images/example.png';
 
-import useStyles from "./styles";
+import useStyles from './styles';
 
 function InfoPanel() {
   const text = appText.landingPage.infoPanel;
@@ -19,7 +19,7 @@ function InfoPanel() {
   const { classes } = useStyles();
 
   const handleOpenOffers = () => {
-    navigate("/our-offer");
+    navigate('/our-offer');
   };
 
   return (

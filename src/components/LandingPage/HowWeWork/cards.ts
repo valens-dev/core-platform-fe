@@ -1,7 +1,7 @@
-import AIDrivenForecastIcon from '@assets/icon/ai-driven-forecast.svg?react'
-import ConnectAndStreamlineIcon from '@assets/icon/connect-streamline.svg?react'
-import InstantInsightsIcon from '@assets/icon/instant-insights.svg?react'
-import YourDataYourWayIcon from '@assets/icon/your-data-your-way.svg?react'
+import AIDrivenForecastIcon from '@assets/icon/ai-driven-forecast.svg?react';
+import ConnectAndStreamlineIcon from '@assets/icon/connect-streamline.svg?react';
+import InstantInsightsIcon from '@assets/icon/instant-insights.svg?react';
+import YourDataYourWayIcon from '@assets/icon/your-data-your-way.svg?react';
 
 export const getCardsData = () => [
   {
@@ -27,4 +27,4 @@ export const getCardsData = () => [
     description: `Visualize data the way you want. With Nimbus's intuitive dashboard builder, you can create tailored views that highlight the metrics that matter most to you. From drag-and-drop functionalities to color-coded data points, customization is at your fingertips.`,
     Icon: YourDataYourWayIcon,
   },
-]
+];

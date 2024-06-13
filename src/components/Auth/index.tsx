@@ -1,33 +1,33 @@
-import { useEffect, useState } from 'react'
-import { Box, Typography } from '@mui/material'
-import { useLocation } from 'react-router-dom'
-import classnames from 'classnames'
+import { useEffect, useState } from 'react';
+import { Box, Typography } from '@mui/material';
+import { useLocation } from 'react-router-dom';
+import classnames from 'classnames';
 
-import Login from './Login'
-import Registration from './Registration'
-import SocialAuthButtons from './SocialAuthButtons'
-import { AuthTab } from '@utils/types'
+import Login from './Login';
+import Registration from './Registration';
+import SocialAuthButtons from './SocialAuthButtons';
+import { AuthTab } from '@utils/types';
 
-import { IAuth } from '@utils/interfaces'
-import { appText } from '@utils/strings'
+import { IAuth } from '@utils/interfaces';
+import { appText } from '@utils/strings';
 
-import Line from '@shared/Line'
+import Line from '@shared/Line';
 
-import useStyles from './styles'
+import useStyles from './styles';
 
 function Auth({ tab = AuthTab.Login }: IAuth) {
-  const text = appText.auth
-  const [activeTab, setActiveTab] = useState(tab)
-  const location = useLocation()
-  const { classes } = useStyles()
+  const text = appText.auth;
+  const [activeTab, setActiveTab] = useState(tab);
+  const location = useLocation();
+  const { classes } = useStyles();
 
   useEffect(() => {
     if (location.state?.tab) {
-      setActiveTab(location.state.tab)
+      setActiveTab(location.state.tab);
     }
-  }, [])
+  }, []);
 
-  const isActiveTabLogin = activeTab === AuthTab.Login
+  const isActiveTabLogin = activeTab === AuthTab.Login;
   return (
     <Box className={classes.wrapper}>
       <Box className={classes.box}>
@@ -78,7 +78,7 @@ function Auth({ tab = AuthTab.Login }: IAuth) {
         <SocialAuthButtons isActiveTabLogin={isActiveTabLogin} />
       </Box>
     </Box>
-  )
+  );
 }
 
-export default Auth
+export default Auth;
