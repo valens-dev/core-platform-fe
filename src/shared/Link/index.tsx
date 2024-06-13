@@ -1,16 +1,16 @@
-import { Box, Link as MuiLink } from "@mui/material";
-import { useNavigate } from "react-router-dom";
-import classNames from "classnames";
+import { Box, Link as MuiLink } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
+import classNames from 'classnames';
 
-import { ColorVariant } from "@models/styles";
+import { ColorVariant } from '@models/styles';
 
-import { ILink } from "@utils/interfaces";
+import { ILink } from '@utils/interfaces';
 
-import useStyles from "./styles";
+import useStyles from './styles';
 
 function Link({
   label,
-  href = "",
+  href = '',
   colorVariant = ColorVariant.Light,
   className,
   underline = true,

@@ -1,4 +1,4 @@
-import { tss } from '@styles/theme'
+import { tss } from '@styles/theme';
 
 const useStyles = tss.create(({ theme }) => ({
   wrapper: {
@@ -20,6 +20,6 @@ const useStyles = tss.create(({ theme }) => ({
     lineHeight: '30px',
     marginTop: '30px',
   },
-}))
+}));
 
-export default useStyles
+export default useStyles;

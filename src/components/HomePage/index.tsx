@@ -1,15 +1,15 @@
-import { useEffect, useRef, useState } from "react";
-import { Box, Typography, IconButton } from "@mui/material";
-import QuestionPopUp from "@assets/icon/questionpop-icon.svg?react";
-import Button from "@shared/Button";
-import Modal from "@shared/Modal";
-import { appText } from "@utils/strings";
-import Search from "./Search";
-import CreateWorkspaceModal from "./CreateWorkspaceModal";
-import SearchBar from "./SearchBar";
-import Cards from "./Cards";
-import TourPopup from "./TourPopup";
-import useStyles from "./styles";
+import { useEffect, useRef, useState } from 'react';
+import { Box, Typography, IconButton } from '@mui/material';
+import QuestionPopUp from '@assets/icon/questionpop-icon.svg?react';
+import Button from '@shared/Button';
+import Modal from '@shared/Modal';
+import { appText } from '@utils/strings';
+import Search from './Search';
+import CreateWorkspaceModal from './CreateWorkspaceModal';
+import SearchBar from './SearchBar';
+import Cards from './Cards';
+import TourPopup from './TourPopup';
+import useStyles from './styles';
 
 function HomePage() {
   const text = appText.homepage;

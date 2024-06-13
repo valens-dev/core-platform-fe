@@ -1,33 +1,33 @@
-import { tss } from "@styles/theme";
+import { tss } from '@styles/theme';
 
 const useStyles = tss.create(({ theme }) => ({
   wrapper: {
-    width: "100%",
-    display: "grid",
-    placeItems: "center",
-    height: "100vh",
+    width: '100%',
+    display: 'grid',
+    placeItems: 'center',
+    height: '100vh',
   },
   box: {
     background: theme.palette.light.main,
-    width: "580px",
-    minHeight: "480px",
-    padding: "32px",
+    width: '580px',
+    minHeight: '480px',
+    padding: '32px',
   },
   infoDetails: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    flexDirection: "column",
-    gap: "18px",
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'column',
+    gap: '18px',
   },
   openingMessage: {
-    display: "flex",
-    gap: "6px",
-    alignItems: "center",
+    display: 'flex',
+    gap: '6px',
+    alignItems: 'center',
   },
   text: {
-    fontSize: "20px",
-    lineHeight: "28px",
+    fontSize: '20px',
+    lineHeight: '28px',
   },
   welcomeToText: {
     color: theme.palette.light.grey,
@@ -41,20 +41,20 @@ const useStyles = tss.create(({ theme }) => ({
     color: theme.palette.light.dark,
   },
   tabs: {
-    marginTop: "35px",
-    display: "flex",
-    gap: "32px",
+    marginTop: '35px',
+    display: 'flex',
+    gap: '32px',
   },
   tab: {
-    cursor: "pointer",
+    cursor: 'pointer',
   },
   activeTab: {
     borderBottom: `2px solid ${theme.palette.primary.dark}`,
     color: theme.palette.primary.dark,
   },
   line: {
-    marginTop: "5px",
-    marginBottom: "25px",
+    marginTop: '5px',
+    marginBottom: '25px',
   },
 }));
 

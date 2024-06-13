@@ -1,15 +1,15 @@
-import { Box, Dialog as MuiDialog } from '@mui/material'
+import { Box, Dialog as MuiDialog } from '@mui/material';
 
-import useStyles from './styles'
+import useStyles from './styles';
 
 interface IModal {
-  isOpen: boolean
-  handleClose?: () => void
-  children: JSX.Element
+  isOpen: boolean;
+  handleClose?: () => void;
+  children: JSX.Element;
 }
 
 function Modal({ children, isOpen, handleClose, ...props }: IModal) {
-  const { classes } = useStyles()
+  const { classes } = useStyles();
 
   return (
     <MuiDialog
@@ -20,7 +20,7 @@ function Modal({ children, isOpen, handleClose, ...props }: IModal) {
     >
       <Box>{children}</Box>
     </MuiDialog>
-  )
+  );
 }
 
-export default Modal
+export default Modal;

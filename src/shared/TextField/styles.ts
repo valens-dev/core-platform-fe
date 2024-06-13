@@ -1,4 +1,4 @@
-import { tss } from '@styles/theme'
+import { tss } from '@styles/theme';
 
 const useStyles = tss.create(({ theme }) => ({
   adornedStart: {
@@ -14,6 +14,6 @@ const useStyles = tss.create(({ theme }) => ({
     width: '100%',
     marginTop: '5px',
   },
-}))
+}));
 
-export default useStyles
+export default useStyles;
