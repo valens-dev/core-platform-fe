@@ -4,37 +4,42 @@ import {
   FormControlLabel,
   Link,
   Typography,
-} from '@mui/material'
-import { useForm } from 'react-hook-form'
+} from "@mui/material";
+import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 
-import Button from '@shared/Button'
-import TextField from '@shared/TextField'
+import Button from "@shared/Button";
+import TextField from "@shared/TextField";
 
-import { ILoginFormData } from '@utils/interfaces'
-import { appText } from '@utils/strings'
-
-import useStyles from './styles'
+import { ILoginFormData } from "@utils/interfaces";
+import { appText } from "@utils/strings";
+import useStyles from "./styles";
 
 function Login() {
-  const text = appText.auth.login
-  const { control, register, handleSubmit } = useForm<ILoginFormData>()
-  const { classes } = useStyles()
+  const text = appText.auth.login;
+  const navigate = useNavigate();
+  const { control, register, handleSubmit } = useForm<ILoginFormData>();
+  const { classes } = useStyles();
 
-  const onSubmit = async () => {}
+  const onSubmit = async () => {};
+
+  const handleOpenHomepage = () => {
+    navigate("/homepage");
+  };
 
   return (
     <form className={classes.loginForm} onSubmit={handleSubmit(onSubmit)}>
       <TextField
         label={text.emailLabel}
         control={control}
-        register={register('email')}
+        register={register("email")}
         className={classes.textField}
         placeholder={text.emailPlaceHolder}
       ></TextField>
       <TextField
         label="Password:"
         control={control}
-        register={register('password')}
+        register={register("password")}
         className={classes.textField}
         placeholder={text.passwordPlaceHolder}
       ></TextField>
@@ -46,7 +51,7 @@ function Login() {
               defaultChecked
               color="default"
               className={classes.checkbox}
-              {...register('rememberMe')}
+              {...register("rememberMe")}
             />
           }
           label={text.rememberMe}
@@ -57,11 +62,15 @@ function Login() {
           </Link>
         </Box>
       </Box>
-      <Button className={classes.loginBtn} type="submit">
+      <Button
+        className={classes.loginBtn}
+        onClick={handleOpenHomepage}
+        type="submit"
+      >
         <Typography variant="body1">{text.signIn}</Typography>
       </Button>
     </form>
-  )
+  );
 }
 
-export default Login
+export default Login;

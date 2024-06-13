@@ -1,22 +1,33 @@
-import { useState } from 'react'
-import { Box, Typography } from '@mui/material'
-
-import Button from '@shared/Button'
-import Modal from '@shared/Modal'
-
-import Search from './Search'
-import CreateWorkspaceModal from './CreateWorkspaceModal'
-
-import { appText } from '@utils/strings'
-
-import useStyles from './styles'
+import { useEffect, useRef, useState } from "react";
+import { Box, Typography, IconButton } from "@mui/material";
+import QuestionPopUp from "@assets/icon/questionpop-icon.svg?react";
+import Button from "@shared/Button";
+import Modal from "@shared/Modal";
+import { appText } from "@utils/strings";
+import Search from "./Search";
+import CreateWorkspaceModal from "./CreateWorkspaceModal";
+import SearchBar from "./SearchBar";
+import Cards from "./Cards";
+import TourPopup from "./TourPopup";
+import useStyles from "./styles";
 
 function HomePage() {
-  const text = appText.homepage
-  const [isModalOpen, setIsModalOpen] = useState(false)
-  const { classes } = useStyles()
+  const text = appText.homepage;
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isTourOpen, setIsTourOpen] = useState(false);
+  const questionPopUpRef = useRef<HTMLButtonElement>(null);
+  const tourPopupRef = useRef<HTMLDivElement>(null);
+  const { classes } = useStyles();
 
-  const handleCloseModal = () => setIsModalOpen(false)
+  const handleCloseModal = () => setIsModalOpen(false);
+  const handleCloseTour = () => setIsTourOpen(false);
+  const handleOpenPopUp = () => setIsTourOpen(true);
+
+  useEffect(() => {
+    if (questionPopUpRef.current) {
+      setIsTourOpen(true);
+    }
+  }, []);
 
   return (
     <Box className={classes.wrapper}>
@@ -31,8 +42,23 @@ function HomePage() {
         handleClose={handleCloseModal}
         children={<CreateWorkspaceModal />}
       />
+      <SearchBar />
+      <Cards />
+      <IconButton
+        ref={questionPopUpRef}
+        className={classes.questionPopUp}
+        onClick={handleOpenPopUp}
+      >
+        <QuestionPopUp />
+      </IconButton>
+      <TourPopup
+        open={isTourOpen}
+        refEl={questionPopUpRef.current}
+        handleClose={handleCloseTour}
+        ref={tourPopupRef}
+      />
     </Box>
-  )
+  );
 }
 
-export default HomePage
+export default HomePage;

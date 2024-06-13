@@ -46,7 +46,7 @@ export const appText = {
   homepage: {
     createWorkspace: "Create Workspace",
     profileHeader: {
-      name: "example example",
+      name: "Senad Senadovic",
       email: "example@gmail.com",
     },
     createWorkspaceModal: {
@@ -63,9 +63,18 @@ export const appText = {
     },
     search: {
       searchTitle: "Search for template architectures",
+      browseTemplates: "Or browse more templates",
       textfieldPlaceholder: "Describe your needs (key words)",
       generate: "Generate",
       tryThis: "Try this:",
+      lastViewed: "Last viewed",
+    },
+    tourPopup: {
+      title: "Take a quick tour of the file browser?",
+      content:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+      noThanks: "No, thanks",
+      yes: "Yes",
     },
   },
   auth: {
@@ -307,5 +316,19 @@ export const featureComparison = [
     starter: "Unlimited",
     premium: true,
     enterprise: true,
+  },
+];
+export const cardData = [
+  {
+    imgSrc: "/src/assets/images/template-5.png",
+    altText: "Clouds Gambit basics",
+    title: "Clouds Gambit basics",
+    creation: "Created: 5 days ago",
+  },
+  {
+    imgSrc: "/src/assets/images/template-6.png",
+    altText: "Clouds Gambit tutorial",
+    title: "Clouds Gambit basics",
+    creation: "Created: 5 days ago",
   },
 ];
