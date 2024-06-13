@@ -318,17 +318,3 @@ export const featureComparison = [
     enterprise: true,
   },
 ];
-export const cardData = [
-  {
-    imgSrc: "/src/assets/images/template-5.png",
-    altText: "Clouds Gambit basics",
-    title: "Clouds Gambit basics",
-    creation: "Created: 5 days ago",
-  },
-  {
-    imgSrc: "/src/assets/images/template-6.png",
-    altText: "Clouds Gambit tutorial",
-    title: "Clouds Gambit basics",
-    creation: "Created: 5 days ago",
-  },
-];

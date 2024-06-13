@@ -1,6 +1,5 @@
 import { Box, Card, CardContent, Typography } from "@mui/material";
-
-import { cardData } from "@utils/strings";
+import { cardsData } from "../Search/constants";
 
 import useStyles from "./styles";
 
@@ -9,7 +8,7 @@ function Cards() {
 
   return (
     <Box className={classes.cardsWrapper}>
-      {cardData.map((card, index) => (
+      {cardsData.map((card, index) => (
         <Card className={classes.card} key={index}>
           <img
             src={card.imgSrc}
