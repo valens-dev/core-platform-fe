@@ -1,5 +1,5 @@
 export interface ITourPopupProps {
   open: boolean;
-  forwardRef: HTMLElement | null;
+  refEl: HTMLElement | null;
   handleClose: () => void;
 }

@@ -11,7 +11,7 @@ import { ColorVariant } from "@models/styles";
 import SearchIcon from "@assets/icon/search-icon.svg?react";
 
 import Template from "./Template";
-import { templateChips, templates } from "./templatesData";
+import { templateChips, templates } from "./constants";
 
 import useStyles from "./styles";
 
