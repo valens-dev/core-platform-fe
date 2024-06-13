@@ -16,6 +16,7 @@ function HomePage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isTourOpen, setIsTourOpen] = useState(false);
   const questionPopUpRef = useRef<HTMLButtonElement>(null);
+  const tourPopupRef = useRef<HTMLDivElement>(null);
   const { classes } = useStyles();
 
   const handleCloseModal = () => setIsModalOpen(false);
@@ -54,6 +55,7 @@ function HomePage() {
         open={isTourOpen}
         refEl={questionPopUpRef.current}
         handleClose={handleCloseTour}
+        ref={tourPopupRef}
       />
     </Box>
   );

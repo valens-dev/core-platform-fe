@@ -5,7 +5,7 @@ import useStyles from "./styles";
 import { appText } from "@utils/strings";
 import { ITourPopupProps } from "./interfaces";
 
-const TourPopup = forwardRef<HTMLButtonElement, ITourPopupProps>(
+const TourPopup = forwardRef<HTMLDivElement, ITourPopupProps>(
   ({ open, refEl, handleClose }, ref) => {
     const text = appText.homepage.tourPopup;
     const { classes } = useStyles();
