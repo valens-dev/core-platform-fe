@@ -3,13 +3,18 @@ import { tss } from '@styles/theme';
 const useStyles = tss.create(({ theme }) => ({
   wrapper: {
     background: theme.palette.white.main,
-    width: '300px',
-    height: '226px',
+    width: '228px',
+    height: '240px',
+    border: `1px solid ${theme.palette.light.normalGrey}`,
+    display: 'flex',
+    flexDirection: 'column',
+    borderRadius: '2px',
   },
   imgWrapper: {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    flexGrow: 1,
   },
   description: {
     display: 'flex',
@@ -21,6 +26,10 @@ const useStyles = tss.create(({ theme }) => ({
   },
   link: {
     fontSize: '14px',
+  },
+  image: {
+    width: '100%',
+    height: 'auto',
   },
 }));
 

@@ -47,7 +47,8 @@ export const appText = {
     createWorkspace: 'Create Workspace',
     profileHeader: {
       name: 'Senad Senadovic',
-      email: 'example@gmail.com',
+      email: 'senads@gmail.com',
+      logout: 'Logout',
     },
     createWorkspaceModal: {
       createWorkspace: 'Create Workspace',
@@ -63,11 +64,18 @@ export const appText = {
     },
     search: {
       searchTitle: 'Search for template architectures',
+      browseTitle: 'What do you want to create today?',
       browseTemplates: 'Or browse more templates',
       textfieldPlaceholder: 'Describe your needs (key words)',
       generate: 'Generate',
       tryThis: 'Try this:',
       lastViewed: 'Last viewed',
+      mostInstalled: 'Most installed',
+      newest: 'Newest',
+      oldest: 'Oldest',
+    },
+    templates: {
+      templates: 'Templates',
     },
     tourPopup: {
       title: 'Take a quick tour of the file browser?',

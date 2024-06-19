@@ -1,13 +1,7 @@
 import { Box, Typography } from '@mui/material';
 import Link from '@shared/Link';
-
+import { ITemplate } from '@components/TemplatesPage/interfaces';
 import useStyles from './styles';
-
-interface ITemplate {
-  imgSrc: string;
-  label: string;
-  link: string;
-}
 
 function Template({ imgSrc, label, link }: ITemplate) {
   const { classes } = useStyles();
@@ -15,7 +9,7 @@ function Template({ imgSrc, label, link }: ITemplate) {
   return (
     <Box className={classes.wrapper}>
       <Box className={classes.imgWrapper}>
-        <img src={imgSrc} />
+        <img src={imgSrc} className={classes.image} />
       </Box>
       <Box className={classes.description}>
         <Typography>{label}</Typography>

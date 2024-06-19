@@ -23,6 +23,10 @@ const useStyles = tss.create(({ theme }) => ({
     display: 'flex',
     alignItems: 'center',
     gap: '12px',
+    cursor: 'pointer',
+  },
+  homeIcon: {
+    cursor: 'pointer',
   },
 }));
 

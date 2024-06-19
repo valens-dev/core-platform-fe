@@ -36,18 +36,16 @@ const useStyles = tss.create(({ theme }) => ({
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-  },
-  browseText: {
-    textDecoration: 'underline',
-    fontSize: '12px',
-    color: theme.palette.primary.light,
-    cursor: 'pointer',
-  },
-  templateWrapper: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    marginTop: '20px',
+    alignSelf: 'center',
+    fontSize: '20px',
+    fontWeight: theme.typography.fontWeight.medium,
   },
 }));
+
+export const getChipStyle = (background: string, color: string) => ({
+  background,
+  '& > span': { color },
+  border: `1px solid ${color}`,
+});
 
 export default useStyles;

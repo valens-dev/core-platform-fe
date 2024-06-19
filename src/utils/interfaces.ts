@@ -2,7 +2,7 @@
 import { ReactNode } from 'react';
 import { UseFormRegisterReturn } from 'react-hook-form/dist/types/form';
 import { Control } from 'react-hook-form';
-import { BaseTextFieldProps } from '@mui/material';
+import { BaseTextFieldProps, SelectChangeEvent } from '@mui/material';
 
 import { AuthTab, TexFieldVariant } from './types';
 
@@ -123,6 +123,11 @@ interface Color {
   grey?: string;
 }
 
+interface BlueColor {
+  lightBlue: string;
+  mediumBlue: string;
+}
+
 export interface Palette {
   primary: Color;
   white: Color;
@@ -131,6 +136,7 @@ export interface Palette {
   dark: Color;
   orange: Color;
   green: Color;
+  blue: BlueColor;
 }
 
 interface BreakpointValues {
@@ -147,4 +153,10 @@ interface BreakpointValues {
 
 export interface Breakpoints {
   values: BreakpointValues;
+}
+
+export interface ISelectOptionProps {
+  value: string;
+  onChange: (event: SelectChangeEvent<string>) => void;
+  options: { value: string; label: string }[];
 }

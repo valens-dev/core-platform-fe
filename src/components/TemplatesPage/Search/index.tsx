@@ -1,25 +1,18 @@
 import { Box, Typography } from '@mui/material';
 import { useForm } from 'react-hook-form';
-import { useNavigate } from 'react-router-dom';
 import TextField from '@shared/TextField';
 import Button from '@shared/Button';
 import { appText } from '@utils/strings';
 import { ColorVariant } from '@models/styles';
 import SearchIcon from '@assets/icon/search-icon.svg?react';
-import Template from './Template';
-import { templateChips, templates } from './constants';
-import { ISearchForm } from '@components/TemplatesPage/interfaces';
-import useStyles from './styles';
+import { templateChips } from '../../HomePage/Search/constants';
+import { ISearchForm } from '../interfaces';
+import useStyles, { getChipStyle } from './styles';
 
 function Search() {
   const text = appText.homepage.search;
-  const navigate = useNavigate();
   const { control, register } = useForm<ISearchForm>();
   const { classes } = useStyles();
-
-  const getChipStyle = (background: string, color: string) => {
-    return { background, '& > span': color, border: `1px solid ${color}` };
-  };
 
   const textfieldEndButton = (
     <Button
@@ -31,19 +24,10 @@ function Search() {
     </Button>
   );
 
-  const handleOpenTemplates = () => {
-    navigate('/homepage/templates');
-  };
   return (
     <Box className={classes.wrapper}>
       <Box className={classes.positionText}>
-        <Typography variant="h6">{text.searchTitle}</Typography>
-        <Typography
-          className={classes.browseText}
-          onClick={handleOpenTemplates}
-        >
-          {text.browseTemplates}
-        </Typography>
+        <Typography variant="h6">{text.browseTitle}</Typography>
       </Box>
       <TextField
         control={control}
@@ -66,11 +50,6 @@ function Search() {
               {label}
             </Typography>
           </Box>
-        ))}
-      </Box>
-      <Box className={classes.templateWrapper}>
-        {templates.map(({ imgSrc, label, link }, i) => (
-          <Template key={i} imgSrc={imgSrc} label={label} link={link} />
         ))}
       </Box>
     </Box>
