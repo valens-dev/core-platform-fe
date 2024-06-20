@@ -22,6 +22,7 @@ function useContext() {
         dark: '#A8A8A8',
         grey: '#525252',
         light: '#6F6F6F',
+        normalGrey: '#F0F0F0',
         normal: '#E0E0E0',
         lightGrey: '#C6C6C6',
       },
@@ -34,6 +35,10 @@ function useContext() {
       },
       green: {
         main: '#24A148',
+      },
+      blue: {
+        lightBlue: '#E6F7FF',
+        mediumBlue: '#1890FF',
       },
     },
     typography: {

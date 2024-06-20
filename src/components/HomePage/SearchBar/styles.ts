@@ -18,20 +18,6 @@ const useStyles = tss.create(() => ({
   searchIcon: {
     marginRight: '8px',
   },
-  viewSelect: {
-    marginLeft: '8px',
-    height: '36px',
-    borderRadius: '4px',
-    '& .MuiOutlinedInput-notchedOutline': {
-      border: 'none',
-    },
-    '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-      border: 'none',
-    },
-  },
-  selectIcon: {
-    top: 'calc(50% - 6px)',
-  },
   iconWrapper: {
     display: 'flex',
     gap: '8px',

@@ -1,5 +1,6 @@
 import { Box, Card, CardContent, Typography } from '@mui/material';
-import { cardsData } from '../Search/constants';
+
+import { cardsData } from '../constants';
 
 import useStyles from './styles';
 

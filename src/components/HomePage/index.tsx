@@ -1,23 +1,31 @@
 import { useEffect, useRef, useState } from 'react';
 import { Box, Typography, IconButton } from '@mui/material';
-import QuestionPopUp from '@assets/icon/questionpop-icon.svg?react';
+import { useNavigate } from 'react-router-dom';
+
 import Button from '@shared/Button';
 import Modal from '@shared/Modal';
-import { appText } from '@utils/strings';
 import Search from './Search';
 import CreateWorkspaceModal from './CreateWorkspaceModal';
 import SearchBar from './SearchBar';
 import Cards from './Cards';
 import TourPopup from './TourPopup';
+import { getLeftArrowClassName } from './constants';
+
+import QuestionPopUp from '@assets/icons/questionpop-icon.svg?react';
+import LeftArrow from '@assets/icons/left-arrow-icon.svg?react';
+import RightArrow from '@assets/icons/right-arrow-icon.svg?react';
+
+import { appText } from '@utils/strings';
 import useStyles from './styles';
 
 function HomePage() {
   const text = appText.homepage;
+  const navigate = useNavigate();
+  const { classes } = useStyles();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isTourOpen, setIsTourOpen] = useState(false);
   const questionPopUpRef = useRef<HTMLButtonElement>(null);
   const tourPopupRef = useRef<HTMLDivElement>(null);
-  const { classes } = useStyles();
 
   const handleCloseModal = () => setIsModalOpen(false);
   const handleCloseTour = () => setIsTourOpen(false);
@@ -29,12 +37,26 @@ function HomePage() {
     }
   }, []);
 
+  const leftArrowClassName = getLeftArrowClassName(location.pathname, classes);
+  const handleOpenHomePage = () => {
+    navigate('/homepage');
+  };
+
   return (
     <Box className={classes.wrapper}>
-      <Box className={classes.buttonWrapper}>
-        <Button onClick={() => setIsModalOpen(true)}>
-          <Typography>{text.createWorkspace}</Typography>
-        </Button>
+      <Box className={classes.buttonAndArrowsWrapper}>
+        <Box className={classes.arrowsWrapper}>
+          <LeftArrow
+            className={leftArrowClassName}
+            onClick={handleOpenHomePage}
+          />
+          <RightArrow className={classes.arrow} />
+        </Box>
+        <Box className={classes.buttonWrapper}>
+          <Button onClick={() => setIsModalOpen(true)}>
+            <Typography>{text.createWorkspace}</Typography>
+          </Button>
+        </Box>
       </Box>
       <Search />
       <Modal

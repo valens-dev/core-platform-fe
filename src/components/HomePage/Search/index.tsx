@@ -1,26 +1,22 @@
 import { Box, Typography } from '@mui/material';
 import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
 
 import TextField from '@shared/TextField';
 import Button from '@shared/Button';
+import Template from './Template';
 
-import { appText } from '@utils/strings';
+import SearchIcon from '@assets/icons/search-icon.svg?react';
+import { ISearchForm } from '@components/TemplatesPage/interfaces';
+import { templateChips, templates } from '../constants';
 
 import { ColorVariant } from '@models/styles';
-
-import SearchIcon from '@assets/icon/search-icon.svg?react';
-
-import Template from './Template';
-import { templateChips, templates } from './constants';
-
+import { appText } from '@utils/strings';
 import useStyles from './styles';
-
-export interface ISearchForm {
-  search: string;
-}
 
 function Search() {
   const text = appText.homepage.search;
+  const navigate = useNavigate();
   const { control, register } = useForm<ISearchForm>();
   const { classes } = useStyles();
 
@@ -38,11 +34,17 @@ function Search() {
     </Button>
   );
 
+  const handleOpenTemplates = () => {
+    navigate('/homepage/templates');
+  };
   return (
     <Box className={classes.wrapper}>
       <Box className={classes.positionText}>
         <Typography variant="h6">{text.searchTitle}</Typography>
-        <Typography className={classes.browseText}>
+        <Typography
+          className={classes.browseText}
+          onClick={handleOpenTemplates}
+        >
           {text.browseTemplates}
         </Typography>
       </Box>

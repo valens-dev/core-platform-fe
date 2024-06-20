@@ -1,6 +1,9 @@
 import React from 'react';
+
 import classnames from 'classnames';
-import CheckIcon from '@assets/icon/check-icon.svg?react';
+
+import CheckIcon from '@assets/icons/check-icon.svg?react';
+
 import useStyles from './styles';
 
 interface FeatureListProps {

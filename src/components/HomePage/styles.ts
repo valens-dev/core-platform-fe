@@ -1,6 +1,6 @@
 import { tss } from '@styles/theme';
 
-const useStyles = tss.create(() => ({
+const useStyles = tss.create(({ theme }) => ({
   wrapper: {
     padding: '15px',
     display: 'flex',
@@ -8,15 +8,31 @@ const useStyles = tss.create(() => ({
     gap: '15px',
     position: 'relative',
   },
-  buttonWrapper: {
+  buttonAndArrowsWrapper: {
     width: '100%',
     display: 'flex',
-    justifyContent: 'flex-end',
+    alignItems: 'center',
   },
   questionPopUp: {
     position: 'fixed',
     bottom: '15px',
     right: '80px',
+  },
+  arrowsWrapper: {
+    display: 'flex',
+  },
+  arrow: {
+    cursor: 'pointer',
+  },
+  buttonWrapper: {
+    display: 'flex',
+    justifyContent: 'flex-end',
+    flexGrow: 1,
+  },
+  blackArrow: {
+    '& path': {
+      fill: theme.palette.dark.main,
+    },
   },
 }));
 

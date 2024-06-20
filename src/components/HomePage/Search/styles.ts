@@ -47,7 +47,6 @@ const useStyles = tss.create(({ theme }) => ({
     display: 'flex',
     justifyContent: 'space-between',
     marginTop: '20px',
-    gap: '20px',
   },
 }));
 
