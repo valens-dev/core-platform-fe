@@ -3,7 +3,7 @@ import ConnectAndStreamlineIcon from '@assets/icons/connect-streamline.svg?react
 import InstantInsightsIcon from '@assets/icons/instant-insights.svg?react';
 import YourDataYourWayIcon from '@assets/icons/your-data-your-way.svg?react';
 
-export const getCardsData = () => [
+export const cardsData = [
   {
     title: 'AI-Driven Forecasts',
     description:

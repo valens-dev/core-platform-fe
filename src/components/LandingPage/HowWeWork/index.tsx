@@ -9,7 +9,7 @@ import Button from '@shared/Button';
 
 import { IHowWeWork } from '@utils/interfaces';
 
-import { getCardsData } from './cards';
+import { cardsData } from './constants';
 
 import ConnectAndCreate from '@assets/images/connect-and-create.png';
 
@@ -18,7 +18,6 @@ import useStyles from './styles';
 const HowWeWork: React.FC<IHowWeWork> = ({ scrollToContactUs }) => {
   const { classes } = useStyles();
   const text = appText.landingPage.howWeWork;
-  const cards = getCardsData();
   const [activeCard, setActiveCard] = useState<number | null>(null);
 
   return (
@@ -27,7 +26,7 @@ const HowWeWork: React.FC<IHowWeWork> = ({ scrollToContactUs }) => {
         <Chip label={text.workFlow} />
         <Typography variant="h2">{text.howWeWork}</Typography>
         <Box className={classes.cards}>
-          {cards.map(({ title, description, Icon }, index) => (
+          {cardsData.map(({ title, description, Icon }, index) => (
             <Box
               className={classnames(
                 classes.generalCardStyle,
@@ -51,14 +50,15 @@ const HowWeWork: React.FC<IHowWeWork> = ({ scrollToContactUs }) => {
         <Typography variant="body1" className={classes.note}>
           {text.note}
         </Typography>
-        <Button
-          className={classes.bookADemoBtn}
-          onClick={() => scrollToContactUs()}
-        >
+        <Button className={classes.bookADemoBtn} onClick={scrollToContactUs}>
           <Typography variant="body2">{text.bookADemo}</Typography>
         </Button>
         <Box className={classes.imagePosition}>
-          <img src={ConnectAndCreate} className={classes.image} />
+          <img
+            src={ConnectAndCreate}
+            className={classes.image}
+            alt="Connect and Create"
+          />
         </Box>
       </Box>
     </Box>

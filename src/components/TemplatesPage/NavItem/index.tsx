@@ -1,10 +1,10 @@
 import { Box, Typography } from '@mui/material';
 
 import { INavItemProps } from '@components/TemplatesPage/interfaces';
-import { getNavItemClasses } from './constants';
 
 import RightArrow from '@assets/icons/right-arrow-icon.svg?react';
 
+import { getNavItemClasses } from './utils';
 import useStyles from './styles';
 
 function NavItem({
