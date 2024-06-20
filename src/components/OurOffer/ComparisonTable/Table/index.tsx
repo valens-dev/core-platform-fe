@@ -1,8 +1,12 @@
 import { Box, Typography } from '@mui/material';
-import { IFeature, IPlan, ITextProps } from '../../interfaces';
+
 import classnames from 'classnames';
-import CheckIcon from '@assets/icon/check-in-icon.svg?react';
-import CrossIcon from '@assets/icon/x-icon.svg?react';
+
+import { IFeature, IPlan, ITextProps } from '@components/OurOffer/interfaces';
+
+import CheckIcon from '@assets/icons/check-in-icon.svg?react';
+import CrossIcon from '@assets/icons/x-icon.svg?react';
+
 import useStyles from './styles';
 
 interface IComparisonTableProps {

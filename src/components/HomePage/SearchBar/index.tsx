@@ -1,10 +1,14 @@
 import { useState } from 'react';
+
 import { Box, TextField, IconButton, InputAdornment } from '@mui/material';
-import SearchIcon from '@assets/icon/search-icon.svg?react';
-import GridView from '@assets/icon/changeview-icon.svg?react';
-import ViewList from '@assets/icon/lines-icon.svg?react';
-import SelectOption from '../../../shared/SelectOption';
-import { options } from '../Search/constants';
+
+import SelectOption from '@shared/SelectOption';
+import { options } from '../constants';
+
+import SearchIcon from '@assets/icons/search-icon.svg?react';
+import GridView from '@assets/icons/changeview-icon.svg?react';
+import ViewList from '@assets/icons/lines-icon.svg?react';
+
 import useStyles from './styles';
 
 function SearchBar() {

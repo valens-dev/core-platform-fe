@@ -1,10 +1,14 @@
 import React from 'react';
+
 import { Box, Typography, Button } from '@mui/material';
+import classnames from 'classnames';
+
 import { IPlanProps, ITextProps } from '../interfaces';
-import StarIcon from '@assets/icon/star-icon.svg?react';
 import PlanPrice from './PlanPrice';
 import FeatureList from './FeatureList';
-import classnames from 'classnames';
+
+import StarIcon from '@assets/icons/star-icon.svg?react';
+
 import useStyles from './styles';
 
 interface IOfferCardProps {

@@ -1,28 +1,21 @@
 import { Box, Typography } from '@mui/material';
 import { useForm } from 'react-hook-form';
+
 import TextField from '@shared/TextField';
-import Button from '@shared/Button';
+import { ISearchForm } from '@components/TemplatesPage/interfaces';
+
+import TextfieldEndButton from './TextfieldEndButton';
+import TemplateChips from './TemplateChips';
+
+import SearchIcon from '@assets/icons/search-icon.svg?react';
+
 import { appText } from '@utils/strings';
-import { ColorVariant } from '@models/styles';
-import SearchIcon from '@assets/icon/search-icon.svg?react';
-import { templateChips } from '../../HomePage/Search/constants';
-import { ISearchForm } from '../interfaces';
-import useStyles, { getChipStyle } from './styles';
+import useStyles from './styles';
 
 function Search() {
   const text = appText.homepage.search;
   const { control, register } = useForm<ISearchForm>();
   const { classes } = useStyles();
-
-  const textfieldEndButton = (
-    <Button
-      className={classes.textfieldEndButton}
-      colorVariant={ColorVariant.Light}
-      startIcon={<SearchIcon />}
-    >
-      <Typography variant="caption">{text.generate}</Typography>
-    </Button>
-  );
 
   return (
     <Box className={classes.wrapper}>
@@ -36,22 +29,9 @@ function Search() {
         fullWidth
         className={classes.textfield}
         startIcon={<SearchIcon />}
-        endIcon={textfieldEndButton}
+        endIcon={<TextfieldEndButton />}
       />
-      <Box className={classes.chipsWrapper}>
-        <Typography>{text.tryThis}</Typography>
-        {templateChips.map(({ label, background, color }, i) => (
-          <Box
-            key={i}
-            className={classes.chip}
-            style={getChipStyle(background, color)}
-          >
-            <Typography variant="body2" style={{ color }}>
-              {label}
-            </Typography>
-          </Box>
-        ))}
-      </Box>
+      <TemplateChips />
     </Box>
   );
 }

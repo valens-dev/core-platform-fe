@@ -1,15 +1,16 @@
 import { useState } from 'react';
 import { Box, Typography } from '@mui/material';
-
-import HomeIcon from '@assets/icon/home-icon.svg?react';
-import OutlinedQuestionMark from '@assets/icon/outlined-questionMark.svg?react';
-import NotificationBell from '@assets/icon/notification-bell.svg?react';
-import ProfilePicture from '@assets/icon/profile-picture.svg?react';
-import ArrowDown from '@assets/icon/arrow-down.svg?react';
-import { appText } from '@utils/strings';
 import { useNavigate } from 'react-router-dom';
+
 import DropDown from './DropDown';
 
+import HomeIcon from '@assets/icons/home-icon.svg?react';
+import OutlinedQuestionMark from '@assets/icons/outlined-questionMark.svg?react';
+import NotificationBell from '@assets/icons/notification-bell.svg?react';
+import ProfilePicture from '@assets/icons/profile-picture.svg?react';
+import ArrowDown from '@assets/icons/arrow-down.svg?react';
+
+import { appText } from '@utils/strings';
 import useStyles from './styles';
 
 function ProfileHeader() {

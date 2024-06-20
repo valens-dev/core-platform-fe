@@ -39,7 +39,3 @@ export interface ITemplate {
   link: string;
 }
 
-export interface IDropDownProps {
-  dropDown: HTMLElement | null;
-  handleClose: () => void;
-}

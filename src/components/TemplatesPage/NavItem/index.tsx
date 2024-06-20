@@ -1,7 +1,11 @@
 import { Box, Typography } from '@mui/material';
-import RightArrow from '@assets/icon/right-arrow-icon.svg?react';
+
+import { INavItemProps } from '@components/TemplatesPage/interfaces';
+import { getNavItemClasses } from './constants';
+
+import RightArrow from '@assets/icons/right-arrow-icon.svg?react';
+
 import useStyles from './styles';
-import { INavItemProps } from '../interfaces';
 
 function NavItem({
   icon: Icon,
@@ -14,20 +18,20 @@ function NavItem({
 }: INavItemProps) {
   const { classes } = useStyles();
 
+  const { navItemClass, iconClass, navTextClass } = getNavItemClasses(
+    hoveredNavItem,
+    index,
+    classes
+  );
+
   return (
     <Box
-      className={`${classes.navItem} ${hoveredNavItem === index ? classes.hoveredNavItem : ''}`}
+      className={navItemClass}
       onMouseEnter={(e) => hasArrow && handleMenuOpen(e, index)}
       onMouseLeave={handleMenuClose}
     >
-      <Icon
-        className={`${classes.icon} ${hoveredNavItem === index ? classes.hoveredIcon : ''}`}
-      />
-      <Typography
-        className={`${classes.navText} ${hoveredNavItem === index ? classes.hoveredText : ''}`}
-      >
-        {navTitle}
-      </Typography>
+      <Icon className={iconClass} />
+      <Typography className={navTextClass}>{navTitle}</Typography>
       {hasArrow && <RightArrow className={classes.arrowIcon} />}
     </Box>
   );

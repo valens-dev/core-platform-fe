@@ -1,21 +1,22 @@
-import { Box, Typography } from '@mui/material';
 import { useState } from 'react';
+
+import { Box, Typography } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
-import LeftArrow from '@assets/icon/left-arrow-icon.svg?react';
-import RightArrow from '@assets/icon/right-arrow-icon.svg?react';
-import { navData, options } from '@components/HomePage/Search/constants';
+import { navData, options } from '@components/HomePage/constants';
 import SelectOption from '@shared/SelectOption';
+import Search from './Search';
+import TemplateContent from './TemplateContent';
 
-import { appText } from '@utils/strings';
+import LeftArrow from '@assets/icons/left-arrow-icon.svg?react';
+import RightArrow from '@assets/icons/right-arrow-icon.svg?react';
+
 import {
   handleMenuOpen,
   handleMenuClose,
   handleOptionClick,
-} from '../../utils/menuHandlers';
-import Search from './Search';
-import TemplateContent from './TemplateContent';
-
+} from '@utils/menuHandlers';
+import { appText } from '@utils/strings';
 import useStyles from './styles';
 
 function TemplatesPage() {

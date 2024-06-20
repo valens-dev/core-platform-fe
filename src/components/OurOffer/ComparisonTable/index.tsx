@@ -1,9 +1,12 @@
 import React from 'react';
+
 import { Box, Typography } from '@mui/material';
 import classnames from 'classnames';
-import { IFeature, IPlan, ITextProps } from '../interfaces';
-import PlanPrice from '../OfferCard/PlanPrice';
+
+import { IFeature, IPlan, ITextProps } from '@components/OurOffer/interfaces';
 import Table from './Table';
+import PlanPrice from '@components/OurOffer/OfferCard/PlanPrice';
+
 import useStyles from './styles';
 
 interface IComparisonTableProps {

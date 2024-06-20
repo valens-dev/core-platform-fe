@@ -11,7 +11,7 @@ import Template10 from '@assets/images/template-10.png';
 import Template11 from '@assets/images/template-11.png';
 import Template12 from '@assets/images/template-12.png';
 
-import SettingsIcon from '@assets/icon/settings-icon.svg?react';
+import SettingsIcon from '@assets/icons/settings-icon.svg?react';
 
 export const templateChips = [
   { label: 'Template', color: '#EB2F96', background: '#FFADD2' },
@@ -107,3 +107,7 @@ export const options = [
   { value: 'Newest', label: 'Newest' },
   { value: 'Oldest', label: 'Oldest' },
 ];
+
+export const getLeftArrowClassName = (pathname: string, classes: any) => {
+  return `${classes.arrow} ${pathname === '/homepage/templates' ? classes.blackArrow : ''}`;
+};

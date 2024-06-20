@@ -1,12 +1,11 @@
 import { Box, Typography, Menu, MenuItem } from '@mui/material';
 
-import ProfilePicture from '@assets/icon/profile-picture.svg?react';
+import { IDropDownProps } from './interfaces';
 
-import Logout from '@assets/icon/logout-icon.svg?react';
+import ProfilePicture from '@assets/icons/profile-picture.svg?react';
+import Logout from '@assets/icons/logout-icon.svg?react';
+
 import { appText } from '@utils/strings';
-
-import { IDropDownProps } from '@components/TemplatesPage/interfaces';
-
 import useStyles from './styles';
 
 function DropDown({ dropDown, handleClose }: IDropDownProps) {

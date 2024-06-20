@@ -1,9 +1,12 @@
 import { forwardRef } from 'react';
+
 import { Box, Button, Typography, IconButton, Popover } from '@mui/material';
-import CloseIcon from '@assets/icon/x-icon.svg?react';
-import useStyles from './styles';
-import { appText } from '@utils/strings';
 import { ITourPopupProps } from './interfaces';
+
+import CloseIcon from '@assets/icons/x-icon.svg?react';
+
+import { appText } from '@utils/strings';
+import useStyles from './styles';
 
 const TourPopup = forwardRef<HTMLDivElement, ITourPopupProps>(
   ({ open, refEl, handleClose }, ref) => {
