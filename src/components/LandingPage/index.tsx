@@ -6,18 +6,26 @@ import HowWeWork from './HowWeWork';
 import InfoPanel from './InfoPanel';
 import Track from './Track';
 
-import { LandingPageOutletContextType } from '@utils/types';
-
 function LandingPage() {
-  const [contactUsRef, scrollToContactUs]: LandingPageOutletContextType =
-    useOutletContext();
+  const { contactUsRef, aboutUsRef, howWeWorkRef } = useOutletContext<{
+    contactUsRef: React.RefObject<HTMLDivElement>;
+    aboutUsRef: React.RefObject<HTMLDivElement>;
+    howWeWorkRef: React.RefObject<HTMLDivElement>;
+  }>();
+
+  const scrollToContactUs = () => {
+    contactUsRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
     <>
       <InfoPanel />
-      <HowWeWork scrollToContactUs={scrollToContactUs} />
+      <HowWeWork
+        howWeWorkRef={howWeWorkRef}
+        scrollToContactUs={scrollToContactUs}
+      />
       <Track />
-      <AboutUs />
+      <AboutUs aboutUsRef={aboutUsRef} />
       <ContactUs contactUsRef={contactUsRef} />
     </>
   );

@@ -16,7 +16,7 @@ import { AuthTab } from '@utils/types';
 
 import useStyles from './styles';
 
-function Header({ scrollToContactUs }: IHeader) {
+function Header({ scrollToContactUs, scrollToAboutUs, scrollToHowWeWork }: IHeader) {
   const text = appText.header;
   const pages = getNavLinks();
   const navigate = useNavigate();
@@ -24,6 +24,8 @@ function Header({ scrollToContactUs }: IHeader) {
 
   const handleScrollTo = (href: string) => {
     if (href === 'contact' && scrollToContactUs) scrollToContactUs();
+    if (href === 'about' && scrollToAboutUs) scrollToAboutUs();
+    if (href === 'support' && scrollToHowWeWork) scrollToHowWeWork();
   };
 
   const handleOpenOffers = () => {

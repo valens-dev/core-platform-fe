@@ -35,13 +35,18 @@ export interface IRegistrationFormData {
 
 export interface IHeader {
   scrollToContactUs?: () => void;
+  scrollToAboutUs?: () => void;
+  scrollToHowWeWork?: () => void;
 }
 
 export interface IContactUs {
-  contactUsRef: any;
+  contactUsRef: React.RefObject<HTMLDivElement>;
 }
-
+export interface IAboutUs {
+  aboutUsRef: React.RefObject<HTMLDivElement>;
+}
 export interface IHowWeWork {
+  howWeWorkRef: React.RefObject<HTMLDivElement>;
   scrollToContactUs: () => void;
 }
 
