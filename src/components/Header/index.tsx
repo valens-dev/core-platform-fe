@@ -16,7 +16,11 @@ import { AuthTab } from '@utils/types';
 
 import useStyles from './styles';
 
-function Header({ scrollToContactUs, scrollToAboutUs, scrollToHowWeWork }: IHeader) {
+function Header({
+  scrollToContactUs,
+  scrollToAboutUs,
+  scrollToHowWeWork,
+}: IHeader) {
   const text = appText.header;
   const pages = getNavLinks();
   const navigate = useNavigate();

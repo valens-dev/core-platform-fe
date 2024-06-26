@@ -9,21 +9,15 @@ function LandingPageLayout() {
   const aboutUsRef = useRef<HTMLDivElement | null>(null);
   const howWeWorkRef = useRef<HTMLDivElement | null>(null);
 
-  const scrollToContactUs = () =>
-    contactUsRef.current?.scrollIntoView({ behavior: 'smooth' });
-
-  const scrollToAboutUs = () =>
-    aboutUsRef.current?.scrollIntoView({ behavior: 'smooth' });
-
-  const scrollToHowWeWork = () =>
-    howWeWorkRef.current?.scrollIntoView({ behavior: 'smooth' });
+  const scrollToSection = (sectionRef: React.RefObject<HTMLDivElement>) =>
+    sectionRef.current?.scrollIntoView({ behavior: 'smooth' });
 
   return (
     <>
       <Header
-        scrollToContactUs={scrollToContactUs}
-        scrollToAboutUs={scrollToAboutUs}
-        scrollToHowWeWork={scrollToHowWeWork}
+        scrollToContactUs={() => scrollToSection(contactUsRef)}
+        scrollToAboutUs={() => scrollToSection(aboutUsRef)}
+        scrollToHowWeWork={() => scrollToSection(howWeWorkRef)}
       />
       <Outlet context={{ contactUsRef, aboutUsRef, howWeWorkRef }} />
       <Footer />

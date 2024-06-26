@@ -42,6 +42,7 @@ export interface IHeader {
 export interface IContactUs {
   contactUsRef: React.RefObject<HTMLDivElement>;
 }
+
 export interface IAboutUs {
   aboutUsRef: React.RefObject<HTMLDivElement>;
 }
