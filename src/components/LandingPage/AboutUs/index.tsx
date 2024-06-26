@@ -8,13 +8,14 @@ import ArrowRight from '@assets/icons/arrow-right.svg?react';
 import { ColorVariant } from '@models/styles';
 import { appText } from '@utils/strings';
 import useStyles from './styles';
+import { IAboutUs } from '@utils/interfaces';
 
-function AboutUs() {
+function AboutUs({ aboutUsRef }: IAboutUs) {
   const text = appText.landingPage.aboutUs;
   const { classes } = useStyles();
 
   return (
-    <Box className={classes.wrapper}>
+    <Box className={classes.wrapper} ref={aboutUsRef}>
       <Chip label={text.chipText} />
       <Typography variant="h2">{text.aboutUs}</Typography>
       <Box className={classes.noteWrapper}>
