@@ -37,7 +37,6 @@ const useStyles = tss.create(({ theme }) => ({
   },
   buttons: {
     display: 'flex',
-    widht: '295px',
     justifyContent: 'flex-end',
     alignItems: 'center',
     gap: '12px',
