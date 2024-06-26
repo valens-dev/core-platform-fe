@@ -19,6 +19,7 @@ const HowWeWork: React.FC<IHowWeWork> = ({ scrollToContactUs }) => {
   const { classes } = useStyles();
   const text = appText.landingPage.howWeWork;
   const [activeCard, setActiveCard] = useState<number | null>(null);
+  console.log('active card----', activeCard);
 
   return (
     <Box className={classes.wrapper}>

@@ -22,10 +22,11 @@ const useStyles = tss.create(({ theme }) => ({
     gap: '40px',
   },
   buttonsAndLinks: {
-    width: '25%',
+    width: '500px',
     display: 'flex',
     flexDirection: 'column',
-    padding: '10px 60px',
+    padding: '10px 30px 4px',
+    marginRight: '35px',
   },
   auth: {
     display: 'flex',
@@ -36,15 +37,24 @@ const useStyles = tss.create(({ theme }) => ({
   },
   buttons: {
     display: 'flex',
-    justifyContent: 'right',
-    gap: '20px',
-    paddingTop: '30px',
+    widht: '295px',
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+    gap: '12px',
+    marginTop: '21px',
+    marginBottom: '30px',
     '& > button': {
-      height: '44px',
+      height: '40px',
     },
     '& > button > p': {
       fontWeight: theme.typography.fontWeight.bold,
     },
+  },
+  buttonStartFreeTrial: {
+    width: '169px',
+  },
+  buttonOurOffers: {
+    width: '114px',
   },
   bookADemoBtn: {
     color: theme.palette.primary.dark,

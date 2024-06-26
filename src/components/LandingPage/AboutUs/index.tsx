@@ -6,6 +6,7 @@ import Link from '@shared/Link';
 import ArrowRight from '@assets/icons/arrow-right.svg?react';
 
 import { ColorVariant } from '@models/styles';
+
 import { appText } from '@utils/strings';
 import useStyles from './styles';
 
