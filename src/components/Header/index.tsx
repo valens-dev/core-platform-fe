@@ -63,13 +63,16 @@ function Header({ scrollToContactUs }: IHeader) {
           </Typography>
         </Box>
         <Box className={classes.buttons}>
-          <Button colorVariant={ColorVariant.Primary}>
+          <Button
+            className={classes.buttonStartFreeTrial}
+            colorVariant={ColorVariant.Primary}
+          >
             <Typography variant="body2">{text.startYourFreeTrial}</Typography>
           </Button>
           <Button
             variant="outlined"
             colorVariant={ColorVariant.Light}
-            className={classes.bookADemoBtn}
+            className={classes.buttonOurOffers}
             onClick={handleOpenOffers}
           >
             <Typography variant="body2">{text.ourOffers}</Typography>

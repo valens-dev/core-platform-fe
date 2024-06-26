@@ -2,17 +2,14 @@ import { useState } from 'react';
 import { Box, Typography } from '@mui/material';
 import classnames from 'classnames';
 
-import { appText } from '@utils/strings';
-
 import Chip from '@shared/Chip';
 import Button from '@shared/Button';
-
 import { IHowWeWork } from '@utils/interfaces';
-
 import { cardsData } from './constants';
 
 import ConnectAndCreate from '@assets/images/connect-and-create.png';
 
+import { appText } from '@utils/strings';
 import useStyles from './styles';
 
 const HowWeWork: React.FC<IHowWeWork> = ({ scrollToContactUs }) => {
