@@ -1,4 +1,6 @@
-import { MouseEvent, Dispatch, SetStateAction } from 'react';
+import { Dispatch, MouseEvent, SetStateAction } from 'react';
+
+import { ITool } from '@components/Workspace/interfaces';
 
 interface IMenuPosition {
   top: number;
@@ -41,4 +43,44 @@ export const handleOptionClick = (
       return [...prev, option];
     }
   });
+};
+
+export const handleArrowClick = (
+  id: number,
+  setMenus: Dispatch<
+    SetStateAction<{ id: number; label: string; isOpen: boolean }[]>
+  >
+) => {
+  setMenus((prevMenus) =>
+    prevMenus.map((menu) =>
+      menu.id === id ? { ...menu, isOpen: !menu.isOpen } : menu
+    )
+  );
+};
+
+export const handlePlusClick = (
+  id: number,
+  menu: { id: number; label: string; isOpen: boolean }[],
+  setMenus: Dispatch<
+    SetStateAction<{ id: number; label: string; isOpen: boolean }[]>
+  >
+) => {
+  const newMenu = {
+    id: menu.length + 1,
+    label: 'Lorem ipsum',
+    isOpen: true,
+  };
+  const updatedMenus = [...menu];
+  const menuIndex = updatedMenus.findIndex((menu) => menu.id === id);
+  updatedMenus.splice(menuIndex + 1, 0, newMenu);
+  setMenus(updatedMenus);
+};
+
+export const handleToolClick = (
+  tool: string,
+  icon: React.FunctionComponent<React.SVGProps<SVGSVGElement>>,
+  selectedTools: ITool[],
+  setSelectedTools: Dispatch<SetStateAction<ITool[]>>
+) => {
+  setSelectedTools([...selectedTools, { tool, icon }]);
 };

@@ -1,13 +1,12 @@
 import { Box, Typography } from '@mui/material';
 import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
 
-import TextField from '@shared/TextField';
 import Button from '@shared/Button';
+import TextField from '@shared/TextField';
 
 import { ColorVariant } from '@models/styles';
-
 import { appText } from '@utils/strings';
-
 import useStyles from './styles';
 
 interface IWorkspaceAuthData {
@@ -19,10 +18,15 @@ interface IWorkspaceAuthData {
 
 function CreateWorkspaceModal() {
   const text = appText.homepage.createWorkspaceModal;
+  const navigate = useNavigate();
   const { control, register, handleSubmit } = useForm<IWorkspaceAuthData>();
   const { classes } = useStyles();
 
   const onSubmit = async () => {};
+
+  const handleOpenWorkspace = () => {
+    navigate('/workspace');
+  };
 
   return (
     <Box className={classes.wrapper}>
@@ -58,6 +62,7 @@ function CreateWorkspaceModal() {
         <Button
           colorVariant={ColorVariant.PrimaryLight}
           className={classes.button}
+          onClick={handleOpenWorkspace}
         >
           <Typography>{text.createWorkspace}</Typography>
         </Button>

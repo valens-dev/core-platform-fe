@@ -1,14 +1,17 @@
-import { Routes, Route, HashRouter } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 
-import Provider from '@hoc/Provider/Provider';
-import HomePageLayout from '@components/Layout/HomePageLayout';
-import LandingPageLayout from '@components/Layout/LandingPageLayout';
-import LandingPage from '@components/LandingPage';
 import Auth from '@components/Auth';
 import HomePage from '@components/HomePage';
+import LandingPage from '@components/LandingPage';
+import HomePageLayout from '@components/Layout/HomePageLayout';
+import LandingPageLayout from '@components/Layout/LandingPageLayout';
+import Provider from '@hoc/Provider/Provider';
 
 import OurOffer from '@components/OurOffer';
 import TemplatesPage from '@components/TemplatesPage';
+
+import WorkspaceLayout from '@components/Layout/WorkspaceLayout';
+import Workspace from '@components/Workspace';
 
 import './App.css';
 
@@ -25,6 +28,9 @@ function App() {
           <Route element={<HomePageLayout />}>
             <Route path="/homepage" element={<HomePage />} />
             <Route path="/homepage/templates" element={<TemplatesPage />} />
+          </Route>
+          <Route element={<WorkspaceLayout />}>
+            <Route path="/workspace" element={<Workspace />} />
           </Route>
         </Routes>
       </HashRouter>
