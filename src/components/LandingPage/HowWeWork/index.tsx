@@ -12,13 +12,16 @@ import ConnectAndCreate from '@assets/images/connect-and-create.png';
 import { appText } from '@utils/strings';
 import useStyles from './styles';
 
-const HowWeWork: React.FC<IHowWeWork> = ({ scrollToContactUs }) => {
+const HowWeWork: React.FC<IHowWeWork> = ({
+  howWeWorkRef,
+  scrollToContactUs,
+}) => {
   const { classes } = useStyles();
   const text = appText.landingPage.howWeWork;
   const [activeCard, setActiveCard] = useState<number | null>(null);
 
   return (
-    <Box className={classes.wrapper}>
+    <Box className={classes.wrapper} ref={howWeWorkRef}>
       <Box className={classes.leftSide}>
         <Chip label={text.workFlow} />
         <Typography variant="h2">{text.howWeWork}</Typography>
