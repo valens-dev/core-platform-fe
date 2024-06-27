@@ -25,6 +25,7 @@ function useContext() {
         normalGrey: '#F0F0F0',
         normal: '#E0E0E0',
         lightGrey: '#C6C6C6',
+        mainGrey: '#D9D9D9',
       },
       dark: {
         main: '#161616',

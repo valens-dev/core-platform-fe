@@ -85,6 +85,21 @@ export const appText = {
       yes: 'Yes',
     },
   },
+  workspace: {
+    tabNames: {
+      firstWorkspace: 'Workspace 1',
+      secondWorkspace: 'Workspace 2',
+      thirdWorkspace: 'Workspace 3',
+    },
+    profileHeader: {
+      name: 'Senad Senadovic',
+    },
+    menuItems: {
+      labelName: 'Lorem ipsum',
+      additionalResources: 'Additional resources',
+      verificate: 'Verificate',
+    },
+  },
   auth: {
     loginText: 'Login',
     signUp: 'Sign Up',
