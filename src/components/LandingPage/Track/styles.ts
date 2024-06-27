@@ -10,11 +10,9 @@ const useStyles = tss.create(() => ({
   },
   marqueeBox: {
     height: '80px',
-    borderRadius: '16px',
   },
   marqueeContent: {
     display: 'grid',
-    gap: '100px',
     overflow: 'hidden',
   },
   marqueeItem: {
