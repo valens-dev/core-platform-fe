@@ -7,6 +7,7 @@ import { ISocialAuthButtons } from '@utils/interfaces';
 import { appText } from '@utils/strings';
 
 import GoogleLogo from '@assets/logo/google-logo.svg?react';
+import MicrosoftLogo from '@assets/icons/microsoft.svg?react';
 
 import useStyles from './styles';
 
@@ -32,6 +33,17 @@ function SocialAuthButtons({ isActiveTabLogin }: ISocialAuthButtons) {
           <Typography variant="body2">{text.signInWithGoogle}</Typography>
         ) : (
           <Typography variant="body2">{text.registerWithGoogle}</Typography>
+        )}
+      </Button>
+      <Button
+        variant="outlined"
+        className={classes.btn}
+        startIcon={<MicrosoftLogo />}
+      >
+        {isActiveTabLogin ? (
+          <Typography variant="body2">{text.signInWithMicrosoft}</Typography>
+        ) : (
+          <Typography variant="body2">{text.registerWithMicrosoft}</Typography>
         )}
       </Button>
     </Box>
