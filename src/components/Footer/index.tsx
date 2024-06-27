@@ -4,8 +4,8 @@ import Line from '@shared/Line';
 import { getNavLinks } from '@components/Header/navLinks';
 
 import MicrosoftIcon from '@assets/icons/microsoft-icon.svg?react';
-import GithubIcon from '@assets/icons/github.svg?react';
-import LinkedInIcon from '@assets/icons/linkedIn.svg?react';
+import GithubIcon from '@assets/icons/github-icon.svg?react';
+import LinkedInIcon from '@assets/icons/linkedIn-icon.svg?react';
 
 import { appText } from '@utils/strings';
 import useStyles from './styles';
