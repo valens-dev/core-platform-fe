@@ -27,7 +27,9 @@ const useStyles = tss.create(({ theme }) => ({
     '& > p': {
       color: theme.palette.dark.main,
     },
-    '&:hover': { background: 'none' },
+    '&:hover': {
+      background: 'none',
+    },
   },
 }));
 

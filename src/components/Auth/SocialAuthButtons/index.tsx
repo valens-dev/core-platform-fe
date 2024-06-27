@@ -7,7 +7,7 @@ import { ISocialAuthButtons } from '@utils/interfaces';
 import { appText } from '@utils/strings';
 
 import GoogleLogo from '@assets/logo/google-logo.svg?react';
-import MicrosoftLogo from '@assets/icons/microsoft.svg?react';
+import MicrosoftLogo from '@assets/icons/microsoft-icon.svg?react';
 
 import useStyles from './styles';
 
