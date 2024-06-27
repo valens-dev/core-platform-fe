@@ -129,6 +129,8 @@ export const appText = {
       or: 'Or',
       signInWithGoogle: 'Sign In With Google',
       registerWithGoogle: 'Register With Google',
+      signInWithMicrosoft: 'Sign In With Microsoft',
+      registerWithMicrosoft: 'Register With Microsoft',
     },
   },
   pricingPage: {
