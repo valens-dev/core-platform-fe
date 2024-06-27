@@ -1,7 +1,4 @@
-export interface ITool {
-  tool: string;
-  icon: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
-}
+import { ITool } from '@utils/interfaces';
 
 export interface IToolItemProps {
   tools: ITool[];

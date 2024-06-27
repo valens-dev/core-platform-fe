@@ -45,6 +45,11 @@ export interface IHowWeWork {
   scrollToContactUs: () => void;
 }
 
+export interface ITool {
+  tool: string;
+  icon: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
+}
+
 export interface IContactFormData {
   name: string;
   email: string;

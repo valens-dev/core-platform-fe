@@ -8,7 +8,7 @@ import {
 } from '@utils/menuHandlers';
 import Menu from './Menu';
 import WorkingArea from './WorkingArea';
-import { ITool } from './interfaces';
+import { ITool } from '@utils/interfaces';
 
 import { appText } from '@utils/strings';
 import useStyles from './styles';

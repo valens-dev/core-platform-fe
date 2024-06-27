@@ -1,6 +1,7 @@
 import { Box, Button } from '@mui/material';
 
-import { ITool, IWorkingAreaProps } from '../interfaces';
+import { IWorkingAreaProps } from '../interfaces';
+import { ITool } from '@utils/interfaces';
 import ToolItem from './ToolItem';
 
 import { appText } from '@utils/strings';

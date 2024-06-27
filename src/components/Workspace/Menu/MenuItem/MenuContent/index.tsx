@@ -11,14 +11,14 @@ function MenuContent({ handleToolClick }: IMenuContentProps) {
   return (
     <Box className={classes.menuContent}>
       <Box className={classes.buttonContainer}>
-        {azureTools.map((tool) => (
+        {azureTools.map((type) => (
           <Button
-            key={tool.tool}
+            key={type.tool}
             variant="outlined"
             className={classes.menuButton}
-            onClick={() => handleToolClick(tool.tool, tool.icon)}
+            onClick={() => handleToolClick(type.tool, type.icon)}
           >
-            {tool.tool}
+            {type.tool}
           </Button>
         ))}
       </Box>

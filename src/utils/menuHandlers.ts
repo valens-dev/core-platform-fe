@@ -1,6 +1,5 @@
 import { Dispatch, MouseEvent, SetStateAction } from 'react';
-
-import { ITool } from '@components/Workspace/interfaces';
+import { ITool } from './interfaces';
 
 interface IMenuPosition {
   top: number;

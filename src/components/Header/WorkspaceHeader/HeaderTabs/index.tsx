@@ -1,5 +1,5 @@
-import { Tab, Tabs } from '@mui/material';
 import { useState } from 'react';
+import { Tab, Tabs } from '@mui/material';
 
 import { appText } from '@utils/strings';
 import useStyles from './styles';
@@ -16,7 +16,7 @@ function HeaderTabs() {
   return (
     <Tabs
       value={tabValue}
-      onChange={(event, newValue) => handleTabChange(newValue)}
+      onChange={(_, newValue) => handleTabChange(newValue)}
       className={classes.tabs}
     >
       <Tab className={classes.tab} label={text.tabNames.firstWorkspace} />

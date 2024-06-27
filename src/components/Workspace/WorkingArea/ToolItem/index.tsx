@@ -1,8 +1,9 @@
-import { Box, Menu, MenuItem, Typography } from '@mui/material';
 import { MouseEvent, useState } from 'react';
+import { Box, Menu, MenuItem, Typography } from '@mui/material';
 import Draggable from 'react-draggable';
 
-import { ITool, IToolItemProps } from '@components/Workspace/interfaces';
+import { IToolItemProps } from '@components/Workspace/interfaces';
+import { ITool } from '@utils/interfaces';
 
 import useStyles from './styles';
 
