@@ -1,40 +1,40 @@
 import { HashRouter, Route, Routes } from 'react-router-dom';
 
-import Auth from '@components/Auth';
-import HomePage from '@components/HomePage';
-import LandingPage from '@components/LandingPage';
-import HomePageLayout from '@components/Layout/HomePageLayout';
-import LandingPageLayout from '@components/Layout/LandingPageLayout';
-import Provider from '@hoc/Provider/Provider';
+import { Auth } from '@/components/auth';
+import { HomePage } from '@/pages/home-page';
+import { LandingPage } from '@/pages/landing-page';
+import { HomeLayout } from '@/layouts/home-layout';
+import { LandingLayout } from '@/layouts/landing-layout';
+import RootProvider from '@/context/root-provider';
 
-import OurOffer from '@components/OurOffer';
-import TemplatesPage from '@components/TemplatesPage';
+import { OurOfferPage } from '@/pages/our-offer-page';
+import { TemplatesPage } from '@/pages/templates-page';
 
-import WorkspaceLayout from '@components/Layout/WorkspaceLayout';
-import Workspace from '@components/Workspace';
+import { WorkspaceLayout } from '@/layouts/workspace-layout';
+import { WorkspacePage } from '@/pages/workspace-page';
 
 import './App.css';
 
 function App() {
   return (
-    <Provider>
+    <RootProvider>
       <HashRouter>
         <Routes>
-          <Route element={<LandingPageLayout />}>
+          <Route element={<LandingLayout />}>
             <Route path="/" element={<LandingPage />} />
-            <Route path="/our-offer" element={<OurOffer />} />
+            <Route path="/our-offer" element={<OurOfferPage />} />
           </Route>
           <Route path="/auth" element={<Auth />} />
-          <Route element={<HomePageLayout />}>
+          <Route element={<HomeLayout />}>
             <Route path="/homepage" element={<HomePage />} />
             <Route path="/homepage/templates" element={<TemplatesPage />} />
           </Route>
           <Route element={<WorkspaceLayout />}>
-            <Route path="/workspace" element={<Workspace />} />
+            <Route path="/workspace" element={<WorkspacePage />} />
           </Route>
         </Routes>
       </HashRouter>
-    </Provider>
+    </RootProvider>
   );
 }
 
