@@ -39,6 +39,10 @@ export interface IHeader {
   scrollToHowWeWork?: () => void;
 }
 
+export interface ICreateWorkspaceModal {
+  handleCloseModal: () => void;
+}
+
 export interface IContactUs {
   contactUsRef: React.RefObject<HTMLDivElement>;
 }

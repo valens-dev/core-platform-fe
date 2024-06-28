@@ -5,6 +5,9 @@ const useStyles = tss.create(() => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    '& .MuiBackdrop-root': {
+      backgroundColor: 'rgba(0, 0, 0, 0.4)',
+    },
   },
 }));
 
