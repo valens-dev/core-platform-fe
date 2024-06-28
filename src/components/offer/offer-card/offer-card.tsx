@@ -1,15 +1,17 @@
 import React from 'react';
 
-import { Box, Typography, Button } from '@mui/material';
 import classnames from 'classnames';
+
+import { Box, Button, Typography } from '@mui/material';
+
+import StarIcon from '@/assets/icon/star-icon.svg?react';
 
 import { PlanPrice } from './plan-price';
 import { FeatureList } from './feature-list';
 
-import StarIcon from '@/assets/icon/star-icon.svg?react';
+import { IOfferCardProps } from './types';
 
 import useStyles from './styles';
-import { IOfferCardProps } from './types';
 
 export const OfferCard: React.FC<IOfferCardProps> = ({ plan, text }) => {
   const { classes } = useStyles();

@@ -1,11 +1,13 @@
 import { useForm } from 'react-hook-form';
-import { Box, Checkbox, FormControlLabel, Typography } from '@mui/material';
+
+import { Box, Checkbox, Typography, FormControlLabel } from '@mui/material';
 
 import { Button } from '@/shared/button';
 import { TextField } from '@/shared/text-field';
 
-import { IRegistrationFormData } from './types';
 import { appText } from '@/constants/strings';
+
+import { IRegistrationFormData } from './types';
 
 import useStyles from './styles';
 

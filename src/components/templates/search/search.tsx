@@ -1,15 +1,18 @@
-import { Box, Typography } from '@mui/material';
 import { useForm } from 'react-hook-form';
 
+import { Box, Typography } from '@mui/material';
+
 import { TextField } from '@/shared/text-field';
+
 import { ISearchFormData } from '@/types/search';
 
-import { TextFieldEndButton } from './text-field-end-button';
-import { TemplateChips } from './template-chips';
+import { appText } from '@/constants/strings';
 
 import SearchIcon from '@/assets/icon/search-icon.svg?react';
 
-import { appText } from '@/constants/strings';
+import { TemplateChips } from './template-chips';
+import { TextFieldEndButton } from './text-field-end-button';
+
 import useStyles from './styles';
 
 const text = appText.homePage.search;

@@ -1,16 +1,16 @@
-import { Box, Typography } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
-import { NAV_LINKS } from '@/constants/navigation';
-
-import { ColorVariant } from '@/types/color';
+import { Box, Typography } from '@mui/material';
 
 import { Button } from '@/shared/button';
 
-import CoreLogo from '@/assets/logo/core.svg?react';
+import { AuthTab } from '@/types/auth';
+import { ColorVariant } from '@/types/color';
 
 import { appText } from '@/constants/strings';
-import { AuthTab } from '@/types/auth';
+import { NAV_LINKS } from '@/constants/navigation';
+
+import CoreLogo from '@/assets/logo/core.svg?react';
 
 import useStyles from './styles';
 

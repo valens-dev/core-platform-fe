@@ -1,7 +1,9 @@
 import { useState } from 'react';
+
 import { Tab, Tabs } from '@mui/material';
 
 import { appText } from '@/constants/strings';
+
 import useStyles from './styles';
 
 const text = appText.workspacePage;

@@ -3,10 +3,12 @@ import { Box, Typography } from '@mui/material';
 import { Chip } from '@/shared/chip';
 import { Link } from '@/shared/link';
 
+import { ColorVariant } from '@/types/color';
+
+import { appText } from '@/constants/strings';
+
 import ArrowRight from '@/assets/icon/arrow-right.svg?react';
 
-import { ColorVariant } from '@/types/color';
-import { appText } from '@/constants/strings';
 import useStyles from './styles';
 
 interface IAboutUsProps {

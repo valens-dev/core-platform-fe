@@ -1,5 +1,6 @@
-import { Button as MuiButton } from '@mui/material';
 import classNames from 'classnames';
+
+import { Button as MuiButton } from '@mui/material';
 
 import { ColorVariant } from '@/types/color';
 

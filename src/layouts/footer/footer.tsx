@@ -1,13 +1,14 @@
 import { Box, Typography } from '@mui/material';
 
 import { Line } from '@/shared/line';
-import { NAV_LINKS } from '@/constants/navigation';
-
-import MicrosoftIcon from '@/assets/icon/microsoft-icon.svg?react';
-import GithubIcon from '@/assets/icon/github-icon.svg?react';
-import LinkedInIcon from '@/assets/icon/linkedIn-icon.svg?react';
 
 import { appText } from '@/constants/strings';
+import { NAV_LINKS } from '@/constants/navigation';
+
+import GithubIcon from '@/assets/icon/github-icon.svg?react';
+import LinkedInIcon from '@/assets/icon/linkedIn-icon.svg?react';
+import MicrosoftIcon from '@/assets/icon/microsoft-icon.svg?react';
+
 import useStyles from './styles';
 
 const text = appText.footer;

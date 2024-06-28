@@ -1,4 +1,4 @@
-import { StyledEngineProvider, ThemeProvider } from '@mui/material/styles';
+import { ThemeProvider, StyledEngineProvider } from '@mui/material/styles';
 
 import { componentOverrides } from '@/styles/component-overrides';
 

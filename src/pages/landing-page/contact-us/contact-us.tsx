@@ -1,12 +1,13 @@
-import { Box, Typography } from '@mui/material';
 import { useForm } from 'react-hook-form';
+
+import { Box, Typography } from '@mui/material';
+
+import { Button } from '@/shared/button';
+import { TextField } from '@/shared/text-field';
 
 import { appText } from '@/constants/strings';
 
 import { IContactFormData } from './types';
-
-import { TextField } from '@/shared/text-field';
-import { Button } from '@/shared/button';
 
 import useStyles from './styles';
 

@@ -1,14 +1,18 @@
 import { useState } from 'react';
-import { Box, Typography } from '@mui/material';
+
 import classnames from 'classnames';
+
+import { Box, Typography } from '@mui/material';
 
 import { Chip } from '@/shared/chip';
 import { Button } from '@/shared/button';
-import { CARDS_DATA } from './constants';
+
+import { appText } from '@/constants/strings';
 
 import ConnectAndCreate from '@/assets/image/connect-and-create.png';
 
-import { appText } from '@/constants/strings';
+import { CARDS_DATA } from './constants';
+
 import useStyles from './styles';
 
 interface IHowWeWorkProps {
@@ -35,7 +39,7 @@ export const HowWeWork: React.FC<IHowWeWorkProps> = ({
             <Box
               className={classnames(
                 classes.generalCardStyle,
-                activeCard === index ? classes.activeCard : classes.card
+                activeCard === index ? classes.activeCard : classes.card,
               )}
               key={`${title}_${index}`}
               onClick={() => setActiveCard(index)}

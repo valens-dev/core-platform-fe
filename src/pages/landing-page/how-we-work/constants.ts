@@ -1,7 +1,7 @@
-import AIDrivenForecastIcon from '@/assets/icon/ai-driven-forecast.svg?react';
-import ConnectAndStreamlineIcon from '@/assets/icon/connect-streamline.svg?react';
 import InstantInsightsIcon from '@/assets/icon/instant-insights.svg?react';
 import YourDataYourWayIcon from '@/assets/icon/your-data-your-way.svg?react';
+import AIDrivenForecastIcon from '@/assets/icon/ai-driven-forecast.svg?react';
+import ConnectAndStreamlineIcon from '@/assets/icon/connect-streamline.svg?react';
 
 export const CARDS_DATA = [
   {

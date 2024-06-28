@@ -1,4 +1,5 @@
 import WorkspaceBackground from '@/assets/image/background-workspace.png';
+
 import { tss } from '@/styles/theme';
 
 const useStyles = tss.create(({ theme }) => ({

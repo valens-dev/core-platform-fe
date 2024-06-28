@@ -1,13 +1,16 @@
 import React from 'react';
 
-import { Box, Typography } from '@mui/material';
 import classnames from 'classnames';
 
-import { Table } from './table';
+import { Box, Typography } from '@mui/material';
+
 import { PlanPrice } from '@/components/offer/offer-card/plan-price';
 
-import useStyles from './styles';
+import { Table } from './table';
+
 import { IComparisonTableProps } from './types';
+
+import useStyles from './styles';
 
 export const ComparisonTable: React.FC<IComparisonTableProps> = ({
   text,

@@ -1,5 +1,6 @@
-import { Box } from '@mui/material';
 import classnames from 'classnames';
+
+import { Box } from '@mui/material';
 
 import useStyles from './styles';
 

@@ -1,7 +1,7 @@
 import { Box, Typography } from '@mui/material';
 
-import { Button } from '@/shared/button';
 import { Line } from '@/shared/line';
+import { Button } from '@/shared/button';
 
 import { appText } from '@/constants/strings';
 

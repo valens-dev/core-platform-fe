@@ -1,8 +1,7 @@
-import { tss } from '@/styles/theme';
-
+import { ITheme } from '@/types/theme';
 import { ColorVariant } from '@/types/color';
 
-import { ITheme } from '@/types/theme';
+import { tss } from '@/styles/theme';
 
 const getButtonGeneralStyle = (theme: ITheme, colorVariant: ColorVariant) => {
   switch (colorVariant) {

@@ -3,6 +3,7 @@ import { Box, Typography } from '@mui/material';
 import RightArrow from '@/assets/icon/right-arrow-icon.svg?react';
 
 import { getNavItemClasses } from './utils';
+
 import useStyles from './styles';
 
 interface INavItemProps {
@@ -29,7 +30,7 @@ export function NavItem({
   const { navItemClass, iconClass, navTextClass } = getNavItemClasses(
     hoveredNavItem,
     index,
-    classes
+    classes,
   );
 
   return (

@@ -1,6 +1,9 @@
 import React from 'react';
-import { Typography } from '@mui/material';
+
 import classnames from 'classnames';
+
+import { Typography } from '@mui/material';
+
 import useStyles from './styles';
 
 interface IPlanPriceProps {

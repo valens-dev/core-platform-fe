@@ -1,9 +1,9 @@
 import { Box, IconButton } from '@mui/material';
 
-import { MenuContent } from './menu-content';
-import { MenuHeader } from './menu-header';
-
 import PlusIcon from '@/assets/icon/plus-icon.svg?react';
+
+import { MenuHeader } from './menu-header';
+import { MenuContent } from './menu-content';
 
 import useStyles from './styles';
 
@@ -14,7 +14,7 @@ interface IMenuItemProps {
   handlePlusClick: (id: number) => void;
   handleToolClick: (
     tool: string,
-    icon: React.FunctionComponent<React.SVGProps<SVGSVGElement>>
+    icon: React.FunctionComponent<React.SVGProps<SVGSVGElement>>,
   ) => void;
 }
 

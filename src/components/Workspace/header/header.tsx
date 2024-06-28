@@ -1,17 +1,20 @@
 import { useState } from 'react';
-import { Box, Typography } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
-import { Dropdown } from '@/components/profile/header/dropdown';
-import { HeaderTabs } from './header-tabs';
+import { Box, Typography } from '@mui/material';
 
-import ArrowDown from '@/assets/icon/arrow-down.svg?react';
-import HomeIcon from '@/assets/icon/home-icon.svg?react';
-import NotificationBell from '@/assets/icon/notification-bell.svg?react';
-import OutlinedQuestionMark from '@/assets/icon/outlined-question-mark.svg?react';
-import ProfilePicture from '@/assets/icon/profile-picture.svg?react';
+import { Dropdown } from '@/components/profile/header/dropdown';
 
 import { appText } from '@/constants/strings';
+
+import HomeIcon from '@/assets/icon/home-icon.svg?react';
+import ArrowDown from '@/assets/icon/arrow-down.svg?react';
+import ProfilePicture from '@/assets/icon/profile-picture.svg?react';
+import NotificationBell from '@/assets/icon/notification-bell.svg?react';
+import OutlinedQuestionMark from '@/assets/icon/outlined-question-mark.svg?react';
+
+import { HeaderTabs } from './header-tabs';
+
 import useStyles from './styles';
 
 const WORKSPACE_TEXT = appText.workspace;

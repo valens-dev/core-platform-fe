@@ -1,7 +1,9 @@
 import React from 'react';
 import { useFormState } from 'react-hook-form';
-import { TextField as MuiTextField, Typography } from '@mui/material';
+
 import classnames from 'classnames';
+
+import { Typography, TextField as MuiTextField } from '@mui/material';
 
 import { ITextFieldProps } from './types';
 

@@ -1,10 +1,10 @@
 import { useOutletContext } from 'react-router-dom';
 
+import { Track } from './track';
 import { AboutUs } from './about-us';
 import { ContactUs } from './contact-us';
-import { HowWeWork } from './how-we-work';
 import { InfoPanel } from './info-panel';
-import { Track } from './track';
+import { HowWeWork } from './how-we-work';
 
 export function LandingPage() {
   const { contactUsRef, aboutUsRef, howWeWorkRef } = useOutletContext<{

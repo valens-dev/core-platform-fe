@@ -1,13 +1,14 @@
-import { Box, Typography } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
-import { appText } from '@/constants/strings';
+import { Box, Typography } from '@mui/material';
 
 import { Line } from '@/shared/line';
 import { Chip } from '@/shared/chip';
 import { Button } from '@/shared/button';
-import { useNavigate } from 'react-router-dom';
 
 import { ColorVariant } from '@/types/color';
+
+import { appText } from '@/constants/strings';
 
 import ExampleImage from '@/assets/image/example.png';
 

@@ -1,9 +1,10 @@
-import { Box, Typography, Menu, MenuItem } from '@mui/material';
-
-import ProfilePicture from '@/assets/icon/profile-picture.svg?react';
-import Logout from '@/assets/icon/logout-icon.svg?react';
+import { Box, Menu, MenuItem, Typography } from '@mui/material';
 
 import { appText } from '@/constants/strings';
+
+import Logout from '@/assets/icon/logout-icon.svg?react';
+import ProfilePicture from '@/assets/icon/profile-picture.svg?react';
+
 import useStyles from './styles';
 
 interface IDropdownProps {

@@ -1,19 +1,23 @@
-import { useEffect, useState } from 'react';
-import { Box, Typography } from '@mui/material';
+import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+
 import classnames from 'classnames';
+
+import { Box, Typography } from '@mui/material';
+
+import { Line } from '@/shared/line';
+
+import { AuthTab } from '@/types/auth';
+
+import { appText } from '@/constants/strings';
 
 import { Login } from './login';
 import { Registration } from './registration';
 import { SocialAuthButtons } from './social-auth-buttons';
 
-import { appText } from '@/constants/strings';
-
-import { Line } from '@/shared/line';
+import { IAuthProps } from './types';
 
 import useStyles from './styles';
-import { IAuthProps } from './types';
-import { AuthTab } from '@/types/auth';
 
 const text = appText.auth;
 

@@ -1,4 +1,4 @@
-import { Box, Card, CardContent, Typography } from '@mui/material';
+import { Box, Card, Typography, CardContent } from '@mui/material';
 
 import { CARDS_DATA } from './constants';
 

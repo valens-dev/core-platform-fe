@@ -1,10 +1,13 @@
 import { Box, Button } from '@mui/material';
 
-import { IWorkingAreaProps } from './types';
 import { ITool } from '@/types/tool';
-import { ToolItem } from './tool-item';
 
 import { appText } from '@/constants/strings';
+
+import { ToolItem } from './tool-item';
+
+import { IWorkingAreaProps } from './types';
+
 import useStyles from './styles';
 
 const text = appText.workspacePage.menuItems;
@@ -17,7 +20,7 @@ export function WorkingArea({
 
   const handleDeleteTool = (tool: ITool) => {
     setSelectedTools((prevTools) =>
-      prevTools.filter((t) => t.tool !== tool.tool)
+      prevTools.filter((t) => t.tool !== tool.tool),
     );
   };
 

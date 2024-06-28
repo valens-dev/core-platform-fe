@@ -1,7 +1,6 @@
 import Template2 from '@/assets/image/template-2.png';
 import Template3 from '@/assets/image/template-3.png';
 import Template4 from '@/assets/image/template-4.png';
-
 import Template7 from '@/assets/image/template-7.png';
 import Template8 from '@/assets/image/template-8.png';
 import Template9 from '@/assets/image/template-9.png';

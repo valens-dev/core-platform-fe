@@ -1,21 +1,25 @@
-import { useEffect, useRef, useState } from 'react';
-import { Box, Typography, IconButton } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+import { useRef, useState, useEffect } from 'react';
 
-import { Button } from '@/shared/button';
+import { Box, Typography, IconButton } from '@mui/material';
+
 import { Modal } from '@/shared/modal';
-import { Search } from '@/components/home/search';
-import { CreateWorkspaceModal } from '@/components/home/create-workspace-modal';
-import { SearchBar } from '@/components/home/search-bar';
-import { Cards } from '@/components/home/cards';
-import { TourPopup } from '@/components/home/tour-popup';
-import { getLeftArrowClassName } from './utils';
+import { Button } from '@/shared/button';
 
-import QuestionPopUp from '@/assets/icon/question-pop-icon.svg?react';
-import LeftArrow from '@/assets/icon/left-arrow-icon.svg?react';
-import RightArrow from '@/assets/icon/right-arrow-icon.svg?react';
+import { Cards } from '@/components/home/cards';
+import { Search } from '@/components/home/search';
+import { SearchBar } from '@/components/home/search-bar';
+import { TourPopup } from '@/components/home/tour-popup';
+import { CreateWorkspaceModal } from '@/components/home/create-workspace-modal';
 
 import { appText } from '@/constants/strings';
+
+import LeftArrow from '@/assets/icon/left-arrow-icon.svg?react';
+import RightArrow from '@/assets/icon/right-arrow-icon.svg?react';
+import QuestionPopUp from '@/assets/icon/question-pop-icon.svg?react';
+
+import { getLeftArrowClassName } from './utils';
+
 import useStyles from './styles';
 
 const text = appText.homePage;

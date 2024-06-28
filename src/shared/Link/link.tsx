@@ -1,11 +1,14 @@
-import { Box, Link as MuiLink } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+
 import classNames from 'classnames';
 
-import useStyles from './styles';
+import { Box, Link as MuiLink } from '@mui/material';
 
 import { ColorVariant } from '@/types/color';
+
 import { ILinkProps } from './types';
+
+import useStyles from './styles';
 
 export function Link({
   label,

@@ -1,14 +1,18 @@
-import { Box, Typography } from '@mui/material';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
+
+import { Box, Typography } from '@mui/material';
 
 import { Button } from '@/shared/button';
 import { TextField } from '@/shared/text-field';
 
 import { ColorVariant } from '@/types/color';
+
 import { appText } from '@/constants/strings';
-import useStyles from './styles';
+
 import { IWorkspaceAuthFormData } from './types';
+
+import useStyles from './styles';
 
 const text = appText.homePage.createWorkspaceModal;
 

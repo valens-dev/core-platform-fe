@@ -1,5 +1,6 @@
 import { ITextProps } from '../../types';
-import { IFeature, IPlan } from '../types';
+
+import { IPlan, IFeature } from '../types';
 
 export interface IComparisonTableProps {
   text: ITextProps;

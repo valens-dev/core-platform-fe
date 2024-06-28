@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
-import { Box, Typography, Button } from '@mui/material';
+
 import classnames from 'classnames';
-import { appText } from '@/constants/strings';
+
+import { Box, Button, Typography } from '@mui/material';
+
 import { OfferCard } from '@/components/offer/offer-card';
 import { ComparisonTable } from '@/components/offer/comparison-table';
+
+import { appText } from '@/constants/strings';
+
 import useStyles from './styles';
 
 const text = appText.pricingPage.ourOffer;

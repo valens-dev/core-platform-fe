@@ -2,10 +2,12 @@ import { Typography } from '@mui/material';
 
 import { Button } from '@/shared/button';
 
+import { ColorVariant } from '@/types/color';
+
+import { appText } from '@/constants/strings';
+
 import SearchIcon from '@/assets/icon/search-icon.svg?react';
 
-import { ColorVariant } from '@/types/color';
-import { appText } from '@/constants/strings';
 import useStyles from './styles';
 
 const text = appText.homePage.search;

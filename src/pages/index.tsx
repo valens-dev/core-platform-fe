@@ -1,16 +1,17 @@
-import { HashRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes, HashRouter } from 'react-router-dom';
 
-import { Auth } from '@/components/auth';
-import { HomePage } from '@/pages/home-page';
-import { LandingPage } from '@/pages/landing-page';
-import { HomeLayout } from '@/layouts/home-layout';
-import { LandingLayout } from '@/layouts/landing-layout';
 import RootProvider from '@/context/root-provider';
 
+import { Auth } from '@/components/auth';
+
+import { HomeLayout } from '@/layouts/home-layout';
+import { LandingLayout } from '@/layouts/landing-layout';
+import { WorkspaceLayout } from '@/layouts/workspace-layout';
+
+import { HomePage } from '@/pages/home-page';
+import { LandingPage } from '@/pages/landing-page';
 import { OurOfferPage } from '@/pages/our-offer-page';
 import { TemplatesPage } from '@/pages/templates-page';
-
-import { WorkspaceLayout } from '@/layouts/workspace-layout';
 import { WorkspacePage } from '@/pages/workspace-page';
 
 import '@/styles/global.css';

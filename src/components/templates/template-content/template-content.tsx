@@ -1,7 +1,9 @@
 import { Box } from '@mui/material';
+
 import { NavItem } from '../nav-item';
 import { MenuOptions } from '../menu-options';
 import { TemplateList } from '../template-list';
+
 import useStyles from './styles';
 
 interface ITemplateContentProps {

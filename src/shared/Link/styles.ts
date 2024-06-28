@@ -1,13 +1,12 @@
-import { tss } from '@/styles/theme';
-
+import { ITheme } from '@/types/theme';
 import { ColorVariant } from '@/types/color';
 
-import { ITheme } from '@/types/theme';
+import { tss } from '@/styles/theme';
 
 const getLinkGeneralStyle = (
   theme: ITheme,
   colorVariant: ColorVariant,
-  underline: boolean
+  underline: boolean,
 ) => {
   let color;
   switch (colorVariant) {

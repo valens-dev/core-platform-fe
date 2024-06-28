@@ -1,16 +1,18 @@
 import { useState } from 'react';
-import { Box, Typography } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+
+import { Box, Typography } from '@mui/material';
+
+import { appText } from '@/constants/strings';
+
+import HomeIcon from '@/assets/icon/home-icon.svg?react';
+import ArrowDown from '@/assets/icon/arrow-down.svg?react';
+import ProfilePicture from '@/assets/icon/profile-picture.svg?react';
+import NotificationBell from '@/assets/icon/notification-bell.svg?react';
+import OutlinedQuestionMark from '@/assets/icon/outlined-question-mark.svg?react';
 
 import { Dropdown } from './dropdown';
 
-import HomeIcon from '@/assets/icon/home-icon.svg?react';
-import OutlinedQuestionMark from '@/assets/icon/outlined-question-mark.svg?react';
-import NotificationBell from '@/assets/icon/notification-bell.svg?react';
-import ProfilePicture from '@/assets/icon/profile-picture.svg?react';
-import ArrowDown from '@/assets/icon/arrow-down.svg?react';
-
-import { appText } from '@/constants/strings';
 import useStyles from './styles';
 
 const text = appText.homePage.profileHeader;

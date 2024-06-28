@@ -1,16 +1,20 @@
-import { Box } from '@mui/material';
 import { useState } from 'react';
 
 import {
-  handleArrowClick,
   handlePlusClick,
   handleToolClick,
+  handleArrowClick,
 } from '@/utils/menu-handlers';
+
+import { Box } from '@mui/material';
+
 import { Menu } from '@/components/workspace/menu';
 import { WorkingArea } from '@/components/workspace/working-area';
+
 import { ITool } from '@/types/tool';
 
 import { appText } from '@/constants/strings';
+
 import useStyles from './styles';
 
 const text = appText.workspacePage.menuItems;

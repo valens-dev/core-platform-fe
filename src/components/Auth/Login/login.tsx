@@ -1,18 +1,21 @@
-import {
-  Box,
-  Checkbox,
-  FormControlLabel,
-  Link,
-  Typography,
-} from '@mui/material';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
+
+import {
+  Box,
+  Link,
+  Checkbox,
+  Typography,
+  FormControlLabel,
+} from '@mui/material';
 
 import { Button } from '@/shared/button';
 import { TextField } from '@/shared/text-field';
 
-import { ILoginFormData } from './types';
 import { appText } from '@/constants/strings';
+
+import { ILoginFormData } from './types';
+
 import useStyles from './styles';
 
 const text = appText.auth.login;

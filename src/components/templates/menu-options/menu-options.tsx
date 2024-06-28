@@ -1,4 +1,5 @@
 import { Box, MenuItem, ClickAwayListener } from '@mui/material';
+
 import useStyles from './styles';
 
 interface IMenuOptionsProps {

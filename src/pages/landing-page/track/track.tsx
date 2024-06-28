@@ -1,6 +1,6 @@
-import { Box } from '@mui/material';
-
 import Marquee from 'react-fast-marquee';
+
+import { Box } from '@mui/material';
 
 import { ICONS } from './constants';
 

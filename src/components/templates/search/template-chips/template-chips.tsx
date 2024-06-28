@@ -1,9 +1,11 @@
 import { Box, Typography } from '@mui/material';
 
+import { appText } from '@/constants/strings';
 import { TEMPLATE_CHIPS } from '@/constants/templates';
 
-import { appText } from '@/constants/strings';
-import useStyles, { getChipStyle } from './styles';
+import { getChipStyle } from './utils';
+
+import useStyles from './styles';
 
 const text = appText.homePage.search;
 

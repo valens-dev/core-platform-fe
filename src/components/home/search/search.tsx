@@ -1,18 +1,23 @@
-import { Box, Typography } from '@mui/material';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 
-import { TextField } from '@/shared/text-field';
-import { Button } from '@/shared/button';
-import { Template } from './template';
+import { Box, Typography } from '@mui/material';
 
-import SearchIcon from '@/assets/icon/search-icon.svg?react';
-import { ISearchFormData } from '@/types/search';
-import { TEMPLATES } from './constants';
-import { TEMPLATE_CHIPS } from '@/constants/templates';
+import { Button } from '@/shared/button';
+import { TextField } from '@/shared/text-field';
 
 import { ColorVariant } from '@/types/color';
+import { ISearchFormData } from '@/types/search';
+
 import { appText } from '@/constants/strings';
+import { TEMPLATE_CHIPS } from '@/constants/templates';
+
+import SearchIcon from '@/assets/icon/search-icon.svg?react';
+
+import { Template } from './template';
+
+import { TEMPLATES } from './constants';
+
 import useStyles from './styles';
 
 const text = appText.homePage.search;

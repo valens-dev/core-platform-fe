@@ -1,6 +1,7 @@
 import { Box } from '@mui/material';
 
 import { Template } from '@/components/home/search/template';
+
 import { CARDS_TEMPLATES } from './constants';
 
 import useStyles from './styles';
