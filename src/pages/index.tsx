@@ -13,9 +13,9 @@ import { TemplatesPage } from '@/pages/templates-page';
 import { WorkspaceLayout } from '@/layouts/workspace-layout';
 import { WorkspacePage } from '@/pages/workspace-page';
 
-import './App.css';
+import '@/styles/global.css';
 
-function App() {
+export function App() {
   return (
     <RootProvider>
       <HashRouter>
@@ -37,5 +37,3 @@ function App() {
     </RootProvider>
   );
 }
-
-export default App;
