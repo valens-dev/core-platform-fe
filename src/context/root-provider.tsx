@@ -1,10 +1,12 @@
 import { StyledEngineProvider, ThemeProvider } from '@mui/material/styles';
 
-import { IProvider } from '@utils/interfaces';
+import { componentOverrides } from '@/styles/component-overrides';
 
-import { componentOverrides } from '@styles/componentOverrides';
+interface IProviderProps {
+  children: React.ReactNode;
+}
 
-const Provider: React.FC<IProvider> = ({ children }) => {
+const RootProvider: React.FC<IProviderProps> = ({ children }) => {
   return (
     <StyledEngineProvider injectFirst>
       <ThemeProvider theme={componentOverrides}>{children}</ThemeProvider>
@@ -12,4 +14,4 @@ const Provider: React.FC<IProvider> = ({ children }) => {
   );
 };
 
-export default Provider;
+export default RootProvider;
