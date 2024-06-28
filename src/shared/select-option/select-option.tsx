@@ -1,4 +1,4 @@
-import { Select, MenuItem, SelectChangeEvent } from '@mui/material';
+import { Select, MenuItem, type SelectChangeEvent } from '@mui/material';
 
 import DownArrowIcon from '@/assets/icon/arrow-down.svg?react';
 

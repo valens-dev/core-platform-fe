@@ -1,8 +1,6 @@
-import { Control } from 'react-hook-form';
+import { type Control, type UseFormRegisterReturn } from 'react-hook-form';
 
-import { UseFormRegisterReturn } from 'react-hook-form/dist/types/form';
-
-import { BaseTextFieldProps } from '@mui/material';
+import { type BaseTextFieldProps } from '@mui/material';
 
 type TexFieldSize = 'small' | 'medium';
 

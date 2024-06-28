@@ -10,7 +10,7 @@ import { ColorVariant } from '@/types/color';
 
 import { appText } from '@/constants/strings';
 
-import { IWorkspaceAuthFormData } from './types';
+import { type IWorkspaceAuthFormData } from './types';
 
 import useStyles from './styles';
 

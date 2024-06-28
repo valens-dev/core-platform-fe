@@ -1,4 +1,4 @@
-import React from 'react';
+import type React from 'react';
 
 import classnames from 'classnames';
 
@@ -8,7 +8,7 @@ import { PlanPrice } from '@/components/offer/offer-card/plan-price';
 
 import { Table } from './table';
 
-import { IComparisonTableProps } from './types';
+import { type IComparisonTableProps } from './types';
 
 import useStyles from './styles';
 

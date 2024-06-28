@@ -1,6 +1,6 @@
-import { Dispatch, MouseEvent, SetStateAction } from 'react';
+import { type Dispatch, type MouseEvent, type SetStateAction } from 'react';
 
-import { ITool } from '@/types/tool';
+import { type ITool } from '@/types/tool';
 
 interface IMenuPosition {
   top: number;
@@ -11,7 +11,7 @@ export const handleMenuOpen = (
   event: MouseEvent<HTMLElement>,
   index: number,
   setMenuPosition: Dispatch<SetStateAction<IMenuPosition | null>>,
-  setHoveredNavItem: Dispatch<SetStateAction<number | null>>
+  setHoveredNavItem: Dispatch<SetStateAction<number | null>>,
 ) => {
   const position = event.currentTarget.getBoundingClientRect();
   setMenuPosition({
@@ -24,7 +24,7 @@ export const handleMenuOpen = (
 export const handleMenuClose = (
   isMouseOverMenu: boolean,
   setMenuPosition: Dispatch<SetStateAction<IMenuPosition | null>>,
-  setHoveredNavItem: Dispatch<SetStateAction<number | null>>
+  setHoveredNavItem: Dispatch<SetStateAction<number | null>>,
 ) => {
   if (isMouseOverMenu) {
     setMenuPosition(null);
@@ -34,7 +34,7 @@ export const handleMenuClose = (
 
 export const handleOptionClick = (
   option: number,
-  setSelectedOptions: Dispatch<SetStateAction<number[]>>
+  setSelectedOptions: Dispatch<SetStateAction<number[]>>,
 ) => {
   setSelectedOptions((prev) => {
     if (prev.includes(option)) {
@@ -49,12 +49,12 @@ export const handleArrowClick = (
   id: number,
   setMenus: Dispatch<
     SetStateAction<{ id: number; label: string; isOpen: boolean }[]>
-  >
+  >,
 ) => {
   setMenus((prevMenus) =>
     prevMenus.map((menu) =>
-      menu.id === id ? { ...menu, isOpen: !menu.isOpen } : menu
-    )
+      menu.id === id ? { ...menu, isOpen: !menu.isOpen } : menu,
+    ),
   );
 };
 
@@ -63,7 +63,7 @@ export const handlePlusClick = (
   menu: { id: number; label: string; isOpen: boolean }[],
   setMenus: Dispatch<
     SetStateAction<{ id: number; label: string; isOpen: boolean }[]>
-  >
+  >,
 ) => {
   const newMenu = {
     id: menu.length + 1,
@@ -80,7 +80,7 @@ export const handleToolClick = (
   tool: string,
   icon: React.FunctionComponent<React.SVGProps<SVGSVGElement>>,
   selectedTools: ITool[],
-  setSelectedTools: Dispatch<SetStateAction<ITool[]>>
+  setSelectedTools: Dispatch<SetStateAction<ITool[]>>,
 ) => {
   setSelectedTools([...selectedTools, { tool, icon }]);
 };

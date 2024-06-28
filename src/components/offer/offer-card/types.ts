@@ -1,4 +1,4 @@
-import { ITextProps } from '../types';
+import { type ITextProps } from '../types';
 
 interface IPlanProps {
   title: string;

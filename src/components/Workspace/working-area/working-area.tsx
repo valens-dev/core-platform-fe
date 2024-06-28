@@ -1,12 +1,12 @@
 import { Box, Button } from '@mui/material';
 
-import { ITool } from '@/types/tool';
+import { type ITool } from '@/types/tool';
 
 import { appText } from '@/constants/strings';
 
 import { ToolItem } from './tool-item';
 
-import { IWorkingAreaProps } from './types';
+import { type IWorkingAreaProps } from './types';
 
 import useStyles from './styles';
 

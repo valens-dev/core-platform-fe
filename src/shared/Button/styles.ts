@@ -1,4 +1,4 @@
-import { ITheme } from '@/types/theme';
+import { type ITheme } from '@/types/theme';
 import { ColorVariant } from '@/types/color';
 
 import { tss } from '@/styles/theme';

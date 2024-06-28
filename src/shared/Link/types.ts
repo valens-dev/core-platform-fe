@@ -1,4 +1,4 @@
-import { ColorVariant } from '@/types/color';
+import { type ColorVariant } from '@/types/color';
 
 export interface ILinkProps {
   label: string;

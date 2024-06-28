@@ -14,7 +14,7 @@ import { TextField } from '@/shared/text-field';
 
 import { appText } from '@/constants/strings';
 
-import { ILoginFormData } from './types';
+import { type ILoginFormData } from './types';
 
 import useStyles from './styles';
 

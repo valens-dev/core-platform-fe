@@ -1,4 +1,4 @@
-import { ITool } from '@/types/tool';
+import { type ITool } from '@/types/tool';
 
 import HTTP from '@/assets/icon/http-icon.svg?react';
 import AzureIcon from '@/assets/icon/azure-icon.svg?react';

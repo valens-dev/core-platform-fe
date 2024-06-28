@@ -1,4 +1,4 @@
-import { AuthTab } from '@/types/auth';
+import { type AuthTab } from '@/types/auth';
 
 export interface IAuthProps {
   tab?: AuthTab;

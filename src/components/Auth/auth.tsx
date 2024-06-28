@@ -15,7 +15,7 @@ import { Login } from './login';
 import { Registration } from './registration';
 import { SocialAuthButtons } from './social-auth-buttons';
 
-import { IAuthProps } from './types';
+import { type IAuthProps } from './types';
 
 import useStyles from './styles';
 

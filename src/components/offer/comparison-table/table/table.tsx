@@ -5,9 +5,9 @@ import { Box, Typography } from '@mui/material';
 import CrossIcon from '@/assets/icon/x-icon.svg?react';
 import CheckIcon from '@/assets/icon/check-in-icon.svg?react';
 
-import { IFeature } from '../types';
+import { type IFeature } from '../types';
 
-import { IComparisonTableProps } from './types';
+import { type IComparisonTableProps } from './types';
 
 import useStyles from './styles';
 

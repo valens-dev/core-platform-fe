@@ -1,11 +1,11 @@
 import Draggable from 'react-draggable';
-import { useState, MouseEvent } from 'react';
+import { useState, type MouseEvent } from 'react';
 
 import { Box, Menu, MenuItem, Typography } from '@mui/material';
 
-import { ITool } from '@/types/tool';
+import { type ITool } from '@/types/tool';
 
-import { IToolItemProps } from './types';
+import { type IToolItemProps } from './types';
 
 import useStyles from './styles';
 

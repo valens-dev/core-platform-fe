@@ -1,4 +1,4 @@
-import React from 'react';
+import type React from 'react';
 
 import classnames from 'classnames';
 
@@ -26,7 +26,7 @@ export const FeatureList: React.FC<FeatureListProps> = ({
             classes.featureItem,
             feature.includes(benefitText)
               ? classes.titleFeature
-              : classes.textFeature
+              : classes.textFeature,
           )}
         >
           {!feature.includes(benefitText) && (

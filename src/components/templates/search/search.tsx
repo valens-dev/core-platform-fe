@@ -4,7 +4,7 @@ import { Box, Typography } from '@mui/material';
 
 import { TextField } from '@/shared/text-field';
 
-import { ISearchFormData } from '@/types/search';
+import { type ISearchFormData } from '@/types/search';
 
 import { appText } from '@/constants/strings';
 

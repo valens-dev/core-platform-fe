@@ -1,4 +1,4 @@
-import { ITool } from '@/types/tool';
+import { type ITool } from '@/types/tool';
 
 export interface IWorkingAreaProps {
   selectedTools: ITool[];

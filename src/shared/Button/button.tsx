@@ -4,7 +4,7 @@ import { Button as MuiButton } from '@mui/material';
 
 import { ColorVariant } from '@/types/color';
 
-import { IButtonProps } from './types';
+import { type IButtonProps } from './types';
 
 import useStyles from './styles';
 

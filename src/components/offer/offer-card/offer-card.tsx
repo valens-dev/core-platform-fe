@@ -1,4 +1,4 @@
-import React from 'react';
+import type React from 'react';
 
 import classnames from 'classnames';
 
@@ -9,7 +9,7 @@ import StarIcon from '@/assets/icon/star-icon.svg?react';
 import { PlanPrice } from './plan-price';
 import { FeatureList } from './feature-list';
 
-import { IOfferCardProps } from './types';
+import { type IOfferCardProps } from './types';
 
 import useStyles from './styles';
 

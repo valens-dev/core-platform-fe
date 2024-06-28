@@ -7,7 +7,7 @@ import { TextField } from '@/shared/text-field';
 
 import { appText } from '@/constants/strings';
 
-import { IRegistrationFormData } from './types';
+import { type IRegistrationFormData } from './types';
 
 import useStyles from './styles';
 
