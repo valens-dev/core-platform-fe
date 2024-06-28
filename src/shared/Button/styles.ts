@@ -1,10 +1,10 @@
-import { tss } from '@styles/theme';
+import { tss } from '@/styles/theme';
 
-import { ColorVariant } from '@models/styles';
+import { ColorVariant } from '@/types/color';
 
-import { Theme } from '@utils/interfaces';
+import { ITheme } from '@/types/theme';
 
-const getButtonGeneralStyle = (theme: Theme, colorVariant: ColorVariant) => {
+const getButtonGeneralStyle = (theme: ITheme, colorVariant: ColorVariant) => {
   switch (colorVariant) {
     case ColorVariant.Primary:
       return {

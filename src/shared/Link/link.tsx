@@ -2,20 +2,19 @@ import { Box, Link as MuiLink } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import classNames from 'classnames';
 
-import { ColorVariant } from '@models/styles';
-
-import { ILink } from '@utils/interfaces';
-
 import useStyles from './styles';
 
-function Link({
+import { ColorVariant } from '@/types/color';
+import { ILinkProps } from './types';
+
+export function Link({
   label,
   href = '',
   colorVariant = ColorVariant.Light,
   className,
   underline = true,
   endIcon,
-}: ILink) {
+}: ILinkProps) {
   const navigate = useNavigate();
   const { classes } = useStyles({ colorVariant, underline });
 
@@ -26,5 +25,3 @@ function Link({
     </Box>
   );
 }
-
-export default Link;

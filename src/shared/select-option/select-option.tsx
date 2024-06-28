@@ -1,11 +1,16 @@
-import { Select, MenuItem } from '@mui/material';
-import { ISelectOptionProps } from '@utils/interfaces';
+import { Select, MenuItem, SelectChangeEvent } from '@mui/material';
 
-import DownArrowIcon from '@assets/icons/arrow-down.svg?react';
+import DownArrowIcon from '@/assets/icon/arrow-down.svg?react';
 
 import useStyles from './styles';
 
-function SelectOption({ value, onChange, options }: ISelectOptionProps) {
+interface ISelectOptionProps {
+  value: string;
+  onChange: (event: SelectChangeEvent<string>) => void;
+  options: { value: string; label: string }[];
+}
+
+export function SelectOption({ value, onChange, options }: ISelectOptionProps) {
   const { classes } = useStyles();
 
   return (
@@ -24,5 +29,3 @@ function SelectOption({ value, onChange, options }: ISelectOptionProps) {
     </Select>
   );
 }
-
-export default SelectOption;

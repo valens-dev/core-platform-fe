@@ -3,11 +3,11 @@ import { useFormState } from 'react-hook-form';
 import { TextField as MuiTextField, Typography } from '@mui/material';
 import classnames from 'classnames';
 
-import { ITextField } from '@utils/interfaces';
+import { ITextFieldProps } from './types';
 
 import useStyles from './styles';
 
-function TextField({
+export function TextField({
   label,
   className,
   placeholder,
@@ -19,7 +19,7 @@ function TextField({
   size = 'small',
   customOnChange,
   ...props
-}: ITextField) {
+}: ITextFieldProps) {
   const { errors } = useFormState({ control });
   const error = errors[register?.name ?? '']?.message as string;
   const { classes } = useStyles();
@@ -58,5 +58,3 @@ function TextField({
     </div>
   );
 }
-
-export default TextField;

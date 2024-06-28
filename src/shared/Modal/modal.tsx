@@ -8,7 +8,7 @@ interface IModal {
   children: JSX.Element;
 }
 
-function Modal({ children, isOpen, handleClose, ...props }: IModal) {
+export function Modal({ children, isOpen, handleClose, ...props }: IModal) {
   const { classes } = useStyles();
 
   return (
@@ -22,5 +22,3 @@ function Modal({ children, isOpen, handleClose, ...props }: IModal) {
     </MuiDialog>
   );
 }
-
-export default Modal;

@@ -1,20 +1,20 @@
 import { Button as MuiButton } from '@mui/material';
 import classNames from 'classnames';
 
-import { ColorVariant } from '@models/styles';
+import { ColorVariant } from '@/types/color';
 
-import { ButtonProps } from '@utils/types';
+import { IButtonProps } from './types';
 
 import useStyles from './styles';
 
-function Button({
+export function Button({
   children,
   variant = 'contained',
   colorVariant = ColorVariant.Primary,
   className,
   isSubmitting,
   ...props
-}: ButtonProps) {
+}: IButtonProps) {
   const { classes } = useStyles({ colorVariant });
 
   return (
@@ -27,5 +27,3 @@ function Button({
     </MuiButton>
   );
 }
-
-export default Button;
