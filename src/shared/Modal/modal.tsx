@@ -8,7 +8,12 @@ interface IModal {
   children: JSX.Element;
 }
 
-export function Modal({ children, isOpen, handleClose, ...props }: IModal) {
+export function Modal({
+  children,
+  isOpen,
+  handleClose,
+  ...props
+}: IModal): JSX.Element {
   const { classes } = useStyles();
 
   return (

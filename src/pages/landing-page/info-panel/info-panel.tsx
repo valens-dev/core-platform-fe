@@ -16,11 +16,11 @@ import useStyles from './styles';
 
 const text = appText.landingPage.infoPanel;
 
-export function InfoPanel() {
+export function InfoPanel(): JSX.Element {
   const navigate = useNavigate();
   const { classes } = useStyles();
 
-  const handleOpenOffers = () => {
+  const handleOpenOffers = (): void => {
     navigate('/our-offer');
   };
 

@@ -21,12 +21,12 @@ export function TextField({
   size = 'small',
   customOnChange,
   ...props
-}: ITextFieldProps) {
+}: ITextFieldProps): JSX.Element {
   const { errors } = useFormState({ control });
   const error = errors[register?.name ?? '']?.message as string;
   const { classes } = useStyles();
 
-  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+  function handleChange(e: React.ChangeEvent<HTMLInputElement>): void {
     const newValue = e.target.value;
     if (register) register.onChange(e);
     if (customOnChange) customOnChange(newValue ?? '');

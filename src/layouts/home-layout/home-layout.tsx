@@ -6,7 +6,7 @@ import { Header } from '@/components/profile/header';
 
 import useStyles from './styles';
 
-export function HomeLayout() {
+export function HomeLayout(): JSX.Element {
   const { classes } = useStyles();
 
   return (

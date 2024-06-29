@@ -17,26 +17,26 @@ import useStyles from './styles';
 
 const text = appText.homePage.profileHeader;
 
-export function Header() {
+export function Header(): JSX.Element {
   const navigate = useNavigate();
   const [dropdown, setDropdown] = useState<null | HTMLElement>(null);
   const { classes } = useStyles();
 
-  const handleOpenHomepage = () => {
+  const handleOpenHomepage = (): void => {
     navigate('/homepage');
   };
 
-  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
+  const handleClick = (event: React.MouseEvent<HTMLElement>): void => {
     setDropdown(event.currentTarget);
   };
 
-  const handleIconClick = (event: React.MouseEvent<SVGSVGElement>) => {
+  const handleIconClick = (event: React.MouseEvent<SVGSVGElement>): void => {
     if (event.currentTarget.parentElement) {
       setDropdown(event.currentTarget.parentElement);
     }
   };
 
-  const handleClose = () => {
+  const handleClose = (): void => {
     setDropdown(null);
   };
 

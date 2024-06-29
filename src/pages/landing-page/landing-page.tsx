@@ -6,14 +6,14 @@ import { ContactUs } from './contact-us';
 import { InfoPanel } from './info-panel';
 import { HowWeWork } from './how-we-work';
 
-export function LandingPage() {
+export function LandingPage(): JSX.Element {
   const { contactUsRef, aboutUsRef, howWeWorkRef } = useOutletContext<{
     contactUsRef: React.RefObject<HTMLDivElement>;
     aboutUsRef: React.RefObject<HTMLDivElement>;
     howWeWorkRef: React.RefObject<HTMLDivElement>;
   }>();
 
-  const scrollToContactUs = () => {
+  const scrollToContactUs = (): void => {
     contactUsRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
 

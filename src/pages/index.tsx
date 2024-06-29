@@ -16,7 +16,7 @@ import { WorkspacePage } from '@/pages/workspace-page';
 
 import '@/styles/global.css';
 
-export function App() {
+export function App(): JSX.Element {
   return (
     <RootProvider>
       <HashRouter>

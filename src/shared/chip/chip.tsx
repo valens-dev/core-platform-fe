@@ -5,6 +5,6 @@ interface IChipProps {
   label?: string;
 }
 
-export function Chip({ className, label }: IChipProps) {
+export function Chip({ className, label }: IChipProps): JSX.Element {
   return <MuiChip className={className} label={label} />;
 }

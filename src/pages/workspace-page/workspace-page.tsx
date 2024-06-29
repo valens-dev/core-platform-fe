@@ -19,7 +19,7 @@ import useStyles from './styles';
 
 const text = appText.workspacePage.menuItems;
 
-export function WorkspacePage() {
+export function WorkspacePage(): JSX.Element {
   const { classes } = useStyles();
   const [menu, setMenu] = useState([
     {

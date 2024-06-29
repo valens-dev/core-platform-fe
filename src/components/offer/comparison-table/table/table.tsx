@@ -11,10 +11,11 @@ import { type IComparisonTableProps } from './types';
 
 import useStyles from './styles';
 
-export function Table({ features, plans }: IComparisonTableProps) {
+export function Table({ features, plans }: IComparisonTableProps): JSX.Element {
   const { classes } = useStyles();
 
-  function handleFeatureName(feature: IFeature) {
+  /** TODO: refactor into a component */
+  function handleFeatureName(feature: IFeature): JSX.Element {
     return (
       <Typography
         className={classnames(classes.tableFeature, {
@@ -27,7 +28,11 @@ export function Table({ features, plans }: IComparisonTableProps) {
     );
   }
 
-  function handlePlanTable(feature: IFeature, planTitle: string) {
+  /** TODO: refactor into a component */
+  function handlePlanTable(
+    feature: IFeature,
+    planTitle: string,
+  ): JSX.Element | null {
     const value = feature[planTitle.toLowerCase()];
     if (typeof value === 'string' && value !== '') {
       return <Typography>{value}</Typography>;

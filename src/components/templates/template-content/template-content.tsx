@@ -26,7 +26,7 @@ export function TemplateContent({
   hoveredNavItem,
   handleMenuOpen,
   navData,
-}: ITemplateContentProps) {
+}: ITemplateContentProps): JSX.Element {
   const { classes } = useStyles();
 
   return (

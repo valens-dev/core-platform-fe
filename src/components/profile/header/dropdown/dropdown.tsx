@@ -14,7 +14,10 @@ interface IDropdownProps {
 
 const text = appText.homePage.profileHeader;
 
-export function Dropdown({ dropdown, handleClose }: IDropdownProps) {
+export function Dropdown({
+  dropdown,
+  handleClose,
+}: IDropdownProps): JSX.Element {
   const { classes } = useStyles();
 
   return (

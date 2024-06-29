@@ -7,11 +7,13 @@ import useStyles from './styles';
 interface IMenuContentProps {
   handleToolClick: (
     tool: string,
-    icon: React.FunctionComponent<React.SVGProps<SVGSVGElement>>
+    icon: React.FunctionComponent<React.SVGProps<SVGSVGElement>>,
   ) => void;
 }
 
-export function MenuContent({ handleToolClick }: IMenuContentProps) {
+export function MenuContent({
+  handleToolClick,
+}: IMenuContentProps): JSX.Element {
   const { classes } = useStyles();
 
   return (

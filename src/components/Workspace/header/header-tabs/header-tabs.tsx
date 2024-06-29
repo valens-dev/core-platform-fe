@@ -8,11 +8,11 @@ import useStyles from './styles';
 
 const text = appText.workspacePage;
 
-export function HeaderTabs() {
+export function HeaderTabs(): JSX.Element {
   const [tabValue, setTabValue] = useState(0);
   const { classes } = useStyles();
 
-  const handleTabChange = (newValue: number) => {
+  const handleTabChange = (newValue: number): void => {
     setTabValue(newValue);
   };
 

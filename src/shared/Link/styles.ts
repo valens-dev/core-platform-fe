@@ -3,11 +3,23 @@ import { ColorVariant } from '@/types/color';
 
 import { tss } from '@/styles/theme';
 
+type LinkStyle =
+  | {
+      color: string | undefined;
+      textDecoration: string;
+      textDecorationColor?: undefined;
+    }
+  | {
+      color: string | undefined;
+      textDecorationColor: string | undefined;
+      textDecoration?: undefined;
+    };
+
 const getLinkGeneralStyle = (
   theme: ITheme,
   colorVariant: ColorVariant,
   underline: boolean,
-) => {
+): LinkStyle => {
   let color;
   switch (colorVariant) {
     case ColorVariant.Primary:

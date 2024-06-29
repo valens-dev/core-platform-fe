@@ -16,14 +16,14 @@ import useStyles from './styles';
 
 const text = appText.homePage.createWorkspaceModal;
 
-export function CreateWorkspaceModal() {
+export function CreateWorkspaceModal(): JSX.Element {
   const navigate = useNavigate();
   const { control, register, handleSubmit } = useForm<IWorkspaceAuthFormData>();
   const { classes } = useStyles();
 
-  const onSubmit = async () => {};
+  const onSubmit = async (): Promise<void> => {};
 
-  const handleOpenWorkspace = () => {
+  const handleOpenWorkspace = (): void => {
     navigate('/workspace');
   };
 

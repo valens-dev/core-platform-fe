@@ -3,13 +3,13 @@ import { Box, Typography } from '@mui/material';
 import { appText } from '@/constants/strings';
 import { TEMPLATE_CHIPS } from '@/constants/templates';
 
-import { getChipStyle } from './utils';
+import { getChipStyle } from '@/utils/template-chips';
 
 import useStyles from './styles';
 
 const text = appText.homePage.search;
 
-export const TemplateChips = () => {
+export const TemplateChips = (): JSX.Element => {
   const { classes } = useStyles();
 
   return (

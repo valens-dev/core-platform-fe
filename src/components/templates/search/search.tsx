@@ -17,7 +17,7 @@ import useStyles from './styles';
 
 const text = appText.homePage.search;
 
-export function Search() {
+export function Search(): JSX.Element {
   const { control, register } = useForm<ISearchFormData>();
   const { classes } = useStyles();
 

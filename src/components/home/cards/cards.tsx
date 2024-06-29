@@ -4,7 +4,7 @@ import { CARDS_DATA } from './constants';
 
 import useStyles from './styles';
 
-export function Cards() {
+export function Cards(): JSX.Element {
   const { classes } = useStyles();
 
   return (

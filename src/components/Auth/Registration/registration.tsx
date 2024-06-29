@@ -13,11 +13,11 @@ import useStyles from './styles';
 
 const text = appText.auth.registration;
 
-export function Registration() {
+export function Registration(): JSX.Element {
   const { control, register, handleSubmit } = useForm<IRegistrationFormData>();
   const { classes } = useStyles();
 
-  const onSubmit = async () => {};
+  const onSubmit = async (): Promise<void> => {};
 
   return (
     <form

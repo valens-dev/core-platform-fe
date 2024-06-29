@@ -19,7 +19,7 @@ export const ComparisonTable: React.FC<IComparisonTableProps> = ({
 }) => {
   const { classes } = useStyles();
 
-  const getPlanPriceClass = (planTitle: string) =>
+  const getPlanPriceClass = (planTitle: string): string =>
     classnames({
       [classes.starterPrice]: planTitle === 'Starter',
       [classes.premiumPrice]: planTitle === 'Premium',

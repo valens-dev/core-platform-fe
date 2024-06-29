@@ -1,6 +1,8 @@
 import { createTss } from 'tss-react';
 
-function useContext() {
+import { type ITheme } from '@/types/theme';
+
+function useContext(): { theme: ITheme } {
   const theme = {
     palette: {
       primary: {

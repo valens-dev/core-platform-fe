@@ -15,10 +15,10 @@ const text = appText.workspacePage.menuItems;
 export function WorkingArea({
   selectedTools,
   setSelectedTools,
-}: IWorkingAreaProps) {
+}: IWorkingAreaProps): JSX.Element {
   const { classes } = useStyles();
 
-  const handleDeleteTool = (tool: ITool) => {
+  const handleDeleteTool = (tool: ITool): void => {
     setSelectedTools((prevTools) =>
       prevTools.filter((t) => t.tool !== tool.tool),
     );

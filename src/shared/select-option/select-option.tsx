@@ -10,7 +10,11 @@ interface ISelectOptionProps {
   options: { value: string; label: string }[];
 }
 
-export function SelectOption({ value, onChange, options }: ISelectOptionProps) {
+export function SelectOption({
+  value,
+  onChange,
+  options,
+}: ISelectOptionProps): JSX.Element {
   const { classes } = useStyles();
 
   return (

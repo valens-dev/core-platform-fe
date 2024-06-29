@@ -10,7 +10,7 @@ interface IMenuProps {
   handlePlusClick: (id: number) => void;
   handleToolClick: (
     tool: string,
-    icon: React.FunctionComponent<React.SVGProps<SVGSVGElement>>
+    icon: React.FunctionComponent<React.SVGProps<SVGSVGElement>>,
   ) => void;
 }
 
@@ -19,7 +19,7 @@ export function Menu({
   handleArrowClick,
   handlePlusClick,
   handleToolClick,
-}: IMenuProps) {
+}: IMenuProps): JSX.Element {
   const { classes } = useStyles();
 
   return (

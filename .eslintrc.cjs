@@ -684,7 +684,7 @@ module.exports = {
             pages: '@/pages/**',
             types: '@/types/**',
             constants: '@/constants/**',
-            utils: '@/utils/',
+            utils: '@/utils/**',
             assets: '@/assets/**',
             styles: '@/styles/**',
             'parent-extended': ['../types'],

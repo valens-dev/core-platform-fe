@@ -12,6 +12,8 @@ import { type ISearchFormData } from '@/types/search';
 import { appText } from '@/constants/strings';
 import { TEMPLATE_CHIPS } from '@/constants/templates';
 
+import { getChipStyle } from '@/utils/template-chips';
+
 import SearchIcon from '@/assets/icon/search-icon.svg?react';
 
 import { Template } from './template';
@@ -22,14 +24,10 @@ import useStyles from './styles';
 
 const text = appText.homePage.search;
 
-export function Search() {
+export function Search(): JSX.Element {
   const navigate = useNavigate();
   const { control, register } = useForm<ISearchFormData>();
   const { classes } = useStyles();
-
-  const getChipStyle = (background: string, color: string) => {
-    return { background, '& > span': color, border: `1px solid ${color}` };
-  };
 
   const textfieldEndButton = (
     <Button
@@ -41,7 +39,7 @@ export function Search() {
     </Button>
   );
 
-  const handleOpenTemplates = () => {
+  const handleOpenTemplates = (): void => {
     navigate('/homepage/templates');
   };
   return (

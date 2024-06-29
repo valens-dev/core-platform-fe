@@ -20,14 +20,14 @@ import useStyles from './styles';
 
 const text = appText.auth.login;
 
-export function Login() {
+export function Login(): JSX.Element {
   const navigate = useNavigate();
   const { control, register, handleSubmit } = useForm<ILoginFormData>();
   const { classes } = useStyles();
 
-  const onSubmit = async () => {};
+  const onSubmit = async (): coid => {};
 
-  const handleOpenHomepage = () => {
+  const handleOpenHomepage = (): void => {
     navigate('/homepage');
   };
 

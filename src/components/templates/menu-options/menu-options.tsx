@@ -16,7 +16,7 @@ export function MenuOptions({
   handleOptionClick,
   handleMenuClose,
   setIsMouseOverMenu,
-}: IMenuOptionsProps) {
+}: IMenuOptionsProps): JSX.Element {
   const { classes } = useStyles();
 
   return (

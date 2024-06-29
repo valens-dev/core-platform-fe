@@ -17,7 +17,7 @@ interface IAboutUsProps {
 
 const text = appText.landingPage.aboutUs;
 
-export function AboutUs({ aboutUsRef }: IAboutUsProps) {
+export function AboutUs({ aboutUsRef }: IAboutUsProps): JSX.Element {
   const { classes } = useStyles();
 
   return (

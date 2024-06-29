@@ -26,20 +26,20 @@ export function Header({
   scrollToContactUs,
   scrollToAboutUs,
   scrollToHowWeWork,
-}: IHeaderProps) {
+}: IHeaderProps): JSX.Element {
   const navigate = useNavigate();
   const { classes } = useStyles();
 
-  const handleScrollTo = (href: string) => {
+  const handleScrollTo = (href: string): void => {
     if (href === 'contact' && scrollToContactUs) scrollToContactUs();
     if (href === 'about' && scrollToAboutUs) scrollToAboutUs();
     if (href === 'support' && scrollToHowWeWork) scrollToHowWeWork();
   };
 
-  const handleOpenOffers = () => {
+  const handleOpenOffers = (): void => {
     navigate('/our-offer');
   };
-  const handleLogoClick = () => {
+  const handleLogoClick = (): void => {
     navigate('/');
   };
 

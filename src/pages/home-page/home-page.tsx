@@ -24,7 +24,7 @@ import useStyles from './styles';
 
 const text = appText.homePage;
 
-export function HomePage() {
+export function HomePage(): JSX.Element {
   const navigate = useNavigate();
   const { classes } = useStyles();
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -32,9 +32,9 @@ export function HomePage() {
   const questionPopUpRef = useRef<HTMLButtonElement>(null);
   const tourPopupRef = useRef<HTMLDivElement>(null);
 
-  const handleCloseModal = () => setIsModalOpen(false);
-  const handleCloseTour = () => setIsTourOpen(false);
-  const handleOpenPopUp = () => setIsTourOpen(true);
+  const handleCloseModal = (): void => setIsModalOpen(false);
+  const handleCloseTour = (): void => setIsTourOpen(false);
+  const handleOpenPopUp = (): void => setIsTourOpen(true);
 
   useEffect(() => {
     if (questionPopUpRef.current) {
@@ -43,7 +43,7 @@ export function HomePage() {
   }, []);
 
   const leftArrowClassName = getLeftArrowClassName(location.pathname, classes);
-  const handleOpenHomePage = () => {
+  const handleOpenHomePage = (): void => {
     navigate('/homepage');
   };
 

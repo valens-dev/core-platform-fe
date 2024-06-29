@@ -24,7 +24,7 @@ export function NavItem({
   handleMenuOpen,
   handleMenuClose,
   hoveredNavItem,
-}: INavItemProps) {
+}: INavItemProps): JSX.Element {
   const { classes } = useStyles();
 
   const { navItemClass, iconClass, navTextClass } = getNavItemClasses(

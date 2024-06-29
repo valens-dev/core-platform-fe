@@ -15,7 +15,7 @@ export function Button({
   className,
   isSubmitting,
   ...props
-}: IButtonProps) {
+}: IButtonProps): JSX.Element {
   const { classes } = useStyles({ colorVariant });
 
   return (

@@ -4,7 +4,7 @@ import { Box } from '@mui/material';
 
 import { Header } from '@/components/workspace/header';
 
-export function WorkspaceLayout() {
+export function WorkspaceLayout(): JSX.Element {
   return (
     <>
       <Header />

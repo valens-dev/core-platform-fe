@@ -6,7 +6,7 @@ import { ICONS } from './constants';
 
 import useStyles from './styles';
 
-export const Track = () => {
+export const Track = (): JSX.Element => {
   const { classes } = useStyles();
 
   return (

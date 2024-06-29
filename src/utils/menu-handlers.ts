@@ -12,7 +12,7 @@ export const handleMenuOpen = (
   index: number,
   setMenuPosition: Dispatch<SetStateAction<IMenuPosition | null>>,
   setHoveredNavItem: Dispatch<SetStateAction<number | null>>,
-) => {
+): void => {
   const position = event.currentTarget.getBoundingClientRect();
   setMenuPosition({
     top: position.top + window.scrollY - 60,
@@ -25,7 +25,7 @@ export const handleMenuClose = (
   isMouseOverMenu: boolean,
   setMenuPosition: Dispatch<SetStateAction<IMenuPosition | null>>,
   setHoveredNavItem: Dispatch<SetStateAction<number | null>>,
-) => {
+): void => {
   if (isMouseOverMenu) {
     setMenuPosition(null);
     setHoveredNavItem(null);
@@ -35,7 +35,7 @@ export const handleMenuClose = (
 export const handleOptionClick = (
   option: number,
   setSelectedOptions: Dispatch<SetStateAction<number[]>>,
-) => {
+): void => {
   setSelectedOptions((prev) => {
     if (prev.includes(option)) {
       return prev.filter((item) => item !== option);
@@ -50,7 +50,7 @@ export const handleArrowClick = (
   setMenus: Dispatch<
     SetStateAction<{ id: number; label: string; isOpen: boolean }[]>
   >,
-) => {
+): void => {
   setMenus((prevMenus) =>
     prevMenus.map((menu) =>
       menu.id === id ? { ...menu, isOpen: !menu.isOpen } : menu,
@@ -64,7 +64,7 @@ export const handlePlusClick = (
   setMenus: Dispatch<
     SetStateAction<{ id: number; label: string; isOpen: boolean }[]>
   >,
-) => {
+): void => {
   const newMenu = {
     id: menu.length + 1,
     label: 'Lorem ipsum',
@@ -81,6 +81,6 @@ export const handleToolClick = (
   icon: React.FunctionComponent<React.SVGProps<SVGSVGElement>>,
   selectedTools: ITool[],
   setSelectedTools: Dispatch<SetStateAction<ITool[]>>,
-) => {
+): void => {
   setSelectedTools([...selectedTools, { tool, icon }]);
 };

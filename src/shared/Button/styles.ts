@@ -3,7 +3,22 @@ import { ColorVariant } from '@/types/color';
 
 import { tss } from '@/styles/theme';
 
-const getButtonGeneralStyle = (theme: ITheme, colorVariant: ColorVariant) => {
+interface ButtonStyle {
+  background?: string;
+  border?: string;
+  '& > p, span'?: {
+    color?: string;
+  };
+  '&:hover'?: {
+    background?: string;
+    border?: string;
+  };
+}
+
+const getButtonGeneralStyle = (
+  theme: ITheme,
+  colorVariant: ColorVariant,
+): ButtonStyle => {
   switch (colorVariant) {
     case ColorVariant.Primary:
       return {

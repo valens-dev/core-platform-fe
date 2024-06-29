@@ -21,7 +21,7 @@ import useStyles from './styles';
 
 const text = appText.auth;
 
-export function Auth({ tab = AuthTab.Login }: IAuthProps) {
+export function Auth({ tab = AuthTab.Login }: IAuthProps): JSX.Element {
   const [activeTab, setActiveTab] = useState(tab);
   const location = useLocation();
   const { classes } = useStyles();

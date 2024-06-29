@@ -17,7 +17,7 @@ export function Link({
   className,
   underline = true,
   endIcon,
-}: ILinkProps) {
+}: ILinkProps): JSX.Element {
   const navigate = useNavigate();
   const { classes } = useStyles({ colorVariant, underline });
 
