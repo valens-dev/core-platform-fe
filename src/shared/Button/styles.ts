@@ -1,19 +1,7 @@
 import { type ITheme } from '@/types/theme';
-import { ColorVariant } from '@/types/color';
+import { ButtonStyle, ColorVariant } from '@/types/style';
 
 import { tss } from '@/styles/theme';
-
-interface ButtonStyle {
-  background?: string;
-  border?: string;
-  '& > p, span'?: {
-    color?: string;
-  };
-  '&:hover'?: {
-    background?: string;
-    border?: string;
-  };
-}
 
 const getButtonGeneralStyle = (
   theme: ITheme,

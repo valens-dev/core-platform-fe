@@ -1,8 +1,4 @@
-interface ChipStyle {
-  background: string;
-  '& > span': { color: string };
-  border: string;
-}
+import { type ChipStyle } from '@/types/style';
 
 export const getChipStyle = (background: string, color: string): ChipStyle => {
   return {

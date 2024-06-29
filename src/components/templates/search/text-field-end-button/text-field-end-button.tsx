@@ -2,7 +2,7 @@ import { Typography } from '@mui/material';
 
 import { Button } from '@/shared/button';
 
-import { ColorVariant } from '@/types/color';
+import { ColorVariant } from '@/types/style';
 
 import { appText } from '@/constants/strings';
 

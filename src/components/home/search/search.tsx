@@ -6,7 +6,7 @@ import { Box, Typography } from '@mui/material';
 import { Button } from '@/shared/button';
 import { TextField } from '@/shared/text-field';
 
-import { ColorVariant } from '@/types/color';
+import { ColorVariant } from '@/types/style';
 import { type ISearchFormData } from '@/types/search';
 
 import { appText } from '@/constants/strings';

@@ -1,5 +1,5 @@
 import { type ITheme } from '@/types/theme';
-import { ColorVariant } from '@/types/color';
+import { ColorVariant } from '@/types/style';
 
 import { tss } from '@/styles/theme';
 

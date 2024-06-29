@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 import { Box, Link as MuiLink } from '@mui/material';
 
-import { ColorVariant } from '@/types/color';
+import { ColorVariant } from '@/types/style';
 
 import { type ILinkProps } from './types';
 

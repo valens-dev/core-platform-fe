@@ -3,7 +3,7 @@ import { Box, Typography } from '@mui/material';
 import { Chip } from '@/shared/chip';
 import { Link } from '@/shared/link';
 
-import { ColorVariant } from '@/types/color';
+import { ColorVariant } from '@/types/style';
 
 import { appText } from '@/constants/strings';
 

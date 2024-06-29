@@ -5,7 +5,7 @@ import { Box, Typography } from '@mui/material';
 import { Button } from '@/shared/button';
 
 import { AuthTab } from '@/types/auth';
-import { ColorVariant } from '@/types/color';
+import { ColorVariant } from '@/types/style';
 
 import { appText } from '@/constants/strings';
 import { NAV_LINKS } from '@/constants/navigation';
