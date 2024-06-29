@@ -11,7 +11,7 @@ export enum ColorVariant {
   White = 'white',
 }
 
-export interface ButtonStyle {
+export interface IButtonStyle {
   background?: string;
   border?: string;
   '& > p, span'?: {
@@ -23,7 +23,7 @@ export interface ButtonStyle {
   };
 }
 
-export interface ChipStyle {
+export interface IChipStyle {
   background: string;
   '& > span': { color: string };
   border: string;

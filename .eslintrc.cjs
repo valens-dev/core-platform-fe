@@ -445,11 +445,11 @@ module.exports = {
         format: ['PascalCase'],
         selector: ['typeLike', 'enumMember'],
       },
-      // Interfaces cannot be prefixed with `I`, or have restricted names.
+      // Interfaces should be prefixed with `I`
       {
         custom: {
-          match: false,
-          regex: '^I[A-Z]|^(Interface|Props|State)$',
+          match: true,
+          regex: '^I[A-Z]',
         },
         format: ['PascalCase'],
         selector: 'interface',

@@ -1,6 +1,6 @@
-import { type ChipStyle } from '@/types/style';
+import { type IChipStyle } from '@/types/style';
 
-export const getChipStyle = (background: string, color: string): ChipStyle => {
+export const getChipStyle = (background: string, color: string): IChipStyle => {
   return {
     background,
     '& > span': { color },

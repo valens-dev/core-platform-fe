@@ -1,9 +1,9 @@
-interface FontFamily {
+interface IFontFamily {
   primary: string;
   secondary: string;
 }
 
-interface FontWeights {
+interface IFontWeights {
   extraLight: number;
   light: number;
   regular: number;
@@ -14,12 +14,12 @@ interface FontWeights {
   black: number;
 }
 
-interface Typography {
-  fontFamily: FontFamily;
-  fontWeight: FontWeights;
+interface ITypography {
+  fontFamily: IFontFamily;
+  fontWeight: IFontWeights;
 }
 
-interface Color {
+interface IColor {
   main?: string;
   success?: string;
   info?: string;
@@ -27,23 +27,23 @@ interface Color {
   grey?: string;
 }
 
-interface BlueColor {
+interface IBlueColor {
   lightBlue: string;
   mediumBlue: string;
 }
 
-interface Palette {
-  primary: Color;
-  white: Color;
-  error: Color;
-  light: Color;
-  dark: Color;
-  orange: Color;
-  green: Color;
-  blue: BlueColor;
+interface IPalette {
+  primary: IColor;
+  white: IColor;
+  error: IColor;
+  light: IColor;
+  dark: IColor;
+  orange: IColor;
+  green: IColor;
+  blue: IBlueColor;
 }
 
-interface BreakpointValues {
+interface IBreakpointValues {
   xxs: number;
   xs: number;
   sm: number;
@@ -55,12 +55,12 @@ interface BreakpointValues {
   xxl: number;
 }
 
-interface Breakpoints {
-  values: BreakpointValues;
+interface IBreakpoints {
+  values: IBreakpointValues;
 }
 
 export interface ITheme {
-  palette: Palette;
-  typography: Typography;
-  breakpoints: Breakpoints;
+  palette: IPalette;
+  typography: ITypography;
+  breakpoints: IBreakpoints;
 }

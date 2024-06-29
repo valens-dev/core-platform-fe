@@ -6,12 +6,12 @@ import CheckIcon from '@/assets/icon/check-icon.svg?react';
 
 import useStyles from './styles';
 
-interface FeatureListProps {
+interface IFeatureListProps {
   features: string[];
   benefitText: string;
 }
 
-export const FeatureList: React.FC<FeatureListProps> = ({
+export const FeatureList: React.FC<IFeatureListProps> = ({
   features,
   benefitText,
 }) => {

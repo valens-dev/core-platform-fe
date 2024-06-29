@@ -1,12 +1,12 @@
 import { type ITheme } from '@/types/theme';
-import { ButtonStyle, ColorVariant } from '@/types/style';
+import { IButtonStyle, ColorVariant } from '@/types/style';
 
 import { tss } from '@/styles/theme';
 
 const getButtonGeneralStyle = (
   theme: ITheme,
   colorVariant: ColorVariant,
-): ButtonStyle => {
+): IButtonStyle => {
   switch (colorVariant) {
     case ColorVariant.Primary: {
       return {
