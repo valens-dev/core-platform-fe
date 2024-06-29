@@ -11,10 +11,10 @@ interface IFeatureListProps {
   benefitText: string;
 }
 
-export const FeatureList: React.FC<IFeatureListProps> = ({
+export function FeatureList({
   features,
   benefitText,
-}) => {
+}: IFeatureListProps): JSX.Element {
   const { classes } = useStyles();
 
   return (
@@ -37,4 +37,4 @@ export const FeatureList: React.FC<IFeatureListProps> = ({
       ))}
     </ul>
   );
-};
+}

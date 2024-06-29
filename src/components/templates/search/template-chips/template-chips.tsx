@@ -9,7 +9,7 @@ import { useStyles } from './styles';
 
 const text = appText.homePage.search;
 
-export const TemplateChips = (): JSX.Element => {
+export function TemplateChips(): JSX.Element {
   const { classes } = useStyles();
 
   return (
@@ -28,4 +28,4 @@ export const TemplateChips = (): JSX.Element => {
       ))}
     </Box>
   );
-};
+}

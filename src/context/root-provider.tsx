@@ -6,10 +6,10 @@ interface IProviderProps {
   children: React.ReactNode;
 }
 
-export const RootProvider: React.FC<IProviderProps> = ({ children }) => {
+export function RootProvider({ children }: IProviderProps): JSX.Element {
   return (
     <StyledEngineProvider injectFirst>
       <ThemeProvider theme={componentOverrides}>{children}</ThemeProvider>
     </StyledEngineProvider>
   );
-};
+}

@@ -11,7 +11,7 @@ interface IPlanPriceProps {
   variant: 'offerCard' | 'comparisonTable';
 }
 
-export const PlanPrice: React.FC<IPlanPriceProps> = ({ price, variant }) => {
+export function PlanPrice({ price, variant }: IPlanPriceProps): JSX.Element {
   const { classes } = useStyles();
   const [amount, period] = price.split(' ');
 
@@ -21,4 +21,4 @@ export const PlanPrice: React.FC<IPlanPriceProps> = ({ price, variant }) => {
       <span className="period">{period}</span>
     </Typography>
   );
-};
+}

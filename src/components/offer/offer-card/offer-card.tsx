@@ -13,7 +13,7 @@ import { type IOfferCardProps } from './types';
 
 import { useStyles } from './styles';
 
-export const OfferCard: React.FC<IOfferCardProps> = ({ plan, text }) => {
+export function OfferCard({ plan, text }: IOfferCardProps): JSX.Element {
   const { classes } = useStyles();
 
   const offerCardClass = classnames(classes.plan, {
@@ -43,4 +43,4 @@ export const OfferCard: React.FC<IOfferCardProps> = ({ plan, text }) => {
       </Box>
     </Box>
   );
-};
+}

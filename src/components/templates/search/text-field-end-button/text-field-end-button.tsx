@@ -12,7 +12,7 @@ import { useStyles } from './styles';
 
 const text = appText.homePage.search;
 
-export const TextFieldEndButton = (): JSX.Element => {
+export function TextFieldEndButton(): JSX.Element {
   const { classes } = useStyles();
 
   return (
@@ -24,4 +24,4 @@ export const TextFieldEndButton = (): JSX.Element => {
       <Typography variant="caption">{text.generate}</Typography>
     </Button>
   );
-};
+}

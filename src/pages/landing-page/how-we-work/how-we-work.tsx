@@ -22,10 +22,10 @@ interface IHowWeWorkProps {
 
 const text = appText.landingPage.howWeWork;
 
-export const HowWeWork: React.FC<IHowWeWorkProps> = ({
+export function HowWeWork({
   howWeWorkRef,
   scrollToContactUs,
-}) => {
+}: IHowWeWorkProps): JSX.Element {
   const { classes } = useStyles();
   const [activeCard, setActiveCard] = useState<number | null>();
 
@@ -72,4 +72,4 @@ export const HowWeWork: React.FC<IHowWeWorkProps> = ({
       </Box>
     </Box>
   );
-};
+}

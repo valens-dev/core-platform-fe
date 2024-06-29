@@ -6,7 +6,7 @@ import { ICONS } from './constants';
 
 import { useStyles } from './styles';
 
-export const Track = (): JSX.Element => {
+export function Track(): JSX.Element {
   const { classes } = useStyles();
 
   return (
@@ -20,4 +20,4 @@ export const Track = (): JSX.Element => {
       </Box>
     </Box>
   );
-};
+}

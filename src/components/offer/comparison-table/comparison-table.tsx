@@ -12,11 +12,11 @@ import { type IComparisonTableProps } from './types';
 
 import { useStyles } from './styles';
 
-export const ComparisonTable: React.FC<IComparisonTableProps> = ({
+export function ComparisonTable({
   text,
   plans,
   features,
-}) => {
+}: IComparisonTableProps): JSX.Element {
   const { classes } = useStyles();
 
   const getPlanPriceClass = (planTitle: string): string =>
@@ -44,4 +44,4 @@ export const ComparisonTable: React.FC<IComparisonTableProps> = ({
       <Table text={text} features={features} plans={plans} />
     </Box>
   );
-};
+}
