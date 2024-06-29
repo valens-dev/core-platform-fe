@@ -34,11 +34,11 @@ export function TextField({
 
   return (
     <div>
-      {!!label && <Typography variant="body1">{label}</Typography>}
+      {Boolean(label) && <Typography variant="body1">{label}</Typography>}
       <MuiTextField
         className={classnames(classes.textField, className)}
         onChange={handleChange}
-        error={!!error}
+        error={Boolean(error)}
         variant={variant}
         placeholder={placeholder}
         size={size}
@@ -52,7 +52,7 @@ export function TextField({
         {...register}
         {...props}
       />
-      {!!error && (
+      {Boolean(error) && (
         <Typography variant="subtitle2" className={classes.errorText}>
           {error}
         </Typography>
