@@ -768,21 +768,6 @@ module.exports = {
     'react/jsx-fragments': 'warn',
 
     /**
-     * Enforce event handler naming conventions in JSX.
-     *
-     * 🚫 Not fixable - https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-handler-names.md
-     */
-    'react/jsx-handler-names': [
-      'warn',
-      {
-        eventHandlerPrefix: 'handle',
-        eventHandlerPropPrefix: 'on',
-        checkLocalVariables: true,
-        checkInlineFunction: true,
-      },
-    ],
-
-    /**
      * Disallow context provider value prop to be a non-primitive literal.
      *
      * 🚫 Not fixable - https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-no-constructed-context-values.md
