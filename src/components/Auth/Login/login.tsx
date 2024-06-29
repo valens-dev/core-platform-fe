@@ -42,14 +42,14 @@ export function Login(): JSX.Element {
         register={register('email')}
         className={classes.textField}
         placeholder={text.emailPlaceHolder}
-      ></TextField>
+      />
       <TextField
         label="Password:"
         control={control}
         register={register('password')}
         className={classes.textField}
         placeholder={text.passwordPlaceHolder}
-      ></TextField>
+      />
       <Box className={classes.section}>
         <FormControlLabel
           className={classes.formControlLabel}
