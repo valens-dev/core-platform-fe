@@ -35,9 +35,9 @@ const getLinkGeneralStyle = (
     }
   }
 
-  return !underline
-    ? { color, textDecoration: 'none' }
-    : { color, textDecorationColor: color };
+  return underline
+    ? { color, textDecorationColor: color }
+    : { color, textDecoration: 'none' };
 };
 
 const useStyles = tss

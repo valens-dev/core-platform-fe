@@ -70,9 +70,9 @@ export function Auth({ tab = AuthTab.Login }: IAuthProps): JSX.Element {
           <Box
             onClick={() => setActiveTab(AuthTab.Registration)}
             className={
-              !isActiveTabLogin
-                ? classnames(classes.tab, classes.activeTab)
-                : classes.tab
+              isActiveTabLogin
+                ? classes.tab
+                : classnames(classes.tab, classes.activeTab)
             }
           >
             <Typography variant="body1">{text.signUp}</Typography>
