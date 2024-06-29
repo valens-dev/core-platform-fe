@@ -25,7 +25,7 @@ export function Registration(): JSX.Element {
   return (
     <form
       className={classes.registrationForm}
-      onSubmit={handleSubmit(onSubmit)}
+      onSubmit={() => handleSubmit(onSubmit)}
     >
       <TextField
         label={text.usernameLabel}

@@ -35,7 +35,7 @@ export function Login(): JSX.Element {
   };
 
   return (
-    <form className={classes.loginForm} onSubmit={handleSubmit(onSubmit)}>
+    <form className={classes.loginForm} onSubmit={() => handleSubmit(onSubmit)}>
       <TextField
         label={text.emailLabel}
         control={control}

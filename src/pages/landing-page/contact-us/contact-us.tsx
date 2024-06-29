@@ -34,7 +34,10 @@ export function ContactUs({ contactUsRef }: IContactUsProps): JSX.Element {
       <Typography align="center" variant="body1" className={classes.note}>
         {text.note}
       </Typography>
-      <form className={classes.contactUsForm} onSubmit={handleSubmit(onSubmit)}>
+      <form
+        className={classes.contactUsForm}
+        onSubmit={() => handleSubmit(onSubmit)}
+      >
         <TextField
           control={control}
           register={register('name')}

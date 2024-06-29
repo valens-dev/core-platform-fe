@@ -36,7 +36,10 @@ export function CreateWorkspaceModal(): JSX.Element {
       <Typography variant="body2" className={classes.note}>
         {text.note}
       </Typography>
-      <form onSubmit={handleSubmit(onSubmit)} className={classes.formWrapper}>
+      <form
+        onSubmit={() => handleSubmit(onSubmit)}
+        className={classes.formWrapper}
+      >
         <TextField
           label={text.workspaceTextfieldLabel}
           control={control}
