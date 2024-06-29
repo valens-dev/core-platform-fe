@@ -39,9 +39,8 @@ export const handleOptionClick = (
   setSelectedOptions((prev) => {
     if (prev.includes(option)) {
       return prev.filter((item) => item !== option);
-    } else {
-      return [...prev, option];
     }
+    return [...prev, option];
   });
 };
 

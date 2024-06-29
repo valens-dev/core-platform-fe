@@ -40,9 +40,8 @@ export function Table({ features, plans }: IComparisonTableProps): JSX.Element {
       return <CheckIcon />;
     } else if (value === '') {
       return undefined;
-    } else {
-      return <CrossIcon />;
     }
+    return <CrossIcon />;
   }
 
   return (
