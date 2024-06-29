@@ -11,8 +11,8 @@ import useStyles from './styles';
 
 export function ToolItem({ tools, onDelete }: IToolItemProps): JSX.Element {
   const { classes } = useStyles();
-  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
-  const [selectedTool, setSelectedTool] = useState<ITool | null>(null);
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>();
+  const [selectedTool, setSelectedTool] = useState<ITool | null>();
 
   const handleDoubleClick = (
     event: MouseEvent<HTMLElement>,
@@ -23,8 +23,8 @@ export function ToolItem({ tools, onDelete }: IToolItemProps): JSX.Element {
   };
 
   const handleClose = (): void => {
-    setAnchorEl(null);
-    setSelectedTool(null);
+    setAnchorEl(undefined);
+    setSelectedTool(undefined);
   };
 
   const handleDelete = (): void => {

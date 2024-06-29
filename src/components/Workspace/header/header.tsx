@@ -21,7 +21,7 @@ const WORKSPACE_TEXT = appText.workspace;
 
 export function Header(): JSX.Element {
   const navigate = useNavigate();
-  const [dropdown, setDropdown] = useState<null | HTMLElement>(null);
+  const [dropdown, setDropdown] = useState<null | HTMLElement>();
   const { classes } = useStyles();
 
   const handleOpenHomepage = (): void => {
@@ -39,7 +39,7 @@ export function Header(): JSX.Element {
   };
 
   const handleClose = (): void => {
-    setDropdown(null);
+    setDropdown(undefined);
   };
 
   return (

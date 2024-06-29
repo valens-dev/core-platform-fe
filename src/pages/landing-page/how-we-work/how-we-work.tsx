@@ -27,7 +27,7 @@ export const HowWeWork: React.FC<IHowWeWorkProps> = ({
   scrollToContactUs,
 }) => {
   const { classes } = useStyles();
-  const [activeCard, setActiveCard] = useState<number | null>(null);
+  const [activeCard, setActiveCard] = useState<number | null>();
 
   return (
     <Box className={classes.wrapper} ref={howWeWorkRef}>

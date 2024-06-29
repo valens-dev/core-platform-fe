@@ -32,14 +32,14 @@ export function Table({ features, plans }: IComparisonTableProps): JSX.Element {
   function handlePlanTable(
     feature: IFeature,
     planTitle: string,
-  ): JSX.Element | null {
+  ): JSX.Element | undefined {
     const value = feature[planTitle.toLowerCase()];
     if (typeof value === 'string' && value !== '') {
       return <Typography>{value}</Typography>;
     } else if (value) {
       return <CheckIcon />;
     } else if (value === '') {
-      return null;
+      return undefined;
     } else {
       return <CrossIcon />;
     }

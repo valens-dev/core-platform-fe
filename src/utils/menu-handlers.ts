@@ -23,12 +23,12 @@ export const handleMenuOpen = (
 
 export const handleMenuClose = (
   isMouseOverMenu: boolean,
-  setMenuPosition: Dispatch<SetStateAction<IMenuPosition | null>>,
-  setHoveredNavItem: Dispatch<SetStateAction<number | null>>,
+  setMenuPosition: Dispatch<SetStateAction<IMenuPosition | undefined>>,
+  setHoveredNavItem: Dispatch<SetStateAction<number | undefined>>,
 ): void => {
   if (isMouseOverMenu) {
-    setMenuPosition(null);
-    setHoveredNavItem(null);
+    setMenuPosition(undefined);
+    setHoveredNavItem(undefined);
   }
 };
 

@@ -29,11 +29,14 @@ const text = appText.homePage;
 export function TemplatesPage(): JSX.Element {
   const { classes } = useStyles();
   const navigate = useNavigate();
-  const [menuPosition, setMenuPosition] = useState<{
-    top: number;
-    left: number;
-  } | null>(null);
-  const [hoveredNavItem, setHoveredNavItem] = useState<number | null>(null);
+  const [menuPosition, setMenuPosition] = useState<
+    | {
+        top: number;
+        left: number;
+      }
+    | undefined
+  >();
+  const [hoveredNavItem, setHoveredNavItem] = useState<number | undefined>();
   const [selectedOptions, setSelectedOptions] = useState<number[]>([]);
   const [isMouseOverMenu, setIsMouseOverMenu] = useState<boolean>(false);
   const [viewMode, setViewMode] = useState('Last viewed');
