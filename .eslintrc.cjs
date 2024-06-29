@@ -751,7 +751,7 @@ module.exports = {
      *
      * 🚫 Not fixable - https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-boolean-value.md
      */
-    'react/jsx-boolean-value': ['warn', 'always'],
+    'react/jsx-boolean-value': ['warn', 'never'],
 
     /**
      * Enforce curly braces or disallow unnecessary curly braces in JSX.
