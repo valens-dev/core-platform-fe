@@ -17,7 +17,7 @@ import { HeaderTabs } from './header-tabs';
 
 import { useStyles } from './styles';
 
-const WORKSPACE_TEXT = appText.workspace;
+const TEXT = appText.workspacePage;
 
 export function Header(): JSX.Element {
   const navigate = useNavigate();
@@ -52,7 +52,7 @@ export function Header(): JSX.Element {
         <Box className={classes.userProfileBox}>
           <ProfilePicture />
           <Typography variant="body2" onClick={handleClick}>
-            {WORKSPACE_TEXT.profileHeader.name}
+            {TEXT.profileHeader.name}
           </Typography>
           <ArrowDown onClick={handleIconClick} />
         </Box>

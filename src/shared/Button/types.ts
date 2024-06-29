@@ -1,6 +1,6 @@
 import { type ButtonProps as MuiButtonProps } from '@mui/material';
 
-import { type ColorVariant } from '@/types/color';
+import { type ColorVariant } from '@/types/style';
 
 type ButtonVariant = 'text' | 'outlined' | 'contained' | undefined;
 

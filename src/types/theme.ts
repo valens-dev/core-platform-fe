@@ -25,6 +25,10 @@ interface IColor {
   info?: string;
   dark?: string;
   grey?: string;
+  darkGrey?: string;
+  light?: string;
+  purple?: string;
+  normal?: string;
 }
 
 interface IBlueColor {
