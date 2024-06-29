@@ -17,7 +17,10 @@ export function Registration(): JSX.Element {
   const { control, register, handleSubmit } = useForm<IRegistrationFormData>();
   const { classes } = useStyles();
 
-  const onSubmit = async (): Promise<void> => {};
+  // eslint-disable-next-line unicorn/consistent-function-scoping
+  const onSubmit = async (): Promise<void> => {
+    /** TODO: implement */
+  };
 
   return (
     <form

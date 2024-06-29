@@ -21,7 +21,10 @@ export function CreateWorkspaceModal(): JSX.Element {
   const { control, register, handleSubmit } = useForm<IWorkspaceAuthFormData>();
   const { classes } = useStyles();
 
-  const onSubmit = async (): Promise<void> => {};
+  // eslint-disable-next-line unicorn/consistent-function-scoping
+  const onSubmit = async (): Promise<void> => {
+    /** TODO: implement */
+  };
 
   const handleOpenWorkspace = (): void => {
     navigate('/workspace');

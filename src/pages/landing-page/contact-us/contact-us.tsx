@@ -21,7 +21,10 @@ export function ContactUs({ contactUsRef }: IContactUsProps): JSX.Element {
   const { control, register, handleSubmit } = useForm<IContactFormData>();
   const { classes } = useStyles();
 
-  const onSubmit = (): void => {};
+  // eslint-disable-next-line unicorn/consistent-function-scoping
+  const onSubmit = (): void => {
+    /** TODO: implement */
+  };
 
   return (
     <Box className={classes.wrapper} ref={contactUsRef}>

@@ -25,7 +25,10 @@ export function Login(): JSX.Element {
   const { control, register, handleSubmit } = useForm<ILoginFormData>();
   const { classes } = useStyles();
 
-  const onSubmit = async (): coid => {};
+  // eslint-disable-next-line unicorn/consistent-function-scoping
+  const onSubmit = async (): Promise<void> => {
+    /** TODO: implement */
+  };
 
   const handleOpenHomepage = (): void => {
     navigate('/homepage');
