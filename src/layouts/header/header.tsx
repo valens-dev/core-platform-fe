@@ -31,9 +31,15 @@ export function Header({
   const { classes } = useStyles();
 
   const handleScrollTo = (href: string): void => {
-    if (href === 'contact' && scrollToContactUs) scrollToContactUs();
-    if (href === 'about' && scrollToAboutUs) scrollToAboutUs();
-    if (href === 'support' && scrollToHowWeWork) scrollToHowWeWork();
+    if (href === 'contact' && scrollToContactUs) {
+      scrollToContactUs();
+    }
+    if (href === 'about' && scrollToAboutUs) {
+      scrollToAboutUs();
+    }
+    if (href === 'support' && scrollToHowWeWork) {
+      scrollToHowWeWork();
+    }
   };
 
   const handleOpenOffers = (): void => {

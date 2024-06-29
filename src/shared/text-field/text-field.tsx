@@ -28,8 +28,12 @@ export function TextField({
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement>): void {
     const newValue = e.target.value;
-    if (register) register.onChange(e);
-    if (customOnChange) customOnChange(newValue ?? '');
+    if (register) {
+      register.onChange(e);
+    }
+    if (customOnChange) {
+      customOnChange(newValue ?? '');
+    }
   }
 
   return (
