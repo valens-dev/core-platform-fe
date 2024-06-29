@@ -1,5 +1,3 @@
-import type React from 'react';
-
 import classnames from 'classnames';
 
 import { Box, Typography } from '@mui/material';

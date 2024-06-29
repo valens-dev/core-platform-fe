@@ -13,7 +13,6 @@ export function Button({
   variant = 'contained',
   colorVariant = ColorVariant.Primary,
   className,
-  isSubmitting,
   ...props
 }: IButtonProps): JSX.Element {
   const { classes } = useStyles({ colorVariant });
