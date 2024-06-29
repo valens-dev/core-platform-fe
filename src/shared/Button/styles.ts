@@ -8,7 +8,7 @@ const getButtonGeneralStyle = (
   colorVariant: ColorVariant,
 ): ButtonStyle => {
   switch (colorVariant) {
-    case ColorVariant.Primary:
+    case ColorVariant.Primary: {
       return {
         background: theme.palette.primary.dark,
         '& > p, span': {
@@ -16,7 +16,8 @@ const getButtonGeneralStyle = (
         },
         '&:hover': { background: theme.palette.primary.dark },
       };
-    case ColorVariant.PrimaryLight:
+    }
+    case ColorVariant.PrimaryLight: {
       return {
         background: theme.palette.primary.main,
         '& > p, span': {
@@ -24,7 +25,8 @@ const getButtonGeneralStyle = (
         },
         '&:hover': { background: theme.palette.primary.main },
       };
-    case ColorVariant.Light:
+    }
+    case ColorVariant.Light: {
       return {
         background: theme.palette.white.main,
         border: `1px solid ${theme.palette.primary.dark}`,
@@ -36,8 +38,10 @@ const getButtonGeneralStyle = (
           border: `1px solid ${theme.palette.primary.dark}`,
         },
       };
-    default:
+    }
+    default: {
       return {};
+    }
   }
 };
 

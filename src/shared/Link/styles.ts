@@ -22,14 +22,17 @@ const getLinkGeneralStyle = (
 ): LinkStyle => {
   let color;
   switch (colorVariant) {
-    case ColorVariant.Primary:
+    case ColorVariant.Primary: {
       color = theme.palette.primary.dark;
       break;
-    case ColorVariant.PrimaryLight:
+    }
+    case ColorVariant.PrimaryLight: {
       color = theme.palette.primary.main;
       break;
-    default:
+    }
+    default: {
       color = theme.palette.light.dark;
+    }
   }
 
   return !underline
