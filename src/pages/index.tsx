@@ -1,6 +1,6 @@
 import { Route, Routes, HashRouter } from 'react-router-dom';
 
-import RootProvider from '@/context/root-provider';
+import { RootProvider } from '@/context/root-provider';
 
 import { Auth } from '@/components/auth';
 

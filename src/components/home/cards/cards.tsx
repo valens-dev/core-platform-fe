@@ -2,7 +2,7 @@ import { Box, Card, Typography, CardContent } from '@mui/material';
 
 import { CARDS_DATA } from './constants';
 
-import useStyles from './styles';
+import { useStyles } from './styles';
 
 export function Cards(): JSX.Element {
   const { classes } = useStyles();

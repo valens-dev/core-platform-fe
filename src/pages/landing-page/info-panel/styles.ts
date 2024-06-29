@@ -1,6 +1,6 @@
 import { tss } from '@/styles/theme';
 
-const useStyles = tss.create(({ theme }) => ({
+export const useStyles = tss.create(({ theme }) => ({
   wrapper: {
     backgroundImage: `
     linear-gradient(to right, #E8E8E8 1px, transparent 1px),
@@ -59,5 +59,3 @@ const useStyles = tss.create(({ theme }) => ({
     marginLeft: '200px',
   },
 }));
-
-export default useStyles;

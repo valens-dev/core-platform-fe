@@ -22,7 +22,7 @@ import RightArrow from '@/assets/icon/right-arrow-icon.svg?react';
 
 import { NAV_DATA } from './constants';
 
-import useStyles from './styles';
+import { useStyles } from './styles';
 
 const text = appText.homePage;
 

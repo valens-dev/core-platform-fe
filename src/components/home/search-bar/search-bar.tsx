@@ -10,7 +10,7 @@ import GridView from '@/assets/icon/change-view-icon.svg';
 import ViewList from '@/assets/icon/lines-icon.svg?react';
 import SearchIcon from '@/assets/icon/search-icon.svg?react';
 
-import useStyles from './styles';
+import { useStyles } from './styles';
 
 export function SearchBar(): JSX.Element {
   const [viewMode, setViewMode] = useState('Last viewed');

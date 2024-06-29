@@ -10,7 +10,7 @@ import { ComparisonTable } from '@/components/offer/comparison-table';
 
 import { appText } from '@/constants/strings';
 
-import useStyles from './styles';
+import { useStyles } from './styles';
 
 const text = appText.pricingPage.ourOffer;
 

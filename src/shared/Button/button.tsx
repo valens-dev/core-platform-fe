@@ -6,7 +6,7 @@ import { ColorVariant } from '@/types/style';
 
 import { type IButtonProps } from './types';
 
-import useStyles from './styles';
+import { useStyles } from './styles';
 
 export function Button({
   children,

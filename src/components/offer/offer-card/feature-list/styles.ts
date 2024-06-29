@@ -1,6 +1,6 @@
 import { tss } from '@/styles/theme';
 
-const useStyles = tss.create(({ theme }) => ({
+export const useStyles = tss.create(({ theme }) => ({
   featureList: {
     borderTop: `1px solid ${theme.palette.light.lightGrey}`,
     listStyle: 'none',
@@ -37,5 +37,3 @@ const useStyles = tss.create(({ theme }) => ({
     height: '16px',
   },
 }));
-
-export default useStyles;

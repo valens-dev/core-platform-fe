@@ -6,7 +6,7 @@ import { appText } from '@/constants/strings';
 
 import CloseIcon from '@/assets/icon/x-icon.svg?react';
 
-import useStyles from './styles';
+import { useStyles } from './styles';
 
 interface ITourPopupProps {
   open: boolean;

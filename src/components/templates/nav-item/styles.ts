@@ -1,6 +1,6 @@
 import { tss } from '@/styles/theme';
 
-const useStyles = tss.create(({ theme }) => ({
+export const useStyles = tss.create(({ theme }) => ({
   navItem: {
     display: 'flex',
     alignItems: 'center',
@@ -39,5 +39,3 @@ const useStyles = tss.create(({ theme }) => ({
     },
   },
 }));
-
-export default useStyles;

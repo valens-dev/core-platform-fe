@@ -4,7 +4,7 @@ import RightArrow from '@/assets/icon/right-arrow-icon.svg?react';
 
 import { getNavItemClasses } from './utils';
 
-import useStyles from './styles';
+import { useStyles } from './styles';
 
 interface INavItemProps {
   icon: React.ElementType;

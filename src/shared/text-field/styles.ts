@@ -1,6 +1,6 @@
 import { tss } from '@/styles/theme';
 
-const useStyles = tss.create(({ theme }) => ({
+export const useStyles = tss.create(({ theme }) => ({
   adornedStart: {
     '& > svg': {
       width: '30px',
@@ -15,5 +15,3 @@ const useStyles = tss.create(({ theme }) => ({
     marginTop: '5px',
   },
 }));
-
-export default useStyles;

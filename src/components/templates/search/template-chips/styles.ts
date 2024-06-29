@@ -1,6 +1,6 @@
 import { tss } from '@/styles/theme';
 
-const useStyles = tss.create(() => ({
+export const useStyles = tss.create(() => ({
   chipsWrapper: {
     display: 'flex',
     justifyContent: 'center',
@@ -16,5 +16,3 @@ const useStyles = tss.create(() => ({
     },
   },
 }));
-
-export default useStyles;

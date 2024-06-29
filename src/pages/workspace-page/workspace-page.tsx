@@ -15,7 +15,7 @@ import { type ITool } from '@/types/tool';
 
 import { appText } from '@/constants/strings';
 
-import useStyles from './styles';
+import { useStyles } from './styles';
 
 const text = appText.workspacePage.menuItems;
 

@@ -1,6 +1,6 @@
 import { tss } from '@/styles/theme';
 
-const useStyles = tss.create(({ theme }) => ({
+export const useStyles = tss.create(({ theme }) => ({
   loginForm: {
     display: 'flex',
     flexDirection: 'column',
@@ -40,5 +40,3 @@ const useStyles = tss.create(({ theme }) => ({
     height: '50px',
   },
 }));
-
-export default useStyles;

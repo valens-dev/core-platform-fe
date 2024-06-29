@@ -20,7 +20,7 @@ import QuestionPopUp from '@/assets/icon/question-pop-icon.svg?react';
 
 import { getLeftArrowClassName } from './utils';
 
-import useStyles from './styles';
+import { useStyles } from './styles';
 
 const text = appText.homePage;
 

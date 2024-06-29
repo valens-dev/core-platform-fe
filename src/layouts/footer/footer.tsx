@@ -9,7 +9,7 @@ import GithubIcon from '@/assets/icon/github-icon.svg?react';
 import LinkedInIcon from '@/assets/icon/linkedIn-icon.svg?react';
 import MicrosoftIcon from '@/assets/icon/microsoft-icon.svg?react';
 
-import useStyles from './styles';
+import { useStyles } from './styles';
 
 const text = appText.footer;
 

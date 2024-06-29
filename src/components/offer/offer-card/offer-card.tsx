@@ -11,7 +11,7 @@ import { FeatureList } from './feature-list';
 
 import { type IOfferCardProps } from './types';
 
-import useStyles from './styles';
+import { useStyles } from './styles';
 
 export const OfferCard: React.FC<IOfferCardProps> = ({ plan, text }) => {
   const { classes } = useStyles();

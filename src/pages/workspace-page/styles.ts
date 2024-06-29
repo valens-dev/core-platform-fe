@@ -1,6 +1,6 @@
 import { tss } from '@/styles/theme';
 
-const useStyles = tss.create({
+export const useStyles = tss.create({
   wrapper: {
     width: '100%',
   },
@@ -9,5 +9,3 @@ const useStyles = tss.create({
     height: 'calc(100% - 50px)',
   },
 });
-
-export default useStyles;

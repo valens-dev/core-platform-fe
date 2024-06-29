@@ -9,7 +9,7 @@ import { appText } from '@/constants/strings';
 
 import { type IContactFormData } from './types';
 
-import useStyles from './styles';
+import { useStyles } from './styles';
 
 interface IContactUsProps {
   contactUsRef: React.RefObject<HTMLDivElement>;
@@ -21,7 +21,7 @@ export function ContactUs({ contactUsRef }: IContactUsProps): JSX.Element {
   const { control, register, handleSubmit } = useForm<IContactFormData>();
   const { classes } = useStyles();
 
-  // eslint-disable-next-line unicorn/consistent-function-scoping
+  /* eslint-disable-next-line unicorn/consistent-function-scoping */
   const onSubmit = (): void => {
     /** TODO: implement */
   };

@@ -2,7 +2,7 @@ import { Box, Typography } from '@mui/material';
 
 import { Link } from '@/shared/link';
 
-import useStyles from './styles';
+import { useStyles } from './styles';
 
 interface ITemplateProps {
   imgSrc: string;

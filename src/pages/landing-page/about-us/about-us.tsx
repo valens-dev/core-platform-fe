@@ -9,7 +9,7 @@ import { appText } from '@/constants/strings';
 
 import ArrowRight from '@/assets/icon/arrow-right.svg?react';
 
-import useStyles from './styles';
+import { useStyles } from './styles';
 
 interface IAboutUsProps {
   aboutUsRef: React.RefObject<HTMLDivElement>;

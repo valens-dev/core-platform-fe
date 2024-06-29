@@ -1,6 +1,6 @@
 import { Box, Dialog as MuiDialog } from '@mui/material';
 
-import useStyles from './styles';
+import { useStyles } from './styles';
 
 interface IModal {
   isOpen: boolean;

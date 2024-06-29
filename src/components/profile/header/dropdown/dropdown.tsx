@@ -5,7 +5,7 @@ import { appText } from '@/constants/strings';
 import Logout from '@/assets/icon/logout-icon.svg?react';
 import ProfilePicture from '@/assets/icon/profile-picture.svg?react';
 
-import useStyles from './styles';
+import { useStyles } from './styles';
 
 interface IDropdownProps {
   dropdown: HTMLElement | null;

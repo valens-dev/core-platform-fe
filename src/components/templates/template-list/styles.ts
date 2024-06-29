@@ -1,6 +1,6 @@
 import { tss } from '@/styles/theme';
 
-const useStyles = tss.create(() => ({
+export const useStyles = tss.create(() => ({
   templateGrid: {
     display: 'grid',
     gridTemplateColumns: 'repeat(4, 1fr)',
@@ -8,5 +8,3 @@ const useStyles = tss.create(() => ({
     flexGrow: 1,
   },
 }));
-
-export default useStyles;

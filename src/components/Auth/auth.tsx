@@ -17,7 +17,7 @@ import { SocialAuthButtons } from './social-auth-buttons';
 
 import { type IAuthProps } from './types';
 
-import useStyles from './styles';
+import { useStyles } from './styles';
 
 const text = appText.auth;
 

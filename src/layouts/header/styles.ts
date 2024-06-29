@@ -1,6 +1,6 @@
 import { tss } from '@/styles/theme';
 
-const useStyles = tss.create(({ theme }) => ({
+export const useStyles = tss.create(({ theme }) => ({
   wrapper: {
     width: '100%',
     height: '122px',
@@ -59,5 +59,3 @@ const useStyles = tss.create(({ theme }) => ({
     color: theme.palette.primary.dark,
   },
 }));
-
-export default useStyles;

@@ -13,7 +13,7 @@ import OutlinedQuestionMark from '@/assets/icon/outlined-question-mark.svg?react
 
 import { Dropdown } from './dropdown';
 
-import useStyles from './styles';
+import { useStyles } from './styles';
 
 const text = appText.homePage.profileHeader;
 

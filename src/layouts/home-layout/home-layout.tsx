@@ -4,7 +4,7 @@ import { Box } from '@mui/material';
 
 import { Header } from '@/components/profile/header';
 
-import useStyles from './styles';
+import { useStyles } from './styles';
 
 export function HomeLayout(): JSX.Element {
   const { classes } = useStyles();

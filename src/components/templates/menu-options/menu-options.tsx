@@ -1,6 +1,6 @@
 import { Box, MenuItem, ClickAwayListener } from '@mui/material';
 
-import useStyles from './styles';
+import { useStyles } from './styles';
 
 interface IMenuOptionsProps {
   menuPosition: { top: number; left: number } | null;

@@ -10,7 +10,7 @@ import { Table } from './table';
 
 import { type IComparisonTableProps } from './types';
 
-import useStyles from './styles';
+import { useStyles } from './styles';
 
 export const ComparisonTable: React.FC<IComparisonTableProps> = ({
   text,

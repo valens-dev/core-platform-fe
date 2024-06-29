@@ -1,6 +1,6 @@
 import { tss } from '@/styles/theme';
 
-const useStyles = tss.create(({ theme }) => ({
+export const useStyles = tss.create(({ theme }) => ({
   price: {
     margin: '10px 0',
     '& span': {
@@ -31,5 +31,3 @@ const useStyles = tss.create(({ theme }) => ({
     },
   },
 }));
-
-export default useStyles;

@@ -12,7 +12,7 @@ import { NAV_LINKS } from '@/constants/navigation';
 
 import CoreLogo from '@/assets/logo/core.svg?react';
 
-import useStyles from './styles';
+import { useStyles } from './styles';
 
 interface IHeaderProps {
   scrollToContactUs?: () => void;

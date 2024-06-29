@@ -4,7 +4,7 @@ import { Template } from '@/components/home/search/template';
 
 import { CARDS_TEMPLATES } from './constants';
 
-import useStyles from './styles';
+import { useStyles } from './styles';
 
 export function TemplateList(): JSX.Element {
   const { classes } = useStyles();

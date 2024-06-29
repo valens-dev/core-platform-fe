@@ -4,7 +4,7 @@ import classnames from 'classnames';
 
 import CheckIcon from '@/assets/icon/check-icon.svg?react';
 
-import useStyles from './styles';
+import { useStyles } from './styles';
 
 interface IFeatureListProps {
   features: string[];

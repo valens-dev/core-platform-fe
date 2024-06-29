@@ -4,7 +4,7 @@ import { Box } from '@mui/material';
 
 import { ICONS } from './constants';
 
-import useStyles from './styles';
+import { useStyles } from './styles';
 
 export const Track = (): JSX.Element => {
   const { classes } = useStyles();

@@ -8,7 +8,7 @@ import { appText } from '@/constants/strings';
 import GoogleLogo from '@/assets/logo/google-logo.svg?react';
 import MicrosoftLogo from '@/assets/icon/microsoft-icon.svg?react';
 
-import useStyles from './styles';
+import { useStyles } from './styles';
 
 interface ISocialAuthButtonsProps {
   isActiveTabLogin: boolean;

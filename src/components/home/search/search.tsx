@@ -20,7 +20,7 @@ import { Template } from './template';
 
 import { TEMPLATES } from './constants';
 
-import useStyles from './styles';
+import { useStyles } from './styles';
 
 const text = appText.homePage.search;
 

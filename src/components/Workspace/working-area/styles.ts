@@ -2,7 +2,7 @@ import WorkspaceBackground from '@/assets/image/background-workspace.png';
 
 import { tss } from '@/styles/theme';
 
-const useStyles = tss.create(({ theme }) => ({
+export const useStyles = tss.create(({ theme }) => ({
   rightSide: {
     flex: 1,
     position: 'relative',
@@ -56,5 +56,3 @@ const useStyles = tss.create(({ theme }) => ({
     },
   },
 }));
-
-export default useStyles;

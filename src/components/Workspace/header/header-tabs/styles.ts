@@ -1,6 +1,6 @@
 import { tss } from '@/styles/theme';
 
-const useStyles = tss.create(() => ({
+export const useStyles = tss.create(() => ({
   tabs: {
     flexGrow: 1,
     marginLeft: '30px',
@@ -10,5 +10,3 @@ const useStyles = tss.create(() => ({
     fontSize: '14px',
   },
 }));
-
-export default useStyles;

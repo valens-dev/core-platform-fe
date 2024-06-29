@@ -7,7 +7,7 @@ import { type ITool } from '@/types/tool';
 
 import { type IToolItemProps } from './types';
 
-import useStyles from './styles';
+import { useStyles } from './styles';
 
 export function ToolItem({ tools, onDelete }: IToolItemProps): JSX.Element {
   const { classes } = useStyles();

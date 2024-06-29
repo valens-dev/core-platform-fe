@@ -6,6 +6,8 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 /**
  * https://vitejs.dev/config/
  */
+
+/* eslint-disable import/no-default-export */
 export default defineConfig({
   plugins: [react(), svgr(), tsconfigPaths()],
 });

@@ -8,7 +8,7 @@ import { appText } from '@/constants/strings';
 
 import SearchIcon from '@/assets/icon/search-icon.svg?react';
 
-import useStyles from './styles';
+import { useStyles } from './styles';
 
 const text = appText.homePage.search;
 

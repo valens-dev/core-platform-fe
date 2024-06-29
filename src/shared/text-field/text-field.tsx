@@ -7,7 +7,7 @@ import { Typography, TextField as MuiTextField } from '@mui/material';
 
 import { type ITextFieldProps } from './types';
 
-import useStyles from './styles';
+import { useStyles } from './styles';
 
 export function TextField({
   label,

@@ -13,7 +13,7 @@ import ConnectAndCreate from '@/assets/image/connect-and-create.png';
 
 import { CARDS_DATA } from './constants';
 
-import useStyles from './styles';
+import { useStyles } from './styles';
 
 interface IHowWeWorkProps {
   howWeWorkRef: React.RefObject<HTMLDivElement>;

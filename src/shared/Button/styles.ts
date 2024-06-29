@@ -45,12 +45,10 @@ const getButtonGeneralStyle = (
   }
 };
 
-const useStyles = tss
+export const useStyles = tss
   .withParams<{ colorVariant: ColorVariant }>()
   .create(({ theme, colorVariant }) => ({
     general: {
       ...getButtonGeneralStyle(theme, colorVariant),
     },
   }));
-
-export default useStyles;

@@ -1,6 +1,6 @@
 import { tss } from '@/styles/theme';
 
-const useStyles = tss.create(({ theme }) => ({
+export const useStyles = tss.create(({ theme }) => ({
   plan: {
     border: `1px solid ${theme.palette.white.light}`,
     borderRadius: '10px',
@@ -81,5 +81,3 @@ const useStyles = tss.create(({ theme }) => ({
     position: 'relative',
   },
 }));
-
-export default useStyles;

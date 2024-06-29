@@ -1,6 +1,6 @@
 import { tss } from '@/styles/theme';
 
-const useStyles = tss.create({
+export const useStyles = tss.create({
   menuHeader: {
     display: 'flex',
     justifyContent: 'space-between',
@@ -12,5 +12,3 @@ const useStyles = tss.create({
     height: '20px',
   },
 });
-
-export default useStyles;

@@ -9,7 +9,7 @@ import { type IFeature } from '../types';
 
 import { type IComparisonTableProps } from './types';
 
-import useStyles from './styles';
+import { useStyles } from './styles';
 
 export function Table({ features, plans }: IComparisonTableProps): JSX.Element {
   const { classes } = useStyles();

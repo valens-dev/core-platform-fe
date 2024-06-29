@@ -4,7 +4,7 @@ import { NavItem } from '../nav-item';
 import { MenuOptions } from '../menu-options';
 import { TemplateList } from '../template-list';
 
-import useStyles from './styles';
+import { useStyles } from './styles';
 
 interface ITemplateContentProps {
   menuPosition: { top: number; left: number } | null;

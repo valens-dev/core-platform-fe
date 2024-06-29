@@ -2,7 +2,7 @@ import { Box, IconButton, Typography } from '@mui/material';
 
 import DownArrowIcon from '@/assets/icon/downarrow-grey-icon.svg?react';
 
-import useStyles from './styles';
+import { useStyles } from './styles';
 
 interface IMenuHeaderProps {
   label: string;

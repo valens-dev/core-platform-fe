@@ -8,7 +8,7 @@ import { ColorVariant } from '@/types/style';
 
 import { type ILinkProps } from './types';
 
-import useStyles from './styles';
+import { useStyles } from './styles';
 
 export function Link({
   label,

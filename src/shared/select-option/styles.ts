@@ -1,6 +1,6 @@
 import { tss } from '@/styles/theme';
 
-const useStyles = tss.create(() => ({
+export const useStyles = tss.create(() => ({
   viewSelect: {
     marginLeft: '8px',
     height: '36px',
@@ -24,5 +24,3 @@ const useStyles = tss.create(() => ({
     cursor: 'pointer',
   },
 }));
-
-export default useStyles;

@@ -2,7 +2,7 @@ import { Box, Button } from '@mui/material';
 
 import { AZURE_TOOLS } from './constants';
 
-import useStyles from './styles';
+import { useStyles } from './styles';
 
 interface IMenuContentProps {
   handleToolClick: (

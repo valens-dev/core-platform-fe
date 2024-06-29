@@ -13,7 +13,7 @@ import SearchIcon from '@/assets/icon/search-icon.svg?react';
 import { TemplateChips } from './template-chips';
 import { TextFieldEndButton } from './text-field-end-button';
 
-import useStyles from './styles';
+import { useStyles } from './styles';
 
 const text = appText.homePage.search;
 

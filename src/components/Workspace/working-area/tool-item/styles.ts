@@ -1,6 +1,6 @@
 import { tss } from '@/styles/theme';
 
-const useStyles = tss.create(({ theme }) => ({
+export const useStyles = tss.create(({ theme }) => ({
   toolsContainer: {
     display: 'flex',
     flexWrap: 'wrap',
@@ -25,5 +25,3 @@ const useStyles = tss.create(({ theme }) => ({
     height: '40px',
   },
 }));
-
-export default useStyles;

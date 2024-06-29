@@ -1,6 +1,6 @@
 import { tss } from '@/styles/theme';
 
-const useStyles = tss.create(({ theme }) => ({
+export const useStyles = tss.create(({ theme }) => ({
   featureComparisonWrapper: {
     marginTop: '100px',
     textAlign: 'left',
@@ -47,5 +47,3 @@ const useStyles = tss.create(({ theme }) => ({
     fontWeight: theme.typography.fontWeight.medium,
   },
 }));
-
-export default useStyles;

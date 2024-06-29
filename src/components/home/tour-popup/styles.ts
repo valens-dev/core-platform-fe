@@ -1,6 +1,6 @@
 import { tss } from '@/styles/theme';
 
-const useStyles = tss.create(({ theme }) => ({
+export const useStyles = tss.create(({ theme }) => ({
   tourPopup: {
     '& .MuiPopover-paper': {
       width: '395px',
@@ -48,5 +48,3 @@ const useStyles = tss.create(({ theme }) => ({
     fontSize: '14px',
   },
 }));
-
-export default useStyles;

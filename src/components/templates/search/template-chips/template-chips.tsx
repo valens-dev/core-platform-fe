@@ -5,7 +5,7 @@ import { TEMPLATE_CHIPS } from '@/constants/templates';
 
 import { getChipStyle } from '@/utils/template-chips';
 
-import useStyles from './styles';
+import { useStyles } from './styles';
 
 const text = appText.homePage.search;
 

@@ -8,7 +8,7 @@ import { ToolItem } from './tool-item';
 
 import { type IWorkingAreaProps } from './types';
 
-import useStyles from './styles';
+import { useStyles } from './styles';
 
 const text = appText.workspacePage.menuItems;
 

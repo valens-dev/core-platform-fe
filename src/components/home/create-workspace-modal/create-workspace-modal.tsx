@@ -12,7 +12,7 @@ import { appText } from '@/constants/strings';
 
 import { type IWorkspaceAuthFormData } from './types';
 
-import useStyles from './styles';
+import { useStyles } from './styles';
 
 const text = appText.homePage.createWorkspaceModal;
 
@@ -21,7 +21,7 @@ export function CreateWorkspaceModal(): JSX.Element {
   const { control, register, handleSubmit } = useForm<IWorkspaceAuthFormData>();
   const { classes } = useStyles();
 
-  // eslint-disable-next-line unicorn/consistent-function-scoping
+  /* eslint-disable-next-line unicorn/consistent-function-scoping */
   const onSubmit = async (): Promise<void> => {
     /** TODO: implement */
   };

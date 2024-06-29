@@ -5,7 +5,7 @@ import PlusIcon from '@/assets/icon/plus-icon.svg?react';
 import { MenuHeader } from './menu-header';
 import { MenuContent } from './menu-content';
 
-import useStyles from './styles';
+import { useStyles } from './styles';
 
 interface IMenuItemProps {
   menu: { id: number; label: string; isOpen: boolean };

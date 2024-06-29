@@ -1,6 +1,6 @@
 import { tss } from '@/styles/theme';
 
-const useStyles = tss.create(({ theme }) => ({
+export const useStyles = tss.create(({ theme }) => ({
   menuContent: {
     padding: '10px',
     borderTop: `1px solid ${theme.palette.light.mainGrey}`,
@@ -22,5 +22,3 @@ const useStyles = tss.create(({ theme }) => ({
     },
   },
 }));
-
-export default useStyles;

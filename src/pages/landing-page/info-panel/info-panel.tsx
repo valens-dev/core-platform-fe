@@ -12,7 +12,7 @@ import { appText } from '@/constants/strings';
 
 import ExampleImage from '@/assets/image/example.png';
 
-import useStyles from './styles';
+import { useStyles } from './styles';
 
 const text = appText.landingPage.infoPanel;
 

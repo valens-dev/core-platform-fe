@@ -40,7 +40,7 @@ const getLinkGeneralStyle = (
     : { color, textDecoration: 'none' };
 };
 
-const useStyles = tss
+export const useStyles = tss
   .withParams<{ colorVariant: ColorVariant; underline: boolean }>()
   .create(({ theme, colorVariant, underline }) => ({
     wrapper: {
@@ -53,5 +53,3 @@ const useStyles = tss
       ...getLinkGeneralStyle(theme, colorVariant, underline),
     },
   }));
-
-export default useStyles;

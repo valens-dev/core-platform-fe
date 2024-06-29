@@ -1,6 +1,6 @@
 import { tss } from '@/styles/theme';
 
-const useStyles = tss.create(({ theme }) => ({
+export const useStyles = tss.create(({ theme }) => ({
   textfieldEndButton: {
     height: '24px',
     width: '100px',
@@ -13,5 +13,3 @@ const useStyles = tss.create(({ theme }) => ({
     gap: '20px',
   },
 }));
-
-export default useStyles;

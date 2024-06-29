@@ -15,7 +15,7 @@ import OutlinedQuestionMark from '@/assets/icon/outlined-question-mark.svg?react
 
 import { HeaderTabs } from './header-tabs';
 
-import useStyles from './styles';
+import { useStyles } from './styles';
 
 const WORKSPACE_TEXT = appText.workspace;
 

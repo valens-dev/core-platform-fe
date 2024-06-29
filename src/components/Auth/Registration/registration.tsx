@@ -9,7 +9,7 @@ import { appText } from '@/constants/strings';
 
 import { type IRegistrationFormData } from './types';
 
-import useStyles from './styles';
+import { useStyles } from './styles';
 
 const text = appText.auth.registration;
 
@@ -17,7 +17,7 @@ export function Registration(): JSX.Element {
   const { control, register, handleSubmit } = useForm<IRegistrationFormData>();
   const { classes } = useStyles();
 
-  // eslint-disable-next-line unicorn/consistent-function-scoping
+  /* eslint-disable-next-line unicorn/consistent-function-scoping */
   const onSubmit = async (): Promise<void> => {
     /** TODO: implement */
   };

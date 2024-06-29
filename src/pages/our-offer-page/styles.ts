@@ -1,6 +1,6 @@
 import { tss } from '@/styles/theme';
 
-const useStyles = tss.create(({ theme }) => ({
+export const useStyles = tss.create(({ theme }) => ({
   wrapper: {
     textAlign: 'center',
     padding: '20px',
@@ -49,5 +49,3 @@ const useStyles = tss.create(({ theme }) => ({
     width: '100%',
   },
 }));
-
-export default useStyles;

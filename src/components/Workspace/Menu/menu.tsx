@@ -2,7 +2,7 @@ import { Box } from '@mui/material';
 
 import { MenuItem } from './menu-item';
 
-import useStyles from './styles';
+import { useStyles } from './styles';
 
 interface IMenuProps {
   menu: { id: number; label: string; isOpen: boolean }[];

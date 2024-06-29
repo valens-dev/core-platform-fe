@@ -2,7 +2,7 @@ import classnames from 'classnames';
 
 import { Box } from '@mui/material';
 
-import useStyles from './styles';
+import { useStyles } from './styles';
 
 interface ILineProps {
   className?: string;

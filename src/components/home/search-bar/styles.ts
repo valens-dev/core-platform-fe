@@ -1,6 +1,6 @@
 import { tss } from '@/styles/theme';
 
-const useStyles = tss.create(() => ({
+export const useStyles = tss.create(() => ({
   searchBar: {
     display: 'flex',
     justifyContent: 'flex-start',
@@ -24,5 +24,3 @@ const useStyles = tss.create(() => ({
     marginLeft: 'auto',
   },
 }));
-
-export default useStyles;

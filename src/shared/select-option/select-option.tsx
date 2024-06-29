@@ -2,7 +2,7 @@ import { Select, MenuItem, type SelectChangeEvent } from '@mui/material';
 
 import DownArrowIcon from '@/assets/icon/arrow-down.svg?react';
 
-import useStyles from './styles';
+import { useStyles } from './styles';
 
 interface ISelectOptionProps {
   value: string;

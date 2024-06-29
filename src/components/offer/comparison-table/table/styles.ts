@@ -1,6 +1,6 @@
 import { tss } from '@/styles/theme';
 
-const useStyles = tss.create(({ theme }) => ({
+export const useStyles = tss.create(({ theme }) => ({
   featureComparisonTable: {
     width: '100%',
     borderCollapse: 'collapse',
@@ -27,5 +27,3 @@ const useStyles = tss.create(({ theme }) => ({
     fontWeight: theme.typography.fontWeight.regular,
   },
 }));
-
-export default useStyles;
