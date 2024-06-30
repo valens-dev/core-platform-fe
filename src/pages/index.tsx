@@ -13,15 +13,15 @@ import { WorkspaceLayout } from '@/layouts/workspace-layout';
 
 import '@/styles/global.css';
 
-const HomePage = lazy(async () => {
+const HomePage = lazy(() => {
   return import('@/pages/home-page/home-page');
 });
 
-const LandingPage = lazy(async () => {
+const LandingPage = lazy(() => {
   return import('@/pages/landing-page/landing-page');
 });
 
-const OurOfferPage = lazy(async () => {
+const OurOfferPage = lazy(() => {
   return import('@/pages/our-offer-page/our-offer-page');
 });
 
