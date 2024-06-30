@@ -25,7 +25,7 @@ interface ILocationState {
   tab?: string;
 }
 
-export function Auth({ tab = AuthTab.Login }: IAuthProps): JSX.Element {
+export function Auth({ tab = AuthTab.Login }: IAuthProps): React.ReactNode {
   const [activeTab, setActiveTab] = useState(tab);
   const location = useLocation() as Location<ILocationState>;
   const { classes } = useStyles();

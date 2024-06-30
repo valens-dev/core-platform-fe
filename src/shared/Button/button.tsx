@@ -14,7 +14,7 @@ export function Button({
   colorVariant = ColorVariant.Primary,
   className,
   ...props
-}: IButtonProps): JSX.Element {
+}: IButtonProps): React.ReactNode {
   const { classes } = useStyles({ colorVariant });
 
   return (

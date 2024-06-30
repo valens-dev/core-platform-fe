@@ -14,7 +14,7 @@ export function SelectOption({
   value,
   onChange,
   options,
-}: ISelectOptionProps): JSX.Element {
+}: ISelectOptionProps): React.ReactNode {
   const { classes } = useStyles();
 
   return (

@@ -21,7 +21,7 @@ export function TextField({
   size = 'small',
   customOnChange,
   ...props
-}: ITextFieldProps): JSX.Element {
+}: ITextFieldProps): React.ReactNode {
   const { errors } = useFormState({ control });
   const error = errors[register?.name ?? '']?.message as string;
   const { classes } = useStyles();

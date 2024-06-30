@@ -13,7 +13,7 @@ interface IMenuContentProps {
 
 export function MenuContent({
   handleToolClick,
-}: IMenuContentProps): JSX.Element {
+}: IMenuContentProps): React.ReactNode {
   const { classes } = useStyles();
 
   return (

@@ -18,7 +18,7 @@ const text = appText.auth.socialAuthButtons;
 
 export function SocialAuthButtons({
   isActiveTabLogin,
-}: ISocialAuthButtonsProps): JSX.Element {
+}: ISocialAuthButtonsProps): React.ReactNode {
   const { classes } = useStyles();
 
   return (

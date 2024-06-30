@@ -17,7 +17,7 @@ export function Link({
   className,
   underline = true,
   endIcon,
-}: ILinkProps): JSX.Element {
+}: ILinkProps): React.ReactNode {
   const navigate = useNavigate();
   const { classes } = useStyles({ colorVariant, underline });
 

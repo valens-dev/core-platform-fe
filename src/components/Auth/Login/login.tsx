@@ -20,7 +20,7 @@ import { useStyles } from './styles';
 
 const text = appText.auth.login;
 
-export function Login(): JSX.Element {
+export function Login(): React.ReactNode {
   const navigate = useNavigate();
   const { control, register, handleSubmit } = useForm<ILoginFormData>();
   const { classes } = useStyles();

@@ -8,5 +8,5 @@ export type IButtonProps = {
   variant?: ButtonVariant;
   colorVariant?: ColorVariant;
   isSubmitting?: boolean;
-  startIcon?: JSX.Element;
+  startIcon?: React.ReactNode;
 } & Omit<MuiButtonProps, 'color' | 'size'>;

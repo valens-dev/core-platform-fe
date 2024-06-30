@@ -11,7 +11,7 @@ import { type IOfferCardProps } from './types';
 
 import { useStyles } from './styles';
 
-export function OfferCard({ plan, text }: IOfferCardProps): JSX.Element {
+export function OfferCard({ plan, text }: IOfferCardProps): React.ReactNode {
   const { classes } = useStyles();
 
   const offerCardClass = classnames(classes.plan, {

@@ -17,7 +17,7 @@ import { useStyles } from './styles';
 
 const text = appText.homePage.profileHeader;
 
-export function Header(): JSX.Element {
+export function Header(): React.ReactNode {
   const navigate = useNavigate();
   const [dropdown, setDropdown] = useState<null | HTMLElement>();
   const { classes } = useStyles();

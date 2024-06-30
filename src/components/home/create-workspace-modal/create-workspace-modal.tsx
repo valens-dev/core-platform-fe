@@ -16,7 +16,7 @@ import { useStyles } from './styles';
 
 const text = appText.homePage.createWorkspaceModal;
 
-export function CreateWorkspaceModal(): JSX.Element {
+export function CreateWorkspaceModal(): React.ReactNode {
   const navigate = useNavigate();
   const { control, register, handleSubmit } = useForm<IWorkspaceAuthFormData>();
   const { classes } = useStyles();

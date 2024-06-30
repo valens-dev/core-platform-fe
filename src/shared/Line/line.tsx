@@ -8,7 +8,7 @@ interface ILineProps {
   className?: string;
 }
 
-export function Line({ className }: ILineProps): JSX.Element {
+export function Line({ className }: ILineProps): React.ReactNode {
   const { classes } = useStyles();
 
   return <Box className={classnames(classes.line, className)} />;

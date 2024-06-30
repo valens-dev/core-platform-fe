@@ -17,7 +17,7 @@ const text = appText.homePage.profileHeader;
 export function Dropdown({
   dropdown,
   handleClose,
-}: IDropdownProps): JSX.Element {
+}: IDropdownProps): React.ReactNode {
   const { classes } = useStyles();
 
   return (

@@ -24,7 +24,7 @@ import { useStyles } from './styles';
 
 const text = appText.homePage.search;
 
-export function Search(): JSX.Element {
+export function Search(): React.ReactNode {
   const navigate = useNavigate();
   const { control, register } = useForm<ISearchFormData>();
   const { classes } = useStyles();

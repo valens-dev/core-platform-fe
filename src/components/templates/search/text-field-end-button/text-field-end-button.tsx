@@ -12,7 +12,7 @@ import { useStyles } from './styles';
 
 const text = appText.homePage.search;
 
-export function TextFieldEndButton(): JSX.Element {
+export function TextFieldEndButton(): React.ReactNode {
   const { classes } = useStyles();
 
   return (

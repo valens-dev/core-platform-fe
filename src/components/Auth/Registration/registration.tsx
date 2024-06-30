@@ -13,7 +13,7 @@ import { useStyles } from './styles';
 
 const text = appText.auth.registration;
 
-export function Registration(): JSX.Element {
+export function Registration(): React.ReactNode {
   const { control, register, handleSubmit } = useForm<IRegistrationFormData>();
   const { classes } = useStyles();
 

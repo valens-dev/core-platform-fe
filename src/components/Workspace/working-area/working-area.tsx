@@ -15,7 +15,7 @@ const text = appText.workspacePage.menuItems;
 export function WorkingArea({
   selectedTools,
   setSelectedTools,
-}: IWorkingAreaProps): JSX.Element {
+}: IWorkingAreaProps): React.ReactNode {
   const { classes } = useStyles();
 
   const handleDeleteTool = (tool: ITool): void => {

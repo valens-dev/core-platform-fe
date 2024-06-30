@@ -25,7 +25,7 @@ const text = appText.landingPage.howWeWork;
 export function HowWeWork({
   howWeWorkRef,
   scrollToContactUs,
-}: IHowWeWorkProps): JSX.Element {
+}: IHowWeWorkProps): React.ReactNode {
   const { classes } = useStyles();
   const [activeCard, setActiveCard] = useState<number | null>();
 

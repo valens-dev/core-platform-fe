@@ -8,7 +8,7 @@ import { useStyles } from './styles';
 
 const text = appText.workspacePage;
 
-export function HeaderTabs(): JSX.Element {
+export function HeaderTabs(): React.ReactNode {
   const [tabValue, setTabValue] = useState(0);
   const { classes } = useStyles();
 

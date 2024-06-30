@@ -9,7 +9,7 @@ import { useStyles } from './styles';
 
 const text = appText.homePage.search;
 
-export function TemplateChips(): JSX.Element {
+export function TemplateChips(): React.ReactNode {
   const { classes } = useStyles();
 
   return (

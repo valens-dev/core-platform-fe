@@ -19,7 +19,7 @@ import { useStyles } from './styles';
 
 const TEXT = appText.workspacePage;
 
-export function Header(): JSX.Element {
+export function Header(): React.ReactNode {
   const navigate = useNavigate();
   const [dropdown, setDropdown] = useState<null | HTMLElement>();
   const { classes } = useStyles();

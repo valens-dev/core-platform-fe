@@ -13,7 +13,7 @@ import { useStyles } from './styles';
 
 const text = appText.footer;
 
-export function Footer(): JSX.Element {
+export function Footer(): React.ReactNode {
   const { classes } = useStyles();
 
   return (

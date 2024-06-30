@@ -12,7 +12,7 @@ import SearchIcon from '@/assets/icon/search-icon.svg?react';
 
 import { useStyles } from './styles';
 
-export function SearchBar(): JSX.Element {
+export function SearchBar(): React.ReactNode {
   const [viewMode, setViewMode] = useState('Last viewed');
   const { classes } = useStyles();
 

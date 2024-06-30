@@ -10,7 +10,11 @@ interface ITemplateProps {
   link: string;
 }
 
-export function Template({ imgSrc, label, link }: ITemplateProps): JSX.Element {
+export function Template({
+  imgSrc,
+  label,
+  link,
+}: ITemplateProps): React.ReactNode {
   const { classes } = useStyles();
 
   return (

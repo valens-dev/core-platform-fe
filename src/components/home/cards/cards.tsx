@@ -4,7 +4,7 @@ import { CARDS_DATA } from './constants';
 
 import { useStyles } from './styles';
 
-export function Cards(): JSX.Element {
+export function Cards(): React.ReactNode {
   const { classes } = useStyles();
 
   return (

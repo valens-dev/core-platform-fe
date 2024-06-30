@@ -16,7 +16,7 @@ import { useStyles } from './styles';
 
 const text = appText.landingPage.infoPanel;
 
-export function InfoPanel(): JSX.Element {
+export function InfoPanel(): React.ReactNode {
   const navigate = useNavigate();
   const { classes } = useStyles();
 

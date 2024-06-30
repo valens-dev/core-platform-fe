@@ -24,7 +24,7 @@ export function MenuItem({
   handleArrowClick,
   handlePlusClick,
   handleToolClick,
-}: IMenuItemProps): JSX.Element {
+}: IMenuItemProps): React.ReactNode {
   const { classes } = useStyles();
 
   return (

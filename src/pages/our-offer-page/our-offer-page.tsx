@@ -13,7 +13,7 @@ import { useStyles } from './styles';
 
 const text = appText.pricingPage.ourOffer;
 
-export function OurOfferPage(): JSX.Element {
+export function OurOfferPage(): React.ReactNode {
   const { classes } = useStyles();
   const [isMonthly, setIsMonthly] = useState(true);
 

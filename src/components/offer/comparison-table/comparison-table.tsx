@@ -14,7 +14,7 @@ export function ComparisonTable({
   text,
   plans,
   features,
-}: IComparisonTableProps): JSX.Element {
+}: IComparisonTableProps): React.ReactNode {
   const { classes } = useStyles();
 
   const getPlanPriceClass = (planTitle: string): string =>

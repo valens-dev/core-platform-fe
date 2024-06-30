@@ -12,7 +12,7 @@ interface IFeatureListProps {
 export function FeatureList({
   features,
   benefitText,
-}: IFeatureListProps): JSX.Element {
+}: IFeatureListProps): React.ReactNode {
   const { classes } = useStyles();
 
   return (

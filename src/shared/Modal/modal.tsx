@@ -5,7 +5,7 @@ import { useStyles } from './styles';
 interface IModal {
   isOpen: boolean;
   handleClose?: () => void;
-  children: JSX.Element;
+  children: React.ReactNode;
 }
 
 export function Modal({
@@ -13,7 +13,7 @@ export function Modal({
   isOpen,
   handleClose,
   ...props
-}: IModal): JSX.Element {
+}: IModal): React.ReactNode {
   const { classes } = useStyles();
 
   return (

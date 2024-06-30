@@ -9,7 +9,7 @@ import { type IToolItemProps } from './types';
 
 import { useStyles } from './styles';
 
-export function ToolItem({ tools, onDelete }: IToolItemProps): JSX.Element {
+export function ToolItem({ tools, onDelete }: IToolItemProps): React.ReactNode {
   const { classes } = useStyles();
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>();
   const [selectedTool, setSelectedTool] = useState<ITool | null>();

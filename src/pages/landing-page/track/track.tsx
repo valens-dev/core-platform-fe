@@ -6,7 +6,7 @@ import { ICONS } from './constants';
 
 import { useStyles } from './styles';
 
-export function Track(): JSX.Element {
+export function Track(): React.ReactNode {
   const { classes } = useStyles();
 
   return (

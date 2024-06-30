@@ -14,7 +14,7 @@ export function MenuHeader({
   label,
   index,
   handleArrowClick,
-}: IMenuHeaderProps): JSX.Element {
+}: IMenuHeaderProps): React.ReactNode {
   const { classes } = useStyles();
 
   return (

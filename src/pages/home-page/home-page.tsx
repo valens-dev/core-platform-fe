@@ -24,7 +24,7 @@ import { useStyles } from './styles';
 
 const text = appText.homePage;
 
-export function HomePage(): JSX.Element {
+export function HomePage(): React.ReactNode {
   const navigate = useNavigate();
   const { classes } = useStyles();
   const [isModalOpen, setIsModalOpen] = useState(false);

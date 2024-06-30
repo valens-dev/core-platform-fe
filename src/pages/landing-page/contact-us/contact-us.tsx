@@ -17,7 +17,7 @@ interface IContactUsProps {
 
 const text = appText.landingPage.contactUs;
 
-export function ContactUs({ contactUsRef }: IContactUsProps): JSX.Element {
+export function ContactUs({ contactUsRef }: IContactUsProps): React.ReactNode {
   const { control, register, handleSubmit } = useForm<IContactFormData>();
   const { classes } = useStyles();
 

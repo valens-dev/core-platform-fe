@@ -9,7 +9,10 @@ interface IPlanPriceProps {
   variant: 'offerCard' | 'comparisonTable';
 }
 
-export function PlanPrice({ price, variant }: IPlanPriceProps): JSX.Element {
+export function PlanPrice({
+  price,
+  variant,
+}: IPlanPriceProps): React.ReactNode {
   const { classes } = useStyles();
   const [amount, period] = price.split(' ');
 

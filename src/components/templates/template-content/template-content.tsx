@@ -26,7 +26,7 @@ export function TemplateContent({
   hoveredNavItem,
   handleMenuOpen,
   navData,
-}: ITemplateContentProps): JSX.Element {
+}: ITemplateContentProps): React.ReactNode {
   const { classes } = useStyles();
 
   return (

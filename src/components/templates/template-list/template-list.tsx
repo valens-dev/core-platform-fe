@@ -6,7 +6,7 @@ import { CARDS_TEMPLATES } from './constants';
 
 import { useStyles } from './styles';
 
-export function TemplateList(): JSX.Element {
+export function TemplateList(): React.ReactNode {
   const { classes } = useStyles();
 
   return (

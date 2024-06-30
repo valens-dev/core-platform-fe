@@ -4,7 +4,7 @@ import { Outlet } from 'react-router-dom';
 import { Header } from '@/layouts/header';
 import { Footer } from '@/layouts/footer';
 
-export function LandingLayout(): JSX.Element {
+export function LandingLayout(): React.ReactNode {
   const contactUsRef = useRef<HTMLDivElement | null>(null);
   const aboutUsRef = useRef<HTMLDivElement | null>(null);
   const howWeWorkRef = useRef<HTMLDivElement | null>(null);

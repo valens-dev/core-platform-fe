@@ -26,7 +26,7 @@ import { useStyles } from './styles';
 
 const text = appText.homePage;
 
-export function TemplatesPage(): JSX.Element {
+export function TemplatesPage(): React.ReactNode {
   const { classes } = useStyles();
   const navigate = useNavigate();
   const [menuPosition, setMenuPosition] = useState<

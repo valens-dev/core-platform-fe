@@ -26,7 +26,7 @@ export function Header({
   scrollToContactUs,
   scrollToAboutUs,
   scrollToHowWeWork,
-}: IHeaderProps): JSX.Element {
+}: IHeaderProps): React.ReactNode {
   const navigate = useNavigate();
   const { classes } = useStyles();
 
