@@ -1,3 +1,5 @@
+/* eslint-disable import/no-default-export */
+
 import { useNavigate } from 'react-router-dom';
 import { useRef, useState, useEffect } from 'react';
 
@@ -24,7 +26,7 @@ import { useStyles } from './styles';
 
 const text = appText.homePage;
 
-export function HomePage(): React.ReactNode {
+export default function HomePage(): React.ReactNode {
   const navigate = useNavigate();
   const { classes } = useStyles();
   const [isModalOpen, setIsModalOpen] = useState(false);

@@ -1,3 +1,5 @@
+/* eslint-disable import/no-default-export */
+
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -26,7 +28,7 @@ import { useStyles } from './styles';
 
 const text = appText.homePage;
 
-export function TemplatesPage(): React.ReactNode {
+export default function TemplatesPage(): React.ReactNode {
   const { classes } = useStyles();
   const navigate = useNavigate();
   const [menuPosition, setMenuPosition] = useState<

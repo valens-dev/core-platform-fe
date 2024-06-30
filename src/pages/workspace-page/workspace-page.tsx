@@ -1,3 +1,5 @@
+/* eslint-disable import/no-default-export */
+
 import { useState } from 'react';
 
 import { Box } from '@mui/material';
@@ -19,7 +21,7 @@ import { useStyles } from './styles';
 
 const text = appText.workspacePage.menuItems;
 
-export function WorkspacePage(): React.ReactNode {
+export default function WorkspacePage(): React.ReactNode {
   const { classes } = useStyles();
   const [menu, setMenu] = useState([
     {

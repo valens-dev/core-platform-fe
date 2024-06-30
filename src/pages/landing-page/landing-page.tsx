@@ -1,3 +1,5 @@
+/* eslint-disable import/no-default-export */
+
 import { useOutletContext } from 'react-router-dom';
 
 import { Track } from './track';
@@ -6,7 +8,7 @@ import { ContactUs } from './contact-us';
 import { InfoPanel } from './info-panel';
 import { HowWeWork } from './how-we-work';
 
-export function LandingPage(): React.ReactNode {
+export default function LandingPage(): React.ReactNode {
   const { contactUsRef, aboutUsRef, howWeWorkRef } = useOutletContext<{
     contactUsRef: React.RefObject<HTMLDivElement>;
     aboutUsRef: React.RefObject<HTMLDivElement>;

@@ -1,3 +1,5 @@
+/* eslint-disable import/no-default-export */
+
 import { useState } from 'react';
 
 import classnames from 'classnames';
@@ -13,7 +15,7 @@ import { useStyles } from './styles';
 
 const text = appText.pricingPage.ourOffer;
 
-export function OurOfferPage(): React.ReactNode {
+export default function OurOfferPage(): React.ReactNode {
   const { classes } = useStyles();
   const [isMonthly, setIsMonthly] = useState(true);
 
