@@ -49,18 +49,22 @@ export function Table({
 
   return (
     <Box className={classes.featureComparisonTable}>
-      {features.map((feature, index) => (
-        /* eslint-disable-next-line react/no-array-index-key */
-        <Box key={index} className={classes.tableRow}>
-          {handleFeatureName(feature)}
-          {plans.map((plan, planIndex) => (
-            /* eslint-disable-next-line react/no-array-index-key */
-            <Box key={planIndex} className={classes.tableCell}>
-              {handlePlanTable(feature, plan.title)}
-            </Box>
-          ))}
-        </Box>
-      ))}
+      {features.map((feature, index) => {
+        return (
+          /* eslint-disable-next-line react/no-array-index-key */
+          <Box key={index} className={classes.tableRow}>
+            {handleFeatureName(feature)}
+            {plans.map((plan, planIndex) => {
+              return (
+                /* eslint-disable-next-line react/no-array-index-key */
+                <Box key={planIndex} className={classes.tableCell}>
+                  {handlePlanTable(feature, plan.title)}
+                </Box>
+              );
+            })}
+          </Box>
+        );
+      })}
     </Box>
   );
 }

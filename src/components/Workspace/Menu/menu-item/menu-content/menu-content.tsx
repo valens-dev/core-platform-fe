@@ -19,16 +19,20 @@ export function MenuContent({
   return (
     <Box className={classes.menuContent}>
       <Box className={classes.buttonContainer}>
-        {AZURE_TOOLS.map((type) => (
-          <Button
-            key={type.tool}
-            variant="outlined"
-            className={classes.menuButton}
-            onClick={() => handleToolClick(type.tool, type.icon)}
-          >
-            {type.tool}
-          </Button>
-        ))}
+        {AZURE_TOOLS.map((type) => {
+          return (
+            <Button
+              key={type.tool}
+              variant="outlined"
+              className={classes.menuButton}
+              onClick={() => {
+                handleToolClick(type.tool, type.icon);
+              }}
+            >
+              {type.tool}
+            </Button>
+          );
+        })}
       </Box>
     </Box>
   );

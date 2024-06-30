@@ -22,7 +22,12 @@ export function Link({
   const { classes } = useStyles({ colorVariant, underline });
 
   return (
-    <Box className={classes.wrapper} onClick={() => navigate(href)}>
+    <Box
+      className={classes.wrapper}
+      onClick={() => {
+        navigate(href);
+      }}
+    >
       <MuiLink className={classNames(classes.link, className)}>{label}</MuiLink>
       {endIcon}
     </Box>

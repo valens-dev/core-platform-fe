@@ -3,10 +3,10 @@ import { ColorVariant, type IButtonStyle } from '@/types/style';
 
 import { tss } from '@/styles/theme';
 
-const getButtonGeneralStyle = (
+function getButtonGeneralStyle(
   theme: ITheme,
   colorVariant: ColorVariant,
-): IButtonStyle => {
+): IButtonStyle {
   switch (colorVariant) {
     case ColorVariant.Primary: {
       return {
@@ -43,12 +43,14 @@ const getButtonGeneralStyle = (
       return {};
     }
   }
-};
+}
 
 export const useStyles = tss
   .withParams<{ colorVariant: ColorVariant }>()
-  .create(({ theme, colorVariant }) => ({
-    general: {
-      ...getButtonGeneralStyle(theme, colorVariant),
-    },
-  }));
+  .create(({ theme, colorVariant }) => {
+    return {
+      general: {
+        ...getButtonGeneralStyle(theme, colorVariant),
+      },
+    };
+  });

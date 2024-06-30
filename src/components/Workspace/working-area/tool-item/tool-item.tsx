@@ -14,40 +14,44 @@ export function ToolItem({ tools, onDelete }: IToolItemProps): React.ReactNode {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>();
   const [selectedTool, setSelectedTool] = useState<ITool | null>();
 
-  const handleDoubleClick = (
+  function handleDoubleClick(
     event: MouseEvent<HTMLElement>,
     tool: ITool,
-  ): void => {
+  ): void {
     setAnchorEl(event.currentTarget);
     setSelectedTool(tool);
-  };
+  }
 
-  const handleClose = (): void => {
+  function handleClose(): void {
     setAnchorEl(undefined);
     setSelectedTool(undefined);
-  };
+  }
 
-  const handleDelete = (): void => {
+  function handleDelete(): void {
     if (selectedTool) {
       onDelete(selectedTool);
     }
     handleClose();
-  };
+  }
 
   return (
     <Box className={classes.toolsContainer}>
-      {tools.map((item, index) => (
-        /* eslint-disable-next-line react/no-array-index-key */
-        <Draggable key={index}>
-          <Box
-            className={classes.tool}
-            onDoubleClick={(event) => handleDoubleClick(event, item)}
-          >
-            <item.icon className={classes.toolIcon} />
-            <Typography className={classes.toolName}>{item.tool}</Typography>
-          </Box>
-        </Draggable>
-      ))}
+      {tools.map((item, index) => {
+        return (
+          /* eslint-disable-next-line react/no-array-index-key */
+          <Draggable key={index}>
+            <Box
+              className={classes.tool}
+              onDoubleClick={(event) => {
+                handleDoubleClick(event, item);
+              }}
+            >
+              <item.icon className={classes.toolIcon} />
+              <Typography className={classes.toolName}>{item.tool}</Typography>
+            </Box>
+          </Draggable>
+        );
+      })}
       <Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleClose}>
         <MenuItem onClick={handleDelete}>Delete</MenuItem>
       </Menu>

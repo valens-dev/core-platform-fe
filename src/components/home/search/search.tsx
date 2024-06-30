@@ -39,9 +39,9 @@ export function Search(): React.ReactNode {
     </Button>
   );
 
-  const handleOpenTemplates = (): void => {
+  function handleOpenTemplates(): void {
     navigate('/homepage/templates');
-  };
+  }
   return (
     <Box className={classes.wrapper}>
       <Box className={classes.positionText}>
@@ -64,24 +64,28 @@ export function Search(): React.ReactNode {
       />
       <Box className={classes.chipsWrapper}>
         <Typography>{text.tryThis}</Typography>
-        {TEMPLATE_CHIPS.map(({ label, background, color }, i) => (
-          <Box
-            /* eslint-disable-next-line react/no-array-index-key */
-            key={i}
-            className={classes.chip}
-            style={getChipStyle(background, color)}
-          >
-            <Typography variant="body2" style={{ color }}>
-              {label}
-            </Typography>
-          </Box>
-        ))}
+        {TEMPLATE_CHIPS.map(({ label, background, color }, i) => {
+          return (
+            <Box
+              /* eslint-disable-next-line react/no-array-index-key */
+              key={i}
+              className={classes.chip}
+              style={getChipStyle(background, color)}
+            >
+              <Typography variant="body2" style={{ color }}>
+                {label}
+              </Typography>
+            </Box>
+          );
+        })}
       </Box>
       <Box className={classes.templateWrapper}>
-        {TEMPLATES.map(({ imgSrc, label, link }, i) => (
-          /* eslint-disable-next-line react/no-array-index-key */
-          <Template key={i} imgSrc={imgSrc} label={label} link={link} />
-        ))}
+        {TEMPLATES.map(({ imgSrc, label, link }, i) => {
+          return (
+            /* eslint-disable-next-line react/no-array-index-key */
+            <Template key={i} imgSrc={imgSrc} label={label} link={link} />
+          );
+        })}
       </Box>
     </Box>
   );

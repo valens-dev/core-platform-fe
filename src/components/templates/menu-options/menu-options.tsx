@@ -23,7 +23,9 @@ export function MenuOptions({
     menuPosition && (
       <ClickAwayListener onClickAway={handleMenuClose}>
         <Box
-          onMouseEnter={() => setIsMouseOverMenu(true)}
+          onMouseEnter={() => {
+            setIsMouseOverMenu(true);
+          }}
           onMouseLeave={() => {
             setIsMouseOverMenu(false);
             handleMenuClose();
@@ -34,16 +36,20 @@ export function MenuOptions({
             left: menuPosition.left,
           }}
         >
-          {Array.from({ length: 10 }, (_, i) => (
-            <MenuItem
-              key={i}
-              selected={selectedOptions.includes(i)}
-              onClick={() => handleOptionClick(i)}
-              className={classes.menuItem}
-            >
-              Option {i + 1}
-            </MenuItem>
-          ))}
+          {Array.from({ length: 10 }, (_, i) => {
+            return (
+              <MenuItem
+                key={i}
+                selected={selectedOptions.includes(i)}
+                onClick={() => {
+                  handleOptionClick(i);
+                }}
+                className={classes.menuItem}
+              >
+                Option {i + 1}
+              </MenuItem>
+            );
+          })}
         </Box>
       </ClickAwayListener>
     )

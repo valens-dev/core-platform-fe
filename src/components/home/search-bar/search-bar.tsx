@@ -33,7 +33,9 @@ export function SearchBar(): React.ReactNode {
       />
       <SelectOption
         value={viewMode}
-        onChange={(e) => setViewMode(e.target.value)}
+        onChange={(e) => {
+          setViewMode(e.target.value);
+        }}
         options={OPTIONS}
       />
       <Box className={classes.iconWrapper}>

@@ -12,14 +12,16 @@ export function HeaderTabs(): React.ReactNode {
   const [tabValue, setTabValue] = useState(0);
   const { classes } = useStyles();
 
-  const handleTabChange = (newValue: number): void => {
+  function handleTabChange(newValue: number): void {
     setTabValue(newValue);
-  };
+  }
 
   return (
     <Tabs
       value={tabValue}
-      onChange={(_, newValue: number) => handleTabChange(newValue)}
+      onChange={(_, newValue: number) => {
+        handleTabChange(newValue);
+      }}
       className={classes.tabs}
     >
       <Tab className={classes.tab} label={text.tabNames.firstWorkspace} />

@@ -35,14 +35,18 @@ export function MenuItem({
       <MenuHeader
         label={menu.label}
         index={index}
-        handleArrowClick={() => handleArrowClick(menu.id)}
+        handleArrowClick={() => {
+          handleArrowClick(menu.id);
+        }}
       />
       {menu.isOpen ? (
         <>
           <MenuContent handleToolClick={handleToolClick} />
           <Box className={classes.plusContainer}>
             <IconButton
-              onClick={() => handlePlusClick(menu.id)}
+              onClick={() => {
+                handlePlusClick(menu.id);
+              }}
               className={classes.plusButton}
             >
               <Box className={classes.icon}>

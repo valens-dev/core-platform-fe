@@ -106,6 +106,13 @@ module.exports = {
     ],
 
     /**
+     * Require braces around arrow function bodies.
+     *
+     * 🔧 Fixable - https://eslint.org/docs/latest/rules/arrow-body-style
+     */
+    'arrow-body-style': ['warn', 'always'],
+
+    /**
      * Enforce the use of variables within the scope they are defined.
      *
      * 🚫 Not fixable - https://eslint.org/docs/rules/block-scoped-var
@@ -153,6 +160,13 @@ module.exports = {
      * 🚫 Not fixable - https://eslint.org/docs/rules/func-names
      */
     'func-names': ['error', 'as-needed'],
+
+    /**
+     * Enforce the consistent use of either function declarations or expressions assigned to variables.
+     *
+     * 🚫 Not fixable - https://eslint.org/docs/latest/rules/func-style
+     */
+    'func-style': ['error', 'declaration'],
 
     /**
      * Disallow the use of `alert`, `confirm`, and `prompt`.

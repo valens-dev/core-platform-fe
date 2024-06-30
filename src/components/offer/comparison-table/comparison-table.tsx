@@ -17,12 +17,13 @@ export function ComparisonTable({
 }: IComparisonTableProps): React.ReactNode {
   const { classes } = useStyles();
 
-  const getPlanPriceClass = (planTitle: string): string =>
-    classnames({
+  function getPlanPriceClass(planTitle: string): string {
+    return classnames({
       [classes.starterPrice]: planTitle === 'Starter',
       [classes.premiumPrice]: planTitle === 'Premium',
       [classes.enterprisePrice]: planTitle === 'Enterprise',
     });
+  }
 
   return (
     <Box className={classes.featureComparisonWrapper}>
@@ -30,15 +31,19 @@ export function ComparisonTable({
         <Typography variant="h2" className={classes.featureComparisonTitle}>
           {text.compareFeaturesTitle}
         </Typography>
-        {plans.map((plan, index) => (
-          /* eslint-disable-next-line react/no-array-index-key */
-          <Box key={index} className={classes.tableHeaderPlan}>
-            <Typography className={classes.planTitle}>{plan.title}</Typography>
-            <Typography className={getPlanPriceClass(plan.title)}>
-              <PlanPrice price={plan.price} variant="comparisonTable" />
-            </Typography>
-          </Box>
-        ))}
+        {plans.map((plan, index) => {
+          return (
+            /* eslint-disable-next-line react/no-array-index-key */
+            <Box key={index} className={classes.tableHeaderPlan}>
+              <Typography className={classes.planTitle}>
+                {plan.title}
+              </Typography>
+              <Typography className={getPlanPriceClass(plan.title)}>
+                <PlanPrice price={plan.price} variant="comparisonTable" />
+              </Typography>
+            </Box>
+          );
+        })}
       </Box>
       <Table text={text} features={features} plans={plans} />
     </Box>

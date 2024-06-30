@@ -18,11 +18,13 @@ export function WorkingArea({
 }: IWorkingAreaProps): React.ReactNode {
   const { classes } = useStyles();
 
-  const handleDeleteTool = (tool: ITool): void => {
-    setSelectedTools((prevTools) =>
-      prevTools.filter((t) => t.tool !== tool.tool),
-    );
-  };
+  function handleDeleteTool(tool: ITool): void {
+    setSelectedTools((prevTools) => {
+      return prevTools.filter((t) => {
+        return t.tool !== tool.tool;
+      });
+    });
+  }
 
   return (
     <Box className={classes.rightSide}>

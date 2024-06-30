@@ -20,9 +20,9 @@ export function InfoPanel(): React.ReactNode {
   const navigate = useNavigate();
   const { classes } = useStyles();
 
-  const handleOpenOffers = (): void => {
+  function handleOpenOffers(): void {
     navigate('/our-offer');
-  };
+  }
 
   return (
     <Box className={classes.wrapper}>

@@ -15,11 +15,11 @@ type LinkStyle =
       textDecoration?: undefined;
     };
 
-const getLinkGeneralStyle = (
+function getLinkGeneralStyle(
   theme: ITheme,
   colorVariant: ColorVariant,
   underline: boolean,
-): LinkStyle => {
+): LinkStyle {
   let color;
   switch (colorVariant) {
     case ColorVariant.Primary: {
@@ -38,18 +38,20 @@ const getLinkGeneralStyle = (
   return underline
     ? { color, textDecorationColor: color }
     : { color, textDecoration: 'none' };
-};
+}
 
 export const useStyles = tss
   .withParams<{ colorVariant: ColorVariant; underline: boolean }>()
-  .create(({ theme, colorVariant, underline }) => ({
-    wrapper: {
-      display: 'flex',
-      alignItems: 'center',
-      gap: '10px',
-      cursor: 'pointer',
-    },
-    link: {
-      ...getLinkGeneralStyle(theme, colorVariant, underline),
-    },
-  }));
+  .create(({ theme, colorVariant, underline }) => {
+    return {
+      wrapper: {
+        display: 'flex',
+        alignItems: 'center',
+        gap: '10px',
+        cursor: 'pointer',
+      },
+      link: {
+        ...getLinkGeneralStyle(theme, colorVariant, underline),
+      },
+    };
+  });

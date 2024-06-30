@@ -26,16 +26,21 @@ export function Login(): React.ReactNode {
   const { classes } = useStyles();
 
   /* eslint-disable-next-line unicorn/consistent-function-scoping */
-  const onSubmit = async (): Promise<void> => {
+  async function onSubmit(): Promise<void> {
     /** TODO: implement */
-  };
+  }
 
-  const handleOpenHomepage = (): void => {
+  function handleOpenHomepage(): void {
     navigate('/homepage');
-  };
+  }
 
   return (
-    <form className={classes.loginForm} onSubmit={() => handleSubmit(onSubmit)}>
+    <form
+      className={classes.loginForm}
+      onSubmit={() => {
+        handleSubmit(onSubmit);
+      }}
+    >
       <TextField
         label={text.emailLabel}
         control={control}

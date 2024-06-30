@@ -9,24 +9,26 @@ export function Cards(): React.ReactNode {
 
   return (
     <Box className={classes.cardsWrapper}>
-      {CARDS_DATA.map((card, index) => (
-        /* eslint-disable-next-line react/no-array-index-key */
-        <Card className={classes.card} key={index}>
-          <img
-            src={card.imgSrc}
-            alt={card.altText}
-            className={classes.cardImage}
-          />
-          <CardContent>
-            <Typography variant="h6" className={classes.cardTitle}>
-              {card.title}
-            </Typography>
-            <Typography variant="body2" className={classes.cardCreation}>
-              {card.creation}
-            </Typography>
-          </CardContent>
-        </Card>
-      ))}
+      {CARDS_DATA.map((card, index) => {
+        return (
+          /* eslint-disable-next-line react/no-array-index-key */
+          <Card className={classes.card} key={index}>
+            <img
+              src={card.imgSrc}
+              alt={card.altText}
+              className={classes.cardImage}
+            />
+            <CardContent>
+              <Typography variant="h6" className={classes.cardTitle}>
+                {card.title}
+              </Typography>
+              <Typography variant="body2" className={classes.cardCreation}>
+                {card.creation}
+              </Typography>
+            </CardContent>
+          </Card>
+        );
+      })}
     </Box>
   );
 }

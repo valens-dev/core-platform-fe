@@ -9,15 +9,22 @@ export function LandingLayout(): React.ReactNode {
   const aboutUsRef = useRef<HTMLDivElement | null>(null);
   const howWeWorkRef = useRef<HTMLDivElement | null>(null);
 
-  const scrollToSection = (sectionRef: React.RefObject<HTMLDivElement>): void =>
-    sectionRef.current?.scrollIntoView({ behavior: 'smooth' });
+  function scrollToSection(sectionRef: React.RefObject<HTMLDivElement>): void {
+    return sectionRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }
 
   return (
     <>
       <Header
-        scrollToContactUs={() => scrollToSection(contactUsRef)}
-        scrollToAboutUs={() => scrollToSection(aboutUsRef)}
-        scrollToHowWeWork={() => scrollToSection(howWeWorkRef)}
+        scrollToContactUs={() => {
+          scrollToSection(contactUsRef);
+        }}
+        scrollToAboutUs={() => {
+          scrollToSection(aboutUsRef);
+        }}
+        scrollToHowWeWork={() => {
+          scrollToSection(howWeWorkRef);
+        }}
       />
       <Outlet context={{ contactUsRef, aboutUsRef, howWeWorkRef }} />
       <Footer />

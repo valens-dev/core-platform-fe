@@ -13,9 +13,9 @@ export function LandingPage(): React.ReactNode {
     howWeWorkRef: React.RefObject<HTMLDivElement>;
   }>();
 
-  const scrollToContactUs = (): void => {
+  function scrollToContactUs(): void {
     contactUsRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
+  }
 
   return (
     <>

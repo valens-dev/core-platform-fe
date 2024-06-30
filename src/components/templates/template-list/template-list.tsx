@@ -11,10 +11,12 @@ export function TemplateList(): React.ReactNode {
 
   return (
     <Box className={classes.templateGrid}>
-      {CARDS_TEMPLATES.map(({ imgSrc, label, link }, i) => (
-        /* eslint-disable-next-line react/no-array-index-key */
-        <Template key={i} imgSrc={imgSrc} label={label} link={link} />
-      ))}
+      {CARDS_TEMPLATES.map(({ imgSrc, label, link }, i) => {
+        return (
+          /* eslint-disable-next-line react/no-array-index-key */
+          <Template key={i} imgSrc={imgSrc} label={label} link={link} />
+        );
+      })}
     </Box>
   );
 }

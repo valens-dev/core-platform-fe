@@ -35,11 +35,15 @@ export function WorkspacePage(): React.ReactNode {
       <Box className={classes.content}>
         <Menu
           menu={menu}
-          handleArrowClick={(id) => handleArrowClick(id, setMenu)}
-          handlePlusClick={(id) => handlePlusClick(id, menu, setMenu)}
-          handleToolClick={(tool, icon) =>
-            handleToolClick(tool, icon, selectedTools, setSelectedTools)
-          }
+          handleArrowClick={(id) => {
+            handleArrowClick(id, setMenu);
+          }}
+          handlePlusClick={(id) => {
+            handlePlusClick(id, menu, setMenu);
+          }}
+          handleToolClick={(tool, icon) => {
+            handleToolClick(tool, icon, selectedTools, setSelectedTools);
+          }}
         />
         <WorkingArea
           selectedTools={selectedTools}

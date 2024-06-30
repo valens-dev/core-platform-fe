@@ -36,7 +36,9 @@ export function NavItem({
   return (
     <Box
       className={navItemClass}
-      onMouseEnter={(e) => hasArrow && handleMenuOpen(e, index)}
+      onMouseEnter={(e) => {
+        return hasArrow && handleMenuOpen(e, index);
+      }}
       onMouseLeave={handleMenuClose}
     >
       <Icon className={iconClass} />

@@ -18,14 +18,16 @@ export function Registration(): React.ReactNode {
   const { classes } = useStyles();
 
   /* eslint-disable-next-line unicorn/consistent-function-scoping */
-  const onSubmit = async (): Promise<void> => {
+  async function onSubmit(): Promise<void> {
     /** TODO: implement */
-  };
+  }
 
   return (
     <form
       className={classes.registrationForm}
-      onSubmit={() => handleSubmit(onSubmit)}
+      onSubmit={() => {
+        handleSubmit(onSubmit);
+      }}
     >
       <TextField
         label={text.usernameLabel}

@@ -32,19 +32,21 @@ export function TemplateContent({
   return (
     <Box className={classes.contentWrapper}>
       <Box className={classes.navigation}>
-        {navData.map((item, index) => (
-          <NavItem
-            /* eslint-disable-next-line react/no-array-index-key */
-            key={index}
-            icon={item.icon}
-            navTitle={item.navTitle}
-            hasArrow={item.hasArrow}
-            index={index}
-            handleMenuOpen={handleMenuOpen}
-            handleMenuClose={handleMenuClose}
-            hoveredNavItem={hoveredNavItem}
-          />
-        ))}
+        {navData.map((item, index) => {
+          return (
+            <NavItem
+              /* eslint-disable-next-line react/no-array-index-key */
+              key={index}
+              icon={item.icon}
+              navTitle={item.navTitle}
+              hasArrow={item.hasArrow}
+              index={index}
+              handleMenuOpen={handleMenuOpen}
+              handleMenuClose={handleMenuClose}
+              hoveredNavItem={hoveredNavItem}
+            />
+          );
+        })}
       </Box>
       <MenuOptions
         menuPosition={menuPosition}

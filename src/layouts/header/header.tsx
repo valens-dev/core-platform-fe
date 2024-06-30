@@ -30,7 +30,7 @@ export function Header({
   const navigate = useNavigate();
   const { classes } = useStyles();
 
-  const handleScrollTo = (href: string): void => {
+  function handleScrollTo(href: string): void {
     if (href === 'contact' && scrollToContactUs) {
       scrollToContactUs();
     }
@@ -40,14 +40,14 @@ export function Header({
     if (href === 'support' && scrollToHowWeWork) {
       scrollToHowWeWork();
     }
-  };
+  }
 
-  const handleOpenOffers = (): void => {
+  function handleOpenOffers(): void {
     navigate('/our-offer');
-  };
-  const handleLogoClick = (): void => {
+  }
+  function handleLogoClick(): void {
     navigate('/');
-  };
+  }
 
   return (
     <Box className={classes.wrapper}>
@@ -55,26 +55,35 @@ export function Header({
         <CoreLogo />
       </Box>
       <Box className={classes.links}>
-        {NAV_LINKS.map(({ label, href }, i) => (
-          /* eslint-disable-next-line react/no-array-index-key */
-          <Box onClick={() => handleScrollTo(href)} key={`${label}_${i}`}>
-            <Typography variant="body1">{label}</Typography>
-          </Box>
-        ))}
+        {NAV_LINKS.map(({ label, href }, i) => {
+          return (
+            <Box
+              /* eslint-disable-next-line react/no-array-index-key */
+              key={`${label}_${i}`}
+              onClick={() => {
+                handleScrollTo(href);
+              }}
+            >
+              <Typography variant="body1">{label}</Typography>
+            </Box>
+          );
+        })}
       </Box>
       <Box className={classes.buttonsAndLinks}>
         <Box className={classes.auth}>
           <Typography
             variant="body2"
-            onClick={() => navigate('/auth', { state: { tab: AuthTab.Login } })}
+            onClick={() => {
+              navigate('/auth', { state: { tab: AuthTab.Login } });
+            }}
           >
             {text.login}
           </Typography>
           <Typography
             variant="body2"
-            onClick={() =>
-              navigate('/auth', { state: { tab: AuthTab.Registration } })
-            }
+            onClick={() => {
+              navigate('/auth', { state: { tab: AuthTab.Registration } });
+            }}
           >
             {text.signUp}
           </Typography>

@@ -47,7 +47,9 @@ export function TemplatesPage(): React.ReactNode {
         <Box className={classes.arrowsWrapper}>
           <LeftArrow
             className={`${classes.arrow} ${classes.blackArrow}`}
-            onClick={() => navigate('/homepage')}
+            onClick={() => {
+              navigate('/homepage');
+            }}
           />
           <RightArrow />
         </Box>
@@ -59,24 +61,26 @@ export function TemplatesPage(): React.ReactNode {
       <Box className={classes.selectOptionWrapper}>
         <SelectOption
           value={viewMode}
-          onChange={(e) => setViewMode(e.target.value)}
+          onChange={(e) => {
+            setViewMode(e.target.value);
+          }}
           options={OPTIONS}
         />
       </Box>
       <TemplateContent
         menuPosition={menuPosition}
         selectedOptions={selectedOptions}
-        handleOptionClick={(option) =>
-          handleOptionClick(option, setSelectedOptions)
-        }
-        handleMenuClose={() =>
-          handleMenuClose(isMouseOverMenu, setMenuPosition, setHoveredNavItem)
-        }
+        handleOptionClick={(option) => {
+          handleOptionClick(option, setSelectedOptions);
+        }}
+        handleMenuClose={() => {
+          handleMenuClose(isMouseOverMenu, setMenuPosition, setHoveredNavItem);
+        }}
         setIsMouseOverMenu={setIsMouseOverMenu}
         hoveredNavItem={hoveredNavItem}
-        handleMenuOpen={(event, index) =>
-          handleMenuOpen(event, index, setMenuPosition, setHoveredNavItem)
-        }
+        handleMenuOpen={(event, index) => {
+          handleMenuOpen(event, index, setMenuPosition, setHoveredNavItem);
+        }}
         navData={NAV_DATA}
       />
     </Box>

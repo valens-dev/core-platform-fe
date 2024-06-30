@@ -25,11 +25,13 @@ export function SelectOption({
       IconComponent={DownArrowIcon}
       disableUnderline
     >
-      {options.map((option) => (
-        <MenuItem key={option.value} value={option.value}>
-          {option.label}
-        </MenuItem>
-      ))}
+      {options.map((option) => {
+        return (
+          <MenuItem key={option.value} value={option.value}>
+            {option.label}
+          </MenuItem>
+        );
+      })}
     </Select>
   );
 }

@@ -13,10 +13,12 @@ export function Track(): React.ReactNode {
     <Box className={classes.wrapper}>
       <Box className={classes.marqueeBox}>
         <Marquee gradient className={classes.marqueeContent} speed={300}>
-          {ICONS.map((Icon, i) => (
-            /* eslint-disable-next-line react/no-array-index-key */
-            <Icon key={i} className={classes.marqueeItem} />
-          ))}
+          {ICONS.map((Icon, i) => {
+            return (
+              /* eslint-disable-next-line react/no-array-index-key */
+              <Icon key={i} className={classes.marqueeItem} />
+            );
+          })}
         </Marquee>
       </Box>
     </Box>

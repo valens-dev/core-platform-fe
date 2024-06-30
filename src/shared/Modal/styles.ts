@@ -1,9 +1,11 @@
 import { tss } from '@/styles/theme';
 
-export const useStyles = tss.create(() => ({
-  modalWrapper: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-}));
+export const useStyles = tss.create(() => {
+  return {
+    modalWrapper: {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+  };
+});

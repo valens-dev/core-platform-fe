@@ -35,25 +35,29 @@ export function HowWeWork({
         <Chip label={text.workFlow} />
         <Typography variant="h2">{text.howWeWork}</Typography>
         <Box className={classes.cards}>
-          {CARDS_DATA.map(({ title, description, Icon }, index) => (
-            <Box
-              className={classnames(
-                classes.generalCardStyle,
-                activeCard === index ? classes.activeCard : classes.card,
-              )}
-              /* eslint-disable-next-line react/no-array-index-key */
-              key={`${title}_${index}`}
-              onClick={() => setActiveCard(index)}
-            >
-              <Box className={classes.cardHeader}>
-                <Icon />
-                <Typography variant="body1">{title}</Typography>
+          {CARDS_DATA.map(({ title, description, Icon }, index) => {
+            return (
+              <Box
+                className={classnames(
+                  classes.generalCardStyle,
+                  activeCard === index ? classes.activeCard : classes.card,
+                )}
+                /* eslint-disable-next-line react/no-array-index-key */
+                key={`${title}_${index}`}
+                onClick={() => {
+                  setActiveCard(index);
+                }}
+              >
+                <Box className={classes.cardHeader}>
+                  <Icon />
+                  <Typography variant="body1">{title}</Typography>
+                </Box>
+                <Typography variant="body1" className={classes.description}>
+                  {description}
+                </Typography>
               </Box>
-              <Typography variant="body1" className={classes.description}>
-                {description}
-              </Typography>
-            </Box>
-          ))}
+            );
+          })}
         </Box>
       </Box>
       <Box className={classes.rightSide}>

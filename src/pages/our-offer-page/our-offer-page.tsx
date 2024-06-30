@@ -31,7 +31,9 @@ export function OurOfferPage(): React.ReactNode {
           className={classnames(classes.toggleButton, {
             active: isMonthly,
           })}
-          onClick={() => setIsMonthly(true)}
+          onClick={() => {
+            setIsMonthly(true);
+          }}
         >
           {text.monthly}
         </Button>
@@ -39,16 +41,20 @@ export function OurOfferPage(): React.ReactNode {
           className={classnames(classes.toggleButton, {
             active: !isMonthly,
           })}
-          onClick={() => setIsMonthly(false)}
+          onClick={() => {
+            setIsMonthly(false);
+          }}
         >
           {text.annually}
         </Button>
       </Box>
       <Box className={classes.plans}>
-        {planTypeText.map((plan, index) => (
-          /* eslint-disable-next-line react/no-array-index-key */
-          <OfferCard key={index} plan={plan} text={text} />
-        ))}
+        {planTypeText.map((plan, index) => {
+          return (
+            /* eslint-disable-next-line react/no-array-index-key */
+            <OfferCard key={index} plan={plan} text={text} />
+          );
+        })}
       </Box>
       <ComparisonTable
         text={text}

@@ -17,23 +17,25 @@ export function FeatureList({
 
   return (
     <ul className={classes.featureList}>
-      {features.map((feature, index) => (
-        <li
-          /* eslint-disable-next-line react/no-array-index-key */
-          key={index}
-          className={classnames(
-            classes.featureItem,
-            feature.includes(benefitText)
-              ? classes.titleFeature
-              : classes.textFeature,
-          )}
-        >
-          {!feature.includes(benefitText) && (
-            <CheckIcon className={classes.checkIcon} />
-          )}
-          {feature}
-        </li>
-      ))}
+      {features.map((feature, index) => {
+        return (
+          <li
+            /* eslint-disable-next-line react/no-array-index-key */
+            key={index}
+            className={classnames(
+              classes.featureItem,
+              feature.includes(benefitText)
+                ? classes.titleFeature
+                : classes.textFeature,
+            )}
+          >
+            {!feature.includes(benefitText) && (
+              <CheckIcon className={classes.checkIcon} />
+            )}
+            {feature}
+          </li>
+        );
+      })}
     </ul>
   );
 }

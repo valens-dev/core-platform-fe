@@ -4,11 +4,11 @@ interface INavItemClasses {
   navTextClass: string;
 }
 
-export const getNavItemClasses = (
+export function getNavItemClasses(
   hoveredNavItem: number | undefined,
   index: number,
   classes: Record<string, string>,
-): INavItemClasses => {
+): INavItemClasses {
   const isHovered = hoveredNavItem === index;
   const navItemClass = `${classes.navItem} ${isHovered ? classes.hoveredNavItem : ''}`;
   const iconClass = `${classes.icon} ${isHovered ? classes.hoveredIcon : ''}`;
@@ -19,4 +19,4 @@ export const getNavItemClasses = (
     iconClass,
     navTextClass,
   };
-};
+}

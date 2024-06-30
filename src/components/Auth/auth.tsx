@@ -60,7 +60,11 @@ export function Auth({ tab = AuthTab.Login }: IAuthProps): React.ReactNode {
           </Typography>
         </Box>
         <Box className={classes.tabs}>
-          <Box onClick={() => setActiveTab(AuthTab.Login)}>
+          <Box
+            onClick={() => {
+              setActiveTab(AuthTab.Login);
+            }}
+          >
             <Typography
               variant="body1"
               className={
@@ -73,7 +77,9 @@ export function Auth({ tab = AuthTab.Login }: IAuthProps): React.ReactNode {
             </Typography>
           </Box>
           <Box
-            onClick={() => setActiveTab(AuthTab.Registration)}
+            onClick={() => {
+              setActiveTab(AuthTab.Registration);
+            }}
             className={
               isActiveTabLogin
                 ? classes.tab

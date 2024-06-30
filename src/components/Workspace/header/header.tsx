@@ -24,23 +24,23 @@ export function Header(): React.ReactNode {
   const [dropdown, setDropdown] = useState<undefined | HTMLElement>();
   const { classes } = useStyles();
 
-  const handleOpenHomepage = (): void => {
+  function handleOpenHomepage(): void {
     navigate('/homepage');
-  };
+  }
 
-  const handleClick = (event: React.MouseEvent<HTMLElement>): void => {
+  function handleClick(event: React.MouseEvent<HTMLElement>): void {
     setDropdown(event.currentTarget);
-  };
+  }
 
-  const handleIconClick = (event: React.MouseEvent<SVGSVGElement>): void => {
+  function handleIconClick(event: React.MouseEvent<SVGSVGElement>): void {
     if (event.currentTarget.parentElement) {
       setDropdown(event.currentTarget.parentElement);
     }
-  };
+  }
 
-  const handleClose = (): void => {
+  function handleClose(): void {
     setDropdown(undefined);
-  };
+  }
 
   return (
     <Box className={classes.wrapper}>

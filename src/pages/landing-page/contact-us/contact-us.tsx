@@ -22,9 +22,9 @@ export function ContactUs({ contactUsRef }: IContactUsProps): React.ReactNode {
   const { classes } = useStyles();
 
   /* eslint-disable-next-line unicorn/consistent-function-scoping */
-  const onSubmit = (): void => {
+  function onSubmit(): void {
     /** TODO: implement */
-  };
+  }
 
   return (
     <Box className={classes.wrapper} ref={contactUsRef}>
@@ -36,7 +36,9 @@ export function ContactUs({ contactUsRef }: IContactUsProps): React.ReactNode {
       </Typography>
       <form
         className={classes.contactUsForm}
-        onSubmit={() => handleSubmit(onSubmit)}
+        onSubmit={() => {
+          handleSubmit(onSubmit);
+        }}
       >
         <TextField
           control={control}

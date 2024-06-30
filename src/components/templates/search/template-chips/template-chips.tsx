@@ -15,18 +15,20 @@ export function TemplateChips(): React.ReactNode {
   return (
     <Box className={classes.chipsWrapper}>
       <Typography>{text.tryThis}</Typography>
-      {TEMPLATE_CHIPS.map(({ label, background, color }, i) => (
-        <Box
-          /* eslint-disable-next-line react/no-array-index-key */
-          key={i}
-          className={classes.chip}
-          style={getChipStyle(background, color)}
-        >
-          <Typography variant="body2" style={{ color }}>
-            {label}
-          </Typography>
-        </Box>
-      ))}
+      {TEMPLATE_CHIPS.map(({ label, background, color }, i) => {
+        return (
+          <Box
+            /* eslint-disable-next-line react/no-array-index-key */
+            key={i}
+            className={classes.chip}
+            style={getChipStyle(background, color)}
+          >
+            <Typography variant="body2" style={{ color }}>
+              {label}
+            </Typography>
+          </Box>
+        );
+      })}
     </Box>
   );
 }

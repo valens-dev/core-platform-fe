@@ -24,16 +24,18 @@ export function Menu({
 
   return (
     <Box className={classes.leftSide}>
-      {menu.map((item, index) => (
-        <MenuItem
-          key={item.id}
-          menu={item}
-          index={index}
-          handleArrowClick={handleArrowClick}
-          handlePlusClick={handlePlusClick}
-          handleToolClick={handleToolClick}
-        />
-      ))}
+      {menu.map((item, index) => {
+        return (
+          <MenuItem
+            key={item.id}
+            menu={item}
+            index={index}
+            handleArrowClick={handleArrowClick}
+            handlePlusClick={handlePlusClick}
+            handleToolClick={handleToolClick}
+          />
+        );
+      })}
     </Box>
   );
 }

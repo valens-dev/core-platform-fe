@@ -19,12 +19,14 @@ export function Footer(): React.ReactNode {
   return (
     <Box className={classes.wrapper}>
       <Box className={classes.links}>
-        {NAV_LINKS.map(({ label }, i) => (
-          /* eslint-disable-next-line react/no-array-index-key */
-          <Typography key={`${label}_${i}`} variant="body1">
-            {label}
-          </Typography>
-        ))}
+        {NAV_LINKS.map(({ label }, i) => {
+          return (
+            /* eslint-disable-next-line react/no-array-index-key */
+            <Typography key={`${label}_${i}`} variant="body1">
+              {label}
+            </Typography>
+          );
+        })}
       </Box>
       <Box className={classes.logos}>
         <MicrosoftIcon />

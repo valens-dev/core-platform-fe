@@ -22,13 +22,13 @@ export function CreateWorkspaceModal(): React.ReactNode {
   const { classes } = useStyles();
 
   /* eslint-disable-next-line unicorn/consistent-function-scoping */
-  const onSubmit = async (): Promise<void> => {
+  async function onSubmit(): Promise<void> {
     /** TODO: implement */
-  };
+  }
 
-  const handleOpenWorkspace = (): void => {
+  function handleOpenWorkspace(): void {
     navigate('/workspace');
-  };
+  }
 
   return (
     <Box className={classes.wrapper}>
@@ -37,7 +37,9 @@ export function CreateWorkspaceModal(): React.ReactNode {
         {text.note}
       </Typography>
       <form
-        onSubmit={() => handleSubmit(onSubmit)}
+        onSubmit={() => {
+          handleSubmit(onSubmit);
+        }}
         className={classes.formWrapper}
       >
         <TextField

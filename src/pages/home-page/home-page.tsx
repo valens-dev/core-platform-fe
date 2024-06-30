@@ -32,9 +32,15 @@ export function HomePage(): React.ReactNode {
   const questionPopUpRef = useRef<HTMLButtonElement>(null);
   const tourPopupRef = useRef<HTMLDivElement>(null);
 
-  const handleCloseModal = (): void => setIsModalOpen(false);
-  const handleCloseTour = (): void => setIsTourOpen(false);
-  const handleOpenPopUp = (): void => setIsTourOpen(true);
+  function handleCloseModal(): void {
+    return setIsModalOpen(false);
+  }
+  function handleCloseTour(): void {
+    return setIsTourOpen(false);
+  }
+  function handleOpenPopUp(): void {
+    return setIsTourOpen(true);
+  }
 
   useEffect(() => {
     if (questionPopUpRef.current) {
@@ -43,9 +49,9 @@ export function HomePage(): React.ReactNode {
   }, []);
 
   const leftArrowClassName = getLeftArrowClassName(location.pathname, classes);
-  const handleOpenHomePage = (): void => {
+  function handleOpenHomePage(): void {
     navigate('/homepage');
-  };
+  }
 
   return (
     <Box className={classes.wrapper}>
@@ -58,7 +64,11 @@ export function HomePage(): React.ReactNode {
           <RightArrow className={classes.arrow} />
         </Box>
         <Box className={classes.buttonWrapper}>
-          <Button onClick={() => setIsModalOpen(true)}>
+          <Button
+            onClick={() => {
+              setIsModalOpen(true);
+            }}
+          >
             <Typography>{text.createWorkspace}</Typography>
           </Button>
         </Box>
