@@ -5,7 +5,7 @@ interface INavItemClasses {
 }
 
 export const getNavItemClasses = (
-  hoveredNavItem: number | null,
+  hoveredNavItem: number | undefined,
   index: number,
   classes: Record<string, string>,
 ): INavItemClasses => {

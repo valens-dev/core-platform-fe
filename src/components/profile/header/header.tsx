@@ -19,7 +19,7 @@ const text = appText.homePage.profileHeader;
 
 export function Header(): React.ReactNode {
   const navigate = useNavigate();
-  const [dropdown, setDropdown] = useState<null | HTMLElement>();
+  const [dropdown, setDropdown] = useState<undefined | HTMLElement>();
   const { classes } = useStyles();
 
   const handleOpenHomepage = (): void => {

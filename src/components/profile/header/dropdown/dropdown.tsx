@@ -8,7 +8,7 @@ import ProfilePicture from '@/assets/icon/profile-picture.svg?react';
 import { useStyles } from './styles';
 
 interface IDropdownProps {
-  dropdown: HTMLElement | null;
+  dropdown: HTMLElement | undefined;
   handleClose: () => void;
 }
 

@@ -3,7 +3,7 @@ import { Box, MenuItem, ClickAwayListener } from '@mui/material';
 import { useStyles } from './styles';
 
 interface IMenuOptionsProps {
-  menuPosition: { top: number; left: number } | null;
+  menuPosition: { top: number; left: number } | undefined;
   selectedOptions: number[];
   handleOptionClick: (option: number) => void;
   handleMenuClose: () => void;

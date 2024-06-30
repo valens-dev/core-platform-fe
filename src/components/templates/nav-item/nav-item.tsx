@@ -13,7 +13,7 @@ interface INavItemProps {
   index: number;
   handleMenuOpen: (event: React.MouseEvent<HTMLElement>, index: number) => void;
   handleMenuClose: () => void;
-  hoveredNavItem: number | null;
+  hoveredNavItem: number | undefined;
 }
 
 export function NavItem({

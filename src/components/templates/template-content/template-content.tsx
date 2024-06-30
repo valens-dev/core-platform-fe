@@ -7,12 +7,12 @@ import { TemplateList } from '../template-list';
 import { useStyles } from './styles';
 
 interface ITemplateContentProps {
-  menuPosition: { top: number; left: number } | null;
+  menuPosition: { top: number; left: number } | undefined;
   selectedOptions: number[];
   handleOptionClick: (option: number) => void;
   handleMenuClose: () => void;
   setIsMouseOverMenu: (isMouseOver: boolean) => void;
-  hoveredNavItem: number | null;
+  hoveredNavItem: number | undefined;
   handleMenuOpen: (event: React.MouseEvent<HTMLElement>, index: number) => void;
   navData: { icon: React.ElementType; navTitle: string; hasArrow: boolean }[];
 }

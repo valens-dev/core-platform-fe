@@ -24,7 +24,10 @@ interface IColor {
   success?: string;
   info?: string;
   dark?: string;
+  mainGrey?: string;
   grey?: string;
+  normalGrey?: string;
+  lightGrey?: string;
   darkGrey?: string;
   light?: string;
   purple?: string;

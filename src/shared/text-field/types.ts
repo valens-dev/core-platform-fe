@@ -11,7 +11,8 @@ export interface ITextFieldProps extends BaseTextFieldProps {
   className?: string;
   placeholder?: string;
   register?: UseFormRegisterReturn;
-  control?: Control;
+  /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
+  control?: Control<any, any>;
   variant?: TexFieldVariant;
   size?: TexFieldSize;
   startIcon?: React.ReactNode;

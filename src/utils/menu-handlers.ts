@@ -10,8 +10,8 @@ interface IMenuPosition {
 export const handleMenuOpen = (
   event: MouseEvent<HTMLElement>,
   index: number,
-  setMenuPosition: Dispatch<SetStateAction<IMenuPosition | null>>,
-  setHoveredNavItem: Dispatch<SetStateAction<number | null>>,
+  setMenuPosition: Dispatch<SetStateAction<IMenuPosition | undefined>>,
+  setHoveredNavItem: Dispatch<SetStateAction<number | undefined>>,
 ): void => {
   const position = event.currentTarget.getBoundingClientRect();
   setMenuPosition({
