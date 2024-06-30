@@ -24,10 +24,10 @@ export function Menu({
 
   return (
     <Box className={classes.leftSide}>
-      {menu.map((menu, index) => (
+      {menu.map((item, index) => (
         <MenuItem
-          key={menu.id}
-          menu={menu}
+          key={item.id}
+          menu={item}
           index={index}
           handleArrowClick={handleArrowClick}
           handlePlusClick={handlePlusClick}

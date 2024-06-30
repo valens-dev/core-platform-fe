@@ -33,7 +33,7 @@ export function SearchBar(): JSX.Element {
       />
       <SelectOption
         value={viewMode}
-        onChange={(e) => setViewMode(e.target.value as string)}
+        onChange={(e) => setViewMode(e.target.value)}
         options={OPTIONS}
       />
       <Box className={classes.iconWrapper}>

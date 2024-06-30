@@ -37,7 +37,7 @@ export function MenuItem({
         index={index}
         handleArrowClick={() => handleArrowClick(menu.id)}
       />
-      {menu.isOpen && (
+      {menu.isOpen ? (
         <>
           <MenuContent handleToolClick={handleToolClick} />
           <Box className={classes.plusContainer}>
@@ -51,7 +51,7 @@ export function MenuItem({
             </IconButton>
           </Box>
         </>
-      )}
+      ) : undefined}
     </Box>
   );
 }

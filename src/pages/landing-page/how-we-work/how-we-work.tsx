@@ -41,6 +41,7 @@ export function HowWeWork({
                 classes.generalCardStyle,
                 activeCard === index ? classes.activeCard : classes.card,
               )}
+              /* eslint-disable-next-line react/no-array-index-key */
               key={`${title}_${index}`}
               onClick={() => setActiveCard(index)}
             >

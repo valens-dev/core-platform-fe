@@ -12,6 +12,7 @@ export function TemplateList(): JSX.Element {
   return (
     <Box className={classes.templateGrid}>
       {CARDS_TEMPLATES.map(({ imgSrc, label, link }, i) => (
+        /* eslint-disable-next-line react/no-array-index-key */
         <Template key={i} imgSrc={imgSrc} label={label} link={link} />
       ))}
     </Box>

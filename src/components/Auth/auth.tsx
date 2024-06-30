@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Location, useLocation } from 'react-router-dom';
+import { useLocation, type Location } from 'react-router-dom';
 
 import classnames from 'classnames';
 
@@ -34,6 +34,7 @@ export function Auth({ tab = AuthTab.Login }: IAuthProps): JSX.Element {
     if (location.state?.tab) {
       setActiveTab(AuthTab[location.state.tab as keyof typeof AuthTab]);
     }
+    /* eslint-disable-next-line react-hooks/exhaustive-deps */
   }, []);
 
   const isActiveTabLogin = activeTab === AuthTab.Login;

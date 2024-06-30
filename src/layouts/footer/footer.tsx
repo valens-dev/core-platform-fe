@@ -20,6 +20,7 @@ export function Footer(): JSX.Element {
     <Box className={classes.wrapper}>
       <Box className={classes.links}>
         {NAV_LINKS.map(({ label }, i) => (
+          /* eslint-disable-next-line react/no-array-index-key */
           <Typography key={`${label}_${i}`} variant="body1">
             {label}
           </Typography>

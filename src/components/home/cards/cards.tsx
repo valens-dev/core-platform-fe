@@ -10,6 +10,7 @@ export function Cards(): JSX.Element {
   return (
     <Box className={classes.cardsWrapper}>
       {CARDS_DATA.map((card, index) => (
+        /* eslint-disable-next-line react/no-array-index-key */
         <Card className={classes.card} key={index}>
           <img
             src={card.imgSrc}

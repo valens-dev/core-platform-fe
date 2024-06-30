@@ -1,12 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import {
-  handleMenuOpen,
-  handleMenuClose,
-  handleOptionClick,
-} from '@/utils/menu-handlers';
-
 import { Box, Typography } from '@mui/material';
 
 import { SelectOption } from '@/shared/select-option';
@@ -16,6 +10,12 @@ import { TemplateContent } from '@/components/templates/template-content';
 
 import { OPTIONS } from '@/constants/search';
 import { appText } from '@/constants/strings';
+
+import {
+  handleMenuOpen,
+  handleMenuClose,
+  handleOptionClick,
+} from '@/utils/menu-handlers';
 
 import LeftArrow from '@/assets/icon/left-arrow-icon.svg?react';
 import RightArrow from '@/assets/icon/right-arrow-icon.svg?react';
@@ -59,7 +59,7 @@ export function TemplatesPage(): JSX.Element {
       <Box className={classes.selectOptionWrapper}>
         <SelectOption
           value={viewMode}
-          onChange={(e) => setViewMode(e.target.value as string)}
+          onChange={(e) => setViewMode(e.target.value)}
           options={OPTIONS}
         />
       </Box>

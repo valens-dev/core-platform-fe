@@ -26,10 +26,10 @@ export function TextField({
   const error = errors[register?.name ?? '']?.message as string;
   const { classes } = useStyles();
 
-  function handleChange(e: React.ChangeEvent<HTMLInputElement>): void {
+  async function handleChange(e: React.ChangeEvent<HTMLInputElement>): void {
     const newValue = e.target.value;
     if (register) {
-      register.onChange(e);
+      await register.onChange(e);
     }
     if (customOnChange) {
       customOnChange(newValue ?? '');

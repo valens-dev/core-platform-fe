@@ -46,6 +46,7 @@ export function OurOfferPage(): JSX.Element {
       </Box>
       <Box className={classes.plans}>
         {planTypeText.map((plan, index) => (
+          /* eslint-disable-next-line react/no-array-index-key */
           <OfferCard key={index} plan={plan} text={text} />
         ))}
       </Box>

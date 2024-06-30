@@ -19,7 +19,7 @@ export function HeaderTabs(): JSX.Element {
   return (
     <Tabs
       value={tabValue}
-      onChange={(_, newValue) => handleTabChange(newValue)}
+      onChange={(_, newValue: number) => handleTabChange(newValue)}
       className={classes.tabs}
     >
       <Tab className={classes.tab} label={text.tabNames.firstWorkspace} />

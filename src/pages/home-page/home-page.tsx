@@ -64,11 +64,9 @@ export function HomePage(): JSX.Element {
         </Box>
       </Box>
       <Search />
-      <Modal
-        isOpen={isModalOpen}
-        handleClose={handleCloseModal}
-        children={<CreateWorkspaceModal />}
-      />
+      <Modal isOpen={isModalOpen} handleClose={handleCloseModal}>
+        <CreateWorkspaceModal />
+      </Modal>
       <SearchBar />
       <Cards />
       <IconButton

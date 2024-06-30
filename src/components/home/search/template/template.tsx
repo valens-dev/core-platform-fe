@@ -16,7 +16,7 @@ export function Template({ imgSrc, label, link }: ITemplateProps): JSX.Element {
   return (
     <Box className={classes.wrapper}>
       <Box className={classes.imgWrapper}>
-        <img src={imgSrc} className={classes.image} />
+        <img src={imgSrc} alt={label} className={classes.image} />
       </Box>
       <Box className={classes.description}>
         <Typography>{label}</Typography>

@@ -37,6 +37,7 @@ export function ToolItem({ tools, onDelete }: IToolItemProps): JSX.Element {
   return (
     <Box className={classes.toolsContainer}>
       {tools.map((item, index) => (
+        /* eslint-disable-next-line react/no-array-index-key */
         <Draggable key={index}>
           <Box
             className={classes.tool}

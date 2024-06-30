@@ -47,7 +47,7 @@ export function InfoPanel(): JSX.Element {
           </Button>
         </Box>
       </Box>
-      <img src={ExampleImage} className={classes.image} />
+      <img src={ExampleImage} alt="Example" className={classes.image} />
     </Box>
   );
 }

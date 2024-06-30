@@ -19,6 +19,7 @@ export function FeatureList({
     <ul className={classes.featureList}>
       {features.map((feature, index) => (
         <li
+          /* eslint-disable-next-line react/no-array-index-key */
           key={index}
           className={classnames(
             classes.featureItem,

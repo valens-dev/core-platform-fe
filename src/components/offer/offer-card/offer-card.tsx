@@ -22,12 +22,12 @@ export function OfferCard({ plan, text }: IOfferCardProps): JSX.Element {
 
   return (
     <Box className={offerCardClass}>
-      {plan.popular && (
+      {plan.popular ? (
         <Box className={classes.mostPopular}>
           <StarIcon className={classes.starIcon} />
           {text.mostPopular}
         </Box>
-      )}
+      ) : undefined}
       <Typography variant="h3" className={classes.planTitle}>
         {plan.title}
       </Typography>

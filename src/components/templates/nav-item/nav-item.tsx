@@ -41,7 +41,7 @@ export function NavItem({
     >
       <Icon className={iconClass} />
       <Typography className={navTextClass}>{navTitle}</Typography>
-      {hasArrow && <RightArrow className={classes.arrowIcon} />}
+      {hasArrow ? <RightArrow className={classes.arrowIcon} /> : undefined}
     </Box>
   );
 }

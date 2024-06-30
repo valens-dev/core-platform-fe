@@ -17,6 +17,7 @@ export function TemplateChips(): JSX.Element {
       <Typography>{text.tryThis}</Typography>
       {TEMPLATE_CHIPS.map(({ label, background, color }, i) => (
         <Box
+          /* eslint-disable-next-line react/no-array-index-key */
           key={i}
           className={classes.chip}
           style={getChipStyle(background, color)}

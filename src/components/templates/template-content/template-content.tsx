@@ -34,6 +34,7 @@ export function TemplateContent({
       <Box className={classes.navigation}>
         {navData.map((item, index) => (
           <NavItem
+            /* eslint-disable-next-line react/no-array-index-key */
             key={index}
             icon={item.icon}
             navTitle={item.navTitle}

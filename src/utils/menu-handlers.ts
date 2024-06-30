@@ -70,7 +70,7 @@ export const handlePlusClick = (
     isOpen: true,
   };
   const updatedMenus = [...menu];
-  const menuIndex = updatedMenus.findIndex((menu) => menu.id === id);
+  const menuIndex = updatedMenus.findIndex((item) => item.id === id);
   updatedMenus.splice(menuIndex + 1, 0, newMenu);
   setMenus(updatedMenus);
 };

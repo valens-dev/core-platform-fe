@@ -66,6 +66,7 @@ export function Search(): JSX.Element {
         <Typography>{text.tryThis}</Typography>
         {TEMPLATE_CHIPS.map(({ label, background, color }, i) => (
           <Box
+            /* eslint-disable-next-line react/no-array-index-key */
             key={i}
             className={classes.chip}
             style={getChipStyle(background, color)}
@@ -78,6 +79,7 @@ export function Search(): JSX.Element {
       </Box>
       <Box className={classes.templateWrapper}>
         {TEMPLATES.map(({ imgSrc, label, link }, i) => (
+          /* eslint-disable-next-line react/no-array-index-key */
           <Template key={i} imgSrc={imgSrc} label={label} link={link} />
         ))}
       </Box>

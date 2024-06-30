@@ -1,11 +1,5 @@
 import { useState } from 'react';
 
-import {
-  handlePlusClick,
-  handleToolClick,
-  handleArrowClick,
-} from '@/utils/menu-handlers';
-
 import { Box } from '@mui/material';
 
 import { Menu } from '@/components/workspace/menu';
@@ -14,6 +8,12 @@ import { WorkingArea } from '@/components/workspace/working-area';
 import { type ITool } from '@/types/tool';
 
 import { appText } from '@/constants/strings';
+
+import {
+  handlePlusClick,
+  handleToolClick,
+  handleArrowClick,
+} from '@/utils/menu-handlers';
 
 import { useStyles } from './styles';
 

@@ -56,3 +56,5 @@ export const TourPopup = forwardRef<HTMLDivElement, ITourPopupProps>(
     );
   },
 );
+
+TourPopup.displayName = 'TourPopup';

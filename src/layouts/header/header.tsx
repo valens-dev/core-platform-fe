@@ -56,6 +56,7 @@ export function Header({
       </Box>
       <Box className={classes.links}>
         {NAV_LINKS.map(({ label, href }, i) => (
+          /* eslint-disable-next-line react/no-array-index-key */
           <Box onClick={() => handleScrollTo(href)} key={`${label}_${i}`}>
             <Typography variant="body1">{label}</Typography>
           </Box>

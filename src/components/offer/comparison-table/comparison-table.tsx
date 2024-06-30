@@ -31,6 +31,7 @@ export function ComparisonTable({
           {text.compareFeaturesTitle}
         </Typography>
         {plans.map((plan, index) => (
+          /* eslint-disable-next-line react/no-array-index-key */
           <Box key={index} className={classes.tableHeaderPlan}>
             <Typography className={classes.planTitle}>{plan.title}</Typography>
             <Typography className={getPlanPriceClass(plan.title)}>

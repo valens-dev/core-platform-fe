@@ -1,5 +1,5 @@
 import { type ITheme } from '@/types/theme';
-import { IButtonStyle, ColorVariant } from '@/types/style';
+import { ColorVariant, type IButtonStyle } from '@/types/style';
 
 import { tss } from '@/styles/theme';
 
