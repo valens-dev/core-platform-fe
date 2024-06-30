@@ -1,6 +1,6 @@
 export const getLeftArrowClassName = (
   pathname: string,
-  classes: any,
+  classes: Record<string, string>,
 ): string => {
   return `${classes.arrow} ${pathname === '/homepage/templates' ? classes.blackArrow : ''}`;
 };

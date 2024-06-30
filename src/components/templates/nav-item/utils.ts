@@ -7,7 +7,7 @@ interface INavItemClasses {
 export const getNavItemClasses = (
   hoveredNavItem: number | null,
   index: number,
-  classes: any,
+  classes: Record<string, string>,
 ): INavItemClasses => {
   const isHovered = hoveredNavItem === index;
   const navItemClass = `${classes.navItem} ${isHovered ? classes.hoveredNavItem : ''}`;

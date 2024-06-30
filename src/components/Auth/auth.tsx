@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { Location, useLocation } from 'react-router-dom';
 
 import classnames from 'classnames';
 
@@ -21,14 +21,18 @@ import { useStyles } from './styles';
 
 const text = appText.auth;
 
+interface ILocationState {
+  tab?: string;
+}
+
 export function Auth({ tab = AuthTab.Login }: IAuthProps): JSX.Element {
   const [activeTab, setActiveTab] = useState(tab);
-  const location = useLocation();
+  const location = useLocation() as Location<ILocationState>;
   const { classes } = useStyles();
 
   useEffect(() => {
     if (location.state?.tab) {
-      setActiveTab(location.state.tab);
+      setActiveTab(AuthTab[location.state.tab as keyof typeof AuthTab]);
     }
   }, []);
 
