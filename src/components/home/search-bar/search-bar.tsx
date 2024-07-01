@@ -6,9 +6,9 @@ import { SelectOption } from '@/shared/select-option';
 
 import { OPTIONS } from '@/constants/search';
 
-import GridView from '@/assets/icon/change-view-icon.svg';
 import ViewList from '@/assets/icon/lines-icon.svg?react';
 import SearchIcon from '@/assets/icon/search-icon.svg?react';
+import GridView from '@/assets/icon/change-view-icon.svg?react';
 
 import { useStyles } from './styles';
 

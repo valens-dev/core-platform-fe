@@ -77,7 +77,7 @@ export function Login(): React.ReactNode {
       <Button
         className={classes.loginBtn}
         onClick={handleOpenHomepage}
-        type="submit"
+        type="button"
       >
         <Typography variant="body1">{text.signIn}</Typography>
       </Button>
