@@ -1,43 +1,57 @@
-import { tss } from '@styles/theme';
+import { type ITheme } from '@/types/theme';
+import { ColorVariant } from '@/types/style';
 
-import { ColorVariant } from '@models/styles';
+import { tss } from '@/styles/theme';
 
-import { Theme } from '@utils/interfaces';
+type LinkStyle =
+  | {
+      color: string | undefined;
+      textDecoration: string;
+      textDecorationColor?: undefined;
+    }
+  | {
+      color: string | undefined;
+      textDecorationColor: string | undefined;
+      textDecoration?: undefined;
+    };
 
-const getLinkGeneralStyle = (
-  theme: Theme,
+function getLinkGeneralStyle(
+  theme: ITheme,
   colorVariant: ColorVariant,
-  underline: boolean
-) => {
+  underline: boolean,
+): LinkStyle {
   let color;
   switch (colorVariant) {
-    case ColorVariant.Primary:
+    case ColorVariant.Primary: {
       color = theme.palette.primary.dark;
       break;
-    case ColorVariant.PrimaryLight:
+    }
+    case ColorVariant.PrimaryLight: {
       color = theme.palette.primary.main;
       break;
-    default:
+    }
+    default: {
       color = theme.palette.light.dark;
+    }
   }
 
-  return !underline
-    ? { color, textDecoration: 'none' }
-    : { color, textDecorationColor: color };
-};
+  return underline
+    ? { color, textDecorationColor: color }
+    : { color, textDecoration: 'none' };
+}
 
-const useStyles = tss
+export const useStyles = tss
   .withParams<{ colorVariant: ColorVariant; underline: boolean }>()
-  .create(({ theme, colorVariant, underline }) => ({
-    wrapper: {
-      display: 'flex',
-      alignItems: 'center',
-      gap: '10px',
-      cursor: 'pointer',
-    },
-    link: {
-      ...getLinkGeneralStyle(theme, colorVariant, underline),
-    },
-  }));
-
-export default useStyles;
+  .create(({ theme, colorVariant, underline }) => {
+    return {
+      wrapper: {
+        display: 'flex',
+        alignItems: 'center',
+        gap: '10px',
+        cursor: 'pointer',
+      },
+      link: {
+        ...getLinkGeneralStyle(theme, colorVariant, underline),
+      },
+    };
+  });

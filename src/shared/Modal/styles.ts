@@ -1,14 +1,14 @@
-import { tss } from '@styles/theme';
+import { tss } from '@/styles/theme';
 
-const useStyles = tss.create(() => ({
-  modalWrapper: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    '& .MuiBackdrop-root': {
-      backgroundColor: 'rgba(0, 0, 0, 0.4)',
+export const useStyles = tss.create(() => {
+  return {
+    modalWrapper: {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      '& .MuiBackdrop-root': {
+        backgroundColor: 'rgba(0, 0, 0, 0.4)',
+      },
     },
-  },
-}));
-
-export default useStyles;
+  };
+});

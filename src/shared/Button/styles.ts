@@ -1,12 +1,14 @@
-import { tss } from '@styles/theme';
+import { type ITheme } from '@/types/theme';
+import { ColorVariant, type IButtonStyle } from '@/types/style';
 
-import { ColorVariant } from '@models/styles';
+import { tss } from '@/styles/theme';
 
-import { Theme } from '@utils/interfaces';
-
-const getButtonGeneralStyle = (theme: Theme, colorVariant: ColorVariant) => {
+function getButtonGeneralStyle(
+  theme: ITheme,
+  colorVariant: ColorVariant,
+): IButtonStyle {
   switch (colorVariant) {
-    case ColorVariant.Primary:
+    case ColorVariant.Primary: {
       return {
         background: theme.palette.primary.dark,
         '& > p, span': {
@@ -14,7 +16,8 @@ const getButtonGeneralStyle = (theme: Theme, colorVariant: ColorVariant) => {
         },
         '&:hover': { background: theme.palette.primary.dark },
       };
-    case ColorVariant.PrimaryLight:
+    }
+    case ColorVariant.PrimaryLight: {
       return {
         background: theme.palette.primary.main,
         '& > p, span': {
@@ -22,7 +25,8 @@ const getButtonGeneralStyle = (theme: Theme, colorVariant: ColorVariant) => {
         },
         '&:hover': { background: theme.palette.primary.main },
       };
-    case ColorVariant.Light:
+    }
+    case ColorVariant.Light: {
       return {
         background: theme.palette.white.main,
         border: `1px solid ${theme.palette.primary.dark}`,
@@ -34,17 +38,19 @@ const getButtonGeneralStyle = (theme: Theme, colorVariant: ColorVariant) => {
           border: `1px solid ${theme.palette.primary.dark}`,
         },
       };
-    default:
+    }
+    default: {
       return {};
+    }
   }
-};
+}
 
-const useStyles = tss
+export const useStyles = tss
   .withParams<{ colorVariant: ColorVariant }>()
-  .create(({ theme, colorVariant }) => ({
-    general: {
-      ...getButtonGeneralStyle(theme, colorVariant),
-    },
-  }));
-
-export default useStyles;
+  .create(({ theme, colorVariant }) => {
+    return {
+      general: {
+        ...getButtonGeneralStyle(theme, colorVariant),
+      },
+    };
+  });
