@@ -10,15 +10,22 @@ import { ColorVariant } from '@/types/style';
 
 import { appText } from '@/constants/strings';
 
-import { type IWorkspaceAuthFormData } from './types';
+import XIcon from '@/assets/icon/x-icon.svg?react';
+
+import {
+  type IWorkspaceAuthData,
+  type ICreateWorkspaceModalProps,
+} from './types';
 
 import { useStyles } from './styles';
 
 const text = appText.homePage.createWorkspaceModal;
 
-export function CreateWorkspaceModal(): React.ReactNode {
+export function CreateWorkspaceModal({
+  handleCloseModal,
+}: ICreateWorkspaceModalProps): React.ReactNode {
   const navigate = useNavigate();
-  const { control, register, handleSubmit } = useForm<IWorkspaceAuthFormData>();
+  const { control, register, handleSubmit } = useForm<IWorkspaceAuthData>();
   const { classes } = useStyles();
 
   /* eslint-disable-next-line unicorn/consistent-function-scoping */
@@ -32,7 +39,10 @@ export function CreateWorkspaceModal(): React.ReactNode {
 
   return (
     <Box className={classes.wrapper}>
-      <Typography variant="h6">{text.createWorkspace}</Typography>
+      <Box className={classes.titleAndCloseButton}>
+        <Typography variant="h6">{text.createWorkspace}</Typography>
+        <XIcon onClick={handleCloseModal} className={classes.closeButton} />
+      </Box>
       <Typography variant="body2" className={classes.note}>
         {text.note}
       </Typography>
@@ -43,24 +53,28 @@ export function CreateWorkspaceModal(): React.ReactNode {
         className={classes.formWrapper}
       >
         <TextField
+          className={classes.textField}
           label={text.workspaceTextfieldLabel}
           control={control}
           register={register('workspaceName')}
           placeholder={text.workspaceTextfieldPlaceholder}
         />
         <TextField
+          className={classes.textField}
           label={text.appIdLabel}
           control={control}
           register={register('appId')}
           placeholder={text.appIdPlaceholder}
         />
         <TextField
+          className={classes.textField}
           label={text.appClientSecretLabel}
           control={control}
           register={register('appClientSecret')}
           placeholder={text.appClientSecretPlaceholder}
         />
         <TextField
+          className={classes.textField}
           label={text.objectIdLabel}
           control={control}
           register={register('objectId')}

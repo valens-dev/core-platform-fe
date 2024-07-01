@@ -77,7 +77,7 @@ export default function HomePage(): React.ReactNode {
       </Box>
       <Search />
       <Modal isOpen={isModalOpen} handleClose={handleCloseModal}>
-        <CreateWorkspaceModal />
+        <CreateWorkspaceModal handleCloseModal={handleCloseModal} />
       </Modal>
       <SearchBar />
       <Cards />
