@@ -5,20 +5,14 @@ import { useNavigate } from 'react-router-dom';
 import Button from '@shared/Button';
 import TextField from '@shared/TextField';
 
-import { ColorVariant } from '@models/styles';
 import { appText } from '@utils/strings';
 import { ICreateWorkspaceModal } from '../interfaces';
+import { IWorkspaceAuthData } from '../interfaces';
 
 import XIcon from '@assets/icons/x-icon.svg?react';
 
 import useStyles from './styles';
-
-interface IWorkspaceAuthData {
-  workspaceName: string;
-  appId: string;
-  appClientSecret: string;
-  objectId: string;
-}
+import { ColorVariant } from '@models/styles';
 
 function CreateWorkspaceModal({ handleCloseModal }: ICreateWorkspaceModal) {
   const text = appText.homepage.createWorkspaceModal;
