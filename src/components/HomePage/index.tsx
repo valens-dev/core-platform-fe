@@ -62,7 +62,7 @@ function HomePage() {
       <Modal
         isOpen={isModalOpen}
         handleClose={handleCloseModal}
-        children={<CreateWorkspaceModal />}
+        children={<CreateWorkspaceModal handleCloseModal={handleCloseModal} />}
       />
       <SearchBar />
       <Cards />

@@ -51,7 +51,7 @@ export const appText = {
       logout: 'Logout',
     },
     createWorkspaceModal: {
-      createWorkspace: 'Create Workspace',
+      createWorkspace: 'Create workspace',
       note: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
       workspaceTextfieldLabel: 'Workspace name:',
       workspaceTextfieldPlaceholder: 'Name',
