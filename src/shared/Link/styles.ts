@@ -1,57 +1,43 @@
-import { type ITheme } from '@/types/theme';
-import { ColorVariant } from '@/types/style';
+import { tss } from '@styles/theme';
 
-import { tss } from '@/styles/theme';
+import { ColorVariant } from '@models/styles';
 
-type LinkStyle =
-  | {
-      color: string | undefined;
-      textDecoration: string;
-      textDecorationColor?: undefined;
-    }
-  | {
-      color: string | undefined;
-      textDecorationColor: string | undefined;
-      textDecoration?: undefined;
-    };
+import { Theme } from '@utils/interfaces';
 
-function getLinkGeneralStyle(
-  theme: ITheme,
+const getLinkGeneralStyle = (
+  theme: Theme,
   colorVariant: ColorVariant,
-  underline: boolean,
-): LinkStyle {
+  underline: boolean
+) => {
   let color;
   switch (colorVariant) {
-    case ColorVariant.Primary: {
+    case ColorVariant.Primary:
       color = theme.palette.primary.dark;
       break;
-    }
-    case ColorVariant.PrimaryLight: {
+    case ColorVariant.PrimaryLight:
       color = theme.palette.primary.main;
       break;
-    }
-    default: {
+    default:
       color = theme.palette.light.dark;
-    }
   }
 
-  return underline
-    ? { color, textDecorationColor: color }
-    : { color, textDecoration: 'none' };
-}
+  return !underline
+    ? { color, textDecoration: 'none' }
+    : { color, textDecorationColor: color };
+};
 
-export const useStyles = tss
+const useStyles = tss
   .withParams<{ colorVariant: ColorVariant; underline: boolean }>()
-  .create(({ theme, colorVariant, underline }) => {
-    return {
-      wrapper: {
-        display: 'flex',
-        alignItems: 'center',
-        gap: '10px',
-        cursor: 'pointer',
-      },
-      link: {
-        ...getLinkGeneralStyle(theme, colorVariant, underline),
-      },
-    };
-  });
+  .create(({ theme, colorVariant, underline }) => ({
+    wrapper: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: '10px',
+      cursor: 'pointer',
+    },
+    link: {
+      ...getLinkGeneralStyle(theme, colorVariant, underline),
+    },
+  }));
+
+export default useStyles;

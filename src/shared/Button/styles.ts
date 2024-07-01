@@ -1,14 +1,12 @@
-import { type ITheme } from '@/types/theme';
-import { ColorVariant, type IButtonStyle } from '@/types/style';
+import { tss } from '@styles/theme';
 
-import { tss } from '@/styles/theme';
+import { ColorVariant } from '@models/styles';
 
-function getButtonGeneralStyle(
-  theme: ITheme,
-  colorVariant: ColorVariant,
-): IButtonStyle {
+import { Theme } from '@utils/interfaces';
+
+const getButtonGeneralStyle = (theme: Theme, colorVariant: ColorVariant) => {
   switch (colorVariant) {
-    case ColorVariant.Primary: {
+    case ColorVariant.Primary:
       return {
         background: theme.palette.primary.dark,
         '& > p, span': {
@@ -16,8 +14,7 @@ function getButtonGeneralStyle(
         },
         '&:hover': { background: theme.palette.primary.dark },
       };
-    }
-    case ColorVariant.PrimaryLight: {
+    case ColorVariant.PrimaryLight:
       return {
         background: theme.palette.primary.main,
         '& > p, span': {
@@ -25,8 +22,7 @@ function getButtonGeneralStyle(
         },
         '&:hover': { background: theme.palette.primary.main },
       };
-    }
-    case ColorVariant.Light: {
+    case ColorVariant.Light:
       return {
         background: theme.palette.white.main,
         border: `1px solid ${theme.palette.primary.dark}`,
@@ -38,19 +34,17 @@ function getButtonGeneralStyle(
           border: `1px solid ${theme.palette.primary.dark}`,
         },
       };
-    }
-    default: {
+    default:
       return {};
-    }
   }
-}
+};
 
-export const useStyles = tss
+const useStyles = tss
   .withParams<{ colorVariant: ColorVariant }>()
-  .create(({ theme, colorVariant }) => {
-    return {
-      general: {
-        ...getButtonGeneralStyle(theme, colorVariant),
-      },
-    };
-  });
+  .create(({ theme, colorVariant }) => ({
+    general: {
+      ...getButtonGeneralStyle(theme, colorVariant),
+    },
+  }));
+
+export default useStyles;

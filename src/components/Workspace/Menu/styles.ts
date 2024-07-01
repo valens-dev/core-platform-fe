@@ -1,6 +1,6 @@
-import { tss } from '@/styles/theme';
+import { tss } from '@styles/theme';
 
-export const useStyles = tss.create({
+const useStyles = tss.create({
   leftSide: {
     flex: 1,
     backgroundColor: 'white',
@@ -11,3 +11,5 @@ export const useStyles = tss.create({
     overflowY: 'auto',
   },
 });
+
+export default useStyles;
