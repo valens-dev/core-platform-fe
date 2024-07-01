@@ -30,7 +30,7 @@ const useStyles = tss.create(({ theme }) => ({
     fontWeight: '400',
   },
   formWrapper: {
-    widht: '505px',
+    width: '505px',
     marginTop: '20px',
     padding: '5px',
     display: 'flex',

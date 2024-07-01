@@ -7,11 +7,11 @@ import TextField from '@shared/TextField';
 
 import { ColorVariant } from '@models/styles';
 import { appText } from '@utils/strings';
+import { ICreateWorkspaceModal } from '../interfaces';
 
 import XIcon from '@assets/icons/x-icon.svg?react';
 
 import useStyles from './styles';
-import { ICreateWorkspaceModal } from '@utils/interfaces';
 
 interface IWorkspaceAuthData {
   workspaceName: string;
