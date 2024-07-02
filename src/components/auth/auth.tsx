@@ -31,13 +31,16 @@ export function Auth({ tab = AuthTab.Login }: IAuthProps): React.ReactNode {
   const { classes } = useStyles();
 
   useEffect(() => {
-    if (location.state?.tab) {
-      setActiveTab(AuthTab[location.state.tab as keyof typeof AuthTab]);
+    if (location.state?.tab === AuthTab.Login) {
+      setActiveTab(AuthTab.Login);
+    } else {
+      setActiveTab(AuthTab.Registration);
     }
     /* eslint-disable-next-line react-hooks/exhaustive-deps */
   }, []);
 
   const isActiveTabLogin = activeTab === AuthTab.Login;
+
   return (
     <Box className={classes.wrapper}>
       <Box className={classes.box}>
