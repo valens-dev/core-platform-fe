@@ -1,6 +1,6 @@
 import { forwardRef } from 'react';
 
-import { Box, Button, Popper, Typography, IconButton } from '@mui/material';
+import { Box, Button, Popover, Typography, IconButton } from '@mui/material';
 
 import { appText } from '@/constants/strings';
 
@@ -21,10 +21,14 @@ export const TourPopup = forwardRef<HTMLDivElement, ITourPopupProps>(
     const { classes } = useStyles();
 
     return (
-      <Popper
+      <Popover
         open={open}
         anchorEl={refEl}
-        placement="top-start"
+        onClose={handleClose}
+        transformOrigin={{
+          vertical: 'bottom',
+          horizontal: 'right',
+        }}
         className={classes.tourPopup}
       >
         <Box ref={ref} className={classes.popupContent}>
@@ -48,7 +52,7 @@ export const TourPopup = forwardRef<HTMLDivElement, ITourPopupProps>(
             </Button>
           </Box>
         </Box>
-      </Popper>
+      </Popover>
     );
   },
 );
