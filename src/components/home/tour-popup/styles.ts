@@ -3,12 +3,13 @@ import { tss } from '@/styles/theme';
 export const useStyles = tss.create(({ theme }) => {
   return {
     tourPopup: {
-      '& .MuiPopover-paper': {
+      '& .css-or9epk-popupContent': {
         width: '395px',
         height: '182px',
         backgroundColor: theme.palette.primary.purple,
         color: theme.palette.white.main,
         padding: '20px',
+        marginRight: '40px',
       },
     },
     closeButton: {
@@ -16,6 +17,7 @@ export const useStyles = tss.create(({ theme }) => {
       right: '8px',
       top: '8px',
       color: 'white',
+      marginRight: '40px',
     },
     closeIcon: {
       '& path': {
