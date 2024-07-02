@@ -1,5 +1,5 @@
-import Template5 from '@/assets/image/template-5.png';
-import Template6 from '@/assets/image/template-6.png';
+import Template5 from '@/assets/image/template-5.webp';
+import Template6 from '@/assets/image/template-6.webp';
 
 export const CARDS_DATA = [
   {

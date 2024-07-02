@@ -1,4 +1,4 @@
-import WorkspaceBackground from '@/assets/image/background-workspace.png';
+import WorkspaceBackground from '@/assets/image/background-workspace.webp';
 
 import { tss } from '@/styles/theme';
 

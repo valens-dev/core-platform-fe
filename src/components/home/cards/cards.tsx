@@ -1,5 +1,7 @@
 import { Box, Card, Typography, CardContent } from '@mui/material';
 
+import { LazyImage } from '@/shared/lazy-image';
+
 import { CARDS_DATA } from './constants';
 
 import { useStyles } from './styles';
@@ -13,7 +15,7 @@ export function Cards(): React.ReactNode {
         return (
           /* eslint-disable-next-line react/no-array-index-key */
           <Card className={classes.card} key={index}>
-            <img
+            <LazyImage
               src={card.imgSrc}
               alt={card.altText}
               className={classes.cardImage}
