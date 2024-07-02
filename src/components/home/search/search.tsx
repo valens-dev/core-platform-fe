@@ -67,7 +67,6 @@ export function Search(): React.ReactNode {
         {TEMPLATE_CHIPS.map(({ label, background, color }, i) => {
           return (
             <Box
-              /* eslint-disable-next-line react/no-array-index-key */
               key={i}
               className={classes.chip}
               style={getChipStyle(background, color)}
@@ -81,10 +80,7 @@ export function Search(): React.ReactNode {
       </Box>
       <Box className={classes.templateWrapper}>
         {TEMPLATES.map(({ imgSrc, label, link }, i) => {
-          return (
-            /* eslint-disable-next-line react/no-array-index-key */
-            <Template key={i} imgSrc={imgSrc} label={label} link={link} />
-          );
+          return <Template key={i} imgSrc={imgSrc} label={label} link={link} />;
         })}
       </Box>
     </Box>

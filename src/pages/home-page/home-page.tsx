@@ -1,5 +1,3 @@
-/* eslint-disable import/no-default-export */
-
 import { useNavigate } from 'react-router-dom';
 import { useRef, useState, useEffect } from 'react';
 
@@ -31,6 +29,8 @@ export default function HomePage(): React.ReactNode {
   const { classes } = useStyles();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isTourOpen, setIsTourOpen] = useState(false);
+  const [viewMode, setViewMode] = useState('grid');
+  const [selectMode, setSelectMode] = useState('Last viewed');
   const questionPopUpRef = useRef<HTMLButtonElement>(null);
   const tourPopupRef = useRef<HTMLDivElement>(null);
 
@@ -54,6 +54,14 @@ export default function HomePage(): React.ReactNode {
   function handleOpenHomePage(): void {
     navigate('/homepage');
   }
+
+  const handleViewMode = (mode: string) => {
+    setViewMode(mode);
+  };
+
+  const handleSelectModeChange = (mode: string) => {
+    setSelectMode(mode);
+  };
 
   return (
     <Box className={classes.wrapper}>
@@ -79,8 +87,13 @@ export default function HomePage(): React.ReactNode {
       <Modal isOpen={isModalOpen} handleClose={handleCloseModal}>
         <CreateWorkspaceModal handleCloseModal={handleCloseModal} />
       </Modal>
-      <SearchBar />
-      <Cards />
+      <SearchBar
+        viewMode={viewMode}
+        onViewModeChange={handleViewMode}
+        selectMode={selectMode}
+        onSelectModeChange={handleSelectModeChange}
+      />
+      <Cards viewMode={viewMode} />
       <IconButton
         ref={questionPopUpRef}
         className={classes.questionPopUp}

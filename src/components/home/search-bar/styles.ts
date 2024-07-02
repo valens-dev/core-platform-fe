@@ -19,10 +19,5 @@ export const useStyles = tss.create(() => {
     searchIcon: {
       marginRight: '8px',
     },
-    iconWrapper: {
-      display: 'flex',
-      gap: '8px',
-      marginLeft: 'auto',
-    },
   };
 });

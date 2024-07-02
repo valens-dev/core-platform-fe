@@ -1,19 +1,26 @@
-import { useState } from 'react';
-
-import { Box, TextField, IconButton, InputAdornment } from '@mui/material';
+import { Box, TextField, InputAdornment } from '@mui/material';
 
 import { SelectOption } from '@/shared/select-option';
-
+import ChangeView from '@/components/home/search-bar/change-view/change-view';
 import { OPTIONS } from '@/constants/search';
 
-import ViewList from '@/assets/icon/lines-icon.svg?react';
 import SearchIcon from '@/assets/icon/search-icon.svg?react';
-import GridView from '@/assets/icon/change-view-icon.svg?react';
 
 import { useStyles } from './styles';
 
-export function SearchBar(): React.ReactNode {
-  const [viewMode, setViewMode] = useState('Last viewed');
+interface ISearchBarProps {
+  viewMode: string;
+  onViewModeChange: (mode: string) => void;
+  selectMode: string;
+  onSelectModeChange: (mode: string) => void;
+}
+
+export function SearchBar({
+  viewMode,
+  onViewModeChange,
+  selectMode,
+  onSelectModeChange,
+}: ISearchBarProps) {
   const { classes } = useStyles();
 
   return (
@@ -32,20 +39,11 @@ export function SearchBar(): React.ReactNode {
         className={classes.searchField}
       />
       <SelectOption
-        value={viewMode}
-        onChange={(e) => {
-          setViewMode(e.target.value);
-        }}
+        value={selectMode}
+        onChange={(e) => onSelectModeChange(e.target.value)}
         options={OPTIONS}
       />
-      <Box className={classes.iconWrapper}>
-        <IconButton>
-          <GridView />
-        </IconButton>
-        <IconButton>
-          <ViewList />
-        </IconButton>
-      </Box>
+      <ChangeView viewMode={viewMode} onViewModeChange={onViewModeChange} />
     </Box>
   );
 }
