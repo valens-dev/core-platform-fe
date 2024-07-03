@@ -1,13 +1,15 @@
 import { Select, MenuItem, type SelectChangeEvent } from '@mui/material';
 
+import { type SelectMode } from '@/types/search';
+
 import DownArrowIcon from '@/assets/icon/arrow-down.svg?react';
 
 import { useStyles } from './styles';
 
 interface ISelectOptionProps {
-  value: string;
-  onChange: (event: SelectChangeEvent<string>) => void;
-  options: { value: string; label: string }[];
+  value: SelectMode;
+  onChange: (event: SelectChangeEvent<SelectMode>) => void;
+  options: { value: SelectMode; label: string }[];
 }
 
 export function SelectOption({
