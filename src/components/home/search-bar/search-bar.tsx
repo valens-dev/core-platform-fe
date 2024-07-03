@@ -1,20 +1,44 @@
-import { useState } from 'react';
-
-import { Box, TextField, IconButton, InputAdornment } from '@mui/material';
+import {
+  Box,
+  TextField,
+  InputAdornment,
+  type SelectChangeEvent,
+} from '@mui/material';
 
 import { SelectOption } from '@/shared/select-option';
 
+import { type ViewMode, type SelectMode } from '@/types/search';
+
 import { OPTIONS } from '@/constants/search';
 
-import ViewList from '@/assets/icon/lines-icon.svg?react';
 import SearchIcon from '@/assets/icon/search-icon.svg?react';
-import GridView from '@/assets/icon/change-view-icon.svg?react';
+
+import { ChangeView } from './change-view';
 
 import { useStyles } from './styles';
 
-export function SearchBar(): React.ReactNode {
-  const [viewMode, setViewMode] = useState('Last viewed');
+interface ISearchBarProps {
+  viewMode: ViewMode;
+  onViewModeChange: (mode: ViewMode) => void;
+  selectMode: SelectMode;
+  onSelectModeChange: (mode: SelectMode) => void;
+}
+
+export function SearchBar({
+  viewMode,
+  onViewModeChange,
+  selectMode,
+  onSelectModeChange,
+}: ISearchBarProps): React.ReactNode {
   const { classes } = useStyles();
+
+  function handleSelectModeChange(event: SelectChangeEvent<SelectMode>): void {
+    onSelectModeChange(event.target.value as SelectMode);
+  }
+
+  function handleViewModeChange(mode: ViewMode): void {
+    onViewModeChange(mode);
+  }
 
   return (
     <Box className={classes.searchBar}>
@@ -32,20 +56,11 @@ export function SearchBar(): React.ReactNode {
         className={classes.searchField}
       />
       <SelectOption
-        value={viewMode}
-        onChange={(e) => {
-          setViewMode(e.target.value);
-        }}
+        value={selectMode}
+        onChange={handleSelectModeChange}
         options={OPTIONS}
       />
-      <Box className={classes.iconWrapper}>
-        <IconButton>
-          <GridView />
-        </IconButton>
-        <IconButton>
-          <ViewList />
-        </IconButton>
-      </Box>
+      <ChangeView viewMode={viewMode} onViewModeChange={handleViewModeChange} />
     </Box>
   );
 }

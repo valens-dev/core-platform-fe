@@ -1,5 +1,4 @@
 /* eslint-disable import/no-default-export */
-
 import { useNavigate } from 'react-router-dom';
 import { useRef, useState, useEffect } from 'react';
 
@@ -13,6 +12,8 @@ import { Search } from '@/components/home/search';
 import { SearchBar } from '@/components/home/search-bar';
 import { TourPopup } from '@/components/home/tour-popup';
 import { CreateWorkspaceModal } from '@/components/home/create-workspace-modal';
+
+import { ViewMode, SelectMode } from '@/types/search';
 
 import { appText } from '@/constants/strings';
 
@@ -31,6 +32,8 @@ export default function HomePage(): React.ReactNode {
   const { classes } = useStyles();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isTourOpen, setIsTourOpen] = useState(false);
+  const [viewMode, setViewMode] = useState(ViewMode.Grid);
+  const [selectMode, setSelectMode] = useState(SelectMode.LastViewed);
   const questionPopUpRef = useRef<HTMLButtonElement>(null);
   const tourPopupRef = useRef<HTMLDivElement>(null);
 
@@ -53,6 +56,14 @@ export default function HomePage(): React.ReactNode {
   const leftArrowClassName = getLeftArrowClassName(location.pathname, classes);
   function handleOpenHomePage(): void {
     navigate('/homepage');
+  }
+
+  function handleViewMode(mode: ViewMode): void {
+    setViewMode(mode);
+  }
+
+  function handleSelectModeChange(mode: SelectMode): void {
+    setSelectMode(mode);
   }
 
   return (
@@ -79,8 +90,13 @@ export default function HomePage(): React.ReactNode {
       <Modal isOpen={isModalOpen} handleClose={handleCloseModal}>
         <CreateWorkspaceModal handleCloseModal={handleCloseModal} />
       </Modal>
-      <SearchBar />
-      <Cards />
+      <SearchBar
+        viewMode={viewMode}
+        onViewModeChange={handleViewMode}
+        selectMode={selectMode}
+        onSelectModeChange={handleSelectModeChange}
+      />
+      <Cards viewMode={viewMode} />
       <IconButton
         ref={questionPopUpRef}
         className={classes.questionPopUp}
