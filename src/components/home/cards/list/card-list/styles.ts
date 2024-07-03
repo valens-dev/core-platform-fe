@@ -10,6 +10,7 @@ export const useStyles = tss.create(({ theme }) => {
       boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.1)',
       border: `1px solid ${theme.palette.white.light}`,
       width: '100%',
+      marginBottom: '16px',
     },
     cardImageListWrapper: {
       display: 'flex',
