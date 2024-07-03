@@ -3,12 +3,14 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, type SelectChangeEvent } from '@mui/material';
 
 import { SelectOption } from '@/shared/select-option';
 
 import { Search } from '@/components/templates/search';
 import { TemplateContent } from '@/components/templates/template-content';
+
+import { SelectMode } from '@/types/search';
 
 import { OPTIONS } from '@/constants/search';
 import { appText } from '@/constants/strings';
@@ -41,7 +43,11 @@ export default function TemplatesPage(): React.ReactNode {
   const [hoveredNavItem, setHoveredNavItem] = useState<number | undefined>();
   const [selectedOptions, setSelectedOptions] = useState<number[]>([]);
   const [isMouseOverMenu, setIsMouseOverMenu] = useState<boolean>(false);
-  const [viewMode, setViewMode] = useState('Last viewed');
+  const [viewMode, setViewMode] = useState<SelectMode>(SelectMode.LastViewed);
+
+  function handleViewModeChange(event: SelectChangeEvent<SelectMode>): void {
+    setViewMode(event.target.value as SelectMode);
+  }
 
   return (
     <Box className={classes.wrapper}>
@@ -63,9 +69,7 @@ export default function TemplatesPage(): React.ReactNode {
       <Box className={classes.selectOptionWrapper}>
         <SelectOption
           value={viewMode}
-          onChange={(e) => {
-            setViewMode(e.target.value);
-          }}
+          onChange={handleViewModeChange}
           options={OPTIONS}
         />
       </Box>
