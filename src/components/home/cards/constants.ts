@@ -1,12 +1,12 @@
-import { FunctionComponent, SVGProps } from 'react';
+import { type SVGProps, type FunctionComponent } from 'react';
 
+import Workspace from '@/assets/image/workspace.png';
 import Template5 from '@/assets/image/template-5.png';
 import Template6 from '@/assets/image/template-6.png';
-import Workspace from '@/assets/image/workspace.png';
-import PurpleDot from '@/assets/icon/purpledot-icon.svg?react';
+import RedDot from '@/assets/icon/reddot-icon.svg?react';
 import GrayDot from '@/assets/icon/graydot-icon.svg?react';
 import GreenDot from '@/assets/icon/greendot-icon.svg?react';
-import RedDot from '@/assets/icon/reddot-icon.svg?react';
+import PurpleDot from '@/assets/icon/purpledot-icon.svg?react';
 import OrangeDot from '@/assets/icon/orangedot-icon.svg?react';
 
 export const CARDS_DATA = [
@@ -24,11 +24,10 @@ export const CARDS_DATA = [
   },
 ];
 
-export const STATUS_ICONS: {
-  [key: string]: FunctionComponent<
-    SVGProps<SVGSVGElement> & { title?: string | undefined }
-  >;
-} = {
+export const STATUS_ICONS: Record<
+  string,
+  FunctionComponent<SVGProps<SVGSVGElement> & { title?: string | undefined }>
+> = {
   Complete: PurpleDot,
   Draft: GrayDot,
   Success: GreenDot,

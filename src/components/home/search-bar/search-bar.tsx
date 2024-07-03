@@ -1,7 +1,9 @@
 import { Box, TextField, InputAdornment } from '@mui/material';
 
 import { SelectOption } from '@/shared/select-option';
-import ChangeView from '@/components/home/search-bar/change-view/change-view';
+
+import { ChangeView } from './change-view';
+
 import { OPTIONS } from '@/constants/search';
 
 import SearchIcon from '@/assets/icon/search-icon.svg?react';
@@ -40,7 +42,9 @@ export function SearchBar({
       />
       <SelectOption
         value={selectMode}
-        onChange={(e) => onSelectModeChange(e.target.value)}
+        onChange={(e) => {
+          return onSelectModeChange(e.target.value);
+        }}
         options={OPTIONS}
       />
       <ChangeView viewMode={viewMode} onViewModeChange={onViewModeChange} />

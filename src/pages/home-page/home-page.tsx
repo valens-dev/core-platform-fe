@@ -1,3 +1,4 @@
+/* eslint-disable import/no-default-export */
 import { useNavigate } from 'react-router-dom';
 import { useRef, useState, useEffect } from 'react';
 
@@ -55,13 +56,13 @@ export default function HomePage(): React.ReactNode {
     navigate('/homepage');
   }
 
-  const handleViewMode = (mode: string) => {
+  function handleViewMode(mode: string): void {
     setViewMode(mode);
-  };
+  }
 
-  const handleSelectModeChange = (mode: string) => {
+  function handleSelectModeChange(mode: string): void {
     setSelectMode(mode);
-  };
+  }
 
   return (
     <Box className={classes.wrapper}>

@@ -1,1 +1,1 @@
-export * from '../card-status-verification';
+export * from './card-status-verification';

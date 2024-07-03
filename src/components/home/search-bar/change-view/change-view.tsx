@@ -1,7 +1,7 @@
 import { Box, IconButton } from '@mui/material';
 
-import GridView from '@/assets/icon/change-view-icon.svg?react';
 import ViewList from '@/assets/icon/lines-icon.svg?react';
+import GridView from '@/assets/icon/change-view-icon.svg?react';
 
 import { useStyles } from './styles';
 
@@ -10,12 +10,15 @@ interface IChangeViewProps {
   onViewModeChange: (mode: string) => void;
 }
 
-function ChangeView({ viewMode, onViewModeChange }: IChangeViewProps) {
+export function ChangeView({
+  viewMode,
+  onViewModeChange,
+}: IChangeViewProps): JSX.Element {
   const { classes } = useStyles();
 
-  const getIconClass = (mode: string) => {
+  function getIconClass(mode: string): string {
     return viewMode === mode ? classes.activeIcon : '';
-  };
+  }
 
   return (
     <Box className={classes.iconWrapper}>
@@ -34,5 +37,3 @@ function ChangeView({ viewMode, onViewModeChange }: IChangeViewProps) {
     </Box>
   );
 }
-
-export default ChangeView;

@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { Box, Typography } from '@mui/material';
 
 import { STATUS_ICONS } from '@/components/home/cards/constants';
@@ -19,15 +20,13 @@ export function CardStatusVerification({
   return (
     <>
       <Box className={classes.cardStatus}>
-        {React.createElement(STATUS_ICONS[status as keyof typeof STATUS_ICONS])}
+        {React.createElement(STATUS_ICONS[status])}
         <Typography variant="body2" className={classes.cardStatusText}>
           {status}
         </Typography>
       </Box>
       <Box className={classes.cardVerification}>
-        {React.createElement(
-          STATUS_ICONS[verification as keyof typeof STATUS_ICONS],
-        )}
+        {React.createElement(STATUS_ICONS[verification])}
         <Typography variant="body2" className={classes.cardVerificationText}>
           {verification}
         </Typography>

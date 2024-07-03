@@ -1,1 +1,1 @@
-export * from '../change-view';
+export * from './change-view';
