@@ -10,9 +10,8 @@ import { SelectOption } from '@/shared/select-option';
 import { Search } from '@/components/templates/search';
 import { TemplateContent } from '@/components/templates/template-content';
 
-import { OPTIONS } from '@/constants/search';
 import { appText } from '@/constants/strings';
-import { SelectMode } from '@/constants/enums';
+import { OPTIONS, SelectMode } from '@/constants/search';
 
 import {
   handleMenuOpen,

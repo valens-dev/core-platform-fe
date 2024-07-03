@@ -1,6 +1,6 @@
 import { Box, IconButton } from '@mui/material';
 
-import { ViewMode } from '@/constants/enums';
+import { ViewMode } from '@/constants/search';
 
 import ViewList from '@/assets/icon/lines-icon.svg?react';
 import GridView from '@/assets/icon/change-view-icon.svg?react';

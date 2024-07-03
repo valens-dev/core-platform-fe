@@ -1,6 +1,6 @@
 import { Select, MenuItem, type SelectChangeEvent } from '@mui/material';
 
-import { type SelectMode } from '@/constants/enums';
+import { type SelectMode } from '@/constants/search';
 
 import DownArrowIcon from '@/assets/icon/arrow-down.svg?react';
 

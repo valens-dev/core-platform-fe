@@ -1,4 +1,4 @@
-import { ViewMode } from '@/constants/enums';
+import { ViewMode } from '@/constants/search';
 
 import { Grid } from './grid';
 import { List } from './list';
