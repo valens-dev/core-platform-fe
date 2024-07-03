@@ -42,6 +42,7 @@ export function Search(): React.ReactNode {
   function handleOpenTemplates(): void {
     navigate('/homepage/templates');
   }
+
   return (
     <Box className={classes.wrapper}>
       <Box className={classes.positionText}>
@@ -64,10 +65,11 @@ export function Search(): React.ReactNode {
       />
       <Box className={classes.chipsWrapper}>
         <Typography>{text.tryThis}</Typography>
-        {TEMPLATE_CHIPS.map(({ label, background, color }, i) => {
+        {TEMPLATE_CHIPS.map(({ label, background, color }, index) => {
           return (
             <Box
-              key={i}
+              /* eslint-disable-next-line react/no-array-index-key */
+              key={index}
               className={classes.chip}
               style={getChipStyle(background, color)}
             >
@@ -79,8 +81,11 @@ export function Search(): React.ReactNode {
         })}
       </Box>
       <Box className={classes.templateWrapper}>
-        {TEMPLATES.map(({ imgSrc, label, link }, i) => {
-          return <Template key={i} imgSrc={imgSrc} label={label} link={link} />;
+        {TEMPLATES.map(({ imgSrc, label, link }, index) => {
+          return (
+            /* eslint-disable-next-line react/no-array-index-key */
+            <Template key={index} imgSrc={imgSrc} label={label} link={link} />
+          );
         })}
       </Box>
     </Box>

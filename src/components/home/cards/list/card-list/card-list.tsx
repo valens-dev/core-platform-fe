@@ -6,13 +6,14 @@ import { CardStatusVerification } from './card-status-verification/card-status-v
 
 import { useStyles } from './styles';
 
-export function CardList() {
+export function CardList(): JSX.Element {
   const { classes } = useStyles();
 
   return (
     <Box>
       {CARDS_DATA2.map((card, index) => {
         return (
+          // eslint-disable-next-line react/no-array-index-key
           <Card className={classes.cardList} key={index}>
             <Box className={classes.cardImageListWrapper}>
               <img

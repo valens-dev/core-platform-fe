@@ -2,11 +2,11 @@ import { Box, TextField, InputAdornment } from '@mui/material';
 
 import { SelectOption } from '@/shared/select-option';
 
-import { ChangeView } from './change-view';
-
 import { OPTIONS } from '@/constants/search';
 
 import SearchIcon from '@/assets/icon/search-icon.svg?react';
+
+import { ChangeView } from './change-view';
 
 import { useStyles } from './styles';
 
@@ -22,7 +22,7 @@ export function SearchBar({
   onViewModeChange,
   selectMode,
   onSelectModeChange,
-}: ISearchBarProps) {
+}: ISearchBarProps): JSX.Element {
   const { classes } = useStyles();
 
   return (

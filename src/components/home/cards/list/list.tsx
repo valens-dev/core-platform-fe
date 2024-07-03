@@ -6,7 +6,7 @@ import { CardList } from './card-list';
 
 import { useStyles } from './styles';
 
-export function List() {
+export function List(): JSX.Element {
   const { classes } = useStyles();
 
   return (

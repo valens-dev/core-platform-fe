@@ -6,7 +6,7 @@ import { useStyles } from './styles';
 
 const text = appText.homePage.changeView;
 
-export function HeaderCell() {
+export function HeaderCell(): JSX.Element {
   const { classes } = useStyles();
 
   return (

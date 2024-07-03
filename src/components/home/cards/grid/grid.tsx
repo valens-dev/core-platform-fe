@@ -4,13 +4,14 @@ import { CARDS_DATA } from '../constants';
 
 import { useStyles } from './styles';
 
-export function Grid() {
+export function Grid(): JSX.Element {
   const { classes } = useStyles();
 
   return (
     <Box className={classes.cardsWrapper}>
       {CARDS_DATA.map((card, index) => {
         return (
+          // eslint-disable-next-line react/no-array-index-key
           <Card className={classes.card} key={index}>
             <img
               src={card.imgSrc}

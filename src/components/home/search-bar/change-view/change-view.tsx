@@ -24,13 +24,17 @@ export function ChangeView({
     <Box className={classes.iconWrapper}>
       <IconButton
         className={getIconClass('grid')}
-        onClick={() => onViewModeChange('grid')}
+        onClick={() => {
+          onViewModeChange('grid');
+        }}
       >
         <GridView />
       </IconButton>
       <IconButton
         className={getIconClass('list')}
-        onClick={() => onViewModeChange('list')}
+        onClick={() => {
+          onViewModeChange('list');
+        }}
       >
         <ViewList />
       </IconButton>
