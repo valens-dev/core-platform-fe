@@ -65,11 +65,10 @@ export function Search(): React.ReactNode {
       />
       <Box className={classes.chipsWrapper}>
         <Typography>{text.tryThis}</Typography>
-        {TEMPLATE_CHIPS.map(({ label, background, color }, index) => {
+        {TEMPLATE_CHIPS.map(({ label, background, color }) => {
           return (
             <Box
-              /* eslint-disable-next-line react/no-array-index-key */
-              key={index}
+              key={label}
               className={classes.chip}
               style={getChipStyle(background, color)}
             >
@@ -81,10 +80,9 @@ export function Search(): React.ReactNode {
         })}
       </Box>
       <Box className={classes.templateWrapper}>
-        {TEMPLATES.map(({ imgSrc, label, link }, index) => {
+        {TEMPLATES.map(({ label, imgSrc, link }) => {
           return (
-            /* eslint-disable-next-line react/no-array-index-key */
-            <Template key={index} imgSrc={imgSrc} label={label} link={link} />
+            <Template key={label} imgSrc={imgSrc} label={label} link={link} />
           );
         })}
       </Box>

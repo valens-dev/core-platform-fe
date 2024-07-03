@@ -1,10 +1,12 @@
+import { ViewMode } from '@/constants/enums';
+
 import { Grid } from './grid';
 import { List } from './list';
 
 interface ICardsProps {
-  viewMode: string;
+  viewMode: ViewMode;
 }
 
-export function Cards({ viewMode }: ICardsProps): JSX.Element {
-  return viewMode === 'grid' ? <Grid /> : <List />;
+export function Cards({ viewMode }: ICardsProps): React.ReactNode {
+  return viewMode === ViewMode.Grid ? <Grid /> : <List />;
 }

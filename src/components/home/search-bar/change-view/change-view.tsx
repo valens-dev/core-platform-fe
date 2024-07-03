@@ -1,39 +1,40 @@
 import { Box, IconButton } from '@mui/material';
 
+import { ViewMode } from '@/constants/enums';
+
 import ViewList from '@/assets/icon/lines-icon.svg?react';
 import GridView from '@/assets/icon/change-view-icon.svg?react';
 
 import { useStyles } from './styles';
 
 interface IChangeViewProps {
-  viewMode: string;
-  onViewModeChange: (mode: string) => void;
+  viewMode: ViewMode;
+  onViewModeChange: (mode: ViewMode) => void;
 }
 
 export function ChangeView({
   viewMode,
   onViewModeChange,
-}: IChangeViewProps): JSX.Element {
+}: IChangeViewProps): React.ReactNode {
   const { classes } = useStyles();
 
-  function getIconClass(mode: string): string {
-    return viewMode === mode ? classes.activeIcon : '';
-  }
+  const gridIconClass = viewMode === ViewMode.Grid ? classes.activeIcon : '';
+  const listIconClass = viewMode === ViewMode.List ? classes.activeIcon : '';
 
   return (
     <Box className={classes.iconWrapper}>
       <IconButton
-        className={getIconClass('grid')}
+        className={gridIconClass}
         onClick={() => {
-          onViewModeChange('grid');
+          onViewModeChange(ViewMode.Grid);
         }}
       >
         <GridView />
       </IconButton>
       <IconButton
-        className={getIconClass('list')}
+        className={listIconClass}
         onClick={() => {
-          onViewModeChange('list');
+          onViewModeChange(ViewMode.List);
         }}
       >
         <ViewList />

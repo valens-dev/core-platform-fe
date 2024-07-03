@@ -1,8 +1,14 @@
-import { Box, TextField, InputAdornment } from '@mui/material';
+import {
+  Box,
+  TextField,
+  InputAdornment,
+  type SelectChangeEvent,
+} from '@mui/material';
 
 import { SelectOption } from '@/shared/select-option';
 
 import { OPTIONS } from '@/constants/search';
+import { type ViewMode, type SelectMode } from '@/constants/enums';
 
 import SearchIcon from '@/assets/icon/search-icon.svg?react';
 
@@ -11,10 +17,10 @@ import { ChangeView } from './change-view';
 import { useStyles } from './styles';
 
 interface ISearchBarProps {
-  viewMode: string;
-  onViewModeChange: (mode: string) => void;
-  selectMode: string;
-  onSelectModeChange: (mode: string) => void;
+  viewMode: ViewMode;
+  onViewModeChange: (mode: ViewMode) => void;
+  selectMode: SelectMode;
+  onSelectModeChange: (mode: SelectMode) => void;
 }
 
 export function SearchBar({
@@ -22,8 +28,16 @@ export function SearchBar({
   onViewModeChange,
   selectMode,
   onSelectModeChange,
-}: ISearchBarProps): JSX.Element {
+}: ISearchBarProps): React.ReactNode {
   const { classes } = useStyles();
+
+  function handleSelectModeChange(event: SelectChangeEvent<SelectMode>): void {
+    onSelectModeChange(event.target.value as SelectMode);
+  }
+
+  function handleViewModeChange(mode: ViewMode): void {
+    onViewModeChange(mode);
+  }
 
   return (
     <Box className={classes.searchBar}>
@@ -42,12 +56,10 @@ export function SearchBar({
       />
       <SelectOption
         value={selectMode}
-        onChange={(e) => {
-          return onSelectModeChange(e.target.value);
-        }}
+        onChange={handleSelectModeChange}
         options={OPTIONS}
       />
-      <ChangeView viewMode={viewMode} onViewModeChange={onViewModeChange} />
+      <ChangeView viewMode={viewMode} onViewModeChange={handleViewModeChange} />
     </Box>
   );
 }

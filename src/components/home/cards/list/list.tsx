@@ -6,7 +6,7 @@ import { CardList } from './card-list';
 
 import { useStyles } from './styles';
 
-export function List(): JSX.Element {
+export function List(): React.ReactNode {
   const { classes } = useStyles();
 
   return (

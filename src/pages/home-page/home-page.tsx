@@ -14,6 +14,7 @@ import { TourPopup } from '@/components/home/tour-popup';
 import { CreateWorkspaceModal } from '@/components/home/create-workspace-modal';
 
 import { appText } from '@/constants/strings';
+import { ViewMode, SelectMode } from '@/constants/enums';
 
 import LeftArrow from '@/assets/icon/left-arrow-icon.svg?react';
 import RightArrow from '@/assets/icon/right-arrow-icon.svg?react';
@@ -30,8 +31,8 @@ export default function HomePage(): React.ReactNode {
   const { classes } = useStyles();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isTourOpen, setIsTourOpen] = useState(false);
-  const [viewMode, setViewMode] = useState('grid');
-  const [selectMode, setSelectMode] = useState('Last viewed');
+  const [viewMode, setViewMode] = useState(ViewMode.Grid);
+  const [selectMode, setSelectMode] = useState(SelectMode.LastViewed);
   const questionPopUpRef = useRef<HTMLButtonElement>(null);
   const tourPopupRef = useRef<HTMLDivElement>(null);
 
@@ -56,11 +57,11 @@ export default function HomePage(): React.ReactNode {
     navigate('/homepage');
   }
 
-  function handleViewMode(mode: string): void {
+  function handleViewMode(mode: ViewMode): void {
     setViewMode(mode);
   }
 
-  function handleSelectModeChange(mode: string): void {
+  function handleSelectModeChange(mode: SelectMode): void {
     setSelectMode(mode);
   }
 

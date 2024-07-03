@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { Box, Typography } from '@mui/material';
 
 import { STATUS_ICONS } from '@/components/home/cards/constants';
@@ -14,21 +12,22 @@ interface ICardStatusVerificationProps {
 export function CardStatusVerification({
   status,
   verification,
-}: ICardStatusVerificationProps): JSX.Element {
+}: ICardStatusVerificationProps): React.ReactNode {
   const { classes } = useStyles();
+
+  const StatusIcon = STATUS_ICONS[status];
+  const VerificationIcon = STATUS_ICONS[verification];
 
   return (
     <>
       <Box className={classes.cardStatus}>
-        {/* eslint-disable-next-line import/no-named-as-default-member */}
-        {React.createElement(STATUS_ICONS[status])}
+        <StatusIcon />
         <Typography variant="body2" className={classes.cardStatusText}>
           {status}
         </Typography>
       </Box>
       <Box className={classes.cardVerification}>
-        {/* eslint-disable-next-line import/no-named-as-default-member */}
-        {React.createElement(STATUS_ICONS[verification])}
+        <VerificationIcon />
         <Typography variant="body2" className={classes.cardVerificationText}>
           {verification}
         </Typography>
