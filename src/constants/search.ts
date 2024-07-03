@@ -1,14 +1,4 @@
-export enum ViewMode {
-  Grid = 'grid',
-  List = 'list',
-}
-
-export enum SelectMode {
-  LastViewed = 'Last viewed',
-  MostInstalled = 'Most installed',
-  Newest = 'Newest',
-  Oldest = 'Oldest',
-}
+import { SelectMode } from '@/types/search';
 
 export const OPTIONS: { value: SelectMode; label: string }[] = [
   { value: SelectMode.LastViewed, label: 'Last viewed' },

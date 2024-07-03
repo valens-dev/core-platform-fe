@@ -13,8 +13,9 @@ import { SearchBar } from '@/components/home/search-bar';
 import { TourPopup } from '@/components/home/tour-popup';
 import { CreateWorkspaceModal } from '@/components/home/create-workspace-modal';
 
+import { ViewMode, SelectMode } from '@/types/search';
+
 import { appText } from '@/constants/strings';
-import { ViewMode, SelectMode } from '@/constants/search';
 
 import LeftArrow from '@/assets/icon/left-arrow-icon.svg?react';
 import RightArrow from '@/assets/icon/right-arrow-icon.svg?react';

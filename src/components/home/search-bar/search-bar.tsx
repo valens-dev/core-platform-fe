@@ -7,7 +7,9 @@ import {
 
 import { SelectOption } from '@/shared/select-option';
 
-import { OPTIONS, type ViewMode, type SelectMode } from '@/constants/search';
+import { type ViewMode, type SelectMode } from '@/types/search';
+
+import { OPTIONS } from '@/constants/search';
 
 import SearchIcon from '@/assets/icon/search-icon.svg?react';
 

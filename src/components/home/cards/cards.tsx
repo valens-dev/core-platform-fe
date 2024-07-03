@@ -1,4 +1,4 @@
-import { ViewMode } from '@/constants/search';
+import { ViewMode } from '@/types/search';
 
 import { Grid } from './grid';
 import { List } from './list';
