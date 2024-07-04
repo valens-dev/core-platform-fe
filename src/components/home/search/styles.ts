@@ -10,6 +10,9 @@ export const useStyles = tss.create(({ theme }) => {
       gap: '20px',
       border: `1px solid ${theme.palette.light.normal}`,
       background: theme.palette.light.main,
+      '& .css-2ehmn7-MuiInputBase-root-MuiOutlinedInput-root': {
+        height: '40px',
+      },
     },
     textfield: {
       background: theme.palette.white.main,

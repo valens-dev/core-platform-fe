@@ -25,6 +25,7 @@ export const useStyles = tss.create(({ theme }) => {
     cardCreation: {
       color: theme.palette.light.dark,
       fontSize: '14px',
+      textAlign: 'center',
     },
   };
 });
