@@ -7,6 +7,22 @@ export const useStyles = tss.create(({ theme }) => {
       alignItems: 'center',
       gap: '10px',
       cursor: 'pointer',
+      width: '256px',
+      height: '40px',
+      paddingLeft: '15px',
+      paddingRight: '10px',
+      '&:hover': {
+        backgroundColor: theme.palette.blue.lightBlue,
+        color: theme.palette.blue.mediumBlue,
+        '& .css-kjes4z-MuiTypography-root-navText': {
+          color: theme.palette.blue.mediumBlue,
+        },
+        '& svg ': {
+          '& path': {
+            fill: theme.palette.blue.mediumBlue,
+          },
+        },
+      },
     },
     hoveredNavItem: {
       color: theme.palette.blue.mediumBlue,
@@ -30,8 +46,8 @@ export const useStyles = tss.create(({ theme }) => {
       color: theme.palette.dark.main,
     },
     icon: {
-      width: '20px',
-      height: '20px',
+      width: '14px',
+      height: '14px',
     },
     arrowIcon: {
       marginLeft: 'auto',

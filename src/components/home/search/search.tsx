@@ -1,13 +1,9 @@
-import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
+import { useState, type SetStateAction } from 'react';
 
-import { Box, Typography } from '@mui/material';
+import { Box, TextField, Typography, InputAdornment } from '@mui/material';
 
-import { Button } from '@/shared/button';
-import { TextField } from '@/shared/text-field';
-
-import { ColorVariant } from '@/types/style';
-import { type ISearchFormData } from '@/types/search';
+import { TextFieldEndButton } from '@/components/templates/search/text-field-end-button';
 
 import { appText } from '@/constants/strings';
 import { TEMPLATE_CHIPS } from '@/constants/templates';
@@ -25,23 +21,24 @@ import { useStyles } from './styles';
 const text = appText.homePage.search;
 
 export function Search(): React.ReactNode {
+  const [searchField, setSearchField] = useState('');
   const navigate = useNavigate();
-  const { control, register } = useForm<ISearchFormData>();
   const { classes } = useStyles();
 
-  const textfieldEndButton = (
-    <Button
-      className={classes.textfieldEndButton}
-      colorVariant={ColorVariant.Light}
-      startIcon={<SearchIcon />}
-    >
-      <Typography variant="caption">{text.generate}</Typography>
-    </Button>
-  );
+  const filteredTemplates = TEMPLATES.filter((template) => {
+    return template.label.toLowerCase().includes(searchField.toLowerCase());
+  });
 
   function handleOpenTemplates(): void {
     navigate('/homepage/templates');
   }
+
+  function handleChange(e: {
+    target: { value: SetStateAction<string> };
+  }): void {
+    setSearchField(e.target.value);
+  }
+
   return (
     <Box className={classes.wrapper}>
       <Box className={classes.positionText}>
@@ -54,21 +51,28 @@ export function Search(): React.ReactNode {
         </Typography>
       </Box>
       <TextField
-        control={control}
-        register={register('search')}
         placeholder={text.textfieldPlaceholder}
-        fullWidth
+        InputProps={{
+          startAdornment: (
+            <InputAdornment position="start">
+              <SearchIcon />
+            </InputAdornment>
+          ),
+          endAdornment: (
+            <InputAdornment position="end">
+              <TextFieldEndButton />
+            </InputAdornment>
+          ),
+        }}
         className={classes.textfield}
-        startIcon={<SearchIcon />}
-        endIcon={textfieldEndButton}
+        onChange={handleChange}
       />
       <Box className={classes.chipsWrapper}>
         <Typography>{text.tryThis}</Typography>
-        {TEMPLATE_CHIPS.map(({ label, background, color }, i) => {
+        {TEMPLATE_CHIPS.map(({ label, background, color }) => {
           return (
             <Box
-              /* eslint-disable-next-line react/no-array-index-key */
-              key={i}
+              key={label}
               className={classes.chip}
               style={getChipStyle(background, color)}
             >
@@ -80,10 +84,10 @@ export function Search(): React.ReactNode {
         })}
       </Box>
       <Box className={classes.templateWrapper}>
-        {TEMPLATES.map(({ imgSrc, label, link }, i) => {
+        {filteredTemplates.map(({ label, imgSrc, link }, index: number) => {
           return (
-            /* eslint-disable-next-line react/no-array-index-key */
-            <Template key={i} imgSrc={imgSrc} label={label} link={link} />
+            // eslint-disable-next-line react/no-array-index-key
+            <Template key={index} imgSrc={imgSrc} label={label} link={link} />
           );
         })}
       </Box>

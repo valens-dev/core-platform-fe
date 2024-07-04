@@ -84,6 +84,12 @@ export const appText = {
       noThanks: 'No, thanks',
       yes: 'Yes',
     },
+    changeView: {
+      headerName: 'Name',
+      headerCreated: 'Created',
+      headerStatus: 'Status',
+      headerVerification: 'Verification',
+    },
   },
   workspacePage: {
     tabNames: {

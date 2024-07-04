@@ -1,6 +1,8 @@
-export const OPTIONS = [
-  { value: 'Last viewed', label: 'Last viewed' },
-  { value: 'Most installed', label: 'Most installed' },
-  { value: 'Newest', label: 'Newest' },
-  { value: 'Oldest', label: 'Oldest' },
+import { SelectMode } from '@/types/search';
+
+export const OPTIONS: { value: SelectMode; label: string }[] = [
+  { value: SelectMode.LastViewed, label: 'Last viewed' },
+  { value: SelectMode.MostInstalled, label: 'Most installed' },
+  { value: SelectMode.Newest, label: 'Newest' },
+  { value: SelectMode.Oldest, label: 'Oldest' },
 ];

@@ -9,11 +9,27 @@ import Template11 from '@/assets/image/template-11.png';
 import Template12 from '@/assets/image/template-12.png';
 
 export const CARDS_TEMPLATES = [
-  { imgSrc: Template3, label: 'Europe Street beat', link: 'www.instagram.com' },
-  { imgSrc: Template7, label: 'Europe Street beat', link: 'www.instagram.com' },
-  { imgSrc: Template8, label: 'Europe Street beat', link: 'www.instagram.com' },
+  {
+    imgSrc: Template3,
+    label: 'Application security template',
+    link: 'www.instagram.com',
+  },
+  {
+    imgSrc: Template7,
+    label: 'App registration template',
+    link: 'www.instagram.com',
+  },
+  {
+    imgSrc: Template8,
+    label: 'Security App Template',
+    link: 'www.instagram.com',
+  },
   { imgSrc: Template9, label: 'Europe Street beat', link: 'www.instagram.com' },
-  { imgSrc: Template2, label: 'Europe Street beat', link: 'www.instagram.com' },
+  {
+    imgSrc: Template2,
+    label: 'App registration template',
+    link: 'www.instagram.com',
+  },
   {
     imgSrc: Template10,
     label: 'Europe Street beat',
@@ -21,12 +37,12 @@ export const CARDS_TEMPLATES = [
   },
   {
     imgSrc: Template11,
-    label: 'Europe Street beat',
+    label: 'Application security template',
     link: 'www.instagram.com',
   },
   {
     imgSrc: Template4,
-    label: 'Europe Street beat',
+    label: 'App registration template',
     link: 'www.instagram.com',
   },
   {
@@ -35,6 +51,10 @@ export const CARDS_TEMPLATES = [
     link: 'www.instagram.com',
   },
   { imgSrc: Template9, label: 'Europe Street beat', link: 'www.instagram.com' },
-  { imgSrc: Template7, label: 'Europe Street beat', link: 'www.instagram.com' },
+  {
+    imgSrc: Template7,
+    label: 'App registration template',
+    link: 'www.instagram.com',
+  },
   { imgSrc: Template8, label: 'Europe Street beat', link: 'www.instagram.com' },
 ];

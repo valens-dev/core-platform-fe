@@ -4,6 +4,7 @@ export const useStyles = tss.create(({ theme }) => {
   return {
     cardsWrapper: {
       display: 'flex',
+      flexWrap: 'wrap',
       gap: '16px',
     },
     card: {
@@ -24,6 +25,7 @@ export const useStyles = tss.create(({ theme }) => {
     cardCreation: {
       color: theme.palette.light.dark,
       fontSize: '14px',
+      textAlign: 'center',
     },
   };
 });
