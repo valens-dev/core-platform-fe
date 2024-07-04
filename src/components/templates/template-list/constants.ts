@@ -19,7 +19,11 @@ export const CARDS_TEMPLATES = [
     label: 'App registration template',
     link: 'www.instagram.com',
   },
-  { imgSrc: Template8, label: 'Himzo', link: 'www.instagram.com' },
+  {
+    imgSrc: Template8,
+    label: 'Security App Template',
+    link: 'www.instagram.com',
+  },
   { imgSrc: Template9, label: 'Europe Street beat', link: 'www.instagram.com' },
   {
     imgSrc: Template2,

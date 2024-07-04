@@ -33,9 +33,11 @@ export function Search(): React.ReactNode {
     navigate('/homepage/templates');
   }
 
-  function handleChange(e: { target: { value: SetStateAction<string> } }) : void {
+  function handleChange(e: {
+    target: { value: SetStateAction<string> };
+  }): void {
     setSearchField(e.target.value);
-  };
+  }
 
   return (
     <Box className={classes.wrapper}>

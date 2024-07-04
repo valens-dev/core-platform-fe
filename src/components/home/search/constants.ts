@@ -15,5 +15,9 @@ export const TEMPLATES = [
     label: 'App registration template',
     link: 'www.instagram.com',
   },
-  { imgSrc: Template4, label: 'Himzo', link: 'www.instagram.com' },
+  {
+    imgSrc: Template4,
+    label: 'Security App Template',
+    link: 'www.instagram.com',
+  },
 ];
