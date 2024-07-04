@@ -1,10 +1,8 @@
-import { useForm } from 'react-hook-form';
+import { type SetStateAction } from 'react';
 
-import { Box, Typography } from '@mui/material';
+import { useSearch } from '@/context/search-provider';
 
-import { TextField } from '@/shared/text-field';
-
-import { type ISearchFormData } from '@/types/search';
+import { Box, TextField, Typography, InputAdornment } from '@mui/material';
 
 import { appText } from '@/constants/strings';
 
@@ -18,8 +16,15 @@ import { useStyles } from './styles';
 const text = appText.homePage.search;
 
 export function Search(): React.ReactNode {
-  const { control, register } = useForm<ISearchFormData>();
+  const { setSearchField } = useSearch();
+
   const { classes } = useStyles();
+
+  function handleChange(e: {
+    target: { value: SetStateAction<string> };
+  }): void {
+    setSearchField(e.target.value);
+  }
 
   return (
     <Box className={classes.wrapper}>
@@ -27,13 +32,21 @@ export function Search(): React.ReactNode {
         <Typography variant="h6">{text.browseTitle}</Typography>
       </Box>
       <TextField
-        control={control}
-        register={register('search')}
         placeholder={text.textfieldPlaceholder}
-        fullWidth
+        InputProps={{
+          startAdornment: (
+            <InputAdornment position="start">
+              <SearchIcon />
+            </InputAdornment>
+          ),
+          endAdornment: (
+            <InputAdornment position="end">
+              <TextFieldEndButton />
+            </InputAdornment>
+          ),
+        }}
         className={classes.textfield}
-        startIcon={<SearchIcon />}
-        endIcon={<TextFieldEndButton />}
+        onChange={handleChange}
       />
       <TemplateChips />
     </Box>

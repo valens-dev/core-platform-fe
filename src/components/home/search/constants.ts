@@ -5,7 +5,15 @@ import Template4 from '@/assets/image/template-4.png';
 
 export const TEMPLATES = [
   { imgSrc: Template1, label: 'Europe Street beat', link: 'www.instagram.com' },
-  { imgSrc: Template2, label: 'Europe Street beat', link: 'www.instagram.com' },
-  { imgSrc: Template3, label: 'Europe Street beat', link: 'www.instagram.com' },
-  { imgSrc: Template4, label: 'Europe Street beat', link: 'www.instagram.com' },
+  {
+    imgSrc: Template2,
+    label: 'Application security template',
+    link: 'www.instagram.com',
+  },
+  {
+    imgSrc: Template3,
+    label: 'App registration template',
+    link: 'www.instagram.com',
+  },
+  { imgSrc: Template4, label: 'Himzo', link: 'www.instagram.com' },
 ];
