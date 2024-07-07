@@ -11,6 +11,10 @@ export const useStyles = tss.create(({ theme }) => {
       zIndex: 1,
     },
     menuItem: {
+      width: '160px',
+      height: '40px',
+      fontSize: '14px',
+      marginBottom: '8px',
       '&:hover': {
         backgroundColor: theme.palette.blue.lightBlue,
         color: theme.palette.blue.mediumBlue,
@@ -18,6 +22,9 @@ export const useStyles = tss.create(({ theme }) => {
       '&.Mui-selected': {
         backgroundColor: theme.palette.blue.lightBlue,
         color: theme.palette.blue.mediumBlue,
+      },
+      '&:last-child': {
+        marginBottom: '0',
       },
     },
   };
