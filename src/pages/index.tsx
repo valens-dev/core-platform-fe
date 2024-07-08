@@ -1,5 +1,5 @@
 import { lazy, Suspense } from 'react';
-import { Route, Routes, HashRouter } from 'react-router-dom';
+import { Route, Routes, BrowserRouter } from 'react-router-dom';
 
 import { RootProvider } from '@/context/root-provider';
 
@@ -51,7 +51,7 @@ function PageLoader(): React.ReactNode {
 export function App(): React.ReactNode {
   return (
     <RootProvider>
-      <HashRouter>
+      <BrowserRouter>
         <Suspense fallback={<PageLoader />}>
           <Routes>
             <Route path="/auth" element={<Auth />} />
@@ -71,7 +71,7 @@ export function App(): React.ReactNode {
             </Route>
           </Routes>
         </Suspense>
-      </HashRouter>
+      </BrowserRouter>
     </RootProvider>
   );
 }
