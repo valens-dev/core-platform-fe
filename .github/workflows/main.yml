@@ -24,26 +24,34 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Set up Node
         uses: actions/setup-node@v3
         with:
           node-version: 20
           cache: 'npm'
-      - name: Install yarn
-        run: npm install yarn
-      - name: Install dependencies
-        run: yarn
+
+      - name: Enable Corepack
+        run: corepack enable
+
+      - name: Install dependencies using Corepack
+        run: corepack yarn install
+
       - name: Build
         run: yarn build
+
       - name: Setup Pages
         uses: actions/configure-pages@v3
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
           path: './dist'
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
+
       - name: Discord Commits
         uses: Sniddl/discord-commits@v1.3
         with:
