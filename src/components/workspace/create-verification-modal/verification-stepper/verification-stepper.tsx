@@ -1,13 +1,6 @@
 import { useState, useEffect } from 'react';
 
-import {
-  Box,
-  Step,
-  Stepper,
-  StepLabel,
-  Typography,
-  StepContent,
-} from '@mui/material';
+import { Box } from '@mui/material';
 
 import { Button } from '@/shared/button';
 
@@ -15,6 +8,7 @@ import { appText } from '@/constants/strings';
 
 import { STEPS } from '../constants';
 
+import { StepperBody } from './stepper-body';
 import { ErrorMessageFooter } from './error-message-footer';
 
 import { useStyles } from './styles';
@@ -58,34 +52,7 @@ export function VerificationStepper(): React.ReactNode {
 
   return (
     <Box sx={{ maxWidth: 400 }}>
-      <Stepper activeStep={activeStep} orientation="vertical">
-        {STEPS.map((step, index) => {
-          const labelProps: {
-            optional?: React.ReactNode;
-            error?: boolean;
-          } = {};
-          if (thirdStep === false && activeStep === 3 && index === 2) {
-            labelProps.error = true;
-          }
-          return (
-            <Step key={step.label}>
-              <StepLabel {...labelProps} className={classes.textItemTitle}>
-                {step.label}
-                <Typography
-                  className={
-                    thirdStep === false && activeStep === 3 && index === 2
-                      ? classes.hideText
-                      : classes.textItemDescription
-                  }
-                >
-                  {step.description}
-                </Typography>
-              </StepLabel>
-              <StepContent transitionDuration={1000} />
-            </Step>
-          );
-        })}
-      </Stepper>
+      <StepperBody activeStep={activeStep} thirdStep={thirdStep} />
       {activeStep === STEPS.length && thirdStep === false && (
         <ErrorMessageFooter />
       )}
