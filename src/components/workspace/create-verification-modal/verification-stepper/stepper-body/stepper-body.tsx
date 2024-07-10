@@ -1,17 +1,31 @@
 import { Step, Stepper } from '@mui/material';
 
+import { StepNumber } from '@/types/stepper';
+
 import { STEPS } from '../../constants';
 
 import { StepperBodyItem } from './stepper-body-item';
 
 interface IStepperBodyProps {
   activeStep: number;
-  thirdStep: boolean;
+  lastStep: boolean;
+}
+
+function applyErrorCondition(
+  lastStep: boolean,
+  activeStep: number,
+  index: number,
+): boolean {
+  return (
+    lastStep === false &&
+    activeStep === (StepNumber.ThirdStep as number) &&
+    index === (StepNumber.SecondStep as number)
+  );
 }
 
 export function StepperBody({
   activeStep,
-  thirdStep,
+  lastStep,
 }: IStepperBodyProps): React.ReactNode {
   return (
     <Stepper activeStep={activeStep} orientation="vertical">
@@ -20,7 +34,7 @@ export function StepperBody({
           optional?: React.ReactNode;
           error?: boolean;
         } = {};
-        if (thirdStep === false && activeStep === 3 && index === 2) {
+        if (applyErrorCondition(lastStep, activeStep, index)) {
           labelProps.error = true;
         }
         return (
@@ -29,7 +43,7 @@ export function StepperBody({
               step={step}
               labelProps={labelProps}
               activeStep={activeStep}
-              thirdStep={thirdStep}
+              lastStep={lastStep}
               index={index}
             />
           </Step>

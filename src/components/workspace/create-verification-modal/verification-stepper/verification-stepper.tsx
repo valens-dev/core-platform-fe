@@ -19,14 +19,14 @@ export function VerificationStepper(): React.ReactNode {
   const { classes } = useStyles();
 
   const [activeStep, setActiveStep] = useState(0);
-  const [thirdStep, setThirdStep] = useState(false);
+  const [lastStep, setLastStep] = useState(false);
 
   useEffect(() => {
     function randomBoolean(): boolean {
       return Math.random() < 0.5;
     }
 
-    setThirdStep(randomBoolean());
+    setLastStep(randomBoolean());
   }, []);
 
   useEffect(() => {
@@ -40,7 +40,7 @@ export function VerificationStepper(): React.ReactNode {
 
     if (activeStep === STEPS.length - 1) {
       STEPS[2].label =
-        thirdStep === true
+        lastStep === true
           ? text.createVerificationModal.textSuccessMessage
           : text.createVerificationModal.textErrorMessage;
     }
@@ -48,15 +48,15 @@ export function VerificationStepper(): React.ReactNode {
     return () => {
       return clearTimeout(timer);
     };
-  }, [activeStep, thirdStep]);
+  }, [activeStep, lastStep]);
 
   return (
     <Box sx={{ maxWidth: 400 }}>
-      <StepperBody activeStep={activeStep} thirdStep={thirdStep} />
-      {activeStep === STEPS.length && thirdStep === false && (
+      <StepperBody activeStep={activeStep} lastStep={lastStep} />
+      {activeStep === STEPS.length && lastStep === false && (
         <ErrorMessageFooter />
       )}
-      {activeStep === STEPS.length && thirdStep === true && (
+      {activeStep === STEPS.length && lastStep === true && (
         <Box className={classes.footer}>
           <Button className={classes.applyButton}>
             {text.createVerificationModal.applyButtonName}

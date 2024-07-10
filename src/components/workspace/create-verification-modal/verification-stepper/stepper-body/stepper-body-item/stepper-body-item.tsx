@@ -1,20 +1,34 @@
 import { Box, StepLabel, Typography, StepContent } from '@mui/material';
 
+import { StepNumber } from '@/types/stepper';
+
 import { useStyles } from './styles';
 
 interface IStepperBodyProps {
   step: { label: string; description: string };
   labelProps: { optional?: React.ReactNode; error?: boolean };
   activeStep: number;
-  thirdStep: boolean;
+  lastStep: boolean;
   index: number;
+}
+
+function shouldHideText(
+  lastStep: boolean,
+  activeStep: number,
+  index: number,
+): boolean {
+  return (
+    lastStep === false &&
+    activeStep === (StepNumber.ThirdStep as number) &&
+    index === (StepNumber.SecondStep as number)
+  );
 }
 
 export function StepperBodyItem({
   step,
   labelProps,
   activeStep,
-  thirdStep,
+  lastStep,
   index,
 }: IStepperBodyProps): React.ReactNode {
   const { classes } = useStyles();
@@ -25,7 +39,7 @@ export function StepperBodyItem({
         {step.label}
         <Typography
           className={
-            thirdStep === false && activeStep === 3 && index === 2
+            shouldHideText(lastStep, activeStep, index)
               ? classes.hideText
               : classes.textItemDescription
           }

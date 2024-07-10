@@ -16,7 +16,7 @@ export const useStyles = tss.create(({ theme }) => {
       alignItems: 'center',
     },
     verticalLine: {
-      borderLeft: '1px solid rgba(9, 109, 217)',
+      borderLeft: `1px solid ${theme.palette.primary.normal}`,
       height: '50px',
       marginLeft: '24px',
     },
