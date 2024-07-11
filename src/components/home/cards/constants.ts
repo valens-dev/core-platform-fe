@@ -1,8 +1,8 @@
 import { type SVGProps, type FunctionComponent } from 'react';
 
-import Workspace from '@/assets/image/workspace.png';
-import Template5 from '@/assets/image/template-5.png';
-import Template6 from '@/assets/image/template-6.png';
+import Workspace from '@/assets/image/workspace.webp';
+import Template5 from '@/assets/image/template-5.webp';
+import Template6 from '@/assets/image/template-6.webp';
 import RedDot from '@/assets/icon/reddot-icon.svg?react';
 import GrayDot from '@/assets/icon/graydot-icon.svg?react';
 import GreenDot from '@/assets/icon/greendot-icon.svg?react';

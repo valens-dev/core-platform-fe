@@ -4,6 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Core Platform</title>
+
+    <!-- Preload the LCP image with a high fetchpriority so it starts loading with the stylesheet. -->
+    <link
+      rel="preload"
+      fetchpriority="high"
+      as="image"
+      href="/src/assets/image/example.webp"
+      type="image/webp"
+    />
   </head>
   <body>
     <div id="root"></div>
