@@ -1,54 +1,24 @@
-import { Step, Stepper } from '@mui/material';
-
-import { StepNumber } from '@/types/stepper';
-
-import { STEPS } from '../../constants';
-
-import { StepperBodyItem } from './stepper-body-item';
+import { CustomStepper } from '@/shared/stepper';
 
 interface IStepperBodyProps {
   activeStep: number;
-  lastStep: boolean;
-}
-
-function applyErrorCondition(
-  lastStep: boolean,
-  activeStep: number,
-  index: number,
-): boolean {
-  return (
-    lastStep === false &&
-    activeStep === (StepNumber.ThirdStep as number) &&
-    index === (StepNumber.SecondStep as number)
-  );
+  isLastStepSuccessful: boolean;
+  steps: {
+    label: string;
+    description: string;
+  }[];
 }
 
 export function StepperBody({
   activeStep,
-  lastStep,
+  isLastStepSuccessful,
+  steps,
 }: IStepperBodyProps): React.ReactNode {
   return (
-    <Stepper activeStep={activeStep} orientation="vertical">
-      {STEPS.map((step, index) => {
-        const labelProps: {
-          optional?: React.ReactNode;
-          error?: boolean;
-        } = {};
-        if (applyErrorCondition(lastStep, activeStep, index)) {
-          labelProps.error = true;
-        }
-        return (
-          <Step key={step.label}>
-            <StepperBodyItem
-              step={step}
-              labelProps={labelProps}
-              activeStep={activeStep}
-              lastStep={lastStep}
-              index={index}
-            />
-          </Step>
-        );
-      })}
-    </Stepper>
+    <CustomStepper
+      activeStep={activeStep}
+      isLastStepSuccessful={isLastStepSuccessful}
+      steps={steps}
+    />
   );
 }

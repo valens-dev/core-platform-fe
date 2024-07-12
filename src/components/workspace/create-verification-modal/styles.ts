@@ -6,11 +6,11 @@ export const useStyles = tss.create(({ theme }) => {
       display: 'flex',
       flexDirection: 'column',
       background: theme.palette.white.main,
-      width: '572px',
-      height: '430px',
+      width: '100%',
+      height: '100%',
       padding: '16px 24px 24px 24px',
       borderRadius: '2px',
-      '& .MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.MuiStepIcon-root.Mui-completed, & .css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root':
+      '& .MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.MuiStepIcon-root.Mui-completed, & .MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.MuiStepIcon-root.Mui-active, & .MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.MuiStepIcon-root':
         {
           width: '32px',
           height: '32px',

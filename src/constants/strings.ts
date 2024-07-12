@@ -111,7 +111,7 @@ export const appText = {
       firstTextItemTitle: 'Architecture complete',
       secondTextItemTitle: 'Verifying architecture',
       thirdTextItemTitle: 'Results',
-      textitemDescription: 'This is a description.',
+      textItemDescription: 'This is a description.',
       textSuccessMessage: 'Verification successful',
       textErrorMessage:
         'The content you have submitted has the following error:',

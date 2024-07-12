@@ -1,9 +1,6 @@
-import { useState } from 'react';
-
 import { Box, Button } from '@mui/material';
 
-import { Modal } from '@/shared/modal';
-
+import { useModal } from '@/types/hooks';
 import { type ITool } from '@/types/tool';
 
 import { appText } from '@/constants/strings';
@@ -23,11 +20,7 @@ export function WorkingArea({
   setSelectedTools,
 }: IWorkingAreaProps): React.ReactNode {
   const { classes } = useStyles();
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  function handleCloseModal(): void {
-    return setIsModalOpen(false);
-  }
+  const { isModalOpen, handleCloseModal, setIsModalOpen } = useModal(false);
 
   function handleDeleteTool(tool: ITool): void {
     setSelectedTools((prevTools) => {
@@ -45,7 +38,7 @@ export function WorkingArea({
         </Button>
         <Button
           onClick={() => {
-            return setIsModalOpen(true);
+            setIsModalOpen(true);
           }}
           variant="contained"
           className={classes.buttonVerification}
@@ -53,9 +46,10 @@ export function WorkingArea({
           {text.verificate}
         </Button>
       </Box>
-      <Modal isOpen={isModalOpen} handleClose={handleCloseModal}>
-        <CreateVerificationModal handleCloseModal={handleCloseModal} />
-      </Modal>
+      <CreateVerificationModal
+        isModalOpen={isModalOpen}
+        handleCloseModal={handleCloseModal}
+      />
       <Box className={classes.backgroundContainer}>
         <Box className={classes.selectedTools}>
           <ToolItem tools={selectedTools} onDelete={handleDeleteTool} />

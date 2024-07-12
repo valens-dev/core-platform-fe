@@ -39,9 +39,16 @@ export const useStyles = tss.create(({ theme }) => {
         marginTop: '3px',
       },
     },
+    goBackButtonWrapper: {
+      display: 'flex',
+      width: '100%',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
     goBackButton: {
       width: '120px',
       height: '35px',
+      marginRight: '40px',
       border: `1px solid ${theme.palette.light.normal}`,
       color: theme.palette.dark.main,
       backgroundColor: theme.palette.white.main,

@@ -1,4 +1,5 @@
 export interface ICreateWorkspaceModalProps {
+  isModalOpen: boolean;
   handleCloseModal: () => void;
 }
 

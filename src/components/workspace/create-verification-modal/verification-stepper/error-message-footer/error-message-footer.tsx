@@ -8,7 +8,7 @@ import XCircleIcon from '@/assets/icon/close-circle-icon.svg?react';
 
 import { useStyles } from './styles';
 
-const text = appText.workspacePage;
+const { createVerificationModal: text } = appText.workspacePage;
 
 export function ErrorMessageFooter(): React.ReactNode {
   const { classes } = useStyles();
@@ -18,26 +18,26 @@ export function ErrorMessageFooter(): React.ReactNode {
       <Box className={classes.errorAccountMessages}>
         <Box className={classes.unlockAccountMessageItem}>
           <XCircleIcon />
-          <Typography variant="body2">
-            {text.createVerificationModal.frozenAccountMessage}
-          </Typography>
+          <Typography variant="body2">{text.frozenAccountMessage}</Typography>
           <Typography variant="body2" className={classes.browseText}>
-            {text.createVerificationModal.thatImmediatelyMessage}
+            {text.thatImmediatelyMessage}
           </Typography>
         </Box>
         <Box className={classes.unlockAccountMessageItem}>
           <XCircleIcon />
           <Typography variant="body2">
-            {text.createVerificationModal.notAbleToPayAccountMessage}
+            {text.notAbleToPayAccountMessage}
           </Typography>
           <Typography variant="body2" className={classes.browseText}>
-            {text.createVerificationModal.applyUnlockMessage}
+            {text.applyUnlockMessage}
           </Typography>
         </Box>
       </Box>
-      <Button className={classes.goBackButton}>
-        {text.createVerificationModal.goBackButtonName}
-      </Button>
+      <Box className={classes.goBackButtonWrapper}>
+        <Button className={classes.goBackButton}>
+          {text.goBackButtonName}
+        </Button>
+      </Box>
     </Paper>
   );
 }

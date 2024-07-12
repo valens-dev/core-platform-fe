@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useMemo, useState, useEffect } from 'react';
 
 import { Box } from '@mui/material';
 
@@ -13,21 +13,21 @@ import { ErrorMessageFooter } from './error-message-footer';
 
 import { useStyles } from './styles';
 
-const text = appText.workspacePage;
+const { createVerificationModal: text } = appText.workspacePage;
 
 export function VerificationStepper(): React.ReactNode {
   const { classes } = useStyles();
 
   const [activeStep, setActiveStep] = useState(0);
-  const [lastStep, setLastStep] = useState(false);
 
-  useEffect(() => {
-    function randomBoolean(): boolean {
-      return Math.random() < 0.5;
-    }
-
-    setLastStep(randomBoolean());
+  const isLastStepSuccessful = useMemo(() => {
+    return Math.random() < 0.5;
   }, []);
+
+  const displayErrorMessage =
+    activeStep === STEPS.length && isLastStepSuccessful === false;
+  const displayApplyButton =
+    activeStep === STEPS.length && isLastStepSuccessful === true;
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -40,29 +40,31 @@ export function VerificationStepper(): React.ReactNode {
 
     if (activeStep === STEPS.length - 1) {
       STEPS[2].label =
-        lastStep === true
-          ? text.createVerificationModal.textSuccessMessage
-          : text.createVerificationModal.textErrorMessage;
+        isLastStepSuccessful === true
+          ? text.textSuccessMessage
+          : text.textErrorMessage;
     }
 
     return () => {
       return clearTimeout(timer);
     };
-  }, [activeStep, lastStep]);
+  }, [activeStep, isLastStepSuccessful]);
 
   return (
     <Box sx={{ maxWidth: 400 }}>
-      <StepperBody activeStep={activeStep} lastStep={lastStep} />
-      {activeStep === STEPS.length && lastStep === false && (
-        <ErrorMessageFooter />
-      )}
-      {activeStep === STEPS.length && lastStep === true && (
+      <StepperBody
+        activeStep={activeStep}
+        isLastStepSuccessful={isLastStepSuccessful}
+        steps={STEPS}
+      />
+      {displayErrorMessage ? <ErrorMessageFooter /> : undefined}
+      {displayApplyButton ? (
         <Box className={classes.footer}>
           <Button className={classes.applyButton}>
-            {text.createVerificationModal.applyButtonName}
+            {text.applyButtonName}
           </Button>
         </Box>
-      )}
+      ) : undefined}
     </Box>
   );
 }

@@ -43,7 +43,7 @@ export const useStyles = tss.create(({ theme }) => {
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
-      width: '520px',
+      width: '472px',
       height: '90px',
       gap: '5px',
     },

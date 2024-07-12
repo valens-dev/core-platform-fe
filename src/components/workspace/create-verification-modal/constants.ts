@@ -1,18 +1,18 @@
 import { appText } from '@/constants/strings';
 
-const text = appText.workspacePage;
+const { createVerificationModal: text } = appText.workspacePage;
 
 export const STEPS = [
   {
-    label: text.createVerificationModal.firstTextItemTitle,
-    description: text.createVerificationModal.textitemDescription,
+    label: text.firstTextItemTitle,
+    description: text.textItemDescription,
   },
   {
-    label: text.createVerificationModal.secondTextItemTitle,
-    description: text.createVerificationModal.textitemDescription,
+    label: text.secondTextItemTitle,
+    description: text.textItemDescription,
   },
   {
-    label: text.createVerificationModal.thirdTextItemTitle,
-    description: text.createVerificationModal.textitemDescription,
+    label: text.thirdTextItemTitle,
+    description: text.textItemDescription,
   },
 ];
