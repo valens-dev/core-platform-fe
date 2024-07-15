@@ -17,7 +17,9 @@ export default function MemberSection(): React.ReactNode {
         <Grid item xs={12} md={6}>
           <Box className={classes.section}>
             <Typography variant="h6">{text.membership}</Typography>
-            <Typography>{text.typeMembership}</Typography>
+            <Typography className={classes.note}>
+              {text.typeMembership}
+            </Typography>
           </Box>
         </Grid>
         <Grid item xs={12} md={6}>
@@ -35,7 +37,9 @@ export default function MemberSection(): React.ReactNode {
                 {text.daysLeft}
               </Typography>
             </Box>
-            <Typography>{text.subscription}</Typography>
+            <Typography className={classes.note}>
+              {text.subscription}
+            </Typography>
           </Box>
         </Grid>
       </Grid>
