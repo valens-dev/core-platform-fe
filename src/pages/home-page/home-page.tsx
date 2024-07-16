@@ -4,7 +4,6 @@ import { useRef, useState, useEffect } from 'react';
 
 import { Box, Typography, IconButton } from '@mui/material';
 
-import { Modal } from '@/shared/modal';
 import { Button } from '@/shared/button';
 
 import { Cards } from '@/components/home/cards';
@@ -13,6 +12,7 @@ import { SearchBar } from '@/components/home/search-bar';
 import { TourPopup } from '@/components/home/tour-popup';
 import { CreateWorkspaceModal } from '@/components/home/create-workspace-modal';
 
+import { useModal } from '@/types/hooks';
 import { ViewMode, SelectMode } from '@/types/search';
 
 import { appText } from '@/constants/strings';
@@ -30,21 +30,18 @@ const text = appText.homePage;
 export default function HomePage(): React.ReactNode {
   const navigate = useNavigate();
   const { classes } = useStyles();
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [isTourOpen, setIsTourOpen] = useState(false);
   const [viewMode, setViewMode] = useState(ViewMode.Grid);
   const [selectMode, setSelectMode] = useState(SelectMode.LastViewed);
   const questionPopUpRef = useRef<HTMLButtonElement>(null);
   const tourPopupRef = useRef<HTMLDivElement>(null);
+  const { isModalOpen, handleCloseModal, setIsModalOpen } = useModal(false);
 
-  function handleCloseModal(): void {
-    return setIsModalOpen(false);
-  }
   function handleCloseTour(): void {
-    return setIsTourOpen(false);
+    setIsTourOpen(false);
   }
   function handleOpenPopUp(): void {
-    return setIsTourOpen(true);
+    setIsTourOpen(true);
   }
 
   useEffect(() => {
@@ -87,9 +84,10 @@ export default function HomePage(): React.ReactNode {
         </Box>
       </Box>
       <Search />
-      <Modal isOpen={isModalOpen} handleClose={handleCloseModal}>
-        <CreateWorkspaceModal handleCloseModal={handleCloseModal} />
-      </Modal>
+      <CreateWorkspaceModal
+        isModalOpen={isModalOpen}
+        handleCloseModal={handleCloseModal}
+      />
       <SearchBar
         viewMode={viewMode}
         onViewModeChange={handleViewMode}

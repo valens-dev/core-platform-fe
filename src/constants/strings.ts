@@ -103,7 +103,24 @@ export const appText = {
     menuItems: {
       labelName: 'Lorem ipsum',
       additionalResources: 'Additional resources',
-      verificate: 'Verificate',
+      verificate: 'Verify',
+    },
+    createVerificationModal: {
+      title: 'Verifying architecture',
+      note: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+      firstTextItemTitle: 'Architecture complete',
+      secondTextItemTitle: 'Verifying architecture',
+      thirdTextItemTitle: 'Results',
+      textItemDescription: 'This is a description.',
+      textSuccessMessage: 'Verification successful',
+      textErrorMessage:
+        'The content you have submitted has the following error:',
+      applyButtonName: 'Apply',
+      goBackButtonName: 'Go back',
+      frozenAccountMessage: 'Your account has been frozen.',
+      notAbleToPayAccountMessage: 'Your account is not yet eligible to apply.',
+      thatImmediatelyMessage: 'Thaw immediately >',
+      applyUnlockMessage: 'Apply Unlock >',
     },
   },
   auth: {
