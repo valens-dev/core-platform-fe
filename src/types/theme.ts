@@ -39,6 +39,10 @@ interface IBlueColor {
   mediumBlue: string;
 }
 
+interface IBlackColor {
+  main: string;
+}
+
 interface IPalette {
   primary: IColor;
   white: IColor;
@@ -48,6 +52,7 @@ interface IPalette {
   orange: IColor;
   green: IColor;
   blue: IBlueColor;
+  black: IBlackColor;
   grey: IColor;
 }
 

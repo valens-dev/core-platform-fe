@@ -43,6 +43,12 @@ function useContext(): { theme: ITheme } {
         lightBlue: '#E6F7FF',
         mediumBlue: '#1890FF',
       },
+      black: {
+        main: '#000000',
+      },
+      grey: {
+        main: '#8D8D8D',
+      },
       grey: {
         main: '#8D8D8D'
       }

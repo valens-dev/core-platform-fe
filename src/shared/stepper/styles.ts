@@ -22,5 +22,15 @@ export const useStyles = tss.create(({ theme }) => {
         fill: theme.palette.light.light,
       },
     },
+    textItemTitle: {
+      fontSize: '16px',
+    },
+    textItemDescription: {
+      fontSize: '14px',
+      color: theme.palette.light.dark,
+    },
+    hideText: {
+      display: 'none',
+    },
   };
 });
