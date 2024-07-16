@@ -15,9 +15,9 @@ const text = appText.userInfo;
 
 export function InterestsSection(): React.ReactNode {
   const { classes } = useStyles();
+
   const [displayInput, setDisplayInput] = useState(false);
   const [titleInput, setTitleInput] = useState('');
-  // eslint-disable-next-line react/hook-use-state
   const [tags, setTags] = useState<string[]>(['Lorem', 'Ipsum', 'Modal']);
 
   function handleAddButtonClick(): void {
