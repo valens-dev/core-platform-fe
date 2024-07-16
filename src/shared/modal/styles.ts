@@ -9,7 +9,7 @@ export const useStyles = tss.create(({ theme }) => {
       justifyContent: 'center',
       alignItems: 'center',
       '& .MuiBackdrop-root': {
-        backgroundColor: hexToRgba(theme.palette.black.main, 0.5),
+        backgroundColor: hexToRgba(theme.palette.black.primaryBlack, 0.5),
       },
     },
     titleAndCloseButton: {

@@ -31,7 +31,7 @@ export const useStyles = tss.create(({ theme }) => {
       margin: '0 auto',
       borderRadius: '25px',
       padding: '5px',
-      boxShadow: `0 4px 6px ${hexToRgba(theme.palette.black.main, 0.1)}`,
+      boxShadow: `0 4px 6px ${hexToRgba(theme.palette.black.primaryBlack, 0.1)}`,
     },
     toggleButton: {
       padding: '10px 20px',

@@ -10,7 +10,7 @@ export const useStyles = tss.create(({ theme }) => {
       padding: '20px',
       width: '348px',
       height: '663px',
-      boxShadow: `0px 2px 4px ${hexToRgba(theme.palette.black.main, 0.5)}`,
+      boxShadow: `0px 2px 4px ${hexToRgba(theme.palette.black.primaryBlack, 0.5)}`,
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'space-between',

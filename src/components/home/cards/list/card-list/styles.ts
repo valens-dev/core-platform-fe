@@ -9,7 +9,7 @@ export const useStyles = tss.create(({ theme }) => {
       gridTemplateColumns: '2fr 1fr 1fr 1fr',
       alignItems: 'center',
       padding: '16px',
-      boxShadow: `0px 2px 4px ${hexToRgba(theme.palette.black.main, 0.1)}`,
+      boxShadow: `0px 2px 4px ${hexToRgba(theme.palette.black.primaryBlack, 0.1)}`,
       border: `1px solid ${theme.palette.white.light}`,
       width: '100%',
       marginBottom: '16px',

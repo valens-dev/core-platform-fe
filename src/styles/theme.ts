@@ -44,7 +44,7 @@ function useContext(): { theme: ITheme } {
         mediumBlue: '#1890FF',
       },
       black: {
-        main: '#000000',
+        primaryBlack: '#000000',
       },
       grey: {
         main: '#8D8D8D',
