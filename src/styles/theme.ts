@@ -49,6 +49,9 @@ function useContext(): { theme: ITheme } {
       grey: {
         main: '#8D8D8D',
       },
+      grey: {
+        main: '#8D8D8D'
+      }
     },
     typography: {
       fontFamily: {

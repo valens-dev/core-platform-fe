@@ -1,3 +1,5 @@
+import { useNavigate } from 'react-router-dom';
+
 import { Box, Menu, MenuItem, Typography } from '@mui/material';
 
 import { appText } from '@/constants/strings';
@@ -18,8 +20,12 @@ export function Dropdown({
   dropdown,
   handleClose,
 }: IDropdownProps): React.ReactNode {
+  const navigate = useNavigate();
   const { classes } = useStyles();
 
+  function handleOpenUsersInfo(): void {
+    navigate('/user');
+  }
   return (
     <Menu
       anchorEl={dropdown}
@@ -33,7 +39,7 @@ export function Dropdown({
     >
       <MenuItem className={classes.menuItem} onClick={handleClose}>
         <ProfilePicture />
-        <Box>
+        <Box onClick={handleOpenUsersInfo}>
           <Typography variant="body2" className={classes.userName}>
             {text.name}
           </Typography>
