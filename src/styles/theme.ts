@@ -43,6 +43,9 @@ function useContext(): { theme: ITheme } {
         lightBlue: '#E6F7FF',
         mediumBlue: '#1890FF',
       },
+      grey: {
+        main: '#8D8D8D'
+      }
     },
     typography: {
       fontFamily: {

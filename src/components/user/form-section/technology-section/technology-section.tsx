@@ -34,7 +34,7 @@ export default function TechnologySection(): React.ReactNode {
         <Grid item xs={12} md={6}>
           <Box className={classes.imageSection}>
             <img
-              src="/src/assets/image/server-block.png"
+              src="/src/assets/image/server-block.webp"
               alt="Server"
               className={classes.imageBlock}
             />

@@ -57,6 +57,7 @@ export const appText = {
     subscription: 'Subscription on monthy agreement',
     technologyType: 'Technology type',
     interests: 'Interests',
+    addYourInterests: 'Add your interests',
   },
   homePage: {
     createWorkspace: 'Create Workspace',

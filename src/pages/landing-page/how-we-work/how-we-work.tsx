@@ -9,7 +9,7 @@ import { Button } from '@/shared/button';
 
 import { appText } from '@/constants/strings';
 
-import ConnectAndCreate from '@/assets/image/connect-and-create.png';
+import ConnectAndCreate from '@/assets/image/connect-and-create.webp';
 
 import { CARDS_DATA } from './constants';
 

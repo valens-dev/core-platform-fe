@@ -22,5 +22,11 @@ export const useStyles = tss.create(({ theme }) => {
         color: theme.palette.light.dark,
       },
     },
+    inputField: {
+      width: '400px',
+    },
+    submitButton: {
+      display: 'none',
+    },
   };
 });

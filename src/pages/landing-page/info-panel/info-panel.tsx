@@ -10,7 +10,7 @@ import { ColorVariant } from '@/types/style';
 
 import { appText } from '@/constants/strings';
 
-import ExampleImage from '@/assets/image/example.png';
+import ExampleImage from '@/assets/image/example.webp';
 
 import { useStyles } from './styles';
 

@@ -29,7 +29,7 @@ export default function MemberSection(): React.ReactNode {
                 {text.paymentTrial}
               </Typography>
               <img
-                src="/src/assets/image/progress-bar.png"
+                src="/src/assets/image/progress-bar.webp"
                 alt="Progress Bar"
                 className={classes.progressImage}
               />

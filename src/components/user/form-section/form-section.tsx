@@ -75,7 +75,7 @@ export default function FormSection(): React.ReactNode {
         <Grid item xs={12} md={6}>
           <Box className={classes.imageSection}>
             <img
-              src="/src/assets/image/list-panel.png"
+              src="/src/assets/image/list-panel.webp"
               alt="Clipboard"
               className={classes.image}
             />
