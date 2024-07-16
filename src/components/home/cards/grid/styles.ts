@@ -13,7 +13,7 @@ export const useStyles = tss.create(({ theme }) => {
       display: 'flex',
       flexDirection: 'column',
       width: '276px',
-      boxShadow: `0px 2px 4px ${hexToRgba(theme.palette.black.main, 0.1)}`,
+      boxShadow: `0px 2px 4px ${hexToRgba(theme.palette.black.primaryBlack, 0.1)}`,
     },
     cardImage: {
       width: '100%',

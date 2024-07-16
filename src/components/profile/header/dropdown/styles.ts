@@ -8,7 +8,7 @@ export const useStyles = tss.create(({ theme }) => {
       marginTop: '20px',
       marginLeft: '-30px',
       borderRadius: '8px',
-      boxShadow: `0px 4px 12px ${hexToRgba(theme.palette.black.main, 0.1)}`,
+      boxShadow: `0px 4px 12px ${hexToRgba(theme.palette.black.primaryBlack, 0.1)}`,
       minWidth: '200px',
     },
     menuItem: {
