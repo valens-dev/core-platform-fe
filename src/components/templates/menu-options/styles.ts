@@ -7,7 +7,7 @@ export const useStyles = tss.create(({ theme }) => {
     menuBox: {
       position: 'absolute',
       backgroundColor: theme.palette.white.main,
-      boxShadow: `0px 4px 6px ${hexToRgba(theme.palette.black.main, 0.1)}`,
+      boxShadow: `0px 4px 6px ${hexToRgba(theme.palette.black.primaryBlack, 0.1)}`,
       borderRadius: '4px',
       width: '160px',
       zIndex: 1,

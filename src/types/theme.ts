@@ -32,6 +32,7 @@ interface IColor {
   light?: string;
   purple?: string;
   normal?: string;
+  black?: string;
 }
 
 interface IBlueColor {
@@ -40,7 +41,7 @@ interface IBlueColor {
 }
 
 interface IBlackColor {
-  main: string;
+  primaryBlack: string;
 }
 
 interface IPalette {
