@@ -43,6 +43,22 @@ export const appText = {
       bookADemo: 'Book a demo',
     },
   },
+  userInfo: {
+    userName: 'Senad Senadović',
+    basicInformation: 'Basic Information',
+    labelUsername: 'Username:',
+    labelEmail: 'Email address:',
+    labelPhone: 'Phone:',
+    labelCompany: 'Company:',
+    membership: 'Membership',
+    typeMembership: 'Lorem ipsum',
+    paymentTrial: 'Payment trial',
+    daysLeft: '20 days left',
+    subscription: 'Subscription on monthy agreement',
+    technologyType: 'Technology type',
+    interests: 'Interests',
+    addYourInterests: 'Add your interests',
+  },
   homePage: {
     createWorkspace: 'Create Workspace',
     profileHeader: {
