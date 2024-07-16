@@ -1,6 +1,7 @@
+import { useModal } from 'hooks/use-modal';
+
 import { Box, Button } from '@mui/material';
 
-import { useModal } from '@/types/hooks';
 import { type ITool } from '@/types/tool';
 
 import { appText } from '@/constants/strings';

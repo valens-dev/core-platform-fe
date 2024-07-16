@@ -1,4 +1,4 @@
-import { hexToRgba } from '@/types/parse';
+import { hexToRgba } from '@/utils/colors';
 
 import { tss } from '@/styles/theme';
 

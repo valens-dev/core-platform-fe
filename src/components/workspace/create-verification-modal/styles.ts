@@ -10,11 +10,10 @@ export const useStyles = tss.create(({ theme }) => {
       height: '100%',
       padding: '16px 24px 24px 24px',
       borderRadius: '2px',
-      '& .MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.MuiStepIcon-root.Mui-completed, & .MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.MuiStepIcon-root.Mui-active, & .MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.MuiStepIcon-root':
-        {
-          width: '32px',
-          height: '32px',
-        },
+      '& .MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.MuiStepIcon-root': {
+        width: '32px',
+        height: '32px',
+      },
       '& .MuiStepConnector-line': {
         marginLeft: '4px',
       },
