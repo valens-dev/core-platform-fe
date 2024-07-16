@@ -2,6 +2,8 @@
 
 import { Box, Grid, Typography } from '@mui/material';
 
+import { LazyImage } from '@/shared/lazy-image';
+
 import { appText } from '@/constants/strings';
 
 import { useStyles } from './styles';
@@ -28,7 +30,7 @@ export default function MemberSection(): React.ReactNode {
               <Typography variant="h6" className={classes.paymentTrial}>
                 {text.paymentTrial}
               </Typography>
-              <img
+              <LazyImage
                 src="/src/assets/image/progress-bar.webp"
                 alt="Progress Bar"
                 className={classes.progressImage}

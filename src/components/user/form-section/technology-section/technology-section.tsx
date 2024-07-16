@@ -1,6 +1,8 @@
 /* eslint-disable import/no-default-export */
 import { Box, Grid, TextField, Typography } from '@mui/material';
 
+import { LazyImage } from '@/shared/lazy-image';
+
 import { appText } from '@/constants/strings';
 
 import { useStyles } from './styles';
@@ -33,7 +35,7 @@ export default function TechnologySection(): React.ReactNode {
         </Grid>
         <Grid item xs={12} md={6}>
           <Box className={classes.imageSection}>
-            <img
+            <LazyImage
               src="/src/assets/image/server-block.webp"
               alt="Server"
               className={classes.imageBlock}
