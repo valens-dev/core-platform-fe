@@ -6,6 +6,7 @@ import { Box, Typography } from '@mui/material';
 
 import { Chip } from '@/shared/chip';
 import { Button } from '@/shared/button';
+import { LazyImage } from '@/shared/lazy-image';
 
 import { appText } from '@/constants/strings';
 
@@ -68,7 +69,7 @@ export function HowWeWork({
           <Typography variant="body2">{text.bookADemo}</Typography>
         </Button>
         <Box className={classes.imagePosition}>
-          <img
+          <LazyImage
             src={ConnectAndCreate}
             className={classes.image}
             alt="Connect and Create"

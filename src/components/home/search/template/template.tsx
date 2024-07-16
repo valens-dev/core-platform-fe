@@ -1,6 +1,7 @@
 import { Box, Typography } from '@mui/material';
 
 import { Link } from '@/shared/link';
+import { LazyImage } from '@/shared/lazy-image';
 
 import { useStyles } from './styles';
 
@@ -20,7 +21,7 @@ export function Template({
   return (
     <Box className={classes.wrapper}>
       <Box className={classes.imgWrapper}>
-        <img src={imgSrc} alt={label} className={classes.image} />
+        <LazyImage src={imgSrc} alt={label} className={classes.image} />
       </Box>
       <Box className={classes.description}>
         <Typography>{label}</Typography>

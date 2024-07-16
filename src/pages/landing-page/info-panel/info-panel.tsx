@@ -5,6 +5,7 @@ import { Box, Typography } from '@mui/material';
 import { Line } from '@/shared/line';
 import { Chip } from '@/shared/chip';
 import { Button } from '@/shared/button';
+import { LazyImage } from '@/shared/lazy-image';
 
 import { ColorVariant } from '@/types/style';
 
@@ -47,7 +48,7 @@ export function InfoPanel(): React.ReactNode {
           </Button>
         </Box>
       </Box>
-      <img src={ExampleImage} alt="Example" className={classes.image} />
+      <LazyImage src={ExampleImage} alt="Example" className={classes.image} />
     </Box>
   );
 }

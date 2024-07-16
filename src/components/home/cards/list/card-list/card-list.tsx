@@ -1,5 +1,7 @@
 import { Box, Card, Typography } from '@mui/material';
 
+import { LazyImage } from '@/shared/lazy-image';
+
 import { CARDS_DATA2 } from '@/components/home/cards/constants';
 
 import { CardStatusVerification } from './card-status-verification/card-status-verification';
@@ -15,7 +17,7 @@ export function CardList(): React.ReactNode {
         return (
           <Card key={card.title} className={classes.cardList}>
             <Box className={classes.cardImageListWrapper}>
-              <img
+              <LazyImage
                 src={card.imgSrc}
                 alt={card.altText}
                 className={classes.cardImageList}
