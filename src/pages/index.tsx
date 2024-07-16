@@ -33,6 +33,10 @@ const WorkspacePage = lazy(() => {
   return import('@/pages/workspace-page/workspace-page');
 });
 
+const UserPage = lazy(() => {
+  return import('@/pages/user-page/user-page');
+});
+
 function PageLoader(): React.ReactNode {
   return (
     <Box
@@ -64,6 +68,7 @@ export function App(): React.ReactNode {
             <Route element={<HomeLayout />}>
               <Route path="/homepage" element={<HomePage />} />
               <Route path="/homepage/templates" element={<TemplatesPage />} />
+              <Route path="/user" element={<UserPage />} />
             </Route>
 
             <Route element={<WorkspaceLayout />}>
