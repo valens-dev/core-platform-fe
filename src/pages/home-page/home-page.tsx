@@ -2,6 +2,8 @@
 import { useNavigate } from 'react-router-dom';
 import { useRef, useState, useEffect } from 'react';
 
+import { useModal } from 'hooks/use-modal';
+
 import { Box, Typography, IconButton } from '@mui/material';
 
 import { Button } from '@/shared/button';
@@ -12,7 +14,6 @@ import { SearchBar } from '@/components/home/search-bar';
 import { TourPopup } from '@/components/home/tour-popup';
 import { CreateWorkspaceModal } from '@/components/home/create-workspace-modal';
 
-import { useModal } from '@/types/hooks';
 import { ViewMode, SelectMode } from '@/types/search';
 
 import { appText } from '@/constants/strings';

@@ -3,12 +3,12 @@ import { useMemo, useState, useEffect } from 'react';
 import { Box } from '@mui/material';
 
 import { Button } from '@/shared/button';
+import { Stepper } from '@/shared/stepper';
 
 import { appText } from '@/constants/strings';
 
 import { STEPS } from '../constants';
 
-import { StepperBody } from './stepper-body';
 import { ErrorMessageFooter } from './error-message-footer';
 
 import { useStyles } from './styles';
@@ -52,7 +52,7 @@ export function VerificationStepper(): React.ReactNode {
 
   return (
     <Box sx={{ maxWidth: 400 }}>
-      <StepperBody
+      <Stepper
         activeStep={activeStep}
         isLastStepSuccessful={isLastStepSuccessful}
         steps={STEPS}
