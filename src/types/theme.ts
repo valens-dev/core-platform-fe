@@ -53,6 +53,7 @@ interface IPalette {
   green: IColor;
   blue: IBlueColor;
   black: IBlackColor;
+  grey: IColor;
 }
 
 interface IBreakpointValues {
