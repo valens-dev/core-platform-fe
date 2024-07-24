@@ -45,6 +45,7 @@ function useContext(): { theme: ITheme } {
       },
       black: {
         primaryBlack: '#000000',
+        secondaryBlack: '#2C2C2E',
       },
       grey: {
         main: '#8D8D8D',

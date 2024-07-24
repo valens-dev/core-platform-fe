@@ -2,6 +2,8 @@ import { useModal } from 'hooks/use-modal';
 
 import { Box, Button } from '@mui/material';
 
+import { ChatBot } from '@/shared/chat-bot';
+
 import { type ITool } from '@/types/tool';
 
 import { appText } from '@/constants/strings';
@@ -55,6 +57,9 @@ export function WorkingArea({
         <Box className={classes.selectedTools}>
           <ToolItem tools={selectedTools} onDelete={handleDeleteTool} />
         </Box>
+      </Box>
+      <Box className={classes.chatBot}>
+        <ChatBot />
       </Box>
     </Box>
   );

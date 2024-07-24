@@ -42,6 +42,7 @@ interface IBlueColor {
 
 interface IBlackColor {
   primaryBlack: string;
+  secondaryBlack: string;
 }
 
 interface IPalette {

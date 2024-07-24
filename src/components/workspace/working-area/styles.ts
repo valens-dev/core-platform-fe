@@ -56,5 +56,8 @@ export const useStyles = tss.create(({ theme }) => {
         marginBottom: '5px',
       },
     },
+    chatBot: {
+      zIndex: 3,
+    },
   };
 });
