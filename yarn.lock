@@ -2120,6 +2120,7 @@ __metadata:
     lint-staged: "npm:^15.2.7"
     prettier: "npm:^3.3.2"
     react: "npm:^18.2.0"
+    react-chatbotify: "npm:^1.7.0"
     react-dom: "npm:^18.2.0"
     react-draggable: "npm:^4.4.6"
     react-fast-marquee: "npm:^1.6.4"
@@ -4895,6 +4896,13 @@ __metadata:
   version: 1.2.3
   resolution: "queue-microtask@npm:1.2.3"
   checksum: 10c0/900a93d3cdae3acd7d16f642c29a642aea32c2026446151f0778c62ac089d4b8e6c986811076e1ae180a694cedf077d453a11b58ff0a865629a4f82ab558e102
+  languageName: node
+  linkType: hard
+
+"react-chatbotify@npm:^1.7.0":
+  version: 1.7.0
+  resolution: "react-chatbotify@npm:1.7.0"
+  checksum: 10c0/b4b0614570dc41907e604c6ac0f7eefc436f70eb767b09d6e10a5b3f396ab24c902494cdc4f53956eebdb32c636c1cfed82d229820d596a2c9d10f24789796c8
   languageName: node
   linkType: hard
 

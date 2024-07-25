@@ -45,6 +45,7 @@ function useContext(): { theme: ITheme } {
       },
       black: {
         primaryBlack: '#000000',
+        secondaryBlack: '#2C2C2E',
       },
       grey: {
         main: '#8D8D8D',
@@ -64,6 +65,18 @@ function useContext(): { theme: ITheme } {
         bold: 700,
         extraBold: 800,
         black: 900,
+      },
+      fontSize: {
+        verySmall: '8px',
+        small: '10px',
+        smallToMedium: '12px',
+        medium: '14px',
+        mediumToLarge: '16px',
+        large: '18px',
+        largePlus: '20px',
+        veryLarge: '24px',
+        extraLarge: '36px',
+        huge: '48px',
       },
     },
     breakpoints: {

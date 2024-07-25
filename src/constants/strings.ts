@@ -379,4 +379,7 @@ export const appText = {
       enterprise: true,
     },
   ],
+  chatBot: {
+    title: 'Chat bot',
+  },
 };

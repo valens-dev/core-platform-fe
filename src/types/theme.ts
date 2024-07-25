@@ -14,9 +14,23 @@ interface IFontWeights {
   black: number;
 }
 
+interface IFontSizes {
+  verySmall: string;
+  small: string;
+  smallToMedium: string;
+  medium: string;
+  mediumToLarge: string;
+  large: string;
+  largePlus: string;
+  veryLarge: string;
+  extraLarge: string;
+  huge: string;
+}
+
 interface ITypography {
   fontFamily: IFontFamily;
   fontWeight: IFontWeights;
+  fontSize: IFontSizes;
 }
 
 interface IColor {
@@ -42,6 +56,7 @@ interface IBlueColor {
 
 interface IBlackColor {
   primaryBlack: string;
+  secondaryBlack: string;
 }
 
 interface IPalette {
