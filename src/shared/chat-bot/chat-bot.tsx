@@ -1,18 +1,19 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
 import ReactChatBotify from 'react-chatbotify';
 
-import { Box } from '@mui/material';
+import { useChatBotFlow, useChatBotOptions } from 'hooks/use-chat-bot-config';
 
-import { CHAT_BOT_FLOW, CHAT_BOT_OPTIONS } from './constants';
+import { Box } from '@mui/material';
 
 import { useStyles } from './styles';
 
 export function ChatBot(): React.ReactNode {
   const { classes } = useStyles();
+  const chatBotOptions = useChatBotOptions();
+  const chatBotFlow = useChatBotFlow();
 
   return (
     <Box className={classes.chatBotWrapper}>
-      <ReactChatBotify options={CHAT_BOT_OPTIONS} flow={CHAT_BOT_FLOW} />
+      <ReactChatBotify options={chatBotOptions} flow={chatBotFlow} />
     </Box>
   );
 }

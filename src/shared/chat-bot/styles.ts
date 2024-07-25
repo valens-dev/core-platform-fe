@@ -15,7 +15,7 @@ export const useStyles = tss.create(({ theme }) => {
       '& .MuiTypography-root': {
         color: theme.palette.black.secondaryBlack,
         marginTop: '6px',
-        fontSize: '14px',
+        fontSize: theme.typography.fontSize.medium,
         fontWeight: theme.typography.fontWeight.bold,
       },
       '& .rcb-close-chat-icon': {

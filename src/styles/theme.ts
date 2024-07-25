@@ -66,6 +66,18 @@ function useContext(): { theme: ITheme } {
         extraBold: 800,
         black: 900,
       },
+      fontSize: {
+        verySmall: '8px',
+        small: '10px',
+        smallToMedium: '12px',
+        medium: '14px',
+        mediumToLarge: '16px',
+        large: '18px',
+        largePlus: '20px',
+        veryLarge: '24px',
+        extraLarge: '36px',
+        huge: '48px',
+      },
     },
     breakpoints: {
       values: {
