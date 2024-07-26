@@ -5,8 +5,8 @@ import { Typography } from '@mui/material';
 
 import { appText } from '@/constants/strings';
 
-import CloseIcon from '@/assets/icon/close-chat-bot-icon.svg';
 import ChatBotAvatar from '@/assets/image/chat-bot-avatar.webp';
+import CloseIcon from '@/assets/image/close-chat-bot-image.webp';
 
 const text = appText.chatBot;
 
