@@ -155,7 +155,7 @@ export function useChatBotFlow(): IChatBotFlow {
             link = 'https://discord.gg/6R4DK4G5Zh';
             break;
           }
-          
+
           default: {
             return 'unknown_input';
           }

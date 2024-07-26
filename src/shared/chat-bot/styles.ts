@@ -14,12 +14,14 @@ export const useStyles = tss.create(({ theme }) => {
       },
       '& .MuiTypography-root': {
         color: theme.palette.black.secondaryBlack,
-        marginTop: '6px',
+        marginTop: '5px',
         fontSize: theme.typography.fontSize.medium,
         fontWeight: theme.typography.fontWeight.bold,
       },
       '& .rcb-close-chat-icon': {
-        marginTop: '4px',
+        margin: '4px',
+        width: '21px',
+        height: '21px',
       },
       '& .rcb-close-chat-icon::after': {
         display: 'none',
